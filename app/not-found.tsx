@@ -1,4 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | Lamb Insurance Agency",
+  description:
+    "The page you're looking for could not be found. Return to our homepage to explore insurance options in Sarasota, FL.",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function NotFound() {
   return (

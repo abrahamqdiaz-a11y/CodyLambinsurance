@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Privacy Policy for Lamb Insurance Agency. Learn how we collect, use, and protect your personal information.",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://lambinsuranceagency.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicy() {

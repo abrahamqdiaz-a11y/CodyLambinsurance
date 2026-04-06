@@ -4,22 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://lambinsuranceagency.com"),
   title: {
-    default: "Lamb Insurance Agency | Personal & Commercial Insurance in Sarasota, FL",
+    default: "Lamb Insurance Agency | Sarasota Insurance since 1991",
     template: "%s | Lamb Insurance Agency",
   },
   description:
-    "Lamb Insurance Agency offers personalized auto, home, life, and commercial insurance in the Sarasota area. Simple, personal, and built around you. Call 941.225.2335 for a free quote.",
-  keywords: [
-    "insurance agency Sarasota",
-    "auto insurance Florida",
-    "home insurance Sarasota",
-    "life insurance",
-    "commercial insurance",
-    "Lamb Insurance Agency",
-    "insurance quotes Florida",
-    "personal insurance",
-    "business insurance Sarasota",
-  ],
+    "Local insurance agency in Sarasota, FL offering auto, home, life, and commercial coverage. Free quotes. Call 941.225.2335.",
   authors: [{ name: "Lamb Insurance Agency" }],
   creator: "Lamb Insurance Agency",
   publisher: "Lamb Insurance Agency",
@@ -83,10 +72,22 @@ export default function RootLayout({
               telephone: ["+19412252335", "+19414049673"],
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "5893 Whitfield Ave",
+                addressLocality: "Sarasota",
                 addressRegion: "FL",
+                postalCode: "34243",
                 addressCountry: "US",
               },
               sameAs: [],
+              description: "Local independent insurance agency serving Sarasota, FL since 1991. Auto, home, life, and commercial insurance with personalized service.",
+              priceRange: "$$",
+              openingHours: ["Mo-Fr 09:00-17:00", "Sa 10:00-14:00"],
+              image: "https://lambinsuranceagency.com/logo.png",
+              logo: "https://lambinsuranceagency.com/logo.png",
+              areaServed: {
+                "@type": "State",
+                name: "Florida",
+              },
               serviceArea: {
                 "@type": "State",
                 name: "Florida",
@@ -100,6 +101,22 @@ export default function RootLayout({
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Life Insurance" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Insurance" } },
                 ],
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Lamb Insurance Agency",
+              url: "https://lambinsuranceagency.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://lambinsuranceagency.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
               },
             }),
           }}

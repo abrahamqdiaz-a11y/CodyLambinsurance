@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description:
     "Terms and Conditions for using the Lamb Insurance Agency website and services.",
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://lambinsuranceagency.com/terms",
+  },
 };
 
 export default function Terms() {
