@@ -168,7 +168,7 @@ function Header() {
               href={PHONE_MAIN_TEL}
               className="mt-2 btn-primary text-center py-3 rounded-lg text-sm font-semibold font-body"
             >
-              📞 Call {PHONE_MAIN}
+              Call {PHONE_MAIN}
             </a>
           </nav>
         </div>
@@ -249,7 +249,7 @@ function Hero() {
               href={PHONE_MAIN_TEL}
               className="btn-outline px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center"
             >
-              📞 Call {PHONE_MAIN}
+              Call {PHONE_MAIN}
             </a>
           </div>
 
@@ -260,12 +260,11 @@ function Hero() {
             aria-label="Trust indicators"
           >
             {[
-              { icon: "🛡️", text: "Trusted Coverage" },
-              { icon: "🤝", text: "Personalized Service" },
-              { icon: "📍", text: "Local Expertise" },
+              { text: "Trusted Coverage" },
+              { text: "Personalized Service" },
+              { text: "Local Expertise" },
             ].map((b) => (
               <div key={b.text} className="flex items-center gap-2">
-                <span className="text-xl" aria-hidden="true">{b.icon}</span>
                 <span className="text-navy-300 text-sm font-body">{b.text}</span>
               </div>
             ))}
@@ -273,11 +272,6 @@ function Hero() {
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream to-transparent pointer-events-none"
-        aria-hidden="true"
-      />
     </section>
   );
 }
@@ -352,17 +346,6 @@ function WhyUs() {
       className="bg-navy-900 py-20 md:py-28 relative overflow-hidden"
       aria-labelledby="why-heading"
     >
-      {/* Background shape */}
-      <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, #97c09a 0, #97c09a 1px, transparent 0, transparent 50%)",
-          backgroundSize: "24px 24px",
-        }}
-        aria-hidden="true"
-      />
-
       <div className="relative z-10 max-w-6xl mx-auto px-5">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left */}
@@ -576,7 +559,7 @@ function ContactForm() {
               {submitted ? (
                 /* Thank-you state */
                 <div className="text-center py-10" role="alert" aria-live="polite">
-                  <div className="text-6xl mb-5" aria-hidden="true">🎉</div>
+                  <div className="mb-5" aria-hidden="true"></div>
                   <h3 className="font-display text-2xl font-bold text-navy-800 mb-3">
                     Thank You!
                   </h3>
@@ -701,10 +684,10 @@ function ContactForm() {
                         <option value="" disabled>
                           Select coverage type…
                         </option>
-                        <option value="Home">🏡 Home Insurance</option>
-                        <option value="Auto">🚗 Auto Insurance</option>
-                        <option value="Life">❤️ Life Insurance</option>
-                        <option value="Commercial">🏢 Commercial Insurance</option>
+                        <option value="Home">Home Insurance</option>
+                        <option value="Auto">Auto Insurance</option>
+                        <option value="Life">Life Insurance</option>
+                        <option value="Commercial">Commercial Insurance</option>
                         <option value="Other">Other</option>
                       </select>
                     </div>
