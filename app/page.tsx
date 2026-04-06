@@ -446,24 +446,22 @@ function ContactForm() {
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
-    formData.append("tcpa-consent", "yes");
-    formData.append("tcpa-consent-timestamp", new Date().toISOString());
-    const encoded = new URLSearchParams();
-    formData.forEach((value, key) => {
-      encoded.append(key, value.toString());
-    });
+    formData.set("tcpa-consent", "yes");
+    formData.set("tcpa-consent-timestamp", new Date().toISOString());
 
     try {
-      await fetch("/", {
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encoded.toString(),
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
+      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
       setSubmitted(true);
       setTcpaConsent(false);
       formRef.current?.reset();
-    } catch {
-      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong submitting the form. Please call us directly or try again.");
     } finally {
       setLoading(false);
     }
