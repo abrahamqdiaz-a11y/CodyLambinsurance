@@ -142,7 +142,44 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              9. Governing Law
+              9. Telephone Consumer Protection Act (TCPA)
+            </h2>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                We obtain prior express written consent before contacting
+                individuals by phone, text, or autodialer.
+              </li>
+              <li>
+                Consent is collected through our website contact form and is
+                never a condition of purchase.
+              </li>
+              <li>
+                Recipients may opt out at any time by replying STOP to any text
+                message or by contacting us at{" "}
+                <a href="tel:+19412252335" className="text-sage-600 hover:underline">
+                  941.225.2335
+                </a>{" "}
+                or{" "}
+                <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
+                  calamb@acg.aaa.com
+                </a>
+                .
+              </li>
+              <li>
+                We do not sell or share phone numbers with third parties for
+                marketing purposes.
+              </li>
+              <li>Message and data rates may apply to SMS communications.</li>
+              <li>
+                We comply with all applicable TCPA regulations and FCC
+                guidelines.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
+              10. Governing Law
             </h2>
             <p>
               These Terms &amp; Conditions are governed by the laws of the State
@@ -154,7 +191,7 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              10. Changes to These Terms
+              11. Changes to These Terms
             </h2>
             <p>
               We reserve the right to update these Terms &amp; Conditions at any
@@ -166,7 +203,7 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              11. Contact Us
+              12. Contact Us
             </h2>
             <p>
               For questions about these Terms &amp; Conditions, please contact
