@@ -71,6 +71,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#0e1c32" />
+        <meta name="google-site-verification" content="KIXQJA3RX_fdHOLHP9_6v-vPVa8t2k6lBtGTZ727pQQ" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
