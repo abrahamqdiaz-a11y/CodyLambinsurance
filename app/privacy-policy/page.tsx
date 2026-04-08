@@ -151,10 +151,10 @@ export default function PrivacyPolicy() {
               Florida residents may also have rights under the Florida Digital
               Bill of Rights. To exercise your rights, contact us at{" "}
               <a
-                href="mailto:lambinsurance91@gmail.com"
+                href="mailto:calamb@acg.aaa.com"
                 className="text-sage-600 hover:underline"
               >
-                lambinsurance91@gmail.com
+                calamb@acg.aaa.com
               </a>
               .
             </p>
@@ -211,10 +211,10 @@ export default function PrivacyPolicy() {
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:lambinsurance91@gmail.com"
+                  href="mailto:calamb@acg.aaa.com"
                   className="text-sage-600 hover:underline"
                 >
-                  lambinsurance91@gmail.com
+                  calamb@acg.aaa.com
                 </a>
               </p>
               <p>

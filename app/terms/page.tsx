@@ -216,10 +216,10 @@ export default function Terms() {
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:lambinsurance91@gmail.com"
+                  href="mailto:calamb@acg.aaa.com"
                   className="text-sage-600 hover:underline"
                 >
-                  lambinsurance91@gmail.com
+                  calamb@acg.aaa.com
                 </a>
               </p>
               <p>
