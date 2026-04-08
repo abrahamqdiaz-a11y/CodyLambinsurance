@@ -79,7 +79,7 @@ export default function RootLayout({
               "@type": "InsuranceAgency",
               name: "Lamb Insurance Agency",
               url: "https://lambinsuranceagency.com",
-              email: "lambinsurance91@gmail.com",
+              email: "calamb@acg.aaa.com",
               telephone: ["+19412252335", "+19414049673"],
               address: {
                 "@type": "PostalAddress",
