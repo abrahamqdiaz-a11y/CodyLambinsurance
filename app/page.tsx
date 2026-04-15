@@ -830,8 +830,8 @@ function ContactForm() {
                         <span className="font-semibold text-navy-700">
                           Consent is not a condition of purchase.
                         </span>{" "}
-                        Message &amp; data rates may apply. I may opt out at any time by replying STOP
-                        or contacting us directly. See our{" "}
+                        Message and data rates may apply. Message frequency varies. Text STOP to
+                        unsubscribe. Text HELP for help. See our{" "}
                         <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
                           Privacy Policy
                         </Link>
