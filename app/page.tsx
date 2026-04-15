@@ -835,6 +835,10 @@ function ContactForm() {
                         <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
                           Privacy Policy
                         </Link>
+                        {" "}and{" "}
+                        <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
+                          Terms &amp; Conditions
+                        </Link>
                         {" "}for details. <span className="text-red-500" aria-label="required">*</span>
                       </p>
                     </label>
