@@ -95,16 +95,48 @@ export default function PrivacyPolicy() {
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
               4. TCPA Compliance
             </h2>
-            <p>
-              By submitting our contact form and checking the consent box, you
-              expressly consent to receive calls, texts, and/or emails from Lamb
-              Insurance Agency at the number and address you provided, including
-              via automated dialing systems or pre-recorded messages, regarding
-              insurance products and services. Consent is not a condition of
-              purchase. Message and data rates may apply. You may opt out at any
-              time by replying STOP to any text, clicking unsubscribe in an
-              email, or contacting us directly.
-            </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                We obtain prior express written consent before contacting
+                individuals by phone, text message (SMS), or autodialer.
+              </li>
+              <li>
+                Consent is collected through our website contact form and is
+                not a condition of purchase.
+              </li>
+              <li>
+                By opting in, customers agree to receive text messages related
+                to insurance quotes, policy updates, and customer support from
+                Lamb Insurance Agency.
+              </li>
+              <li>
+                Message frequency varies depending on customer interaction.
+              </li>
+              <li>Message and data rates may apply.</li>
+              <li>
+                Recipients may opt out at any time by replying STOP to any text
+                message or reply HELP for assistance.
+              </li>
+              <li>
+                You may also contact us at{" "}
+                <a href="tel:+19412252335" className="text-sage-600 hover:underline">
+                  941-225-2335
+                </a>{" "}
+                or{" "}
+                <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
+                  calamb@acg.aaa.com
+                </a>{" "}
+                for assistance.
+              </li>
+              <li>
+                We do not sell or share phone numbers with third parties for
+                marketing purposes.
+              </li>
+              <li>
+                We comply with all applicable TCPA regulations and FCC
+                guidelines.
+              </li>
+            </ul>
           </section>
 
           <section>
