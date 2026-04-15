@@ -147,29 +147,40 @@ export default function Terms() {
             <ul className="list-disc pl-5 space-y-2">
               <li>
                 We obtain prior express written consent before contacting
-                individuals by phone, text, or autodialer.
+                individuals by phone, text message (SMS), or autodialer.
               </li>
               <li>
                 Consent is collected through our website contact form and is
-                never a condition of purchase.
+                not a condition of purchase.
               </li>
               <li>
+                By opting in, customers agree to receive text messages related
+                to insurance quotes, policy updates, and customer support from
+                Lamb Insurance Agency.
+              </li>
+              <li>
+                Message frequency varies depending on customer interaction.
+              </li>
+              <li>Message and data rates may apply.</li>
+              <li>
                 Recipients may opt out at any time by replying STOP to any text
-                message or by contacting us at{" "}
+                message or reply HELP for assistance.
+              </li>
+              <li>
+                You may also contact us at{" "}
                 <a href="tel:+19412252335" className="text-sage-600 hover:underline">
-                  941.225.2335
+                  941-225-2335
                 </a>{" "}
                 or{" "}
                 <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
                   calamb@acg.aaa.com
-                </a>
-                .
+                </a>{" "}
+                for assistance.
               </li>
               <li>
                 We do not sell or share phone numbers with third parties for
                 marketing purposes.
               </li>
-              <li>Message and data rates may apply to SMS communications.</li>
               <li>
                 We comply with all applicable TCPA regulations and FCC
                 guidelines.
