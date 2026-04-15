@@ -190,7 +190,24 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              10. Governing Law
+              10. SMS Terms of Service
+            </h2>
+            <p>
+              By opting into SMS from a web form or other medium, you are
+              agreeing to receive SMS messages from Lamb Insurance Agency LLC.
+              This includes SMS messages for account notifications. Message
+              frequency varies. Message and data rates may apply. See privacy
+              policy at{" "}
+              <Link href="/privacy-policy" className="text-sage-600 hover:underline">
+                lambinsuranceagency.com/privacy-policy
+              </Link>
+              . Message HELP for help. Reply STOP to any message to opt out.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
+              11. Governing Law
             </h2>
             <p>
               These Terms &amp; Conditions are governed by the laws of the State
@@ -202,7 +219,7 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              11. Changes to These Terms
+              12. Changes to These Terms
             </h2>
             <p>
               We reserve the right to update these Terms &amp; Conditions at any
@@ -214,7 +231,7 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              12. Contact Us
+              13. Contact Us
             </h2>
             <p>
               For questions about these Terms &amp; Conditions, please contact
