@@ -745,6 +745,42 @@ function ContactForm() {
                     </div>
                   </div>
 
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="btn-primary mt-7 w-full py-4 rounded-lg font-semibold font-body text-base flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                    aria-live="polite"
+                  >
+                    {loading ? (
+                      <>
+                        <svg
+                          className="animate-spin h-4 w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          />
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8v8z"
+                          />
+                        </svg>
+                        Sending…
+                      </>
+                    ) : (
+                      "Submit My Quote Request →"
+                    )}
+                  </button>
+
                   {/* TCPA Consent Checkbox */}
                   <div className={`mt-6 p-4 rounded-xl border-2 transition-colors ${tcpaError ? "border-red-400 bg-red-50" : "border-navy-100 bg-navy-50/50"}`}>
                     <label
@@ -807,42 +843,6 @@ function ContactForm() {
                       </p>
                     )}
                   </div>
-
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="btn-primary mt-7 w-full py-4 rounded-lg font-semibold font-body text-base flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                    aria-live="polite"
-                  >
-                    {loading ? (
-                      <>
-                        <svg
-                          className="animate-spin h-4 w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          />
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8v8z"
-                          />
-                        </svg>
-                        Sending…
-                      </>
-                    ) : (
-                      "Submit My Quote Request →"
-                    )}
-                  </button>
                 </form>
               )}
             </div>
