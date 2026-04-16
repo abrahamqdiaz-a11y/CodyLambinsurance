@@ -431,17 +431,11 @@ function ContactForm() {
   const [insuranceType, setInsuranceType] = useState("");
   const [loading, setLoading] = useState(false);
   const [tcpaConsent, setTcpaConsent] = useState(false);
-  const [tcpaError, setTcpaError] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!tcpaConsent) {
-      setTcpaError(true);
-      document.getElementById("tcpa-consent")?.focus();
-      return;
-    }
     setTcpaError(false);
     setLoading(true);
 
@@ -781,8 +775,23 @@ function ContactForm() {
                     )}
                   </button>
 
-                  {/* TCPA Consent Checkbox */}
-                  <div className={`mt-6 p-4 rounded-xl border-2 transition-colors ${tcpaError ? "border-red-400 bg-red-50" : "border-navy-100 bg-navy-50/50"}`}>
+                  {/* SMS Disclosure + Consent Checkbox */}
+                  <div className="mt-6 p-4 rounded-xl border-2 border-navy-100 bg-navy-50/50">
+                    <p className="text-xs text-navy-600 font-body leading-relaxed mb-3">
+                      By checking the box below, you confirm your preference regarding SMS
+                      messages from Lamb Insurance Agency. Messages may include insurance
+                      quotes, policy updates, and customer support. Message frequency varies.
+                      Message and data rates may apply. Reply STOP to unsubscribe or HELP for
+                      assistance. Consent is not a condition of purchase. See our{" "}
+                      <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
+                        Terms &amp; Conditions
+                      </Link>
+                      {" "}and{" "}
+                      <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
+                        Privacy Policy
+                      </Link>
+                      .
+                    </p>
                     <label
                       htmlFor="tcpa-consent"
                       className="flex items-start gap-3 cursor-pointer group"
@@ -793,20 +802,13 @@ function ContactForm() {
                           type="checkbox"
                           name="tcpa-consent-checkbox"
                           checked={tcpaConsent}
-                          onChange={(e) => {
-                            setTcpaConsent(e.target.checked);
-                            if (e.target.checked) setTcpaError(false);
-                          }}
+                          onChange={(e) => setTcpaConsent(e.target.checked)}
                           className="sr-only"
-                          aria-required="true"
-                          aria-describedby="tcpa-disclosure"
                         />
                         <div
                           className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
                             tcpaConsent
                               ? "bg-sage-600 border-sage-600"
-                              : tcpaError
-                              ? "border-red-400 bg-white"
                               : "border-navy-300 bg-white group-hover:border-sage-400"
                           }`}
                           aria-hidden="true"
@@ -818,34 +820,11 @@ function ContactForm() {
                           )}
                         </div>
                       </div>
-                      <p
-                        id="tcpa-disclosure"
-                        className="text-xs text-navy-600 font-body leading-relaxed"
-                      >
-                        By checking this box, I consent to receive SMS text messages from Lamb
-                        Insurance Agency at the phone number provided regarding insurance quotes,
-                        policy updates, and customer support. Consent is not a condition of
-                        purchase. <span className="text-red-500" aria-label="required">*</span>
+                      <p className="text-xs text-navy-600 font-body leading-relaxed">
+                        I agree to receive SMS text messages from Lamb Insurance Agency at the
+                        phone number provided.
                       </p>
                     </label>
-                    <p className="mt-2 ml-8 text-xs text-navy-500 font-body leading-relaxed">
-                      Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt
-                      out or HELP for help. No mobile information will be shared with third parties
-                      or affiliates for marketing or promotional purposes. View our{" "}
-                      <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
-                        Privacy Policy
-                      </Link>
-                      {" "}and{" "}
-                      <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
-                        Terms &amp; Conditions
-                      </Link>
-                      .
-                    </p>
-                    {tcpaError && (
-                      <p className="mt-2 ml-8 text-xs text-red-600 font-body font-semibold" role="alert" aria-live="polite">
-                        Please check this box to continue — consent is required before we can contact you.
-                      </p>
-                    )}
                   </div>
                 </form>
               )}

@@ -144,12 +144,12 @@ export default function PrivacyPolicy() {
             </h2>
             <p>
               If you opt in to receive SMS messages from Lamb Insurance Agency,
-              your phone number and consent data will be used solely to send you
+              your phone number and consent data will be used solely to send
               messages related to insurance quotes, policy updates, and customer
               support. Message frequency varies. Message and data rates may
-              apply. You may opt out at any time by replying STOP. For help,
-              reply HELP. No mobile information will be shared with third parties
-              or affiliates for marketing or promotional purposes. All the above
+              apply. Reply STOP to opt out at any time or HELP for assistance.
+              No mobile information will be shared with third parties or
+              affiliates for marketing or promotional purposes. All the above
               categories exclude text messaging originator opt-in data and
               consent; this information will not be shared with any third
               parties.
