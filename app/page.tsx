@@ -472,7 +472,7 @@ function ContactForm() {
 
             {/* Contact info cards */}
             <div className="space-y-4">
-              <
+              <a
                 href={`mailto:${EMAIL}`}
                 className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
                 aria-label={`Email ${EMAIL}`}
