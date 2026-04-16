@@ -142,22 +142,17 @@ export default function PrivacyPolicy() {
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
               5. SMS Communications
             </h2>
-            <p className="mb-3">
-              If you provide your phone number, you consent to receive SMS
-              messages from Lamb Insurance Agency regarding insurance quotes,
-              policy updates, and customer support.
-            </p>
-            <p className="mb-3">
-              Message frequency varies depending on customer interaction.
-              Message and data rates may apply.
-            </p>
-            <p className="mb-3">
-              You may opt out at any time by replying STOP to any message or
-              reply HELP for assistance.
-            </p>
             <p>
-              We do not sell or share your phone number with third parties for
-              marketing purposes.
+              If you opt in to receive SMS messages from Lamb Insurance Agency,
+              your phone number and consent data will be used solely to send you
+              messages related to insurance quotes, policy updates, and customer
+              support. Message frequency varies. Message and data rates may
+              apply. You may opt out at any time by replying STOP. For help,
+              reply HELP. No mobile information will be shared with third parties
+              or affiliates for marketing or promotional purposes. All the above
+              categories exclude text messaging originator opt-in data and
+              consent; this information will not be shared with any third
+              parties.
             </p>
           </section>
 
