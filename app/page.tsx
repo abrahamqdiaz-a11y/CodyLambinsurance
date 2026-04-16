@@ -826,7 +826,7 @@ function ContactForm() {
                         id="tcpa-disclosure"
                         className="text-xs text-navy-600 font-body leading-relaxed"
                       >
-                        By submitting this form, I consent to receive SMS text messages from Lamb
+                        By checking this box, I consent to receive SMS text messages from Lamb
                         Insurance Agency at the phone number provided regarding insurance quotes,
                         policy updates, and customer support. Message frequency varies depending
                         on customer interaction. Message and data rates may apply. Reply STOP to
