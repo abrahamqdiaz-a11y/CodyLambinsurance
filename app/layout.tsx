@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | Lamb Insurance Agency",
   },
   description:
-    "Lamb Insurance Agency offers personalized auto, home, life, and commercial insurance in the Sarasota area. Simple, personal, and built around you. Call 941.225.2335 for a free quote.",
+    "Lamb Insurance Agency offers personalized auto, home, life, and commercial insurance in the Sarasota area. Simple, personal, and built around you. Get a free quote today.",
   keywords: [
     "insurance agency Sarasota",
     "auto insurance Florida",
@@ -81,7 +81,6 @@ export default function RootLayout({
               name: "Lamb Insurance Agency",
               url: "https://lambinsuranceagency.com",
               email: "calamb@acg.aaa.com",
-              telephone: ["+19412252335", "+19414049673"],
               address: {
                 "@type": "PostalAddress",
                 addressRegion: "FL",

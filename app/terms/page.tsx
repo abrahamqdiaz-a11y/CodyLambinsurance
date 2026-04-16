@@ -168,10 +168,6 @@ export default function Terms() {
               </li>
               <li>
                 You may also contact us at{" "}
-                <a href="tel:+19412252335" className="text-sage-600 hover:underline">
-                  941-225-2335
-                </a>{" "}
-                or{" "}
                 <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
                   calamb@acg.aaa.com
                 </a>{" "}
@@ -248,15 +244,6 @@ export default function Terms() {
                   className="text-sage-600 hover:underline"
                 >
                   calamb@acg.aaa.com
-                </a>
-              </p>
-              <p>
-                Phone:{" "}
-                <a
-                  href="tel:+19412252335"
-                  className="text-sage-600 hover:underline"
-                >
-                  941.225.2335
                 </a>
               </p>
             </address>
