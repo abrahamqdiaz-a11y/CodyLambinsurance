@@ -781,6 +781,10 @@ function ContactForm() {
                     )}
                   </button>
 
+                  <p className="mt-3 text-xs text-navy-500 font-body text-center">
+                    After submitting this form, you may receive a text message from our team regarding your quote request.
+                  </p>
+
                   {/* TCPA Consent Checkbox */}
                   <div className={`mt-6 p-4 rounded-xl border-2 transition-colors ${tcpaError ? "border-red-400 bg-red-50" : "border-navy-100 bg-navy-50/50"}`}>
                     <label
