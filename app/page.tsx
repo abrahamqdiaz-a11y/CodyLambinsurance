@@ -436,7 +436,6 @@ function ContactForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    setTcpaError(false);
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
