@@ -163,8 +163,7 @@ export default function Terms() {
               </li>
               <li>Message and data rates may apply.</li>
               <li>
-                Recipients may opt out at any time by replying STOP to any text
-                message or reply HELP for assistance.
+                Reply STOP to opt out or HELP for help.
               </li>
               <li>
                 You may also contact us at{" "}
