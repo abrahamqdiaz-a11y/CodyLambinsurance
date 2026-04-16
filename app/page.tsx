@@ -783,7 +783,7 @@ function ContactForm() {
 
                   {/* SMS notice */}
                   <p className="mt-3 text-xs text-navy-500 font-body text-center">
-                    After submitting this form, you may receive a text message from our team to follow up on your quote request.
+                    After submitting this form, you may receive an SMS text message from our team to follow up on your quote request or service inquiry.
                   </p>
 
                   {/* TCPA Consent Checkbox */}
@@ -827,16 +827,15 @@ function ContactForm() {
                         id="tcpa-disclosure"
                         className="text-xs text-navy-600 font-body leading-relaxed"
                       >
-                        <span className="font-bold text-navy-800">I consent to be contacted</span> by
-                        Lamb Insurance Agency at the phone number and email address provided above,
-                        including by telephone call, text message (SMS), or email, regarding insurance
-                        products and services. I understand that autodialed or prerecorded calls/texts
-                        may be used.{" "}
+                        By submitting this form, I consent to receive SMS text messages from Lamb
+                        Insurance Agency at the phone number provided regarding insurance quotes,
+                        policy updates, and customer support. Message frequency varies depending
+                        on customer interaction. Message and data rates may apply. Reply STOP to
+                        opt out or HELP for help.{" "}
                         <span className="font-semibold text-navy-700">
                           Consent is not a condition of purchase.
                         </span>{" "}
-                        Message and data rates may apply. Message frequency varies.
-                        Reply STOP to opt out or HELP for help. See our{" "}
+                        See our{" "}
                         <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
                           Privacy Policy
                         </Link>
@@ -844,7 +843,7 @@ function ContactForm() {
                         <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
                           Terms &amp; Conditions
                         </Link>
-                        {" "}for SMS details. <span className="text-red-500" aria-label="required">*</span>
+                        {" "}for details. <span className="text-red-500" aria-label="required">*</span>
                       </p>
                     </label>
                     {tcpaError && (
