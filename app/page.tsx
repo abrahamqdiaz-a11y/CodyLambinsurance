@@ -745,47 +745,6 @@ function ContactForm() {
                     </div>
                   </div>
 
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="btn-primary mt-7 w-full py-4 rounded-lg font-semibold font-body text-base flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                    aria-live="polite"
-                  >
-                    {loading ? (
-                      <>
-                        <svg
-                          className="animate-spin h-4 w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          />
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8v8z"
-                          />
-                        </svg>
-                        Sending…
-                      </>
-                    ) : (
-                      "Submit My Quote Request →"
-                    )}
-                  </button>
-
-                  {/* SMS notice */}
-                  <p className="mt-3 text-xs text-navy-500 font-body text-center">
-                    After submitting this form, you may receive an SMS text message from our team to follow up on your quote request or service inquiry.
-                  </p>
-
                   {/* TCPA Consent Checkbox */}
                   <div className={`mt-6 p-4 rounded-xl border-2 transition-colors ${tcpaError ? "border-red-400 bg-red-50" : "border-navy-100 bg-navy-50/50"}`}>
                     <label
@@ -831,11 +790,7 @@ function ContactForm() {
                         Insurance Agency at the phone number provided regarding insurance quotes,
                         policy updates, and customer support. Message frequency varies depending
                         on customer interaction. Message and data rates may apply. Reply STOP to
-                        opt out or HELP for help.{" "}
-                        <span className="font-semibold text-navy-700">
-                          Consent is not a condition of purchase.
-                        </span>{" "}
-                        See our{" "}
+                        opt out or HELP for help. Consent is not a condition of purchase. See our{" "}
                         <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
                           Privacy Policy
                         </Link>
@@ -852,6 +807,42 @@ function ContactForm() {
                       </p>
                     )}
                   </div>
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="btn-primary mt-7 w-full py-4 rounded-lg font-semibold font-body text-base flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                    aria-live="polite"
+                  >
+                    {loading ? (
+                      <>
+                        <svg
+                          className="animate-spin h-4 w-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          />
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8v8z"
+                          />
+                        </svg>
+                        Sending…
+                      </>
+                    ) : (
+                      "Submit My Quote Request →"
+                    )}
+                  </button>
                 </form>
               )}
             </div>
