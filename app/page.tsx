@@ -781,10 +781,6 @@ function ContactForm() {
                     )}
                   </button>
 
-                  <p className="mt-3 text-xs text-navy-500 font-body text-center">
-                    After submitting this form, you may receive a text message from our team regarding your quote request.
-                  </p>
-
                   {/* TCPA Consent Checkbox */}
                   <div className={`mt-6 p-4 rounded-xl border-2 transition-colors ${tcpaError ? "border-red-400 bg-red-50" : "border-navy-100 bg-navy-50/50"}`}>
                     <label
@@ -828,19 +824,23 @@ function ContactForm() {
                       >
                         By checking this box, I consent to receive SMS text messages from Lamb
                         Insurance Agency at the phone number provided regarding insurance quotes,
-                        policy updates, and customer support. Message frequency varies depending
-                        on customer interaction. Message and data rates may apply. Reply STOP to
-                        opt out or HELP for help. Consent is not a condition of purchase. See our{" "}
-                        <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
-                          Privacy Policy
-                        </Link>
-                        {" "}and{" "}
-                        <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
-                          Terms &amp; Conditions
-                        </Link>
-                        {" "}for details. <span className="text-red-500" aria-label="required">*</span>
+                        policy updates, and customer support. Consent is not a condition of
+                        purchase. <span className="text-red-500" aria-label="required">*</span>
                       </p>
                     </label>
+                    <p className="mt-2 ml-8 text-xs text-navy-500 font-body leading-relaxed">
+                      Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt
+                      out or HELP for help. No mobile information will be shared with third parties
+                      or affiliates for marketing or promotional purposes. View our{" "}
+                      <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
+                        Privacy Policy
+                      </Link>
+                      {" "}and{" "}
+                      <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
+                        Terms &amp; Conditions
+                      </Link>
+                      .
+                    </p>
                     {tcpaError && (
                       <p className="mt-2 ml-8 text-xs text-red-600 font-body font-semibold" role="alert" aria-live="polite">
                         Please check this box to continue — consent is required before we can contact you.
