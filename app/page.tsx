@@ -4,10 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 // ── Constants ──────────────────────────────────────────────
-const PHONE_MAIN = "941.225.2335";
-const PHONE_MAIN_TEL = "tel:+19412252335";
-const PHONE_CELL = "941.404.9673";
-const PHONE_CELL_TEL = "tel:+19414049673";
 const EMAIL = "calamb@acg.aaa.com";
 
 const SERVICES = [
@@ -164,12 +160,6 @@ function Header() {
                 {l.label}
               </a>
             ))}
-            <a
-              href={PHONE_MAIN_TEL}
-              className="mt-2 btn-primary text-center py-3 rounded-lg text-sm font-semibold font-body"
-            >
-              Call {PHONE_MAIN}
-            </a>
           </nav>
         </div>
       )}
@@ -244,12 +234,6 @@ function Hero() {
               className="btn-primary px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center"
             >
               Get Your Free Quote
-            </a>
-            <a
-              href={PHONE_MAIN_TEL}
-              className="btn-outline px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center"
-            >
-              Call {PHONE_MAIN}
             </a>
           </div>
 
@@ -488,43 +472,7 @@ function ContactForm() {
 
             {/* Contact info cards */}
             <div className="space-y-4">
-              <a
-                href={PHONE_MAIN_TEL}
-                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
-                aria-label={`Call main number ${PHONE_MAIN}`}
-              >
-                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
-                  📞
-                </div>
-                <div>
-                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">
-                    Main Office
-                  </p>
-                  <p className="font-display text-navy-800 font-bold group-hover:text-sage-700 transition-colors">
-                    {PHONE_MAIN}
-                  </p>
-                </div>
-              </a>
-
-              <a
-                href={PHONE_CELL_TEL}
-                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
-                aria-label={`Call work cell ${PHONE_CELL}`}
-              >
-                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
-                  📱
-                </div>
-                <div>
-                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">
-                    Work Cell
-                  </p>
-                  <p className="font-display text-navy-800 font-bold group-hover:text-sage-700 transition-colors">
-                    {PHONE_CELL}
-                  </p>
-                </div>
-              </a>
-
-              <a
+              <
                 href={`mailto:${EMAIL}`}
                 className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
                 aria-label={`Email ${EMAIL}`}
@@ -863,30 +811,6 @@ function Footer() {
             Contact Us
           </h3>
           <ul className="space-y-3 font-body text-sm">
-            <li>
-              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">
-                Main Office
-              </span>
-              <a
-                href={PHONE_MAIN_TEL}
-                className="text-navy-200 hover:text-white transition-colors font-semibold"
-                aria-label={`Call main office: ${PHONE_MAIN}`}
-              >
-                {PHONE_MAIN}
-              </a>
-            </li>
-            <li>
-              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">
-                Work Cell
-              </span>
-              <a
-                href={PHONE_CELL_TEL}
-                className="text-navy-200 hover:text-white transition-colors font-semibold"
-                aria-label={`Call work cell: ${PHONE_CELL}`}
-              >
-                {PHONE_CELL}
-              </a>
-            </li>
             <li>
               <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">
                 Email
