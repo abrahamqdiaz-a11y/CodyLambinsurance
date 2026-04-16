@@ -114,8 +114,7 @@ export default function PrivacyPolicy() {
               </li>
               <li>Message and data rates may apply.</li>
               <li>
-                Recipients may opt out at any time by replying STOP to any text
-                message or reply HELP for assistance.
+                Reply STOP to opt out or HELP for help.
               </li>
               <li>
                 You may also contact us at{" "}
@@ -141,7 +140,28 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              5. Sharing Your Information
+              5. SMS Communication Policy
+            </h2>
+            <p className="mb-3">
+              By providing your phone number, you consent to receive SMS
+              messages from Lamb Insurance Agency related to:
+            </p>
+            <ul className="list-disc pl-5 space-y-2 mb-3">
+              <li>Insurance quotes</li>
+              <li>Policy updates</li>
+              <li>Customer support and service notifications</li>
+            </ul>
+            <p>
+              Message frequency varies depending on your interaction with our
+              agency. Message and data rates may apply. You can reply STOP at
+              any time to opt out or reply HELP for assistance. We do not share
+              or sell your phone number to third parties for marketing purposes.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
+              6. Sharing Your Information
             </h2>
             <p>
               We do <strong>not</strong> sell your personal information. We may
@@ -164,7 +184,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              6. Data Retention
+              7. Data Retention
             </h2>
             <p>
               We retain your information only as long as necessary to fulfill
@@ -175,7 +195,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              7. Your Rights
+              8. Your Rights
             </h2>
             <p>
               Depending on your state of residence, you may have the right to
@@ -194,7 +214,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              8. Cookies &amp; Analytics
+              9. Cookies &amp; Analytics
             </h2>
             <p>
               Our website may use cookies and similar tracking technologies to
@@ -206,7 +226,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              9. Security
+              10. Security
             </h2>
             <p>
               We implement reasonable technical and organizational measures to
@@ -218,7 +238,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              10. Changes to This Policy
+              11. Changes to This Policy
             </h2>
             <p>
               We may update this Privacy Policy from time to time. Changes will
@@ -230,7 +250,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              11. Contact Us
+              12. Contact Us
             </h2>
             <p>
               If you have questions about this Privacy Policy, please contact
