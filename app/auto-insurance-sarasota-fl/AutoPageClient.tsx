@@ -5,48 +5,76 @@ import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 
 const EMAIL = "calamb@acg.aaa.com";
+const PHONE_DISPLAY = "(941) 555-0100";
+const PHONE_HREF = "+19415550100";
 
-const autoCoverageItems = [
-  "Liability coverage — bodily injury and property damage",
-  "Collision coverage for your vehicle",
-  "Comprehensive coverage — theft, weather, and more",
-  "Uninsured and underinsured motorist protection",
-  "Medical payments and personal injury protection",
-  "Roadside assistance and rental reimbursement options",
+const switchReasons = [
+  {
+    title: "El precio subió al renovar",
+    text: "Si tu póliza aumentó en la renovación, te ayudamos a comparar opciones de seguro de auto Sarasota y revisar descuentos disponibles.",
+  },
+  {
+    title: "Quieren mejor cobertura",
+    text: "Muchos conductores buscan algo más que lo mínimo. Te explicamos en español qué incluye cada opción para proteger mejor a tu familia.",
+  },
+  {
+    title: "Servicio al cliente deficiente",
+    text: "Aquí hablas con personas reales de una agencia local, no con un call center. Resolvemos tus dudas con claridad y seguimiento.",
+  },
+  {
+    title: "Nuevo carro o nueva licencia",
+    text: "Si compraste auto o empezaste a manejar en Florida, te guiamos paso a paso con una cotización de seguro Sarasota fácil de entender.",
+  },
 ];
 
-const processSteps = [
-  "Tell us about your vehicles and drivers",
-  "We build your auto quote — same day",
-  "Review your coverage options together",
-  "We handle everything from there — one agent, one call",
+const coverageItems = [
+  {
+    title: "Liability (Responsabilidad Civil)",
+    text: "Ayuda a cubrir daños a otras personas o propiedad cuando tú eres responsable de un accidente.",
+  },
+  {
+    title: "Full Coverage",
+    text: "Combinación común de coberturas para una protección más completa según tu vehículo y tu situación.",
+  },
+  {
+    title: "Collision",
+    text: "Ayuda con daños a tu carro después de un choque, sin importar quién tuvo la culpa.",
+  },
+  {
+    title: "Comprehensive",
+    text: "Cubre situaciones fuera de choque, como robo, vandalismo o ciertos eventos del clima.",
+  },
+  {
+    title: "Uninsured Motorist",
+    text: "Te protege si te impacta un conductor sin seguro o con cobertura insuficiente.",
+  },
 ];
 
 const faqItems = [
   {
-    question: "How do I know if I have enough auto coverage in Florida?",
+    question: "¿Cuánto cuesta aseguranza de auto en Sarasota?",
     answer:
-      "Florida has specific minimum requirements, but minimums rarely provide enough protection in a real accident. A local agent reviews your full picture — your vehicles, assets, and risk — and recommends coverage levels that actually protect you, not just the legal minimum.",
+      "Depende de tu historial de manejo, vehículo, tipo de cobertura y descuentos. En Lamb Insurance Agency comparamos opciones para ayudarte a encontrar una prima que se ajuste a tu presupuesto.",
   },
   {
-    question: "Can I save money by bundling my auto and home insurance?",
+    question: "¿Puedo bajar mi pago mensual?",
     answer:
-      "In most cases, yes. When you place both policies through the same agent, bundle discounts apply to your combined premium. The exact savings depend on your specific policies. Contact Lamb Insurance Agency for a same-day bundle quote that prices both together.",
+      "En muchos casos sí. Podemos revisar deducibles, descuentos y niveles de cobertura para buscar un pago mensual más cómodo.",
   },
   {
-    question: "What happens if I'm hit by an uninsured driver in Sarasota?",
+    question: "¿Qué cobertura necesito en Florida?",
     answer:
-      "Florida has a high rate of uninsured drivers. Uninsured motorist coverage on your policy steps in to cover your costs when the at-fault driver has no insurance or not enough. It's one of the most important coverage components for Florida drivers and one we always walk through with every client.",
+      "Florida exige coberturas mínimas, pero eso no siempre es suficiente para todos. Te explicamos en español tus opciones para que elijas con confianza.",
   },
   {
-    question: "Do I need separate coverage for each vehicle in my household?",
+    question: "¿Puedo cambiarme antes de renovar?",
     answer:
-      "All vehicles in your household should be listed on your policy. Multi-vehicle households often qualify for multi-vehicle discounts. We review your full household situation and quote it accurately — no surprises when you need to file a claim.",
+      "Sí, normalmente puedes cambiar antes de la renovación. Te ayudamos a revisar tiempos y a hacer una transición clara.",
   },
   {
-    question: "How quickly can I get a quote?",
+    question: "¿Atienden en español?",
     answer:
-      "Same day. Fill out the form below or email us directly, and we'll be back in touch promptly with your options. No pressure, no jargon — just clear information about your coverage.",
+      "Sí. Nuestro equipo te atiende en español para que entiendas bien tu póliza, tu cotización y cada paso del proceso.",
   },
 ];
 
@@ -79,28 +107,34 @@ function Hero() {
           <div className="inline-flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-4 py-1.5 mb-6">
             <span className="w-2 h-2 rounded-full bg-sage-400 animate-pulse" aria-hidden="true" />
             <span className="text-sage-300 text-xs font-body uppercase tracking-widest">
-              Auto Insurance — Sarasota FL
+              Aseguranza de Auto en Sarasota
             </span>
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Auto Insurance Sarasota FL — Local Agent, Personalized Coverage, Same-Day Quote
+            Aseguranza de Auto en Sarasota, Explicada en Español
           </h1>
 
           <p className="text-navy-200 text-base md:text-lg leading-relaxed mb-10 font-body max-w-3xl">
-            Getting the right auto coverage in Sarasota starts with a local agent who knows your situation — not a website form and a call center. One conversation, same-day quote, coverage built around you.
+            En Lamb Insurance Agency te ayudamos a comparar cobertura, entender tus opciones y encontrar protección accesible sin complicaciones. Seguro de auto en español Sarasota con atención local y humana.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 mb-10">
             <a href="#contact" className="btn-primary px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center">
-              Get Your Auto Quote
+              Obtén Tu Cotización Gratis
+            </a>
+            <a
+              href={`tel:${PHONE_HREF}`}
+              className="px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center border border-white/40 text-white hover:bg-white/10 transition-colors"
+            >
+              Llamar: {PHONE_DISPLAY}
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-6" aria-label="Trust indicators">
-            {[{ text: "Trusted Coverage" }, { text: "Personalized Service" }, { text: "Local Expertise" }].map((b) => (
-              <div key={b.text} className="flex items-center gap-2">
-                <span className="text-navy-300 text-sm font-body">{b.text}</span>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3" aria-label="Indicadores de confianza">
+            {["Atención en Español", "Ayuda Local en Sarasota", "Cotización Rápida", "Opciones Claras"].map((item) => (
+              <div key={item} className="bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-sm text-navy-100 font-body">
+                {item}
               </div>
             ))}
           </div>
@@ -110,24 +144,23 @@ function Hero() {
   );
 }
 
-function WhyLocalSection() {
+function WhyPeopleSwitchSection() {
   return (
-    <section id="why-auto" className="bg-cream py-20 md:py-28">
+    <section className="bg-cream py-20 md:py-28" aria-labelledby="switch-heading">
       <div className="max-w-6xl mx-auto px-5">
-        <div className="animate-on-scroll max-w-4xl">
+        <div className="max-w-3xl mb-10 animate-on-scroll">
           <div className="section-rule" />
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">Why Work With a Local Sarasota Auto Insurance Agent?</h2>
-          <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
-            <p>
-              Most drivers in Sarasota can find a lower rate on a national website — until something goes wrong. A local agent means someone who knows your policy when you call, can advocate for you at claim time, and takes the time to build coverage that actually fits your life.
-            </p>
-            <p>
-              At Lamb Insurance Agency, we review your coverage with you so you understand what you have and what you don&#39;t. We look at your vehicles, your driving habits, and your household — then we build a quote that makes sense for your situation.
-            </p>
-            <p>
-              And when you <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundle your home and auto</Link> through the same agent, you typically save more and deal with far less paperwork. But whether you bundle or not, you get one local person who handles everything.
-            </p>
-          </div>
+          <h2 id="switch-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
+            ¿Por Qué la Gente se Cambia de Aseguranza de Carro en Sarasota?
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {switchReasons.map((item, index) => (
+            <article key={item.title} className={`bg-white border border-navy-100 rounded-2xl p-6 animate-on-scroll animate-on-scroll-delay-${Math.min(index + 1, 4)}`}>
+              <h3 className="font-display text-xl font-bold text-navy-800 mb-3">{item.title}</h3>
+              <p className="text-navy-600 font-body text-base leading-relaxed">{item.text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -140,17 +173,43 @@ function CoverageSection() {
       <div className="max-w-6xl mx-auto px-5">
         <div className="max-w-3xl mb-12 animate-on-scroll">
           <div className="section-rule" />
-          <h2 id="coverage-heading" className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">What Your Auto Policy Can Cover</h2>
+          <h2 id="coverage-heading" className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+            Coberturas de Seguro de Auto que Te Explicamos Sin Enredos
+          </h2>
         </div>
-        <ul className="grid md:grid-cols-2 gap-6" aria-label="Auto coverage checklist">
-          {autoCoverageItems.map((item, index) => (
-            <li key={item} className={`flex items-start gap-4 animate-on-scroll animate-on-scroll-delay-${Math.min(index + 1, 4)}`}>
-              <div className="w-9 h-9 rounded-full bg-sage-500/20 border border-sage-400/40 flex items-center justify-center mt-0.5" aria-hidden="true">
-                <svg className="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <p className="text-navy-200 font-body text-base leading-relaxed">{item}</p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {coverageItems.map((item) => (
+            <article key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 animate-on-scroll">
+              <h3 className="font-display text-xl font-bold text-white mb-3">{item.title}</h3>
+              <p className="text-navy-200 font-body text-base leading-relaxed">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhyChooseSection() {
+  return (
+    <section className="bg-warm py-20 md:py-28" aria-labelledby="choose-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl mb-10 animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="choose-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
+            ¿Por Qué Elegir Lamb Insurance Agency?
+          </h2>
+        </div>
+        <ul className="grid md:grid-cols-2 gap-4 text-navy-700 font-body">
+          {[
+            "Agencia local en Sarasota",
+            "Personas reales, no un call center",
+            "Te explicamos opciones claramente",
+            "Proceso de cotización rápido",
+            "Ayuda para elegir según tu presupuesto",
+          ].map((item) => (
+            <li key={item} className="bg-white border border-navy-100 rounded-xl p-4 animate-on-scroll">
+              {item}
             </li>
           ))}
         </ul>
@@ -161,51 +220,24 @@ function CoverageSection() {
 
 function SarasotaSection() {
   return (
-    <section className="bg-cream py-20 md:py-28">
+    <section className="bg-cream py-20 md:py-28" aria-labelledby="sarasota-heading">
       <div className="max-w-6xl mx-auto px-5">
         <div className="animate-on-scroll max-w-4xl">
           <div className="section-rule" />
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">Built Around Your Sarasota Situation</h2>
+          <h2 id="sarasota-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
+            Ayuda Local para Conductores de Sarasota
+          </h2>
           <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
             <p>
-              Whether you drive one car or have multiple vehicles in your household, your auto policy is quoted around your actual situation — your vehicles, your drivers, your coverage history, and your budget.
+              Trabajamos con conductores de Sarasota que manejan todos los días para trabajo, escuela y familia. Si buscas aseguranza de auto en Sarasota con alguien local que sí te explique, aquí estamos.
             </p>
             <p>
-              We work with households across Sarasota, Lakewood Ranch, Venice, North Port, and the surrounding area. We know the local roads, the coverage requirements that matter here, and what Sarasota drivers are typically paying — and overpaying — for auto coverage.
+              Te orientamos sobre requisitos de Florida, opciones de cobertura para tu rutina y formas de mantener tu póliza clara en cada renovación.
             </p>
             <p>
-              If you&#39;re also looking to protect your home, we can build a bundle that covers both. You can also explore <Link href="/home-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">home insurance in Sarasota</Link> and <Link href="/condo-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">condo insurance</Link> options through the same local agency.
+              También te podemos ayudar si buscas combinar pólizas. Conoce opciones de <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundle en Sarasota</Link> y recibe apoyo en español.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ProcessSection() {
-  return (
-    <section id="how-it-works" className="bg-navy-900 py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-5">
-        <div className="max-w-3xl mb-12 animate-on-scroll">
-          <div className="section-rule" />
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">How It Works</h2>
-        </div>
-        <ol className="grid md:grid-cols-2 gap-6" aria-label="Auto insurance process">
-          {processSteps.map((step, index) => (
-            <li key={step} className="bg-white/5 border border-white/10 rounded-2xl p-6 animate-on-scroll">
-              <div className="w-10 h-10 rounded-full bg-sage-500/20 border border-sage-400/40 text-sage-300 font-display text-lg font-bold flex items-center justify-center mb-4">
-                {index + 1}
-              </div>
-              <p className="text-white font-display text-lg leading-tight mb-2">Step {index + 1}</p>
-              <p className="text-navy-200 font-body text-base leading-relaxed">{step}</p>
-            </li>
-          ))}
-        </ol>
-        <div className="mt-10 animate-on-scroll animate-on-scroll-delay-2">
-          <a href="#contact" className="btn-primary px-7 py-3.5 rounded-lg font-semibold font-body text-base inline-flex">
-            Get Your Auto Quote — Same Day Response
-          </a>
         </div>
       </div>
     </section>
@@ -221,7 +253,7 @@ function FAQSection() {
         <div className="max-w-3xl mb-12 animate-on-scroll">
           <div className="section-rule" />
           <h2 id="faq-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
-            Frequently Asked Questions
+            Preguntas Frecuentes
           </h2>
         </div>
         <div className="space-y-4">
@@ -256,7 +288,7 @@ function FAQSection() {
 
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
-  const [insuranceType, setInsuranceType] = useState("");
+  const [insuranceType, setInsuranceType] = useState("Auto");
   const [loading, setLoading] = useState(false);
   const [tcpaConsent, setTcpaConsent] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -280,9 +312,10 @@ function ContactForm() {
       setSubmitted(true);
       setTcpaConsent(false);
       formRef.current?.reset();
+      setInsuranceType("Auto");
     } catch (err) {
       console.error(err);
-      alert("Something went wrong submitting the form. Please call us directly or try again.");
+      alert("Hubo un problema al enviar el formulario. Por favor llámanos directamente o intenta de nuevo.");
     } finally {
       setLoading(false);
     }
@@ -299,26 +332,37 @@ function ContactForm() {
           <div className="lg:col-span-2 animate-on-scroll">
             <div className="section-rule" />
             <h2 id="contact-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
-              Get Your Bundle Quote — Same Day Response
+              No Esperes a la Renovación o a un Accidente
             </h2>
             <p className="text-navy-600 font-body text-base leading-relaxed mb-8">
-              Ready to bundle your home and auto? Fill out the form and we&#39;ll review your options, pricing, and bundle savings with you.
+              Recibe ayuda local hoy mismo para tu aseguranza de carro Sarasota. Te explicamos opciones en español y te guiamos para tomar una decisión clara.
             </p>
 
             <div className="space-y-4">
               <a
+                href={`tel:${PHONE_HREF}`}
+                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
+                aria-label={`Llamar al ${PHONE_DISPLAY}`}
+              >
+                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
+                  📞
+                </div>
+                <div>
+                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">Llamar Ahora</p>
+                  <p className="font-display text-navy-800 font-bold text-sm group-hover:text-sage-700 transition-colors">{PHONE_DISPLAY}</p>
+                </div>
+              </a>
+              <a
                 href={`mailto:${EMAIL}`}
                 className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
-                aria-label={`Email ${EMAIL}`}
+                aria-label={`Enviar correo a ${EMAIL}`}
               >
                 <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
                   ✉️
                 </div>
                 <div>
-                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">Email Us</p>
-                  <p className="font-display text-navy-800 font-bold text-sm group-hover:text-sage-700 transition-colors break-all">
-                    {EMAIL}
-                  </p>
+                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">Correo</p>
+                  <p className="font-display text-navy-800 font-bold text-sm group-hover:text-sage-700 transition-colors break-all">{EMAIL}</p>
                 </div>
               </a>
             </div>
@@ -328,12 +372,12 @@ function ContactForm() {
             <div className="bg-white rounded-2xl shadow-xl shadow-navy-100/50 p-8 md:p-10 border border-navy-100">
               {submitted ? (
                 <div className="text-center py-10" role="alert" aria-live="polite">
-                  <h3 className="font-display text-2xl font-bold text-navy-800 mb-3">Thank You!</h3>
+                  <h3 className="font-display text-2xl font-bold text-navy-800 mb-3">¡Gracias!</h3>
                   <p className="text-navy-600 font-body text-base leading-relaxed mb-6 max-w-sm mx-auto">
-                    Your quote request has been received. We&#39;ll review your information and reach out to you shortly!
+                    Recibimos tu solicitud. Un agente local te contactará pronto.
                   </p>
                   <button onClick={() => setSubmitted(false)} className="btn-primary px-6 py-3 rounded-lg font-semibold font-body text-sm">
-                    Submit Another Request
+                    Enviar Otra Solicitud
                   </button>
                 </div>
               ) : (
@@ -344,77 +388,76 @@ function ContactForm() {
                   data-netlify="true"
                   netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
-                  aria-label="Quote request form"
+                  aria-label="Formulario de cotización"
                   noValidate
                 >
                   <input type="hidden" name="form-name" value="quote-request" />
                   <div hidden aria-hidden="true">
                     <label>
-                      Don&#39;t fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                      No llenar este campo: <input name="bot-field" tabIndex={-1} autoComplete="off" />
                     </label>
                   </div>
 
-                  <h3 className="font-display text-xl font-bold text-navy-800 mb-7">Request a Free Quote</h3>
+                  <h3 className="font-display text-xl font-bold text-navy-800 mb-7">Recibir Cotización</h3>
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div className="sm:col-span-2">
-                      <label htmlFor="full-name" className={labelClass}>Full Name <span className="text-red-500">*</span></label>
-                      <input id="full-name" type="text" name="full-name" required autoComplete="name" placeholder="Jane Smith" className={inputClass} />
+                      <label htmlFor="full-name" className={labelClass}>Nombre Completo <span className="text-red-500">*</span></label>
+                      <input id="full-name" type="text" name="full-name" required autoComplete="name" placeholder="María López" className={inputClass} />
                     </div>
 
                     <div className="sm:col-span-2">
-                      <label htmlFor="address" className={labelClass}>Address <span className="text-red-500">*</span></label>
+                      <label htmlFor="address" className={labelClass}>Dirección <span className="text-red-500">*</span></label>
                       <input id="address" type="text" name="address" required autoComplete="street-address" placeholder="123 Main St, Sarasota, FL 34230" className={inputClass} />
                     </div>
 
                     <div>
                       <label htmlFor="email" className={labelClass}>Email <span className="text-red-500">*</span></label>
-                      <input id="email" type="email" name="email" required autoComplete="email" placeholder="jane@example.com" className={inputClass} />
+                      <input id="email" type="email" name="email" required autoComplete="email" placeholder="correo@ejemplo.com" className={inputClass} />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className={labelClass}>Phone Number <span className="text-red-500">*</span></label>
+                      <label htmlFor="phone" className={labelClass}>Teléfono <span className="text-red-500">*</span></label>
                       <input id="phone" type="tel" name="phone" required autoComplete="tel" placeholder="(941) 555-0100" className={inputClass} />
                     </div>
 
                     <div className="sm:col-span-2">
-                      <label htmlFor="insurance-type" className={labelClass}>Insurance Type <span className="text-red-500">*</span></label>
+                      <label htmlFor="insurance-type" className={labelClass}>Tipo de Seguro <span className="text-red-500">*</span></label>
                       <select id="insurance-type" name="insurance-type" required className={`${inputClass} cursor-pointer`} value={insuranceType} onChange={(e) => setInsuranceType(e.target.value)}>
-                        <option value="" disabled>Select coverage type…</option>
-                        <option value="Home">Home Insurance</option>
-                        <option value="Auto">Auto Insurance</option>
-                        <option value="Life">Life Insurance</option>
-                        <option value="Commercial">Commercial Insurance</option>
-                        <option value="Other">Other</option>
+                        <option value="Auto">Aseguranza de Auto</option>
+                        <option value="Home">Seguro de Casa</option>
+                        <option value="Life">Seguro de Vida</option>
+                        <option value="Commercial">Seguro Comercial</option>
+                        <option value="Other">Otro</option>
                       </select>
                     </div>
 
-                    {(insuranceType === "Auto" || insuranceType === "") && (
-                      <>
-                        <div>
-                          <label htmlFor="vehicle-year-make-model" className={labelClass}>Year, Make &amp; Model <span className="ml-1 text-navy-400 font-normal">(optional)</span></label>
-                          <input id="vehicle-year-make-model" type="text" name="vehicle-year-make-model" autoComplete="off" placeholder="e.g. 2022 Honda Accord" className={inputClass} />
-                        </div>
-                        <div>
-                          <label htmlFor="vin-number" className={labelClass}>VIN Number <span className="ml-1 text-navy-400 font-normal">(if handy)</span></label>
-                          <input id="vin-number" type="text" name="vin-number" autoComplete="off" placeholder="17-character VIN" maxLength={17} className={inputClass} />
-                        </div>
-                      </>
-                    )}
+                    <div>
+                      <label htmlFor="vehicle-year-make-model" className={labelClass}>Año, Marca y Modelo <span className="ml-1 text-navy-400 font-normal">(opcional)</span></label>
+                      <input id="vehicle-year-make-model" type="text" name="vehicle-year-make-model" autoComplete="off" placeholder="Ej. 2022 Honda Accord" className={inputClass} />
+                    </div>
+                    <div>
+                      <label htmlFor="vin-number" className={labelClass}>Número VIN <span className="ml-1 text-navy-400 font-normal">(si lo tienes)</span></label>
+                      <input id="vin-number" type="text" name="vin-number" autoComplete="off" placeholder="VIN de 17 caracteres" maxLength={17} className={inputClass} />
+                    </div>
 
                     <div className="sm:col-span-2">
-                      <label htmlFor="message" className={labelClass}>Message / Additional Details <span className="ml-1 text-navy-400 font-normal">(optional)</span></label>
-                      <textarea id="message" name="message" rows={4} placeholder="Tell us anything that would help us find the right coverage for you…" className={inputClass} />
+                      <label htmlFor="message" className={labelClass}>Mensaje / Detalles Adicionales <span className="ml-1 text-navy-400 font-normal">(opcional)</span></label>
+                      <textarea id="message" name="message" rows={4} placeholder="Cuéntanos lo que te gustaría mejorar de tu cobertura actual…" className={inputClass} />
                     </div>
                   </div>
 
                   <button type="submit" disabled={loading} className="btn-primary mt-7 w-full py-4 rounded-lg font-semibold font-body text-base flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
-                    {loading ? "Sending…" : "Submit My Quote Request →"}
+                    {loading ? "Enviando…" : "Recibir Cotización"}
                   </button>
+
+                  <a href={`tel:${PHONE_HREF}`} className="mt-3 w-full inline-flex justify-center px-6 py-3 rounded-lg border border-navy-300 text-navy-800 font-semibold font-body hover:bg-navy-50 transition-colors">
+                    Llamar Ahora
+                  </a>
 
                   <div className="mt-6 p-4 rounded-xl border-2 border-navy-100 bg-navy-50/50">
                     <p className="text-xs text-navy-600 font-body leading-relaxed mb-3">
-                      By checking the box below, you confirm your preference regarding SMS messages from Lamb Insurance Agency. Messages may include insurance quotes, policy updates, and customer support. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance. Consent is not a condition of purchase. See our <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">Terms &amp; Conditions</Link> and <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">Privacy Policy</Link>.
+                      Al marcar la casilla, confirmas tu preferencia para mensajes SMS de Lamb Insurance Agency. Los mensajes pueden incluir cotizaciones, actualizaciones de póliza y soporte al cliente. La frecuencia varía y pueden aplicar cargos de tu proveedor. Responde STOP para cancelar o HELP para ayuda. Tu consentimiento no es condición de compra. Consulta nuestros <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">Términos y Condiciones</Link> y <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">Aviso de Privacidad</Link>.
                     </p>
                     <label htmlFor="tcpa-consent" className="flex items-start gap-3 cursor-pointer group">
                       <div className="relative flex-shrink-0 mt-0.5">
@@ -427,7 +470,7 @@ function ContactForm() {
                           )}
                         </div>
                       </div>
-                      <p className="text-xs text-navy-600 font-body leading-relaxed">I agree to receive SMS text messages from Lamb Insurance Agency at the phone number provided.</p>
+                      <p className="text-xs text-navy-600 font-body leading-relaxed">Acepto recibir mensajes de texto SMS de Lamb Insurance Agency en el número proporcionado.</p>
                     </label>
                   </div>
                 </form>
@@ -448,10 +491,10 @@ export default function AutoPageClient() {
       <ServicePageHeader />
       <main id="main-content">
         <Hero />
-        <WhyLocalSection />
+        <WhyPeopleSwitchSection />
         <CoverageSection />
+        <WhyChooseSection />
         <SarasotaSection />
-        <ProcessSection />
         <FAQSection />
         <ContactForm />
       </main>
