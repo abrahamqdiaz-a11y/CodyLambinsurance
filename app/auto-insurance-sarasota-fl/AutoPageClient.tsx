@@ -2,8 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const EMAIL = "calamb@acg.aaa.com";
+const INSURANCE_LINKS = [
+  { href: "/auto-insurance-sarasota-fl", label: "Auto Insurance" },
+  { href: "/condo-insurance-sarasota-fl", label: "Condo Insurance" },
+  { href: "/flood-insurance-sarasota-fl", label: "Flood Insurance" },
+  { href: "/bundle-insurance-sarasota-fl", label: "Bundle Insurance" },
+  { href: "/citizens-insurance-alternative-sarasota-fl", label: "Citizens Insurance Alternative" },
+];
 
 const autoCoverageItems = [
   "Liability coverage — bodily injury and property damage",
@@ -70,6 +78,10 @@ function useScrollReveal() {
 function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [insuranceOpen, setInsuranceOpen] = useState(false);
+  const [mobileInsuranceOpen, setMobileInsuranceOpen] = useState(false);
+  const pathname = usePathname();
+  const insuranceMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -77,11 +89,16 @@ function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/#services", label: "Services" },
-    { href: "/#why-us", label: "Why Us" },
-  ];
+  useEffect(() => {
+    const onPointerDown = (event: MouseEvent) => {
+      if (insuranceMenuRef.current && !insuranceMenuRef.current.contains(event.target as Node)) {
+        setInsuranceOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", onPointerDown);
+    return () => document.removeEventListener("mousedown", onPointerDown);
+  }, []);
 
   return (
     <header
@@ -104,21 +121,46 @@ function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          {navLinks.map((l) => (
+          <Link href="/" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Home</Link>
+          <div
+            ref={insuranceMenuRef}
+            className="relative"
+            onMouseEnter={() => setInsuranceOpen(true)}
+            onMouseLeave={() => setInsuranceOpen(false)}
+          >
             <Link
-              key={l.href}
-              href={l.href}
+              href="/#services"
+              onClick={() => setInsuranceOpen(false)}
               className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors"
             >
-              {l.label}
+              Insurance
             </Link>
-          ))}
-          <a
-            href="#contact"
+            {insuranceOpen && (
+              <div className="absolute top-full left-0 mt-2 min-w-72 rounded-lg border border-white/10 bg-navy-950/98 backdrop-blur-md shadow-lg shadow-black/20 py-2">
+                {INSURANCE_LINKS.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${isActive ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                      onClick={() => setInsuranceOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+          <Link href="/about" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">About</Link>
+          <Link href="/contact" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Contact</Link>
+          <Link
+            href="/get-a-quote"
             className="btn-primary px-5 py-2.5 rounded-lg text-sm font-semibold font-body tracking-wide"
           >
-            Get Your Auto Quote
-          </a>
+            Get a Quote
+          </Link>
         </nav>
 
         <button
@@ -148,23 +190,38 @@ function Header() {
       {open && (
         <div className="md:hidden bg-navy-950/98 backdrop-blur-md border-t border-white/10">
           <nav className="flex flex-col px-5 py-4 gap-1" aria-label="Mobile navigation">
-            {[...navLinks, { href: "#contact", label: "Get Your Auto Quote" }].map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="text-navy-200 hover:text-white py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors"
-                onClick={() => setOpen(false)}
-              >
-                {l.label}
-              </Link>
-            ))}
+            <Link href="/" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Home</Link>
+            <button
+              type="button"
+              onClick={() => setMobileInsuranceOpen((prev) => !prev)}
+              className="text-left text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors"
+              aria-expanded={mobileInsuranceOpen}
+            >
+              Insurance
+            </button>
+            {mobileInsuranceOpen && (
+              <div className="pl-4">
+                {INSURANCE_LINKS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block min-h-11 py-3 px-3 rounded-lg font-body text-sm tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+            <Link href="/about" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>About</Link>
+            <Link href="/contact" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Contact</Link>
+            <Link href="/get-a-quote" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Get a Quote</Link>
           </nav>
         </div>
       )}
     </header>
   );
 }
-
 function Hero() {
   return (
     <section id="home" className="hero-pattern min-h-screen flex flex-col justify-center relative overflow-hidden">
@@ -566,11 +623,13 @@ function Footer() {
         </div>
 
         <div>
-          <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-5">Coverage</h3>
+          <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-5">Insurance</h3>
           <ul className="space-y-2 font-body text-sm mb-8">
-            <li><Link href="/home-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Home Insurance</Link></li>
             <li><Link href="/auto-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Auto Insurance</Link></li>
             <li><Link href="/condo-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Condo Insurance</Link></li>
+            <li><Link href="/flood-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Flood Insurance</Link></li>
+            <li><Link href="/bundle-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Bundle Insurance</Link></li>
+            <li><Link href="/citizens-insurance-alternative-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Citizens Insurance Alternative</Link></li>
           </ul>
 
           <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-4">Legal</h3>
