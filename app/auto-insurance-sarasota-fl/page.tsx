@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AutoPageClient from "./AutoPageClient";
 
 export const metadata: Metadata = {
-  title: "Aseguranza de Auto en Sarasota | Lamb Insurance Agency",
+  title: "Auto Insurance in Sarasota | Lamb Insurance Agency",
   description:
-    "Aseguranza de Auto en Sarasota con atención en español. Compara opciones, entiende tu cobertura y recibe una cotización rápida con ayuda local.",
+    "Auto insurance in Sarasota from a local agency. Compare options, understand your coverage, and get a fast quote with personal, local help.",
   alternates: {
     canonical: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl",
   },
@@ -32,42 +32,42 @@ const schemas = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "¿Cuánto cuesta aseguranza de auto en Sarasota?",
+          name: "How much does auto insurance cost in Sarasota?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "El costo depende de factores como tu historial de manejo, vehículo, tipo de cobertura y descuentos disponibles. En Lamb Insurance Agency te ayudamos a comparar opciones para encontrar una prima que se ajuste a tu presupuesto.",
+            text: "The cost depends on factors like your driving history, vehicle, type of coverage, and available discounts. At Lamb Insurance Agency we help you compare options to find a premium that fits your budget.",
           },
         },
         {
           "@type": "Question",
-          name: "¿Puedo bajar mi pago mensual?",
+          name: "Can I lower my monthly payment?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Muchas veces sí. Podemos revisar deducibles, descuentos y opciones de cobertura para buscar un pago mensual más cómodo sin perder la protección importante para ti.",
+            text: "In many cases, yes. We can review deductibles, discounts, and coverage options to find a more affordable monthly payment without losing the coverage that matters to you.",
           },
         },
         {
           "@type": "Question",
-          name: "¿Qué cobertura necesito en Florida?",
+          name: "What coverage do I need in Florida?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Florida exige coberturas mínimas, pero muchas familias necesitan protección adicional. Te explicamos en español qué cubre cada opción para que tomes una decisión informada.",
+            text: "Florida requires minimum coverage, but many families need additional protection. We walk you through what each option covers so you can make an informed decision.",
           },
         },
         {
           "@type": "Question",
-          name: "¿Puedo cambiarme antes de renovar?",
+          name: "Can I switch before my renewal date?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sí, en muchos casos puedes cambiar de póliza antes de la fecha de renovación. Nuestro equipo local te orienta sobre los pasos para que la transición sea clara y sencilla.",
+            text: "Yes, in many cases you can switch policies before your renewal date. Our local team guides you through the steps to make the transition clear and easy.",
           },
         },
         {
           "@type": "Question",
-          name: "¿Atienden en español?",
+          name: "Do you offer bilingual service?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sí. Te atendemos en español para que entiendas tu cotización, cobertura y próximos pasos con total claridad.",
+            text: "Yes. Our team is available in both English and Spanish so you fully understand your quote, coverage, and next steps.",
           },
         },
       ],
@@ -84,7 +84,7 @@ const schemas = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Aseguranza de Auto en Sarasota",
+          name: "Auto Insurance in Sarasota",
           item: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl",
         },
       ],
