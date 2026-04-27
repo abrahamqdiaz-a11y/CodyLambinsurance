@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BundleInsurancePage from "./BundlePageClient";
+import BundleInsurancePage from "./BundleInsurancePage";
 
 export const metadata: Metadata = {
   title: "Bundle Home and Auto Insurance Sarasota FL | Lamb Insurance Agency",
