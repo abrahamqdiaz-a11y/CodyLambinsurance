@@ -403,6 +403,74 @@ function ContactForm() {
   );
 }
 
+function JsonLdSchemas() {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "InsuranceAgency"],
+    name: "Lamb Insurance Agency",
+    url: "https://lambinsuranceagency.com/bundle-insurance-sarasota-fl",
+    email: EMAIL,
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "FL",
+      addressCountry: "US",
+    },
+    serviceArea: {
+      "@type": "State",
+      name: "Florida",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Insurance Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Auto Insurance" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Home Insurance" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Bundle Home and Auto Insurance" } },
+      ],
+    },
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://lambinsuranceagency.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Bundle Insurance Sarasota FL",
+        item: "https://lambinsuranceagency.com/bundle-insurance-sarasota-fl",
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+    </>
+  );
+}
+
 export default function BundleInsurancePage() {
   useScrollReveal();
 
