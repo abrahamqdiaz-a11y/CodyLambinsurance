@@ -30,7 +30,7 @@ export default function Terms() {
           Terms &amp; Conditions
         </h1>
         <p className="text-navy-500 font-body text-sm mb-10">
-          Last updated: April 6, 2025
+          Last updated: April 15, 2026
         </p>
 
         <div className="prose max-w-none font-body text-navy-700 space-y-8">
@@ -142,7 +142,68 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              9. Governing Law
+              9. Telephone Consumer Protection Act (TCPA)
+            </h2>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                We obtain prior express written consent before contacting
+                individuals by phone, text message (SMS), or autodialer.
+              </li>
+              <li>
+                Consent is collected through our website contact form and is
+                not a condition of purchase.
+              </li>
+              <li>
+                By opting in, customers agree to receive text messages related
+                to insurance quotes, policy updates, and customer support from
+                Lamb Insurance Agency.
+              </li>
+              <li>
+                Message frequency varies depending on customer interaction.
+              </li>
+              <li>Message and data rates may apply.</li>
+              <li>
+                Recipients may opt out at any time by replying STOP to any
+                text message or reply HELP for assistance.
+              </li>
+              <li>
+                You may also contact us at{" "}
+                <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
+                  calamb@acg.aaa.com
+                </a>{" "}
+                for assistance.
+              </li>
+              <li>
+                We do not sell or share phone numbers with third parties for
+                marketing purposes.
+              </li>
+              <li>
+                We comply with all applicable TCPA regulations and FCC
+                guidelines.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
+              10. SMS Terms of Service
+            </h2>
+            <p>
+              By opting into SMS from a web form or other medium, you are
+              agreeing to receive SMS messages from Lamb Insurance Agency LLC.
+              This includes SMS messages for account notifications. Message
+              frequency varies. Message and data rates may apply. See privacy
+              policy at{" "}
+              <Link href="/privacy-policy" className="text-sage-600 hover:underline">
+                lambinsuranceagency.com/privacy-policy
+              </Link>
+              . Message HELP for help. Reply STOP to any message to opt out.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
+              11. Governing Law
             </h2>
             <p>
               These Terms &amp; Conditions are governed by the laws of the State
@@ -154,7 +215,7 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              10. Changes to These Terms
+              12. Changes to These Terms
             </h2>
             <p>
               We reserve the right to update these Terms &amp; Conditions at any
@@ -166,7 +227,7 @@ export default function Terms() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              11. Contact Us
+              13. Contact Us
             </h2>
             <p>
               For questions about these Terms &amp; Conditions, please contact
@@ -179,19 +240,10 @@ export default function Terms() {
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:lambinsurance91@gmail.com"
+                  href="mailto:calamb@acg.aaa.com"
                   className="text-sage-600 hover:underline"
                 >
-                  lambinsurance91@gmail.com
-                </a>
-              </p>
-              <p>
-                Phone:{" "}
-                <a
-                  href="tel:+19412252335"
-                  className="text-sage-600 hover:underline"
-                >
-                  941.225.2335
+                  calamb@acg.aaa.com
                 </a>
               </p>
             </address>

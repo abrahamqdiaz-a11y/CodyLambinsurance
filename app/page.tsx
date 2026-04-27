@@ -2,13 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { INSURANCE_LINKS } from "./constants/insuranceLinks";
 
 // ── Constants ──────────────────────────────────────────────
-const PHONE_MAIN = "941.225.2335";
-const PHONE_MAIN_TEL = "tel:+19412252335";
-const PHONE_CELL = "941.404.9673";
-const PHONE_CELL_TEL = "tel:+19414049673";
-const EMAIL = "lambinsurance91@gmail.com";
+const EMAIL = "calamb@acg.aaa.com";
 
 const SERVICES = [
   {
@@ -67,6 +65,10 @@ function useScrollReveal() {
 function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [insuranceOpen, setInsuranceOpen] = useState(false);
+  const [mobileInsuranceOpen, setMobileInsuranceOpen] = useState(false);
+  const pathname = usePathname();
+  const insuranceMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -74,12 +76,15 @@ function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#services", label: "Services" },
-    { href: "#why-us", label: "Why Us" },
-    { href: "#contact", label: "Get a Quote" },
-  ];
+  useEffect(() => {
+    const onPointerDown = (event: MouseEvent) => {
+      if (insuranceMenuRef.current && !insuranceMenuRef.current.contains(event.target as Node)) {
+        setInsuranceOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    return () => document.removeEventListener("mousedown", onPointerDown);
+  }, []);
 
   return (
     <header
@@ -91,8 +96,8 @@ function Header() {
     >
       <div className="max-w-6xl mx-auto px-5 flex items-center justify-between h-16 md:h-20">
         {/* Wordmark */}
-        <a
-          href="#home"
+        <Link
+          href="/"
           className="flex flex-col leading-none group"
           aria-label="Lamb Insurance Agency — home"
         >
@@ -102,25 +107,47 @@ function Header() {
           <span className="text-sage-400 text-xs uppercase tracking-[0.2em] font-body">
             Agency
           </span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          {navLinks.slice(0, 3).map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+          <Link href="/" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Home</Link>
+          <div
+            ref={insuranceMenuRef}
+            className="relative"
+            onMouseEnter={() => setInsuranceOpen(true)}
+            onMouseLeave={() => setInsuranceOpen(false)}
+          >
+            <Link
+              href="/#services"
+              onClick={() => setInsuranceOpen(false)}
               className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors"
             >
-              {l.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
+              Insurance
+            </Link>
+            {insuranceOpen && (
+              <div className="absolute top-full left-0 min-w-72 rounded-lg border border-white/10 bg-navy-950/98 backdrop-blur-md shadow-lg shadow-black/20 py-2">
+                {INSURANCE_LINKS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                    onClick={() => setInsuranceOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <Link href="/about" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">About</Link>
+          <Link href="/contact" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Contact</Link>
+          <Link
+            href="/get-a-quote"
             className="btn-primary px-5 py-2.5 rounded-lg text-sm font-semibold font-body tracking-wide"
           >
-            Get a Free Quote
-          </a>
+            Get a Quote
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -154,22 +181,32 @@ function Header() {
       {open && (
         <div className="md:hidden bg-navy-950/98 backdrop-blur-md border-t border-white/10">
           <nav className="flex flex-col px-5 py-4 gap-1" aria-label="Mobile navigation">
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-navy-200 hover:text-white py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors"
-                onClick={() => setOpen(false)}
-              >
-                {l.label}
-              </a>
-            ))}
-            <a
-              href={PHONE_MAIN_TEL}
-              className="mt-2 btn-primary text-center py-3 rounded-lg text-sm font-semibold font-body"
+            <Link href="/" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Home</Link>
+            <button
+              type="button"
+              onClick={() => setMobileInsuranceOpen((prev) => !prev)}
+              className="text-left text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors"
+              aria-expanded={mobileInsuranceOpen}
             >
-              📞 Call {PHONE_MAIN}
-            </a>
+              Insurance
+            </button>
+            {mobileInsuranceOpen && (
+              <div className="pl-4">
+                {INSURANCE_LINKS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block min-h-11 py-3 px-3 rounded-lg font-body text-sm tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+            <Link href="/about" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>About</Link>
+            <Link href="/contact" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Contact</Link>
+            <Link href="/get-a-quote" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Get a Quote</Link>
           </nav>
         </div>
       )}
@@ -245,12 +282,6 @@ function Hero() {
             >
               Get Your Free Quote
             </a>
-            <a
-              href={PHONE_MAIN_TEL}
-              className="btn-outline px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center"
-            >
-              📞 Call {PHONE_MAIN}
-            </a>
           </div>
 
           {/* Trust badges */}
@@ -260,12 +291,11 @@ function Hero() {
             aria-label="Trust indicators"
           >
             {[
-              { icon: "🛡️", text: "Trusted Coverage" },
-              { icon: "🤝", text: "Personalized Service" },
-              { icon: "📍", text: "Local Expertise" },
+              { text: "Trusted Coverage" },
+              { text: "Personalized Service" },
+              { text: "Local Expertise" },
             ].map((b) => (
               <div key={b.text} className="flex items-center gap-2">
-                <span className="text-xl" aria-hidden="true">{b.icon}</span>
                 <span className="text-navy-300 text-sm font-body">{b.text}</span>
               </div>
             ))}
@@ -273,11 +303,6 @@ function Hero() {
         </div>
       </div>
 
-      {/* Bottom fade */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-cream to-transparent pointer-events-none"
-        aria-hidden="true"
-      />
     </section>
   );
 }
@@ -352,17 +377,6 @@ function WhyUs() {
       className="bg-navy-900 py-20 md:py-28 relative overflow-hidden"
       aria-labelledby="why-heading"
     >
-      {/* Background shape */}
-      <div
-        className="absolute inset-0 opacity-5 pointer-events-none"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, #97c09a 0, #97c09a 1px, transparent 0, transparent 50%)",
-          backgroundSize: "24px 24px",
-        }}
-        aria-hidden="true"
-      />
-
       <div className="relative z-10 max-w-6xl mx-auto px-5">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left */}
@@ -448,39 +462,30 @@ function ContactForm() {
   const [insuranceType, setInsuranceType] = useState("");
   const [loading, setLoading] = useState(false);
   const [tcpaConsent, setTcpaConsent] = useState(false);
-  const [tcpaError, setTcpaError] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!tcpaConsent) {
-      setTcpaError(true);
-      document.getElementById("tcpa-consent")?.focus();
-      return;
-    }
-    setTcpaError(false);
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
-    formData.append("tcpa-consent", "yes");
-    formData.append("tcpa-consent-timestamp", new Date().toISOString());
-    const encoded = new URLSearchParams();
-    formData.forEach((value, key) => {
-      encoded.append(key, value.toString());
-    });
+    formData.set("tcpa-consent", "yes");
+    formData.set("tcpa-consent-timestamp", new Date().toISOString());
 
     try {
-      await fetch("/", {
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encoded.toString(),
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
+      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
       setSubmitted(true);
       setTcpaConsent(false);
       formRef.current?.reset();
-    } catch {
-      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong submitting the form. Please call us directly or try again.");
     } finally {
       setLoading(false);
     }
@@ -515,42 +520,6 @@ function ContactForm() {
             {/* Contact info cards */}
             <div className="space-y-4">
               <a
-                href={PHONE_MAIN_TEL}
-                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
-                aria-label={`Call main number ${PHONE_MAIN}`}
-              >
-                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
-                  📞
-                </div>
-                <div>
-                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">
-                    Main Office
-                  </p>
-                  <p className="font-display text-navy-800 font-bold group-hover:text-sage-700 transition-colors">
-                    {PHONE_MAIN}
-                  </p>
-                </div>
-              </a>
-
-              <a
-                href={PHONE_CELL_TEL}
-                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
-                aria-label={`Call work cell ${PHONE_CELL}`}
-              >
-                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
-                  📱
-                </div>
-                <div>
-                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">
-                    Work Cell
-                  </p>
-                  <p className="font-display text-navy-800 font-bold group-hover:text-sage-700 transition-colors">
-                    {PHONE_CELL}
-                  </p>
-                </div>
-              </a>
-
-              <a
                 href={`mailto:${EMAIL}`}
                 className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
                 aria-label={`Email ${EMAIL}`}
@@ -576,7 +545,7 @@ function ContactForm() {
               {submitted ? (
                 /* Thank-you state */
                 <div className="text-center py-10" role="alert" aria-live="polite">
-                  <div className="text-6xl mb-5" aria-hidden="true">🎉</div>
+                  <div className="mb-5" aria-hidden="true"></div>
                   <h3 className="font-display text-2xl font-bold text-navy-800 mb-3">
                     Thank You!
                   </h3>
@@ -701,10 +670,10 @@ function ContactForm() {
                         <option value="" disabled>
                           Select coverage type…
                         </option>
-                        <option value="Home">🏡 Home Insurance</option>
-                        <option value="Auto">🚗 Auto Insurance</option>
-                        <option value="Life">❤️ Life Insurance</option>
-                        <option value="Commercial">🏢 Commercial Insurance</option>
+                        <option value="Home">Home Insurance</option>
+                        <option value="Auto">Auto Insurance</option>
+                        <option value="Life">Life Insurance</option>
+                        <option value="Commercial">Commercial Insurance</option>
                         <option value="Other">Other</option>
                       </select>
                     </div>
@@ -800,8 +769,23 @@ function ContactForm() {
                     )}
                   </button>
 
-                  {/* TCPA Consent Checkbox */}
-                  <div className={`mt-6 p-4 rounded-xl border-2 transition-colors ${tcpaError ? "border-red-400 bg-red-50" : "border-navy-100 bg-navy-50/50"}`}>
+                  {/* SMS Disclosure + Consent Checkbox */}
+                  <div className="mt-6 p-4 rounded-xl border-2 border-navy-100 bg-navy-50/50">
+                    <p className="text-xs text-navy-600 font-body leading-relaxed mb-3">
+                      By checking the box below, you confirm your preference regarding SMS
+                      messages from Lamb Insurance Agency. Messages may include insurance
+                      quotes, policy updates, and customer support. Message frequency varies.
+                      Message and data rates may apply. Reply STOP to unsubscribe or HELP for
+                      assistance. Consent is not a condition of purchase. See our{" "}
+                      <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
+                        Terms &amp; Conditions
+                      </Link>
+                      {" "}and{" "}
+                      <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
+                        Privacy Policy
+                      </Link>
+                      .
+                    </p>
                     <label
                       htmlFor="tcpa-consent"
                       className="flex items-start gap-3 cursor-pointer group"
@@ -812,20 +796,13 @@ function ContactForm() {
                           type="checkbox"
                           name="tcpa-consent-checkbox"
                           checked={tcpaConsent}
-                          onChange={(e) => {
-                            setTcpaConsent(e.target.checked);
-                            if (e.target.checked) setTcpaError(false);
-                          }}
+                          onChange={(e) => setTcpaConsent(e.target.checked)}
                           className="sr-only"
-                          aria-required="true"
-                          aria-describedby="tcpa-disclosure"
                         />
                         <div
                           className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
                             tcpaConsent
                               ? "bg-sage-600 border-sage-600"
-                              : tcpaError
-                              ? "border-red-400 bg-white"
                               : "border-navy-300 bg-white group-hover:border-sage-400"
                           }`}
                           aria-hidden="true"
@@ -837,31 +814,11 @@ function ContactForm() {
                           )}
                         </div>
                       </div>
-                      <p
-                        id="tcpa-disclosure"
-                        className="text-xs text-navy-600 font-body leading-relaxed"
-                      >
-                        <span className="font-bold text-navy-800">I consent to be contacted</span> by
-                        Lamb Insurance Agency at the phone number and email address provided above,
-                        including by telephone call, text message (SMS), or email, regarding insurance
-                        products and services. I understand that autodialed or prerecorded calls/texts
-                        may be used.{" "}
-                        <span className="font-semibold text-navy-700">
-                          Consent is not a condition of purchase.
-                        </span>{" "}
-                        Message &amp; data rates may apply. I may opt out at any time by replying STOP
-                        or contacting us directly. See our{" "}
-                        <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
-                          Privacy Policy
-                        </Link>
-                        {" "}for details. <span className="text-red-500" aria-label="required">*</span>
+                      <p className="text-xs text-navy-600 font-body leading-relaxed">
+                        I agree to receive SMS text messages from Lamb Insurance Agency at the
+                        phone number provided.
                       </p>
                     </label>
-                    {tcpaError && (
-                      <p className="mt-2 ml-8 text-xs text-red-600 font-body font-semibold" role="alert" aria-live="polite">
-                        Please check this box to continue — consent is required before we can contact you.
-                      </p>
-                    )}
                   </div>
                 </form>
               )}
@@ -903,30 +860,6 @@ function Footer() {
           <ul className="space-y-3 font-body text-sm">
             <li>
               <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">
-                Main Office
-              </span>
-              <a
-                href={PHONE_MAIN_TEL}
-                className="text-navy-200 hover:text-white transition-colors font-semibold"
-                aria-label={`Call main office: ${PHONE_MAIN}`}
-              >
-                {PHONE_MAIN}
-              </a>
-            </li>
-            <li>
-              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">
-                Work Cell
-              </span>
-              <a
-                href={PHONE_CELL_TEL}
-                className="text-navy-200 hover:text-white transition-colors font-semibold"
-                aria-label={`Call work cell: ${PHONE_CELL}`}
-              >
-                {PHONE_CELL}
-              </a>
-            </li>
-            <li>
-              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">
                 Email
               </span>
               <a
@@ -943,19 +876,14 @@ function Footer() {
         {/* Services + Legal */}
         <div>
           <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-5">
-            Coverage
+            Insurance
           </h3>
           <ul className="space-y-2 font-body text-sm mb-8">
-            {SERVICES.map((s) => (
-              <li key={s.id}>
-                <a
-                  href="#services"
-                  className="text-navy-400 hover:text-navy-200 transition-colors"
-                >
-                  {s.title}
-                </a>
-              </li>
-            ))}
+            <li><Link href="/auto-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Auto Insurance</Link></li>
+            <li><Link href="/condo-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Condo Insurance</Link></li>
+            <li><Link href="/flood-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Flood Insurance</Link></li>
+            <li><Link href="/bundle-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Bundle Insurance</Link></li>
+            <li><Link href="/citizens-insurance-alternative-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Citizens Insurance Alternative</Link></li>
           </ul>
 
           <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-4">

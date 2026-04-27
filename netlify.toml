@@ -1,5 +1,5 @@
 [build]
-  command = "next build"
+  command = "next build && cp public/__forms.html .next/__forms.html"
   publish = ".next"
 
 [[plugins]]

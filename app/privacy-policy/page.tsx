@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
           Privacy Policy
         </h1>
         <p className="text-navy-500 font-body text-sm mb-10">
-          Last updated: April 6, 2025
+          Last updated: April 15, 2026
         </p>
 
         <div className="prose max-w-none font-body text-navy-700 space-y-8">
@@ -95,21 +95,66 @@ export default function PrivacyPolicy() {
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
               4. TCPA Compliance
             </h2>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                We obtain prior express written consent before contacting
+                individuals by phone, text message (SMS), or autodialer.
+              </li>
+              <li>
+                Consent is collected through our website contact form and is
+                not a condition of purchase.
+              </li>
+              <li>
+                By opting in, customers agree to receive text messages related
+                to insurance quotes, policy updates, and customer support from
+                Lamb Insurance Agency.
+              </li>
+              <li>
+                Message frequency varies depending on customer interaction.
+              </li>
+              <li>Message and data rates may apply.</li>
+              <li>
+                Reply STOP to opt out or HELP for help.
+              </li>
+              <li>
+                You may also contact us at{" "}
+                <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
+                  calamb@acg.aaa.com
+                </a>{" "}
+                for assistance.
+              </li>
+              <li>
+                We do not sell or share phone numbers with third parties for
+                marketing purposes.
+              </li>
+              <li>
+                We comply with all applicable TCPA regulations and FCC
+                guidelines.
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
+              5. SMS Communications
+            </h2>
             <p>
-              By submitting our contact form and checking the consent box, you
-              expressly consent to receive calls, texts, and/or emails from Lamb
-              Insurance Agency at the number and address you provided, including
-              via automated dialing systems or pre-recorded messages, regarding
-              insurance products and services. Consent is not a condition of
-              purchase. Message and data rates may apply. You may opt out at any
-              time by replying STOP to any text, clicking unsubscribe in an
-              email, or contacting us directly.
+              If you opt in to receive SMS messages from Lamb Insurance Agency,
+              your phone number and consent data will be used solely to send
+              messages related to insurance quotes, policy updates, and customer
+              support. Message frequency varies. Message and data rates may
+              apply. Reply STOP to opt out at any time or HELP for assistance.
+              No mobile information will be shared with third parties or
+              affiliates for marketing or promotional purposes. All the above
+              categories exclude text messaging originator opt-in data and
+              consent; this information will not be shared with any third
+              parties.
             </p>
           </section>
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              5. Sharing Your Information
+              6. Sharing Your Information
             </h2>
             <p>
               We do <strong>not</strong> sell your personal information. We may
@@ -132,7 +177,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              6. Data Retention
+              7. Data Retention
             </h2>
             <p>
               We retain your information only as long as necessary to fulfill
@@ -143,7 +188,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              7. Your Rights
+              8. Your Rights
             </h2>
             <p>
               Depending on your state of residence, you may have the right to
@@ -151,10 +196,10 @@ export default function PrivacyPolicy() {
               Florida residents may also have rights under the Florida Digital
               Bill of Rights. To exercise your rights, contact us at{" "}
               <a
-                href="mailto:lambinsurance91@gmail.com"
+                href="mailto:calamb@acg.aaa.com"
                 className="text-sage-600 hover:underline"
               >
-                lambinsurance91@gmail.com
+                calamb@acg.aaa.com
               </a>
               .
             </p>
@@ -162,7 +207,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              8. Cookies &amp; Analytics
+              9. Cookies &amp; Analytics
             </h2>
             <p>
               Our website may use cookies and similar tracking technologies to
@@ -174,7 +219,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              9. Security
+              10. Security
             </h2>
             <p>
               We implement reasonable technical and organizational measures to
@@ -186,7 +231,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              10. Changes to This Policy
+              11. Changes to This Policy
             </h2>
             <p>
               We may update this Privacy Policy from time to time. Changes will
@@ -198,7 +243,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="font-display text-xl font-bold text-navy-800 mb-3">
-              11. Contact Us
+              12. Contact Us
             </h2>
             <p>
               If you have questions about this Privacy Policy, please contact
@@ -211,19 +256,10 @@ export default function PrivacyPolicy() {
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:lambinsurance91@gmail.com"
+                  href="mailto:calamb@acg.aaa.com"
                   className="text-sage-600 hover:underline"
                 >
-                  lambinsurance91@gmail.com
-                </a>
-              </p>
-              <p>
-                Phone:{" "}
-                <a
-                  href="tel:+19412252335"
-                  className="text-sage-600 hover:underline"
-                >
-                  941.225.2335
+                  calamb@acg.aaa.com
                 </a>
               </p>
             </address>
