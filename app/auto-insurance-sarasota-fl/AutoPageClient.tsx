@@ -5,76 +5,76 @@ import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 
 const EMAIL = "calamb@acg.aaa.com";
-const PHONE_DISPLAY = "(941) 555-0100";
-const PHONE_HREF = "+19415550100";
+const PHONE_DISPLAY = "(941) 225-2335";
+const PHONE_HREF = "+19412252335";
 
 const switchReasons = [
   {
-    title: "My rate went up at renewal",
-    text: "If your policy went up at renewal, we help you compare Sarasota auto insurance options and review available discounts.",
+    title: "My Price Went Up",
+    text: "A renewal increase is one of the biggest reasons people switch. We help you compare current options and check for discounts you may be missing.",
   },
   {
-    title: "They want better coverage",
-    text: "Many drivers want more than the minimum. We walk you through what each option covers so you can better protect your family.",
+    title: "I Want Better Protection",
+    text: "Lowest price is not always best. We help you review coverage limits, deductibles, and protection options that match your real needs.",
   },
   {
-    title: "Poor customer service",
-    text: "Here you speak with real people at a local agency, not a call center. We answer your questions clearly and follow through.",
+    title: "I'm Tired of Bad Service",
+    text: "You should be able to reach someone when you need help. Work with a local agency that answers questions and follows through.",
   },
   {
-    title: "New car or new license",
-    text: "If you bought a car or just started driving in Florida, we guide you step by step with a Sarasota insurance quote that's easy to understand.",
+    title: "New Car or New Driver",
+    text: "Bought a vehicle or added a driver to the household? We make the process simple and explain each step.",
   },
 ];
 
 const coverageItems = [
   {
-    title: "Liability",
-    text: "Helps cover damage to other people or property when you are responsible for an accident.",
+    title: "Liability Coverage",
+    text: "Helps pay for injuries or property damage you cause to others in an accident.",
+  },
+  {
+    title: "Collision Coverage",
+    text: "Helps repair or replace your vehicle after a covered crash.",
+  },
+  {
+    title: "Comprehensive Coverage",
+    text: "Helps protect against theft, vandalism, fire, weather, and other non-collision losses.",
+  },
+  {
+    title: "Uninsured Motorist Coverage",
+    text: "Helps protect you if another driver has little or no insurance.",
   },
   {
     title: "Full Coverage",
-    text: "A common combination of coverages for more complete protection based on your vehicle and situation.",
-  },
-  {
-    title: "Collision",
-    text: "Helps cover damage to your car after a collision, regardless of who was at fault.",
-  },
-  {
-    title: "Comprehensive",
-    text: "Covers non-collision events such as theft, vandalism, or certain weather events.",
-  },
-  {
-    title: "Uninsured Motorist",
-    text: "Protects you if you're hit by a driver with no insurance or insufficient coverage.",
+    text: "A common term for combining multiple coverages for broader protection.",
   },
 ];
 
 const faqItems = [
   {
-    question: "How much does auto insurance cost in Sarasota?",
+    question: "How much is auto insurance in Sarasota?",
     answer:
-      "It depends on your driving history, vehicle, type of coverage, and available discounts. At Lamb Insurance Agency we compare options to help you find a premium that fits your budget.",
+      "Your rate depends on factors like driving history, vehicle, location, coverage choices, and discounts. We help you compare options based on your situation.",
   },
   {
     question: "Can I lower my monthly payment?",
     answer:
-      "In many cases, yes. We can review deductibles, discounts, and coverage levels to find a more affordable monthly payment.",
+      "Often, yes. Adjusting deductibles, reviewing discounts, bundling policies, or comparing carriers may reduce your premium.",
   },
   {
     question: "What coverage do I need in Florida?",
     answer:
-      "Florida requires minimum coverage, but that isn't always enough for everyone. We walk you through your options so you can choose with confidence.",
+      "That depends on your car, budget, and risk tolerance. We'll explain your options clearly so you can decide with confidence.",
   },
   {
-    question: "Can I switch before my renewal date?",
+    question: "Can I switch before renewal?",
     answer:
-      "Yes, you can typically switch before your renewal date. We help you review the timing and make the transition smooth.",
+      "Yes. Many drivers switch before their renewal date. We can help you review timing and next steps.",
   },
   {
     question: "Do you offer bilingual service?",
     answer:
-      "Yes. Our team is available in both English and Spanish so you fully understand your policy, your quote, and every step of the process.",
+      "Yes. We proudly help English- and Spanish-speaking customers.",
   },
 ];
 
@@ -107,21 +107,21 @@ function Hero() {
           <div className="inline-flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-4 py-1.5 mb-6">
             <span className="w-2 h-2 rounded-full bg-sage-400 animate-pulse" aria-hidden="true" />
             <span className="text-sage-300 text-xs font-body uppercase tracking-widest">
-              Auto Insurance in Sarasota
+              Free Quote · Fast Answers · Local Help
             </span>
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Auto Insurance in Sarasota, Explained Clearly
+            Auto Insurance in Sarasota
           </h1>
 
           <p className="text-navy-200 text-base md:text-lg leading-relaxed mb-10 font-body max-w-3xl">
-            At Lamb Insurance Agency we help you compare coverage, understand your options, and find affordable protection without the hassle. Local, personal service right here in Sarasota.
+            Get coverage that fits your life and your budget. At Lamb Insurance Agency, we help Sarasota drivers compare options, understand what they&apos;re buying, and move forward with confidence.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
             <a href="#contact" className="btn-primary px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center">
-              Get Your Free Quote
+              Get a Free Quote
             </a>
             <a
               href={`tel:${PHONE_HREF}`}
@@ -132,7 +132,7 @@ function Hero() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3" aria-label="Trust indicators">
-            {["Bilingual Service", "Local Sarasota Agency", "Fast Quote", "Clear Options"].map((item) => (
+            {["Bilingual Service", "Local Sarasota Team", "Quick Quote Process", "Clear Guidance"].map((item) => (
               <div key={item} className="bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-sm text-navy-100 font-body">
                 {item}
               </div>
@@ -151,7 +151,7 @@ function WhyPeopleSwitchSection() {
         <div className="max-w-3xl mb-10 animate-on-scroll">
           <div className="section-rule" />
           <h2 id="switch-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
-            Why People Switch Auto Insurance in Sarasota
+            Why Drivers Shop for New Coverage
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -174,7 +174,7 @@ function CoverageSection() {
         <div className="max-w-3xl mb-12 animate-on-scroll">
           <div className="section-rule" />
           <h2 id="coverage-heading" className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-            Auto Insurance Coverage Options, Explained Simply
+            Coverage Options Explained Clearly
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -197,16 +197,17 @@ function WhyChooseSection() {
         <div className="max-w-3xl mb-10 animate-on-scroll">
           <div className="section-rule" />
           <h2 id="choose-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
-            Why Choose Lamb Insurance Agency?
+            Why Choose Lamb Insurance Agency
           </h2>
         </div>
         <ul className="grid md:grid-cols-2 gap-4 text-navy-700 font-body">
           {[
-            "Local agency in Sarasota",
+            "Local Sarasota agency",
             "Real people, not a call center",
-            "We explain your options clearly",
-            "Fast quote process",
-            "Help choosing coverage for your budget",
+            "Straight answers without jargon",
+            "Fast, simple quote process",
+            "Help finding coverage within your budget",
+            "Ongoing support after you buy",
           ].map((item) => (
             <li key={item} className="bg-white border border-navy-100 rounded-xl p-4 animate-on-scroll">
               {item}
@@ -229,13 +230,10 @@ function SarasotaSection() {
           </h2>
           <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
             <p>
-              We work with Sarasota drivers who are on the road every day for work, school, and family. If you&apos;re looking for auto insurance in Sarasota with someone local who will actually explain it to you, we&apos;re here.
+              From daily commutes to school runs to weekend trips across Florida, your insurance should match how you actually drive. We help Sarasota drivers understand state requirements, compare options, and keep coverage on track at renewal.
             </p>
             <p>
-              We guide you through Florida requirements, coverage options that fit your routine, and how to keep your policy clear at every renewal.
-            </p>
-            <p>
-              We can also help if you&apos;re looking to bundle policies. Explore <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundle options in Sarasota</Link> and get clear, local guidance.
+              Need more than auto insurance? Ask about <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundling options in Sarasota</Link> for added convenience and possible savings.
             </p>
           </div>
         </div>
@@ -332,10 +330,10 @@ function ContactForm() {
           <div className="lg:col-span-2 animate-on-scroll">
             <div className="section-rule" />
             <h2 id="contact-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
-              Don&apos;t Wait for Renewal or an Accident
+              Get a Quote Today
             </h2>
             <p className="text-navy-600 font-body text-base leading-relaxed mb-8">
-              Get local help today for your Sarasota auto insurance. We walk you through your options and help you make a confident decision.
+              Don&apos;t wait for your next renewal notice or a problem on the road. Get local help, clear answers, and coverage options built around your needs.
             </p>
 
             <div className="space-y-4">

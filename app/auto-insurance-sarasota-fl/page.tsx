@@ -4,7 +4,7 @@ import AutoPageClient from "./AutoPageClient";
 export const metadata: Metadata = {
   title: "Auto Insurance in Sarasota | Lamb Insurance Agency",
   description:
-    "Auto insurance in Sarasota from a local agency. Compare options, understand your coverage, and get a fast quote with personal, local help.",
+    "Get auto insurance in Sarasota that fits your life and budget. Compare coverage options, get fast answers, and work with a local agency that explains everything clearly.",
   alternates: {
     canonical: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl",
   },
@@ -32,10 +32,10 @@ const schemas = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "How much does auto insurance cost in Sarasota?",
+          name: "How much is auto insurance in Sarasota?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The cost depends on factors like your driving history, vehicle, type of coverage, and available discounts. At Lamb Insurance Agency we help you compare options to find a premium that fits your budget.",
+            text: "Your rate depends on factors like driving history, vehicle, location, coverage choices, and discounts. We help you compare options based on your situation.",
           },
         },
         {
@@ -43,7 +43,7 @@ const schemas = {
           name: "Can I lower my monthly payment?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "In many cases, yes. We can review deductibles, discounts, and coverage options to find a more affordable monthly payment without losing the coverage that matters to you.",
+            text: "Often, yes. Adjusting deductibles, reviewing discounts, bundling policies, or comparing carriers may reduce your premium.",
           },
         },
         {
@@ -51,15 +51,15 @@ const schemas = {
           name: "What coverage do I need in Florida?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Florida requires minimum coverage, but many families need additional protection. We walk you through what each option covers so you can make an informed decision.",
+            text: "That depends on your car, budget, and risk tolerance. We'll explain your options clearly so you can decide with confidence.",
           },
         },
         {
           "@type": "Question",
-          name: "Can I switch before my renewal date?",
+          name: "Can I switch before renewal?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes, in many cases you can switch policies before your renewal date. Our local team guides you through the steps to make the transition clear and easy.",
+            text: "Yes. Many drivers switch before their renewal date. We can help you review timing and next steps.",
           },
         },
         {
@@ -67,7 +67,7 @@ const schemas = {
           name: "Do you offer bilingual service?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Our team is available in both English and Spanish so you fully understand your quote, coverage, and next steps.",
+            text: "Yes. We proudly help English- and Spanish-speaking customers.",
           },
         },
       ],
