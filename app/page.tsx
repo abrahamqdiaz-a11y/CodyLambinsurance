@@ -906,6 +906,14 @@ function Footer() {
                 Terms &amp; Conditions
               </Link>
             </li>
+            <li>
+              <Link
+                href="/faq"
+                className="text-navy-400 hover:text-navy-200 transition-colors"
+              >
+                FAQ
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
