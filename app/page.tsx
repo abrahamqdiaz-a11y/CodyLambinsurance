@@ -11,25 +11,25 @@ const EMAIL = "calamb@acg.aaa.com";
 
 const SERVICES = [
   {
-    emoji: "🚗",
+    icon: "/car insurance icon.png",
     title: "Auto Insurance",
     desc: "Customized coverage to keep you protected on the road, with options that fit your driving habits and budget.",
     id: "auto",
   },
   {
-    emoji: "🏡",
+    icon: "/home ins icon.png",
     title: "Home Insurance",
     desc: "Reliable protection for your home and everything inside it—so you can have peace of mind no matter what comes your way.",
     id: "home",
   },
   {
-    emoji: "❤️",
+    icon: "/life insurance icon.png",
     title: "Life Insurance",
     desc: "Secure your family's future with flexible life insurance options designed to provide long-term financial protection.",
     id: "life",
   },
   {
-    emoji: "🏢",
+    icon: "/commerical insurance icon.png",
     title: "Commercial Insurance",
     desc: "Smart coverage solutions to protect your business, employees, and operations—so you can focus on growth.",
     id: "commercial",
@@ -353,10 +353,10 @@ function Services() {
               aria-labelledby={`service-${s.id}-title`}
             >
               <div
-                className="w-14 h-14 rounded-xl bg-sage-50 flex items-center justify-center text-3xl mb-5 border border-sage-100"
+                className="w-14 h-14 rounded-xl bg-sage-50 flex items-center justify-center mb-5 border border-sage-100"
                 aria-hidden="true"
               >
-                {s.emoji}
+                <Image src={s.icon} alt="" width={40} height={40} className="object-contain" />
               </div>
               <h3
                 id={`service-${s.id}-title`}
