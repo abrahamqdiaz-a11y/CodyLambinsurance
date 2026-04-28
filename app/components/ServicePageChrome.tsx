@@ -47,7 +47,7 @@ export function ServicePageHeader() {
           aria-label="Lamb Insurance Agency — home"
         >
           <Image
-            src="/FullLogo.png"
+            src="/Untitled design (15).png"
             alt="Lamb Insurance Agency logo"
             width={40}
             height={44}
