@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { INSURANCE_LINKS } from "../constants/insuranceLinks";
@@ -35,20 +36,30 @@ export function ServicePageHeader() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy-950/97 backdrop-blur-md shadow-lg shadow-black/20"
-          : "bg-transparent"
+          ? "bg-navy-900/97 backdrop-blur-md shadow-lg shadow-black/20"
+          : "bg-navy-900/90 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-6xl mx-auto px-5 flex items-center justify-between h-16 md:h-20">
         <Link
           href="/"
-          className="flex flex-col leading-none group"
+          className="flex items-center gap-3 group"
           aria-label="Lamb Insurance Agency — home"
         >
-          <span className="font-display text-white text-lg md:text-xl font-bold tracking-tight group-hover:text-sage-300 transition-colors">
-            Lamb Insurance
+          <Image
+            src="/logo.svg"
+            alt="Lamb Insurance Agency logo"
+            width={40}
+            height={44}
+            className="h-9 md:h-11 w-auto"
+            priority
+          />
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-white text-lg md:text-xl font-bold tracking-tight group-hover:text-sage-300 transition-colors">
+              Lamb Insurance
+            </span>
+            <span className="text-sage-400 text-xs uppercase tracking-[0.2em] font-body">Agency</span>
           </span>
-          <span className="text-sage-400 text-xs uppercase tracking-[0.2em] font-body">Agency</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
