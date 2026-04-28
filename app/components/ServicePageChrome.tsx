@@ -177,6 +177,7 @@ export function ServicePageFooter({ email }: { email: string }) {
           <ul className="space-y-2 font-body text-sm">
             <li><Link href="/privacy-policy" className="text-navy-400 hover:text-navy-200 transition-colors">Privacy Policy</Link></li>
             <li><Link href="/terms" className="text-navy-400 hover:text-navy-200 transition-colors">Terms &amp; Conditions</Link></li>
+            <li><Link href="/faq" className="text-navy-400 hover:text-navy-200 transition-colors">FAQ</Link></li>
           </ul>
         </div>
       </div>
