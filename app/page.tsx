@@ -513,7 +513,7 @@ function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 pt-24 pb-14 md:pt-32 md:pb-20">
         {/* ── Three-column grid (desktop) / stacked (mobile) ── */}
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_400px_340px] lg:gap-10 xl:gap-14 lg:items-center">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_400px_390px] lg:gap-10 xl:gap-14 lg:items-center">
 
           {/* ── Col 1: Left copy ── */}
           <div>
@@ -589,18 +589,23 @@ function Hero() {
           </div>
 
           {/* ── Col 3: Agent photo + trust badge (desktop only) ── */}
-          <div className="hidden lg:flex flex-col items-end self-stretch relative">
-            <div className="relative w-full h-full flex items-end justify-center">
+          <div className="hidden lg:flex flex-col items-end justify-end self-stretch relative">
+            <div className="relative w-full h-full flex items-end justify-end pr-2 pb-2">
+              <div
+                className="absolute right-0 bottom-0 w-[270px] h-24 rounded-full bg-navy-900/20 blur-2xl"
+                aria-hidden="true"
+              />
               <Image
                 src="/Untitled design (16).png"
                 alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-                width={380}
-                height={520}
-                className="object-contain object-bottom w-full max-h-[520px] drop-shadow-2xl"
+                width={320}
+                height={430}
+                className="object-contain object-bottom w-full max-w-[320px] drop-shadow-2xl"
+                style={{ maskImage: "linear-gradient(to bottom, black 78%, transparent 100%)" }}
                 priority
               />
               {/* Floating trust badge */}
-              <div className="absolute bottom-6 right-0 max-w-[210px]">
+              <div className="absolute bottom-0 right-0 max-w-[210px]">
                 <TrustBadge />
               </div>
             </div>
@@ -609,13 +614,14 @@ function Hero() {
 
         {/* ── Mobile-only: Agent photo + trust badge (below form) ── */}
         <div className="lg:hidden mt-8 flex flex-col items-center gap-4">
-          <div className="w-full max-w-[280px]">
+          <div className="w-full max-w-[300px]">
             <Image
               src="/Untitled design (16).png"
               alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-              width={280}
-              height={380}
+              width={300}
+              height={400}
               className="object-contain w-full drop-shadow-xl"
+              style={{ maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)" }}
             />
           </div>
           <div className="w-full max-w-sm">
