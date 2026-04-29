@@ -231,12 +231,15 @@ function Header() {
 function HeroQuoteForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [tcpaConsent, setTcpaConsent] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     const formData = new FormData(e.currentTarget);
+    formData.set("tcpa-consent", "yes");
+    formData.set("tcpa-consent-timestamp", new Date().toISOString());
     try {
       const res = await fetch("/__forms.html", {
         method: "POST",
@@ -245,6 +248,7 @@ function HeroQuoteForm() {
       });
       if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
       setSubmitted(true);
+      setTcpaConsent(false);
       formRef.current?.reset();
     } catch (err) {
       console.error(err);
@@ -401,6 +405,50 @@ function HeroQuoteForm() {
               >
                 {loading ? "Sending…" : "Get My Quote →"}
               </button>
+
+              {/* SMS Disclosure + Consent Checkbox */}
+              <div className="mt-4 p-4 rounded-xl border-2 border-navy-100 bg-navy-50/50">
+                <p className="text-xs text-navy-600 font-body leading-relaxed mb-3">
+                  By checking the box below, you confirm your preference regarding SMS messages from Lamb Insurance Agency. Messages may include insurance quotes, policy updates, and customer support. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance. Consent is not a condition of purchase. See our{" "}
+                  <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
+                    Terms &amp; Conditions
+                  </Link>
+                  {" "}and{" "}
+                  <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
+                    Privacy Policy
+                  </Link>
+                  .
+                </p>
+                <label htmlFor="hero-tcpa-consent" className="flex items-start gap-3 cursor-pointer group">
+                  <div className="relative flex-shrink-0 mt-0.5">
+                    <input
+                      id="hero-tcpa-consent"
+                      type="checkbox"
+                      name="tcpa-consent-checkbox"
+                      checked={tcpaConsent}
+                      onChange={(e) => setTcpaConsent(e.target.checked)}
+                      className="sr-only"
+                    />
+                    <div
+                      className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                        tcpaConsent
+                          ? "bg-sage-600 border-sage-600"
+                          : "border-navy-300 bg-white group-hover:border-sage-400"
+                      }`}
+                      aria-hidden="true"
+                    >
+                      {tcpaConsent && (
+                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-xs text-navy-600 font-body leading-relaxed">
+                    I agree to receive SMS text messages from Lamb Insurance Agency at the phone number provided.
+                  </p>
+                </label>
+              </div>
             </div>
           </form>
 
@@ -544,7 +592,7 @@ function Hero() {
           <div className="hidden lg:flex flex-col items-end self-stretch relative">
             <div className="relative w-full h-full flex items-end justify-center">
               <Image
-                src="/Untitled design (15).png"
+                src="/Untitled design (16).png"
                 alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
                 width={380}
                 height={520}
@@ -563,7 +611,7 @@ function Hero() {
         <div className="lg:hidden mt-8 flex flex-col items-center gap-4">
           <div className="w-full max-w-[280px]">
             <Image
-              src="/Untitled design (15).png"
+              src="/Untitled design (16).png"
               alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
               width={280}
               height={380}
