@@ -246,7 +246,7 @@ function Hero() {
               Llamar Ahora
             </a>
             <Link
-              href="/get-a-quote"
+              href="#contacto"
               className="px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center border border-white/40 text-white hover:bg-white/10 transition-colors"
             >
               Obtener Cotización
@@ -487,7 +487,7 @@ function CTASection() {
                 Llamar Ahora
               </a>
               <Link
-                href="/get-a-quote"
+                href="/#contact"
                 className="btn-outline px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center"
               >
                 Obtener Cotización
