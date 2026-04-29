@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { INSURANCE_LINKS } from "../constants/insuranceLinks";
@@ -45,6 +46,14 @@ export function ServicePageHeader() {
           className="flex items-center gap-3 group"
           aria-label="Lamb Insurance Agency — home"
         >
+          <Image
+            src="/Untitled design (15).png"
+            alt="Lamb Insurance Agency logo"
+            width={40}
+            height={44}
+            className="h-9 md:h-11 w-auto"
+            priority
+          />
           <span className="flex flex-col leading-none">
             <span className="font-display text-white text-lg md:text-xl font-bold tracking-tight group-hover:text-sage-300 transition-colors">
               Lamb Insurance
