@@ -42,7 +42,6 @@ const WHY_US = [
   "Local expertise with a customer-first approach",
   "Fast, friendly, and reliable support",
 ];
-
 // ── Scroll animation hook ──────────────────────────────────
 function useScrollReveal() {
   useEffect(() => {
