@@ -592,16 +592,16 @@ function Hero() {
           <div className="hidden lg:flex flex-col items-end self-stretch relative">
             <div className="relative w-full h-full flex items-end justify-center">
               <div
-                className="absolute inset-x-6 bottom-2 h-32 rounded-full bg-navy-900/20 blur-3xl"
+                className="absolute inset-x-4 bottom-2 h-40 rounded-full bg-navy-900/25 blur-3xl"
                 aria-hidden="true"
               />
               <Image
                 src="/Untitled design (16).png"
                 alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
                 width={450}
-                height={620}
-                className="object-contain object-bottom w-full max-h-[620px] drop-shadow-xl mix-blend-multiply"
-                style={{ maskImage: "linear-gradient(to bottom, black 72%, transparent 100%)" }}
+                height={650}
+                className="object-contain object-bottom w-full max-h-[650px] drop-shadow-xl mix-blend-multiply"
+                style={{ maskImage: "linear-gradient(to bottom, black 60%, rgba(0,0,0,0.4) 82%, transparent 100%)" }}
                 priority
               />
               {/* Floating trust badge */}
@@ -614,14 +614,14 @@ function Hero() {
 
         {/* ── Mobile-only: Agent photo + trust badge (below form) ── */}
         <div className="lg:hidden mt-8 flex flex-col items-center gap-4">
-          <div className="w-full max-w-[340px]">
+          <div className="w-full max-w-[360px]">
             <Image
               src="/Untitled design (16).png"
               alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-              width={340}
-              height={460}
+              width={360}
+              height={480}
               className="object-contain w-full drop-shadow-lg mix-blend-multiply"
-              style={{ maskImage: "linear-gradient(to bottom, black 75%, transparent 100%)" }}
+              style={{ maskImage: "linear-gradient(to bottom, black 65%, rgba(0,0,0,0.35) 85%, transparent 100%)" }}
             />
           </div>
           <div className="w-full max-w-sm">
