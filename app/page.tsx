@@ -465,27 +465,6 @@ function HeroQuoteForm() {
 
 // ── Hero ───────────────────────────────────────────────────
 function Hero() {
-  const TrustBadge = () => (
-    <div
-      className="bg-navy-900/95 backdrop-blur-sm rounded-xl px-4 py-3 flex items-center gap-3 shadow-xl border border-white/10"
-      aria-label="Trust indicator"
-    >
-      <div
-        className="flex-shrink-0 w-10 h-10 rounded-full bg-sage-600/20 border border-sage-500/30 flex items-center justify-center"
-        aria-hidden="true"
-      >
-        <svg className="w-5 h-5 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      </div>
-      <div>
-        <p className="text-white font-body text-xs font-bold leading-snug">Local Advisors.</p>
-        <p className="text-navy-300 font-body text-xs leading-snug">Trusted By Thousands</p>
-        <p className="text-navy-300 font-body text-xs leading-snug">Across Florida.</p>
-      </div>
-    </div>
-  );
-
   return (
     <section
       id="home"
@@ -526,8 +505,8 @@ function Hero() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 pt-24 pb-14 md:pt-32 md:pb-20">
-        {/* ── Three-column grid (desktop) / stacked (mobile) ── */}
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_400px_440px] lg:gap-10 xl:gap-12 lg:items-center">
+        {/* ── Two-column grid (desktop) / stacked (mobile) ── */}
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_440px] lg:gap-12 xl:gap-16 lg:items-center">
 
           {/* ── Col 1: Left copy ── */}
           <div>
@@ -600,52 +579,6 @@ function Hero() {
           {/* ── Col 2: Quote form card ── */}
           <div className="w-full">
             <HeroQuoteForm />
-          </div>
-
-          {/* ── Col 3: Agent photo + trust badge (desktop only) ── */}
-          <div className="hidden lg:block self-stretch relative" style={{ minHeight: "520px" }}>
-            {/* Ground shadow beneath advisor */}
-            <div
-              className="absolute inset-x-6 bottom-0 h-28 rounded-full bg-navy-900/20 blur-3xl"
-              aria-hidden="true"
-              style={{ zIndex: 1 }}
-            />
-            {/* Image fills full column height, anchored at bottom so head reaches toward top */}
-            <div className="absolute inset-0" style={{ zIndex: 2 }}>
-              <Image
-                src="/Untitled design (16).png"
-                alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-                fill
-                sizes="440px"
-                className="object-contain drop-shadow-2xl mix-blend-multiply"
-                style={{
-                  objectPosition: "bottom center",
-                  maskImage: "linear-gradient(to bottom, black 72%, rgba(0,0,0,0.35) 89%, transparent 100%)",
-                }}
-                priority
-              />
-            </div>
-            {/* Floating trust badge */}
-            <div className="absolute bottom-6 right-0 max-w-[210px]" style={{ zIndex: 3 }}>
-              <TrustBadge />
-            </div>
-          </div>
-        </div>
-
-        {/* ── Mobile-only: Agent photo + trust badge (below form) ── */}
-        <div className="lg:hidden mt-6 flex flex-col items-center gap-4">
-          <div className="w-full max-w-[400px]">
-            <Image
-              src="/Untitled design (16).png"
-              alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-              width={400}
-              height={560}
-              className="object-contain w-full drop-shadow-xl mix-blend-multiply"
-              style={{ maskImage: "linear-gradient(to bottom, black 68%, rgba(0,0,0,0.35) 87%, transparent 100%)" }}
-            />
-          </div>
-          <div className="w-full max-w-sm">
-            <TrustBadge />
           </div>
         </div>
       </div>
