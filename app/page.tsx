@@ -513,7 +513,7 @@ function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 pt-24 pb-14 md:pt-32 md:pb-20">
         {/* ── Three-column grid (desktop) / stacked (mobile) ── */}
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_400px_340px] lg:gap-10 xl:gap-14 lg:items-center">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_400px_390px] lg:gap-10 xl:gap-14 lg:items-center">
 
           {/* ── Col 1: Left copy ── */}
           <div>
@@ -591,12 +591,17 @@ function Hero() {
           {/* ── Col 3: Agent photo + trust badge (desktop only) ── */}
           <div className="hidden lg:flex flex-col items-end self-stretch relative">
             <div className="relative w-full h-full flex items-end justify-center">
+              <div
+                className="absolute inset-x-6 bottom-2 h-32 rounded-full bg-navy-900/20 blur-3xl"
+                aria-hidden="true"
+              />
               <Image
                 src="/Untitled design (16).png"
                 alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-                width={380}
-                height={520}
-                className="object-contain object-bottom w-full max-h-[520px] drop-shadow-2xl"
+                width={450}
+                height={620}
+                className="object-contain object-bottom w-full max-h-[620px] drop-shadow-xl mix-blend-multiply"
+                style={{ maskImage: "linear-gradient(to bottom, black 72%, transparent 100%)" }}
                 priority
               />
               {/* Floating trust badge */}
@@ -609,13 +614,14 @@ function Hero() {
 
         {/* ── Mobile-only: Agent photo + trust badge (below form) ── */}
         <div className="lg:hidden mt-8 flex flex-col items-center gap-4">
-          <div className="w-full max-w-[280px]">
+          <div className="w-full max-w-[340px]">
             <Image
               src="/Untitled design (16).png"
               alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-              width={280}
-              height={380}
-              className="object-contain w-full drop-shadow-xl"
+              width={340}
+              height={460}
+              className="object-contain w-full drop-shadow-lg mix-blend-multiply"
+              style={{ maskImage: "linear-gradient(to bottom, black 75%, transparent 100%)" }}
             />
           </div>
           <div className="w-full max-w-sm">
