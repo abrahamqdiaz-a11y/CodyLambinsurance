@@ -489,30 +489,45 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden"
-      style={{
-        backgroundImage: "linear-gradient(135deg, rgba(238,242,248,0.55) 0%, rgba(229,237,246,0.55) 45%, rgba(216,229,243,0.55) 100%), url('/backgorund.house.image.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh",
-      }}
+      className="relative overflow-hidden min-h-screen"
       aria-labelledby="hero-heading"
     >
+      {/* Background house — separate div enables CSS filter for sharpness/contrast */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/backgorund.house.image.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(1.12) contrast(1.12) saturate(1.08)",
+          zIndex: 0,
+        }}
+        aria-hidden="true"
+      />
+      {/* Directional overlay: protects left text, reveals house toward the right */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "linear-gradient(105deg, rgba(238,242,248,0.95) 0%, rgba(238,242,248,0.88) 28%, rgba(238,242,248,0.58) 50%, rgba(238,242,248,0.22) 68%, rgba(238,242,248,0.06) 85%)",
+          zIndex: 1,
+        }}
+        aria-hidden="true"
+      />
       {/* Subtle decorative blobs */}
       <div
         className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full pointer-events-none"
-        style={{ background: "#1e3a5f", opacity: 0.05, filter: "blur(90px)", transform: "translate(35%, -35%)" }}
+        style={{ background: "#1e3a5f", opacity: 0.04, filter: "blur(90px)", transform: "translate(35%, -35%)", zIndex: 2 }}
         aria-hidden="true"
       />
       <div
         className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{ background: "#2b4f7a", opacity: 0.04, filter: "blur(70px)", transform: "translate(-30%, 30%)" }}
+        style={{ background: "#2b4f7a", opacity: 0.03, filter: "blur(70px)", transform: "translate(-30%, 30%)", zIndex: 2 }}
         aria-hidden="true"
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 pt-24 pb-14 md:pt-32 md:pb-20">
         {/* ── Three-column grid (desktop) / stacked (mobile) ── */}
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_400px_390px] lg:gap-10 xl:gap-14 lg:items-center">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_400px_440px] lg:gap-10 xl:gap-12 lg:items-center">
 
           {/* ── Col 1: Left copy ── */}
           <div>
@@ -588,39 +603,45 @@ function Hero() {
           </div>
 
           {/* ── Col 3: Agent photo + trust badge (desktop only) ── */}
-          <div className="hidden lg:flex flex-col items-end self-stretch relative">
-            <div className="relative w-full h-full flex items-end justify-center">
-              <div
-                className="absolute inset-x-4 bottom-2 h-40 rounded-full bg-navy-900/25 blur-3xl"
-                aria-hidden="true"
-              />
+          <div className="hidden lg:block self-stretch relative" style={{ minHeight: "520px" }}>
+            {/* Ground shadow beneath advisor */}
+            <div
+              className="absolute inset-x-6 bottom-0 h-28 rounded-full bg-navy-900/20 blur-3xl"
+              aria-hidden="true"
+              style={{ zIndex: 1 }}
+            />
+            {/* Image fills full column height, anchored at bottom so head reaches toward top */}
+            <div className="absolute inset-0" style={{ zIndex: 2 }}>
               <Image
                 src="/Untitled design (16).png"
                 alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-                width={450}
-                height={650}
-                className="object-contain object-bottom w-full max-h-[650px] drop-shadow-xl mix-blend-multiply"
-                style={{ maskImage: "linear-gradient(to bottom, black 60%, rgba(0,0,0,0.4) 82%, transparent 100%)" }}
+                fill
+                sizes="440px"
+                className="object-contain drop-shadow-2xl mix-blend-multiply"
+                style={{
+                  objectPosition: "bottom center",
+                  maskImage: "linear-gradient(to bottom, black 72%, rgba(0,0,0,0.35) 89%, transparent 100%)",
+                }}
                 priority
               />
-              {/* Floating trust badge */}
-              <div className="absolute bottom-6 right-0 max-w-[210px]">
-                <TrustBadge />
-              </div>
+            </div>
+            {/* Floating trust badge */}
+            <div className="absolute bottom-6 right-0 max-w-[210px]" style={{ zIndex: 3 }}>
+              <TrustBadge />
             </div>
           </div>
         </div>
 
         {/* ── Mobile-only: Agent photo + trust badge (below form) ── */}
-        <div className="lg:hidden mt-8 flex flex-col items-center gap-4">
-          <div className="w-full max-w-[360px]">
+        <div className="lg:hidden mt-6 flex flex-col items-center gap-4">
+          <div className="w-full max-w-[400px]">
             <Image
               src="/Untitled design (16).png"
               alt="Cody Lamb, local insurance advisor serving Sarasota, FL"
-              width={360}
-              height={480}
-              className="object-contain w-full drop-shadow-lg mix-blend-multiply"
-              style={{ maskImage: "linear-gradient(to bottom, black 65%, rgba(0,0,0,0.35) 85%, transparent 100%)" }}
+              width={400}
+              height={560}
+              className="object-contain w-full drop-shadow-xl mix-blend-multiply"
+              style={{ maskImage: "linear-gradient(to bottom, black 68%, rgba(0,0,0,0.35) 87%, transparent 100%)" }}
             />
           </div>
           <div className="w-full max-w-sm">
