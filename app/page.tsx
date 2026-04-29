@@ -444,7 +444,9 @@ function Hero() {
       id="home"
       className="relative overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #eef2f8 0%, #e5edf6 45%, #d8e5f3 100%)",
+        backgroundImage: "linear-gradient(135deg, rgba(238,242,248,0.82) 0%, rgba(229,237,246,0.82) 45%, rgba(216,229,243,0.82) 100%), url('/backgorund.house.image.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         minHeight: "100vh",
       }}
       aria-labelledby="hero-heading"
