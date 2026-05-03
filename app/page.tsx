@@ -1162,7 +1162,6 @@ function Footer() {
             <li><Link href="/condo-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Condo Insurance</Link></li>
             <li><Link href="/flood-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Flood Insurance</Link></li>
             <li><Link href="/bundle-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Bundle Insurance</Link></li>
-            <li><Link href="/citizens-insurance-alternative-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Citizens Insurance Alternative</Link></li>
           </ul>
 
           <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-4">
