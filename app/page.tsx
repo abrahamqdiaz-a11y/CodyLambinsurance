@@ -102,7 +102,7 @@ function Header() {
           aria-label="Lamb Insurance Agency — home"
         >
           <Image
-            src="/Untitled design (15).png"
+            src="/favicon.png"
             alt="Lamb Insurance Agency logo"
             width={40}
             height={44}
