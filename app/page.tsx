@@ -4,44 +4,58 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Car, House, AlertTriangle, Phone, Mail, ChevronDown } from "lucide-react";
 import { INSURANCE_LINKS } from "./constants/insuranceLinks";
 
 // ── Constants ──────────────────────────────────────────────
 const EMAIL = "calamb@acg.aaa.com";
 
-const SERVICES = [
+const HOW_IT_WORKS = [
   {
-    icon: "/car insurance icon.png",
-    title: "Auto Insurance",
-    desc: "Customized coverage to keep you protected on the road, with options that fit your driving habits and budget.",
-    id: "auto",
+    num: "01",
+    title: "Request a Quote",
+    desc: "Fill out the short form above and tell us what you need.",
   },
   {
-    icon: "/home ins icon.png",
-    title: "Home Insurance",
-    desc: "Reliable protection for your home and everything inside it—so you can have peace of mind no matter what comes your way.",
-    id: "home",
+    num: "02",
+    title: "Policy Review",
+    desc: "We look at your current coverage and identify gaps or overlaps.",
   },
   {
-    icon: "/life insurance icon.png",
-    title: "Life Insurance",
-    desc: "Secure your family's future with flexible life insurance options designed to provide long-term financial protection.",
-    id: "life",
+    num: "03",
+    title: "Clear Options",
+    desc: "We walk you through what you're actually getting. No jargon.",
   },
   {
-    icon: "/commerical insurance icon.png",
-    title: "Commercial Insurance",
-    desc: "Smart coverage solutions to protect your business, employees, and operations—so you can focus on growth.",
-    id: "commercial",
+    num: "04",
+    title: "Get Covered",
+    desc: "Choose what fits. We handle the paperwork and stay available after.",
   },
 ];
 
-const WHY_US = [
-  "We review your policies with you so you actually understand your coverage",
-  "Personalized service — not one-size-fits-all",
-  "Local expertise with a customer-first approach",
-  "Fast, friendly, and reliable support",
+const FAQ_ITEMS = [
+  {
+    q: "What does auto insurance cover in Florida?",
+    a: "Florida requires a minimum of Personal Injury Protection (PIP) and Property Damage Liability. But minimum coverage often isn't enough. Depending on your vehicle and driving habits, you may also need collision, comprehensive, and uninsured motorist coverage. We review your full situation before making a recommendation.",
+  },
+  {
+    q: "Why did my insurance rate go up?",
+    a: "Rates increase due to regional risk factors, claims history, carrier adjustments, or market-wide changes. Florida has seen significant rate increases due to weather exposure and litigation trends. A policy review can identify whether you're still getting competitive value.",
+  },
+  {
+    q: "How often should I review my insurance policy?",
+    a: "At minimum, once a year — and immediately after any major life change like buying a vehicle, moving, or adding a driver. Policies get outdated fast and most people don't notice until it costs them.",
+  },
+  {
+    q: "What is the difference between liability and full coverage?",
+    a: "Liability covers damage you cause to others. Full coverage adds collision (damage to your own vehicle) and comprehensive (theft, weather, non-collision events). The right choice depends on your vehicle's value and your financial exposure.",
+  },
+  {
+    q: "Do I need flood insurance in Sarasota?",
+    a: "Yes, in most cases. Standard homeowners policies do not cover flood damage. Given Sarasota's coastal exposure, flood insurance is often essential — not optional. We'll tell you exactly what your current policy does and doesn't cover.",
+  },
 ];
+
 // ── Scroll animation hook ──────────────────────────────────
 function useScrollReveal() {
   useEffect(() => {
@@ -471,7 +485,7 @@ function Hero() {
       className="relative overflow-hidden min-h-screen"
       aria-labelledby="hero-heading"
     >
-      {/* Background house — separate div enables CSS filter for sharpness/contrast */}
+      {/* Background house */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -483,7 +497,7 @@ function Hero() {
         }}
         aria-hidden="true"
       />
-      {/* Directional overlay: protects left text, reveals house toward the right */}
+      {/* Directional overlay */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -492,7 +506,7 @@ function Hero() {
         }}
         aria-hidden="true"
       />
-      {/* Subtle decorative blobs */}
+      {/* Decorative blobs */}
       <div
         className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full pointer-events-none"
         style={{ background: "#1e3a5f", opacity: 0.04, filter: "blur(90px)", transform: "translate(35%, -35%)", zIndex: 2 }}
@@ -505,39 +519,28 @@ function Hero() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 pt-24 pb-14 md:pt-32 md:pb-20">
-        {/* ── Two-column grid (desktop) / stacked (mobile) ── */}
         <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_440px] lg:gap-12 xl:gap-16 lg:items-center">
 
-          {/* ── Col 1: Left copy ── */}
+          {/* Col 1: Left copy */}
           <div>
-            {/* Trust label */}
             <p className="text-navy-700 font-body text-xs font-bold uppercase tracking-[0.18em] mb-5 flex items-center gap-2">
               <span className="w-6 h-px bg-navy-600 inline-block" aria-hidden="true" />
               Local Insurance You Can Trust
             </p>
 
-            {/* Headline */}
             <h1
               id="hero-heading"
-              className="font-display text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-navy-900 leading-[1.08] mb-3"
+              className="font-display text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-navy-900 leading-[1.08] mb-6"
             >
-              Better Coverage.<br />
-              Better Service.
+              Sarasota Insurance Agent — Coverage You Can Actually Understand
             </h1>
 
-            {/* Script italic line */}
-            <p className="font-display italic text-2xl md:text-3xl text-navy-600 mb-6 leading-snug">
-              Right Here at Home.
+            <p className="text-navy-600 font-body text-base leading-relaxed mb-7 max-w-lg">
+              Local, licensed, and available when you need us. We explain your policy clearly, respond fast, and make sure you&apos;re covered for what actually matters — not just what&apos;s cheapest.
             </p>
 
-            {/* Paragraph */}
-            <p className="text-navy-600 font-body text-base leading-relaxed mb-7 max-w-sm">
-              We make insurance simple. Get the right coverage for auto, home, life, and more with local advisors who are here when you need us most.
-            </p>
-
-            {/* Trust bullets */}
             <ul className="space-y-2.5 mb-8" aria-label="Key benefits">
-              {["Local & Independent", "Fast, Free Quotes", "Real People"].map((item) => (
+              {["Licensed Florida Agent", "Thorough Policy Reviews", "Real People, Fast Responses"].map((item) => (
                 <li key={item} className="flex items-center gap-2.5">
                   <span
                     className="flex-shrink-0 w-5 h-5 rounded-full bg-navy-800 flex items-center justify-center"
@@ -576,7 +579,7 @@ function Hero() {
             </div>
           </div>
 
-          {/* ── Col 2: Quote form card ── */}
+          {/* Col 2: Quote form card */}
           <div className="w-full">
             <HeroQuoteForm />
           </div>
@@ -586,60 +589,49 @@ function Hero() {
   );
 }
 
-// ── Services ───────────────────────────────────────────────
-function Services() {
-  useScrollReveal();
-
+// ── How It Works ───────────────────────────────────────────
+function HowItWorks() {
   return (
     <section
-      id="services"
+      id="how-it-works"
       className="bg-cream py-20 md:py-28"
-      aria-labelledby="services-heading"
+      aria-labelledby="how-heading"
     >
       <div className="max-w-6xl mx-auto px-5">
-        {/* Header */}
         <div className="max-w-xl mb-14 animate-on-scroll">
           <div className="section-rule" />
           <h2
-            id="services-heading"
+            id="how-heading"
             className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight"
           >
-            What We Offer
+            How It Works
           </h2>
           <p className="text-navy-600 font-body text-base leading-relaxed">
-            Comprehensive coverage options tailored to protect every part of your life—
-            from your car to your career.
+            Getting the right coverage shouldn&apos;t be complicated. Here&apos;s what to expect when you reach out to us.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {SERVICES.map((s, i) => (
+        {/* Steps — horizontal timeline on desktop, stacked on mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+          {/* Connector line on desktop */}
+          <div
+            className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-navy-200"
+            aria-hidden="true"
+          />
+
+          {HOW_IT_WORKS.map((step, i) => (
             <article
-              key={s.id}
-              className={`service-card bg-white rounded-2xl p-7 border border-navy-100 animate-on-scroll animate-on-scroll-delay-${i + 1}`}
-              aria-labelledby={`service-${s.id}-title`}
+              key={step.num}
+              className={`relative flex flex-col items-start lg:items-center lg:text-center animate-on-scroll animate-on-scroll-delay-${i + 1}`}
             >
-              <div
-                className="w-14 h-14 rounded-xl bg-sage-50 flex items-center justify-center mb-5 border border-sage-100"
-                aria-hidden="true"
-              >
-                <Image src={s.icon} alt="" width={40} height={40} className="object-contain" />
+              {/* Step number circle */}
+              <div className="relative z-10 mb-5">
+                <div className="w-20 h-20 rounded-full bg-navy-900 border-4 border-cream flex items-center justify-center shadow-lg shadow-navy-900/10">
+                  <span className="font-display text-2xl font-bold text-sage-300">{step.num}</span>
+                </div>
               </div>
-              <h3
-                id={`service-${s.id}-title`}
-                className="font-display text-lg font-bold text-navy-800 mb-3"
-              >
-                {s.title}
-              </h3>
-              <p className="text-navy-600 font-body text-sm leading-relaxed">{s.desc}</p>
-              <a
-                href="#contact"
-                className="inline-block mt-5 text-sage-600 text-sm font-semibold font-body hover:text-sage-700 transition-colors"
-                aria-label={`Get a quote for ${s.title}`}
-              >
-                Get a quote →
-              </a>
+              <h3 className="font-display text-lg font-bold text-navy-800 mb-2">{step.title}</h3>
+              <p className="text-navy-600 font-body text-sm leading-relaxed">{step.desc}</p>
             </article>
           ))}
         </div>
@@ -648,86 +640,60 @@ function Services() {
   );
 }
 
-// ── Why Us ─────────────────────────────────────────────────
-function WhyUs() {
+// ── Coverage Explained ─────────────────────────────────────
+function CoverageExplained() {
+  const cards = [
+    {
+      icon: <Car className="w-6 h-6" aria-hidden="true" />,
+      title: "Auto Insurance",
+      body: "Covers liability, collision, and comprehensive protection. Many Florida drivers are underinsured without realizing it. We review your policy against how you actually drive and what you actually own.",
+    },
+    {
+      icon: <House className="w-6 h-6" aria-hidden="true" />,
+      title: "Home Insurance",
+      body: "Protects your structure, belongings, and liability. In Florida, coverage gaps are common due to weather exposure and policy exclusions. We make sure you understand what's included before you need it.",
+    },
+    {
+      icon: <AlertTriangle className="w-6 h-6" aria-hidden="true" />,
+      title: "Why Coverage Fails",
+      body: "Most gaps come from outdated policies, unclear language, or choosing coverage based on price alone. We identify those gaps early — before a claim forces the issue.",
+    },
+  ];
+
   return (
     <section
-      id="why-us"
-      className="bg-navy-900 py-20 md:py-28 relative overflow-hidden"
-      aria-labelledby="why-heading"
+      id="coverage"
+      className="bg-navy-900 py-20 md:py-28"
+      aria-labelledby="coverage-heading"
     >
-      <div className="relative z-10 max-w-6xl mx-auto px-5">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left */}
-          <div className="animate-on-scroll">
-            <div className="section-rule" />
-            <h2
-              id="why-heading"
-              className="font-display text-3xl md:text-4xl font-bold text-white mb-5 leading-tight"
-            >
-              Why Choose{" "}
-              <span className="text-sage-300">Lamb Insurance?</span>
-            </h2>
-            <p className="text-navy-300 font-body text-base leading-relaxed mb-8">
-              We&#39;re not a faceless call center. We&#39;re a local agency that takes the time
-              to know you, your family, and your goals—so your coverage actually makes sense for
-              your life.
-            </p>
-            <a
-              href="#contact"
-              className="btn-primary inline-block px-7 py-3.5 rounded-lg font-semibold font-body text-base"
-            >
-              Start with a Free Consultation
-            </a>
-          </div>
-
-          {/* Right — checklist */}
-          <ul className="space-y-4" aria-label="Reasons to choose Lamb Insurance Agency">
-            {WHY_US.map((item, i) => (
-              <li
-                key={i}
-                className={`flex items-start gap-4 animate-on-scroll animate-on-scroll-delay-${i + 1}`}
-              >
-                <div
-                  className="flex-shrink-0 w-8 h-8 rounded-full bg-sage-600/30 border border-sage-500/40 flex items-center justify-center mt-0.5"
-                  aria-hidden="true"
-                >
-                  <svg
-                    className="w-4 h-4 text-sage-300"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <p className="text-navy-200 font-body text-base leading-relaxed pt-0.5">{item}</p>
-              </li>
-            ))}
-          </ul>
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-2xl mb-14 animate-on-scroll">
+          <div className="section-rule" />
+          <h2
+            id="coverage-heading"
+            className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
+          >
+            Understanding Your Coverage
+          </h2>
+          <p className="text-navy-300 font-body text-base leading-relaxed">
+            Most people don&apos;t know what their insurance actually covers until they&apos;re filing a claim. We break it down clearly so you understand exactly what you have — and where you may be exposed.
+          </p>
         </div>
 
-        {/* Stats row */}
-        <div
-          className="mt-16 pt-12 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center animate-on-scroll"
-          aria-label="Agency highlights"
-        >
-          {[
-            { value: "4", label: "Coverage Types" },
-            { value: "100%", label: "Personalized Service" },
-            { value: "Local", label: "Florida Expertise" },
-            { value: "Free", label: "Quotes & Consultations" },
-          ].map((s) => (
-            <div key={s.label}>
-              <div className="font-display text-3xl md:text-4xl font-bold text-sage-300 mb-1">
-                {s.value}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {cards.map((card, i) => (
+            <article
+              key={card.title}
+              className={`bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/8 transition-colors animate-on-scroll animate-on-scroll-delay-${i + 1}`}
+            >
+              <div
+                className="w-12 h-12 rounded-xl bg-sage-600/20 border border-sage-500/30 flex items-center justify-center mb-5 text-sage-300"
+              >
+                {card.icon}
               </div>
-              <div className="text-navy-400 font-body text-sm uppercase tracking-widest">
-                {s.label}
-              </div>
-            </div>
+              <h3 className="font-display text-lg font-bold text-white mb-3">{card.title}</h3>
+              <p className="text-navy-300 font-body text-sm leading-relaxed">{card.body}</p>
+            </article>
           ))}
         </div>
       </div>
@@ -735,373 +701,274 @@ function WhyUs() {
   );
 }
 
-// ── Contact Form ───────────────────────────────────────────
-function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
-  const [insuranceType, setInsuranceType] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [tcpaConsent, setTcpaConsent] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    setLoading(true);
-
-    const formData = new FormData(e.currentTarget);
-    formData.set("tcpa-consent", "yes");
-    formData.set("tcpa-consent-timestamp", new Date().toISOString());
-
-    try {
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
-      });
-      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
-      setSubmitted(true);
-      setTcpaConsent(false);
-      formRef.current?.reset();
-    } catch (err) {
-      console.error(err);
-      alert("Something went wrong submitting the form. Please call us directly or try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const inputClass =
-    "form-input w-full rounded-lg px-4 py-3 text-navy-900 font-body text-sm placeholder-navy-400 focus:ring-0";
-  const labelClass = "block font-body text-sm font-semibold text-navy-700 mb-1.5";
+// ── About the Agent ────────────────────────────────────────
+function AboutAgent() {
+  const badges = [
+    "Licensed Florida Insurance Agency",
+    "AAA Authorized Agent",
+    "Sarasota-Based, Locally Focused",
+  ];
 
   return (
     <section
-      id="contact"
-      className="bg-warm py-20 md:py-28"
-      aria-labelledby="contact-heading"
+      id="about-agent"
+      className="bg-white py-20 md:py-28"
+      aria-labelledby="about-agent-heading"
     >
       <div className="max-w-6xl mx-auto px-5">
-        <div className="grid lg:grid-cols-5 gap-12 items-start">
-          {/* Left info panel */}
-          <div className="lg:col-span-2 animate-on-scroll">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left — text */}
+          <div className="animate-on-scroll">
             <div className="section-rule" />
             <h2
-              id="contact-heading"
-              className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight"
+              id="about-agent-heading"
+              className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-6 leading-tight"
             >
-              Get Your Free Quote
+              You&apos;re Talking to a Local Agent, Not a Call Center
             </h2>
-            <p className="text-navy-600 font-body text-base leading-relaxed mb-8">
-              Ready to find the right coverage? Fill out the form and we&#39;ll be in touch promptly
-              to walk you through your options—no pressure, no jargon.
-            </p>
-
-            {/* Contact info cards */}
-            <div className="space-y-4">
-              <a
-                href={`mailto:${EMAIL}`}
-                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
-                aria-label={`Email ${EMAIL}`}
-              >
-                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
-                  ✉️
-                </div>
-                <div>
-                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">
-                    Email Us
-                  </p>
-                  <p className="font-display text-navy-800 font-bold text-sm group-hover:text-sage-700 transition-colors break-all">
-                    {EMAIL}
-                  </p>
-                </div>
-              </a>
+            <div className="space-y-4 text-navy-600 font-body text-base leading-relaxed mb-8">
+              <p>
+                Lamb Insurance Agency is a licensed, AAA-authorized insurance agency based in Sarasota, Florida. We work directly with clients — no handoffs, no hold music, no automated systems.
+              </p>
+              <p>
+                We focus on auto and home coverage for Florida drivers and homeowners who want to understand their policy, not just have one.
+              </p>
+              <p>
+                When you reach out, you hear back from a real person who knows your file.
+              </p>
             </div>
+
+            {/* Trust badges */}
+            <ul className="flex flex-col gap-3" aria-label="Agency credentials">
+              {badges.map((badge) => (
+                <li key={badge} className="flex items-center gap-3">
+                  <span
+                    className="flex-shrink-0 w-5 h-5 rounded-full bg-sage-600 flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-navy-700 font-body text-sm font-semibold">{badge}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Form */}
-          <div className="lg:col-span-3 animate-on-scroll animate-on-scroll-delay-2">
-            <div className="bg-white rounded-2xl shadow-xl shadow-navy-100/50 p-8 md:p-10 border border-navy-100">
-              {submitted ? (
-                /* Thank-you state */
-                <div className="text-center py-10" role="alert" aria-live="polite">
-                  <div className="mb-5" aria-hidden="true"></div>
-                  <h3 className="font-display text-2xl font-bold text-navy-800 mb-3">
-                    Thank You!
-                  </h3>
-                  <p className="text-navy-600 font-body text-base leading-relaxed mb-6 max-w-sm mx-auto">
-                    Your quote request has been received. We&#39;ll review your information and
-                    reach out to you shortly!
-                  </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="btn-primary px-6 py-3 rounded-lg font-semibold font-body text-sm"
-                  >
-                    Submit Another Request
-                  </button>
+          {/* Right — trust visual */}
+          <div className="animate-on-scroll animate-on-scroll-delay-2 flex justify-center">
+            <div className="w-full max-w-sm">
+              {/* AAA badge card */}
+              <div className="bg-navy-900 rounded-2xl p-8 text-center border border-navy-800 shadow-xl shadow-navy-900/20 mb-6">
+                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mx-auto mb-5 border-4 border-sage-400">
+                  <Image
+                    src="/favicon.png"
+                    alt="Lamb Insurance Agency"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
-              ) : (
-                <form
-                  ref={formRef}
-                  name="quote-request"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
-                  aria-label="Quote request form"
-                  noValidate
-                >
-                  {/* Netlify hidden fields */}
-                  <input type="hidden" name="form-name" value="quote-request" />
-                  <div hidden aria-hidden="true">
-                    <label>
-                      Don&#39;t fill this out:{" "}
-                      <input name="bot-field" tabIndex={-1} autoComplete="off" />
-                    </label>
-                  </div>
-
-                  <h3 className="font-display text-xl font-bold text-navy-800 mb-7">
-                    Request a Free Quote
-                  </h3>
-
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    {/* Full Name */}
-                    <div className="sm:col-span-2">
-                      <label htmlFor="full-name" className={labelClass}>
-                        Full Name <span className="text-red-500" aria-label="required">*</span>
-                      </label>
-                      <input
-                        id="full-name"
-                        type="text"
-                        name="full-name"
-                        required
-                        autoComplete="name"
-                        placeholder="Jane Smith"
-                        className={inputClass}
-                        aria-required="true"
-                      />
-                    </div>
-
-                    {/* Address */}
-                    <div className="sm:col-span-2">
-                      <label htmlFor="address" className={labelClass}>
-                        Address <span className="text-red-500" aria-label="required">*</span>
-                      </label>
-                      <input
-                        id="address"
-                        type="text"
-                        name="address"
-                        required
-                        autoComplete="street-address"
-                        placeholder="123 Main St, Sarasota, FL 34230"
-                        className={inputClass}
-                        aria-required="true"
-                      />
-                    </div>
-
-                    {/* Email */}
-                    <div>
-                      <label htmlFor="email" className={labelClass}>
-                        Email <span className="text-red-500" aria-label="required">*</span>
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        required
-                        autoComplete="email"
-                        placeholder="jane@example.com"
-                        className={inputClass}
-                        aria-required="true"
-                      />
-                    </div>
-
-                    {/* Phone */}
-                    <div>
-                      <label htmlFor="phone" className={labelClass}>
-                        Phone Number <span className="text-red-500" aria-label="required">*</span>
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        name="phone"
-                        required
-                        autoComplete="tel"
-                        placeholder="(941) 555-0100"
-                        className={inputClass}
-                        aria-required="true"
-                      />
-                    </div>
-
-                    {/* Insurance Type */}
-                    <div className="sm:col-span-2">
-                      <label htmlFor="insurance-type" className={labelClass}>
-                        Insurance Type <span className="text-red-500" aria-label="required">*</span>
-                      </label>
-                      <select
-                        id="insurance-type"
-                        name="insurance-type"
-                        required
-                        className={`${inputClass} cursor-pointer`}
-                        value={insuranceType}
-                        onChange={(e) => setInsuranceType(e.target.value)}
-                        aria-required="true"
-                      >
-                        <option value="" disabled>
-                          Select coverage type…
-                        </option>
-                        <option value="Home">Home Insurance</option>
-                        <option value="Auto">Auto Insurance</option>
-                        <option value="Life">Life Insurance</option>
-                        <option value="Commercial">Commercial Insurance</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-
-                    {/* Vehicle fields — shown for Auto */}
-                    {(insuranceType === "Auto" || insuranceType === "") && (
-                      <>
-                        <div>
-                          <label htmlFor="vehicle-year-make-model" className={labelClass}>
-                            Year, Make &amp; Model
-                            <span className="ml-1 text-navy-400 font-normal">(optional)</span>
-                          </label>
-                          <input
-                            id="vehicle-year-make-model"
-                            type="text"
-                            name="vehicle-year-make-model"
-                            autoComplete="off"
-                            placeholder="e.g. 2022 Honda Accord"
-                            className={inputClass}
-                          />
-                        </div>
-                        <div>
-                          <label htmlFor="vin-number" className={labelClass}>
-                            VIN Number
-                            <span className="ml-1 text-navy-400 font-normal">(if handy)</span>
-                          </label>
-                          <input
-                            id="vin-number"
-                            type="text"
-                            name="vin-number"
-                            autoComplete="off"
-                            placeholder="17-character VIN"
-                            maxLength={17}
-                            className={inputClass}
-                          />
-                        </div>
-                      </>
-                    )}
-
-                    {/* Message */}
-                    <div className="sm:col-span-2">
-                      <label htmlFor="message" className={labelClass}>
-                        Message / Additional Details
-                        <span className="ml-1 text-navy-400 font-normal">(optional)</span>
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={4}
-                        placeholder="Tell us anything that would help us find the right coverage for you…"
-                        className={inputClass}
-                        aria-describedby="message-hint"
-                      />
-                      <p id="message-hint" className="text-xs text-navy-400 font-body mt-1.5">
-                        Current coverage provider, specific questions, budget, etc.
-                      </p>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="btn-primary mt-7 w-full py-4 rounded-lg font-semibold font-body text-base flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                    aria-live="polite"
+                <p className="font-display text-white text-xl font-bold mb-1">Lamb Insurance Agency</p>
+                <p className="text-sage-400 text-xs uppercase tracking-[0.2em] font-body mb-5">AAA Authorized Agent</p>
+                <div className="border-t border-white/10 pt-5">
+                  <p className="text-navy-300 font-body text-sm">Sarasota, Florida</p>
+                  <a
+                    href="tel:+19412252335"
+                    className="text-sage-300 font-body text-sm font-semibold hover:text-white transition-colors mt-1 block"
                   >
-                    {loading ? (
-                      <>
-                        <svg
-                          className="animate-spin h-4 w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          aria-hidden="true"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          />
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8v8z"
-                          />
-                        </svg>
-                        Sending…
-                      </>
-                    ) : (
-                      "Submit My Quote Request →"
-                    )}
-                  </button>
+                    (941) 225-2335
+                  </a>
+                </div>
+              </div>
 
-                  {/* SMS Disclosure + Consent Checkbox */}
-                  <div className="mt-6 p-4 rounded-xl border-2 border-navy-100 bg-navy-50/50">
-                    <p className="text-xs text-navy-600 font-body leading-relaxed mb-3">
-                      By checking the box below, you confirm your preference regarding SMS
-                      messages from Lamb Insurance Agency. Messages may include insurance
-                      quotes, policy updates, and customer support. Message frequency varies.
-                      Message and data rates may apply. Reply STOP to unsubscribe or HELP for
-                      assistance. Consent is not a condition of purchase. See our{" "}
-                      <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
-                        Terms &amp; Conditions
-                      </Link>
-                      {" "}and{" "}
-                      <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
-                        Privacy Policy
-                      </Link>
-                      .
-                    </p>
-                    <label
-                      htmlFor="tcpa-consent"
-                      className="flex items-start gap-3 cursor-pointer group"
-                    >
-                      <div className="relative flex-shrink-0 mt-0.5">
-                        <input
-                          id="tcpa-consent"
-                          type="checkbox"
-                          name="tcpa-consent-checkbox"
-                          checked={tcpaConsent}
-                          onChange={(e) => setTcpaConsent(e.target.checked)}
-                          className="sr-only"
-                        />
-                        <div
-                          className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                            tcpaConsent
-                              ? "bg-sage-600 border-sage-600"
-                              : "border-navy-300 bg-white group-hover:border-sage-400"
-                          }`}
-                          aria-hidden="true"
-                        >
-                          {tcpaConsent && (
-                            <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                          )}
-                        </div>
-                      </div>
-                      <p className="text-xs text-navy-600 font-body leading-relaxed">
-                        I agree to receive SMS text messages from Lamb Insurance Agency at the
-                        phone number provided.
-                      </p>
-                    </label>
+              {/* Credential pills */}
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { label: "Licensed", sub: "Florida DOI" },
+                  { label: "AAA Auth.", sub: "Authorized Agent" },
+                  { label: "Local", sub: "Sarasota, FL" },
+                  { label: "Direct", sub: "No Call Centers" },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="bg-cream rounded-xl p-4 border border-navy-100 text-center"
+                  >
+                    <p className="font-display text-navy-800 font-bold text-base">{item.label}</p>
+                    <p className="text-navy-500 font-body text-xs mt-0.5">{item.sub}</p>
                   </div>
-                </form>
-              )}
+                ))}
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── FAQ ────────────────────────────────────────────────────
+function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (i: number) => setOpenIndex((prev) => (prev === i ? null : i));
+
+  return (
+    <section
+      id="faq"
+      className="bg-warm py-20 md:py-28"
+      aria-labelledby="faq-heading"
+    >
+      <div className="max-w-3xl mx-auto px-5">
+        <div className="text-center mb-14 animate-on-scroll">
+          <div className="flex justify-center mb-4">
+            <div className="section-rule w-12" />
+          </div>
+          <h2
+            id="faq-heading"
+            className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight"
+          >
+            Frequently Asked Questions
+          </h2>
+          <p className="text-navy-600 font-body text-base leading-relaxed">
+            Common questions from Florida drivers and homeowners we work with.
+          </p>
+        </div>
+
+        <dl className="space-y-3 animate-on-scroll">
+          {FAQ_ITEMS.map((item, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div
+                key={i}
+                className="bg-white rounded-2xl border border-navy-100 overflow-hidden"
+              >
+                <dt>
+                  <button
+                    type="button"
+                    onClick={() => toggle(i)}
+                    aria-expanded={isOpen}
+                    className="w-full text-left flex items-center justify-between gap-4 px-6 py-5 font-display font-bold text-navy-800 text-base hover:text-navy-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-400 focus-visible:ring-inset"
+                  >
+                    <span>{item.q}</span>
+                    <ChevronDown
+                      className={`w-5 h-5 flex-shrink-0 text-navy-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                      aria-hidden="true"
+                    />
+                  </button>
+                </dt>
+                {isOpen && (
+                  <dd className="px-6 pb-6">
+                    <p className="text-navy-600 font-body text-sm leading-relaxed">{item.a}</p>
+                  </dd>
+                )}
+              </div>
+            );
+          })}
+        </dl>
+      </div>
+    </section>
+  );
+}
+
+// ── Bottom CTA ─────────────────────────────────────────────
+function BottomCTA() {
+  return (
+    <section
+      id="contact"
+      className="bg-navy-900 py-20 md:py-28"
+      aria-labelledby="cta-heading"
+    >
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+          {/* Left — copy */}
+          <div className="animate-on-scroll">
+            <div className="section-rule" />
+            <h2
+              id="cta-heading"
+              className="font-display text-3xl md:text-4xl font-bold text-white mb-5 leading-tight"
+            >
+              Get Clear on Your Coverage
+            </h2>
+            <p className="text-navy-300 font-body text-base leading-relaxed mb-8">
+              We&apos;ll review your options, explain what you&apos;re actually getting, and help you choose coverage that fits. No pressure. No jargon. Just straight answers from a local agent.
+            </p>
+
+            <ul className="space-y-3" aria-label="What we offer">
+              {[
+                "Full policy review at no cost",
+                "Clear explanation of every option",
+                "Fast, direct responses",
+              ].map((point) => (
+                <li key={point} className="flex items-center gap-3">
+                  <span
+                    className="flex-shrink-0 w-5 h-5 rounded-full bg-sage-600/40 border border-sage-500/50 flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <svg className="w-3 h-3 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-navy-200 font-body text-sm font-medium">{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right — CTA cards */}
+          <div className="flex flex-col gap-4 animate-on-scroll animate-on-scroll-delay-2">
+
+            {/* Card 1 — Get a Free Quote */}
+            <a
+              href="#home"
+              className="group flex items-center justify-between gap-4 bg-sage-600 hover:bg-sage-500 rounded-2xl px-7 py-6 transition-colors"
+              aria-label="Get a free quote — scroll to form"
+            >
+              <div>
+                <p className="font-display text-white text-lg font-bold mb-0.5">Get a Free Quote</p>
+                <p className="text-sage-100 font-body text-sm">Fill out the short form — takes about 60 seconds.</p>
+              </div>
+              <svg
+                className="w-6 h-6 text-white flex-shrink-0 group-hover:translate-x-1 transition-transform"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+
+            {/* Card 2 — Call Us Directly */}
+            <a
+              href="tel:+19412252335"
+              className="group flex items-center gap-5 bg-white/5 border border-white/15 hover:border-white/30 hover:bg-white/8 rounded-2xl px-7 py-6 transition-colors"
+              aria-label="Call Lamb Insurance Agency at (941) 225-2335"
+            >
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-800 border border-white/10 flex items-center justify-center text-sage-300">
+                <Phone className="w-5 h-5" aria-hidden="true" />
+              </div>
+              <div>
+                <p className="font-display text-white text-lg font-bold mb-0.5">Call Us Directly</p>
+                <p className="text-sage-300 font-body text-sm font-semibold">(941) 225-2335</p>
+              </div>
+            </a>
+
+            {/* Card 3 — Send an Email */}
+            <a
+              href={`mailto:${EMAIL}`}
+              className="group flex items-center gap-5 bg-white/5 border border-white/10 hover:border-white/25 hover:bg-white/8 rounded-2xl px-7 py-6 transition-colors"
+              aria-label={`Send an email to ${EMAIL}`}
+            >
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-800/60 border border-white/8 flex items-center justify-center text-navy-400 group-hover:text-navy-300 transition-colors">
+                <Mail className="w-5 h-5" aria-hidden="true" />
+              </div>
+              <div>
+                <p className="font-display text-white text-base font-bold mb-0.5">Send an Email</p>
+                <p className="text-navy-400 font-body text-sm">Quick questions welcome.</p>
+              </div>
+            </a>
+
           </div>
         </div>
       </div>
@@ -1115,7 +982,6 @@ function Footer() {
 
   return (
     <footer className="bg-navy-950 text-navy-300" role="contentinfo">
-      {/* Main footer */}
       <div className="max-w-6xl mx-auto px-5 py-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {/* Brand */}
         <div className="lg:col-span-1">
@@ -1138,9 +1004,17 @@ function Footer() {
           </h3>
           <ul className="space-y-3 font-body text-sm">
             <li>
-              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">
-                Email
-              </span>
+              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Phone</span>
+              <a
+                href="tel:+19412252335"
+                className="text-navy-200 hover:text-white transition-colors"
+                aria-label="Call (941) 225-2335"
+              >
+                (941) 225-2335
+              </a>
+            </li>
+            <li>
+              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Email</span>
               <a
                 href={`mailto:${EMAIL}`}
                 className="text-navy-200 hover:text-white transition-colors break-all"
@@ -1170,40 +1044,22 @@ function Footer() {
           </h3>
           <ul className="space-y-2 font-body text-sm">
             <li>
-              <Link
-                href="/privacy-policy"
-                className="text-navy-400 hover:text-navy-200 transition-colors"
-              >
-                Privacy Policy
-              </Link>
+              <Link href="/privacy-policy" className="text-navy-400 hover:text-navy-200 transition-colors">Privacy Policy</Link>
             </li>
             <li>
-              <Link
-                href="/terms"
-                className="text-navy-400 hover:text-navy-200 transition-colors"
-              >
-                Terms &amp; Conditions
-              </Link>
+              <Link href="/terms" className="text-navy-400 hover:text-navy-200 transition-colors">Terms &amp; Conditions</Link>
             </li>
             <li>
-              <Link
-                href="/faq"
-                className="text-navy-400 hover:text-navy-200 transition-colors"
-              >
-                FAQ
-              </Link>
+              <Link href="/faq" className="text-navy-400 hover:text-navy-200 transition-colors">FAQ</Link>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-white/8">
         <div className="max-w-6xl mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-body text-navy-500">
           <p>© {year} Lamb Insurance Agency. All rights reserved.</p>
-          <p>
-            Licensed Insurance Agency &nbsp;|&nbsp; Florida
-          </p>
+          <p>Licensed Insurance Agency &nbsp;|&nbsp; Florida</p>
         </div>
       </div>
     </footer>
@@ -1219,9 +1075,11 @@ export default function Home() {
       <Header />
       <main id="main-content">
         <Hero />
-        <Services />
-        <WhyUs />
-        <ContactForm />
+        <HowItWorks />
+        <CoverageExplained />
+        <AboutAgent />
+        <FAQSection />
+        <BottomCTA />
       </main>
       <Footer />
     </>
