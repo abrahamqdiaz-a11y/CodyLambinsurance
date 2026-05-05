@@ -109,57 +109,6 @@ export default function RootLayout({
             }),
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "What does auto insurance cover in Florida?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Florida requires a minimum of Personal Injury Protection (PIP) and Property Damage Liability. But minimum coverage often isn't enough. Depending on your vehicle and driving habits, you may also need collision, comprehensive, and uninsured motorist coverage. We review your full situation before making a recommendation.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Why did my insurance rate go up?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Rates increase due to regional risk factors, claims history, carrier adjustments, or market-wide changes. Florida has seen significant rate increases due to weather exposure and litigation trends. A policy review can identify whether you're still getting competitive value.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "How often should I review my insurance policy?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "At minimum, once a year — and immediately after any major life change like buying a vehicle, moving, or adding a driver. Policies get outdated fast and most people don't notice until it costs them.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "What is the difference between liability and full coverage?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Liability covers damage you cause to others. Full coverage adds collision (damage to your own vehicle) and comprehensive (theft, weather, non-collision events). The right choice depends on your vehicle's value and your financial exposure.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Do I need flood insurance in Sarasota?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, in most cases. Standard homeowners policies do not cover flood damage. Given Sarasota's coastal exposure, flood insurance is often essential — not optional. We'll tell you exactly what your current policy does and doesn't cover.",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
       </head>
       <body className="antialiased">{children}</body>
     </html>
