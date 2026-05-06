@@ -487,7 +487,7 @@ function CTASection() {
                 Llamar Ahora
               </a>
               <Link
-                href="/#contact"
+                href="/#quote-form"
                 className="btn-outline px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center"
               >
                 Obtener Cotización
