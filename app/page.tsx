@@ -168,7 +168,7 @@ function Header() {
           <Link href="#contact" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Contact</Link>
           <Link href="/espanol" className="nav-link text-sage-300 hover:text-white text-sm font-body tracking-wide transition-colors">Español</Link>
           <Link
-            href="#contact"
+            href="#quote-form"
             className="btn-primary px-5 py-2.5 rounded-lg text-sm font-semibold font-body tracking-wide"
           >
             Get a Quote
@@ -232,7 +232,7 @@ function Header() {
             <Link href="/about" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>About</Link>
             <Link href="#contact" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Contact</Link>
             <Link href="/espanol" className="text-sage-300 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Español</Link>
-            <Link href="#contact" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Get a Quote</Link>
+            <Link href="#quote-form" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Get a Quote</Link>
           </nav>
         </div>
       )}
@@ -558,7 +558,7 @@ function Hero() {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="#contact"
+                href="#quote-form"
                 className="btn-primary px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center flex items-center justify-center gap-2"
               >
                 <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
@@ -580,7 +580,7 @@ function Hero() {
           </div>
 
           {/* Col 2: Quote form card */}
-          <div className="w-full">
+          <div id="quote-form" className="w-full">
             <HeroQuoteForm />
           </div>
         </div>
