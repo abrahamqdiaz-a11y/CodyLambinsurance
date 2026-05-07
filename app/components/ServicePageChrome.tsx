@@ -115,7 +115,7 @@ export function ServicePageHeader() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-navy-950/98 backdrop-blur-md border-t border-white/10">
+        <div className="md:hidden bg-navy-950 border-t border-white/10">
           <nav className="flex flex-col px-5 py-4 gap-1" aria-label="Mobile navigation">
             <Link href="/" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Home</Link>
             <button
