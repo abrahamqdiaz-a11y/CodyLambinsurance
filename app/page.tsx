@@ -1061,6 +1061,19 @@ function Footer() {
           <p>© {year} Lamb Insurance Agency. All rights reserved.</p>
           <p>Licensed Insurance Agency &nbsp;|&nbsp; Florida</p>
         </div>
+        <div className="max-w-6xl mx-auto px-5 pb-5 text-center">
+          <p className="text-xs font-body text-navy-600 opacity-75">
+            Built by{" "}
+            <a
+              href="https://echelonfox.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-navy-400 transition-colors duration-300"
+            >
+              EchelonFox AI
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
