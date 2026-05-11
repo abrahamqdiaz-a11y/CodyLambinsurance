@@ -78,7 +78,7 @@ export function ServicePageHeader() {
               Insurance
             </Link>
             {insuranceOpen && (
-              <div className="absolute top-full left-0 min-w-72 rounded-lg border border-white/10 bg-navy-950/98 backdrop-blur-md shadow-lg shadow-black/20 py-2">
+              <div className="absolute top-full left-0 min-w-72 rounded-lg border border-white/10 bg-navy-950 shadow-lg shadow-black/20 py-2">
                 {INSURANCE_LINKS.map((item) => (
                   <Link
                     key={item.href}
