@@ -3,4 +3,5 @@ export const INSURANCE_LINKS = [
   { href: "/condo-insurance-sarasota-fl", label: "Condo Insurance" },
   { href: "/flood-insurance-sarasota-fl", label: "Flood Insurance" },
   { href: "/bundle-insurance-sarasota-fl", label: "Bundle Insurance" },
+  { href: "/commercial-insurance-sarasota-fl", label: "Commercial Insurance" },
 ] as const;
