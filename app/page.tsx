@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Car, House, AlertTriangle, Phone, Mail, ChevronDown, Linkedin, Facebook } from "lucide-react";
+import { Car, House, AlertTriangle, Phone, Mail, ChevronDown } from "lucide-react";
 import { INSURANCE_LINKS } from "./constants/insuranceLinks";
 
 // ── Constants ──────────────────────────────────────────────
@@ -55,6 +55,24 @@ const FAQ_ITEMS = [
     a: "Yes, in most cases. Standard homeowners policies do not cover flood damage. Given Sarasota's coastal exposure, flood insurance is often essential — not optional. We'll tell you exactly what your current policy does and doesn't cover.",
   },
 ];
+
+function LinkedinIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
+function FacebookIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
 
 // ── Scroll animation hook ──────────────────────────────────
 function useScrollReveal() {
@@ -1007,7 +1025,7 @@ function Footer() {
               aria-label="Lamb Insurance Agency on LinkedIn"
               className="text-navy-500 hover:text-navy-200 transition-colors"
             >
-              <Linkedin size={18} />
+              <LinkedinIcon size={18} />
             </a>
             <a
               href="https://www.facebook.com/people/Lamb-Insurance-Agency-LLC/61572033134721/"
@@ -1016,7 +1034,7 @@ function Footer() {
               aria-label="Lamb Insurance Agency on Facebook"
               className="text-navy-500 hover:text-navy-200 transition-colors"
             >
-              <Facebook size={18} />
+              <FacebookIcon size={18} />
             </a>
           </div>
         </div>
