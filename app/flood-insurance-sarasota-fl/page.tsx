@@ -8,6 +8,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://lambinsuranceagency.com/flood-insurance-sarasota-fl",
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://lambinsuranceagency.com/flood-insurance-sarasota-fl",
+    siteName: "Lamb Insurance Agency",
+    title: "Flood Insurance Sarasota FL | Lamb Insurance Agency",
+    description:
+      "Your home insurance does not cover flooding. Lamb Insurance Agency helps Sarasota homeowners understand their flood zone and get the right flood coverage. Local agent, same-day quotes.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lamb Insurance Agency — Flood Insurance Sarasota FL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flood Insurance Sarasota FL | Lamb Insurance Agency",
+    description:
+      "Your home insurance does not cover flooding. Lamb Insurance Agency helps Sarasota homeowners understand their flood zone and get the right flood coverage. Local agent, same-day quotes.",
+  },
 };
 
 const schemas = {

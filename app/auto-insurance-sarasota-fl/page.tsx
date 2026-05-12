@@ -2,11 +2,34 @@ import type { Metadata } from "next";
 import AutoPageClient from "./AutoPageClient";
 
 export const metadata: Metadata = {
-  title: "Auto Insurance in Sarasota | Lamb Insurance Agency",
+  title: "Auto Insurance in Sarasota, FL",
   description:
     "Get auto insurance in Sarasota that fits your life and budget. Compare coverage options, get fast answers, and work with a local agency that explains everything clearly.",
   alternates: {
     canonical: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl",
+    siteName: "Lamb Insurance Agency",
+    title: "Auto Insurance in Sarasota, FL | Lamb Insurance Agency",
+    description:
+      "Get auto insurance in Sarasota that fits your life and budget. Compare coverage options, get fast answers, and work with a local agency that explains everything clearly.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lamb Insurance Agency — Auto Insurance in Sarasota, FL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Auto Insurance in Sarasota, FL | Lamb Insurance Agency",
+    description:
+      "Get auto insurance in Sarasota that fits your life and budget. Compare coverage options, get fast answers, and work with a local agency that explains everything clearly.",
   },
 };
 

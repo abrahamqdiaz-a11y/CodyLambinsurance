@@ -8,6 +8,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://lambinsuranceagency.com/condo-insurance-sarasota-fl",
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://lambinsuranceagency.com/condo-insurance-sarasota-fl",
+    siteName: "Lamb Insurance Agency",
+    title: "Condo Insurance Sarasota FL | Lamb Insurance Agency",
+    description:
+      "Condo insurance in Sarasota FL through Lamb Insurance Agency. Florida condo rules changed — make sure your HO-6 policy keeps up. Local agent, same-day quotes.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lamb Insurance Agency — Condo Insurance Sarasota FL",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Condo Insurance Sarasota FL | Lamb Insurance Agency",
+    description:
+      "Condo insurance in Sarasota FL through Lamb Insurance Agency. Florida condo rules changed — make sure your HO-6 policy keeps up. Local agent, same-day quotes.",
+  },
 };
 
 const schemas = {

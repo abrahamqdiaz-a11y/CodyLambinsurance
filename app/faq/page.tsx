@@ -8,6 +8,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://lambinsuranceagency.com/faq",
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://lambinsuranceagency.com/faq",
+    siteName: "Lamb Insurance Agency",
+    title: "Florida Insurance FAQ | Lamb Insurance Agency",
+    description:
+      "Answers to common Florida insurance questions about auto, home, life, renewals, and coverage options in Sarasota and Bradenton. Get a free quote today.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Lamb Insurance Agency — Florida Insurance FAQ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Florida Insurance FAQ | Lamb Insurance Agency",
+    description:
+      "Answers to common Florida insurance questions about auto, home, life, renewals, and coverage options in Sarasota and Bradenton. Get a free quote today.",
+  },
   robots: { index: true, follow: true },
 };
 
