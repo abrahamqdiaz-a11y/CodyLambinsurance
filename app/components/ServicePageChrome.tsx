@@ -96,7 +96,10 @@ export function ServicePageHeader() {
           <Link href="/about" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">About</Link>
           <Link href="/#contact" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Contact</Link>
           <Link href="/espanol" className="nav-link text-sage-300 hover:text-white text-sm font-body tracking-wide transition-colors">Español</Link>
-          <Link href="/#quote-form" className="btn-primary px-5 py-2.5 rounded-lg text-sm font-semibold font-body tracking-wide">
+          <Link
+            href="/quote"
+            className={`btn-primary px-5 py-2.5 rounded-lg text-sm font-semibold font-body tracking-wide${pathname === "/quote" ? " ring-2 ring-white/30" : ""}`}
+          >
             Get a Quote
           </Link>
         </nav>
@@ -144,7 +147,11 @@ export function ServicePageHeader() {
             <Link href="/about" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>About</Link>
             <Link href="/#contact" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Contact</Link>
             <Link href="/espanol" className="text-sage-300 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Español</Link>
-            <Link href="/#quote-form" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Get a Quote</Link>
+            <Link
+              href="/quote"
+              className={`min-h-11 py-3 px-3 rounded-lg font-body text-sm tracking-wide transition-colors ${pathname === "/quote" ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+              onClick={() => setOpen(false)}
+            >Get a Quote</Link>
           </nav>
         </div>
       )}
