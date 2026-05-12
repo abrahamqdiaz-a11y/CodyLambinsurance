@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Linkedin, Facebook } from "lucide-react";
 
 import { INSURANCE_LINKS } from "../constants/insuranceLinks";
 
@@ -165,6 +166,26 @@ export function ServicePageFooter({ email }: { email: string }) {
           <p className="text-navy-400 font-body text-sm leading-relaxed max-w-xs">
             Protecting families, homes, vehicles, and businesses throughout Florida with coverage tailored to your life.
           </p>
+          <div className="flex gap-3 mt-5">
+            <a
+              href="https://www.linkedin.com/company/lamb-insurance-agency-llc"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lamb Insurance Agency on LinkedIn"
+              className="text-navy-500 hover:text-navy-200 transition-colors"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a
+              href="https://www.facebook.com/people/Lamb-Insurance-Agency-LLC/61572033134721/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lamb Insurance Agency on Facebook"
+              className="text-navy-500 hover:text-navy-200 transition-colors"
+            >
+              <Facebook size={18} />
+            </a>
+          </div>
         </div>
 
         <div>
