@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AutoPageClient from "./AutoPageClient";
 
 export const metadata: Metadata = {
-  title: "Auto Insurance in Sarasota | Lamb Insurance Agency",
+  title: "Auto Insurance in Sarasota, FL",
   description:
     "Get auto insurance in Sarasota that fits your life and budget. Compare coverage options, get fast answers, and work with a local agency that explains everything clearly.",
   alternates: {
