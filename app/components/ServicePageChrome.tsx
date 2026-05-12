@@ -174,6 +174,14 @@ export function ServicePageFooter({ email }: { email: string }) {
               <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Email</span>
               <a href={`mailto:${email}`} className="text-navy-200 hover:text-white transition-colors break-all" aria-label={`Send email to ${email}`}>{email}</a>
             </li>
+            <li>
+              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Address</span>
+              <address className="text-navy-200 not-italic text-sm leading-snug">
+                5893 Whitfield Ave<br />
+                Sarasota, FL 34243<br />
+                United States
+              </address>
+            </li>
           </ul>
         </div>
 
