@@ -45,6 +45,12 @@ export const metadata: Metadata = {
     title: "Lamb Insurance Agency | Personal & Commercial Insurance",
     description:
       "Insurance should be simple, personal, and built around you. Free quotes for auto, home, life, and commercial coverage.",
+    images: [
+      {
+        url: "/og-image.png",
+        alt: "Lamb Insurance Agency — Protecting What Matters Most",
+      },
+    ],
   },
   robots: {
     index: true,
