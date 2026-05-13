@@ -677,8 +677,8 @@ function CoverageExplained() {
     },
     {
       icon: <AlertTriangle className="w-6 h-6" aria-hidden="true" />,
-      title: "Why Coverage Fails",
-      body: "Most gaps come from outdated policies, unclear language, or choosing coverage based on price alone. We identify those gaps early — before a claim forces the issue.",
+      title: "Commercial Insurance",
+      body: "Looking for business insurance in Sarasota or Southwest Florida? We help contractors, retailers, and service businesses find the right commercial coverage — general liability, commercial auto, and business owner policies — without overpaying.",
     },
   ];
 
