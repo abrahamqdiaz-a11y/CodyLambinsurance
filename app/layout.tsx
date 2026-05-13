@@ -33,21 +33,21 @@ export const metadata: Metadata = {
       "Insurance should be simple, personal, and built around you. Get a free quote for auto, home, life, or commercial coverage from Lamb Insurance Agency.",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "/lamb.logo.jpg",
+        width: 200,
+        height: 200,
         alt: "Lamb Insurance Agency — Protecting What Matters Most",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Lamb Insurance Agency | Personal & Commercial Insurance",
     description:
       "Insurance should be simple, personal, and built around you. Free quotes for auto, home, life, and commercial coverage.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/lamb.logo.jpg",
         alt: "Lamb Insurance Agency — Protecting What Matters Most",
       },
     ],
