@@ -524,7 +524,7 @@ export default function EspanolPageClient() {
   return (
     <>
       <ServicePageHeader />
-      <main id="main-content">
+      <main id="main-content" lang="es">
         <Hero />
         <ServicesSection />
         <ReasonsSection />
