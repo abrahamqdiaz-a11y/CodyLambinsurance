@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Car, House, AlertTriangle, Phone, Mail, ChevronDown } from "lucide-react";
 import { INSURANCE_LINKS } from "./constants/insuranceLinks";
+import HighLevelForm from "./components/HighLevelForm";
 
 // ── Constants ──────────────────────────────────────────────
 const EMAIL = "calamb@acg.aaa.com";
@@ -262,249 +263,12 @@ function Header() {
   );
 }
 
-// ── Hero Quote Form ────────────────────────────────────────
-function HeroQuoteForm() {
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [tcpaConsent, setTcpaConsent] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    const formData = new FormData(e.currentTarget);
-    formData.set("tcpa-consent", "yes");
-    formData.set("tcpa-consent-timestamp", new Date().toISOString());
-    try {
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
-      });
-      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
-      setSubmitted(true);
-      setTcpaConsent(false);
-      formRef.current?.reset();
-    } catch (err) {
-      console.error(err);
-      alert("Something went wrong. Please call us directly or try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const inputCls =
-    "w-full rounded-lg px-4 py-3.5 pl-11 text-navy-900 font-body text-sm border border-slate-200 bg-white placeholder-navy-400 focus:outline-none focus:border-navy-600 focus:ring-2 focus:ring-navy-200/60 transition-all";
-
-  return (
-    <div className="bg-white rounded-2xl shadow-2xl shadow-navy-900/10 border border-slate-100 p-7 w-full">
-      {submitted ? (
-        <div className="text-center py-6" role="alert" aria-live="polite">
-          <div
-            className="w-14 h-14 bg-sage-50 border border-sage-200 rounded-full flex items-center justify-center mx-auto mb-4"
-            aria-hidden="true"
-          >
-            <svg className="w-7 h-7 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h3 className="font-display text-xl font-bold text-navy-800 mb-2">Request Received!</h3>
-          <p className="text-navy-500 font-body text-sm mb-5">
-            We&#39;ll be in touch shortly with your free quote.
-          </p>
-          <button
-            onClick={() => setSubmitted(false)}
-            className="btn-primary px-5 py-2.5 rounded-lg font-semibold font-body text-sm"
-          >
-            Submit Another
-          </button>
-        </div>
-      ) : (
-        <>
-          <div className="mb-5 text-center">
-            <h2 className="font-display text-xl font-bold text-navy-900 mb-1">
-              Get Your Free Quote
-            </h2>
-            <p className="text-navy-400 font-body text-sm">Quick. Easy. No Obligation.</p>
-          </div>
-
-          <form
-            ref={formRef}
-            name="hero-quote"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-            aria-label="Quick quote request form"
-          >
-            <input type="hidden" name="form-name" value="hero-quote" />
-            <div hidden aria-hidden="true">
-              <label>Don&#39;t fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" /></label>
-            </div>
-
-            <div className="space-y-3">
-              {/* Full Name */}
-              <div className="relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-navy-400 pointer-events-none" aria-hidden="true">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </span>
-                <input
-                  type="text"
-                  name="full-name"
-                  required
-                  autoComplete="name"
-                  placeholder="Full Name"
-                  className={inputCls}
-                  aria-label="Full Name"
-                />
-              </div>
-
-              {/* Phone */}
-              <div className="relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-navy-400 pointer-events-none" aria-hidden="true">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </span>
-                <input
-                  type="tel"
-                  name="phone"
-                  required
-                  autoComplete="tel"
-                  placeholder="Phone Number"
-                  className={inputCls}
-                  aria-label="Phone Number"
-                />
-              </div>
-
-              {/* Email */}
-              <div className="relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-navy-400 pointer-events-none" aria-hidden="true">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </span>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  autoComplete="email"
-                  placeholder="Email Address"
-                  className={inputCls}
-                  aria-label="Email Address"
-                />
-              </div>
-
-              {/* Insurance Type */}
-              <select
-                name="insurance-type"
-                required
-                defaultValue=""
-                className="w-full rounded-lg px-4 py-3.5 text-navy-900 font-body text-sm border border-slate-200 bg-white focus:outline-none focus:border-navy-600 focus:ring-2 focus:ring-navy-200/60 transition-all cursor-pointer"
-                aria-label="Insurance Type"
-              >
-                <option value="" disabled>Insurance Type</option>
-                <option value="Auto">Auto Insurance</option>
-                <option value="Home">Home Insurance</option>
-                <option value="Life">Life Insurance</option>
-                <option value="Commercial">Commercial Insurance</option>
-                <option value="Other">Other</option>
-              </select>
-
-              {/* ZIP Code */}
-              <div className="relative">
-                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-navy-400 pointer-events-none" aria-hidden="true">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </span>
-                <input
-                  type="text"
-                  name="zip"
-                  required
-                  inputMode="numeric"
-                  placeholder="ZIP Code"
-                  maxLength={5}
-                  className={inputCls}
-                  aria-label="ZIP Code"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="btn-primary w-full py-3.5 rounded-lg font-semibold font-body text-base flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-              >
-                {loading ? "Sending…" : "Get My Quote →"}
-              </button>
-
-              {/* SMS Disclosure + Consent Checkbox */}
-              <div className="mt-4 p-4 rounded-xl border-2 border-navy-100 bg-navy-50/50">
-                <p className="text-xs text-navy-600 font-body leading-relaxed mb-3">
-                  By checking the box below, you confirm your preference regarding SMS messages from Lamb Insurance Agency. Messages may include insurance quotes, policy updates, and customer support. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe or HELP for assistance. Consent is not a condition of purchase. See our{" "}
-                  <Link href="/terms" className="underline hover:text-sage-700 text-sage-600">
-                    Terms &amp; Conditions
-                  </Link>
-                  {" "}and{" "}
-                  <Link href="/privacy-policy" className="underline hover:text-sage-700 text-sage-600">
-                    Privacy Policy
-                  </Link>
-                  .
-                </p>
-                <label htmlFor="hero-tcpa-consent" className="flex items-start gap-3 cursor-pointer group">
-                  <div className="relative flex-shrink-0 mt-0.5">
-                    <input
-                      id="hero-tcpa-consent"
-                      type="checkbox"
-                      name="tcpa-consent-checkbox"
-                      checked={tcpaConsent}
-                      onChange={(e) => setTcpaConsent(e.target.checked)}
-                      className="sr-only"
-                    />
-                    <div
-                      className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                        tcpaConsent
-                          ? "bg-sage-600 border-sage-600"
-                          : "border-navy-300 bg-white group-hover:border-sage-400"
-                      }`}
-                      aria-hidden="true"
-                    >
-                      {tcpaConsent && (
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      )}
-                    </div>
-                  </div>
-                  <p className="text-xs text-navy-600 font-body leading-relaxed">
-                    I agree to receive SMS text messages from Lamb Insurance Agency at the phone number provided.
-                  </p>
-                </label>
-              </div>
-            </div>
-          </form>
-
-          <p className="text-center text-navy-400 font-body text-xs mt-4 flex items-center justify-center gap-1.5">
-            <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-            Your information is safe and secure.
-          </p>
-        </>
-      )}
-    </div>
-  );
-}
-
 // ── Hero ───────────────────────────────────────────────────
 function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden min-h-screen"
+      className="relative overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Background house */}
@@ -541,10 +305,10 @@ function Hero() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 pt-24 pb-14 md:pt-32 md:pb-20">
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_440px] lg:gap-12 xl:gap-16 lg:items-center">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_480px] lg:gap-12 xl:gap-16 lg:items-start">
 
           {/* Col 1: Left copy */}
-          <div>
+          <div className="pt-4">
             <p className="text-navy-700 font-body text-xs font-bold uppercase tracking-[0.18em] mb-5 flex items-center gap-2">
               <span className="w-6 h-px bg-navy-600 inline-block" aria-hidden="true" />
               Local Insurance You Can Trust
@@ -601,9 +365,9 @@ function Hero() {
             </div>
           </div>
 
-          {/* Col 2: Quote form card */}
+          {/* Col 2: GHL Quote form */}
           <div id="quote-form" className="w-full">
-            <HeroQuoteForm />
+            <HighLevelForm />
           </div>
         </div>
       </div>
