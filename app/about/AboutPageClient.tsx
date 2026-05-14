@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
+import HighLevelForm from "../components/HighLevelForm";
 
 const EMAIL = "calamb@acg.aaa.com";
 const PHONE_DISPLAY = "(941) 225-2335";
@@ -371,9 +372,7 @@ function ServiceSection() {
           </div>
 
           <div className="animate-on-scroll animate-on-scroll-delay-2">
-            <h3 className="font-display text-xl font-bold text-navy-800 mb-5">
-              Clients can expect:
-            </h3>
+            <h3 className="font-display text-xl font-bold text-navy-800 mb-5">Clients can expect:</h3>
             <ul className="space-y-4">
               {[
                 {
@@ -524,41 +523,6 @@ function LongTermSection() {
 }
 
 function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
-  const [insuranceType, setInsuranceType] = useState("Auto");
-  const [loading, setLoading] = useState(false);
-  const [tcpaConsent, setTcpaConsent] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    const formData = new FormData(e.currentTarget);
-    formData.set("tcpa-consent", "yes");
-    formData.set("tcpa-consent-timestamp", new Date().toISOString());
-    try {
-      const res = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
-      });
-      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
-      setSubmitted(true);
-      setTcpaConsent(false);
-      formRef.current?.reset();
-      setInsuranceType("Auto");
-    } catch (err) {
-      console.error(err);
-      alert("There was a problem submitting the form. Please call us directly or try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const inputClass =
-    "form-input w-full rounded-lg px-4 py-3 text-navy-900 font-body text-sm placeholder-navy-400 focus:ring-0";
-  const labelClass = "block font-body text-sm font-semibold text-navy-700 mb-1.5";
-
   return (
     <section id="contact" className="bg-cream py-20 md:py-28" aria-labelledby="contact-heading">
       <div className="max-w-6xl mx-auto px-5">
@@ -621,225 +585,7 @@ function ContactForm() {
           </div>
 
           <div className="lg:col-span-3 animate-on-scroll animate-on-scroll-delay-2">
-            <div className="bg-white rounded-2xl shadow-xl shadow-navy-100/50 p-8 md:p-10 border border-navy-100">
-              {submitted ? (
-                <div className="text-center py-10" role="alert" aria-live="polite">
-                  <h3 className="font-display text-2xl font-bold text-navy-800 mb-3">
-                    Thank You!
-                  </h3>
-                  <p className="text-navy-600 font-body text-base leading-relaxed mb-6 max-w-sm mx-auto">
-                    We received your request. Cody will be in touch soon.
-                  </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="btn-primary px-6 py-3 rounded-lg font-semibold font-body text-sm"
-                  >
-                    Submit Another Request
-                  </button>
-                </div>
-              ) : (
-                <form
-                  ref={formRef}
-                  name="quote-request"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
-                  aria-label="Quote request form"
-                  noValidate
-                >
-                  <input type="hidden" name="form-name" value="quote-request" />
-                  <div hidden aria-hidden="true">
-                    <label>
-                      Don&apos;t fill this field:{" "}
-                      <input name="bot-field" tabIndex={-1} autoComplete="off" />
-                    </label>
-                  </div>
-
-                  <h3 className="font-display text-xl font-bold text-navy-800 mb-7">
-                    Request a Quote
-                  </h3>
-
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div className="sm:col-span-2">
-                      <label htmlFor="full-name" className={labelClass}>
-                        Full Name <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        id="full-name"
-                        type="text"
-                        name="full-name"
-                        required
-                        autoComplete="name"
-                        placeholder="Jane Smith"
-                        className={inputClass}
-                      />
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label htmlFor="address" className={labelClass}>
-                        Address <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        id="address"
-                        type="text"
-                        name="address"
-                        required
-                        autoComplete="street-address"
-                        placeholder="123 Main St, Sarasota, FL 34230"
-                        className={inputClass}
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="email" className={labelClass}>
-                        Email <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        required
-                        autoComplete="email"
-                        placeholder="you@example.com"
-                        className={inputClass}
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="phone" className={labelClass}>
-                        Phone <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        name="phone"
-                        required
-                        autoComplete="tel"
-                        placeholder="(941) 555-0100"
-                        className={inputClass}
-                      />
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label htmlFor="insurance-type" className={labelClass}>
-                        Insurance Type <span className="text-red-500">*</span>
-                      </label>
-                      <select
-                        id="insurance-type"
-                        name="insurance-type"
-                        required
-                        className={`${inputClass} cursor-pointer`}
-                        value={insuranceType}
-                        onChange={(e) => setInsuranceType(e.target.value)}
-                      >
-                        <option value="Auto">Auto Insurance</option>
-                        <option value="Home">Home Insurance</option>
-                        <option value="Life">Life Insurance</option>
-                        <option value="Commercial">Commercial Insurance</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-
-                    <div className="sm:col-span-2">
-                      <label htmlFor="message" className={labelClass}>
-                        Message / Additional Details{" "}
-                        <span className="ml-1 text-navy-400 font-normal">(optional)</span>
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={4}
-                        placeholder="Tell us about your current coverage or what you're looking for…"
-                        className={inputClass}
-                      />
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="btn-primary mt-7 w-full py-4 rounded-lg font-semibold font-body text-base flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                  >
-                    {loading ? "Sending…" : "Request a Policy Review"}
-                  </button>
-
-                  <a
-                    href={`tel:${PHONE_HREF}`}
-                    className="mt-3 w-full inline-flex justify-center px-6 py-3 rounded-lg border border-navy-300 text-navy-800 font-semibold font-body hover:bg-navy-50 transition-colors"
-                  >
-                    Call Now
-                  </a>
-
-                  <div className="mt-6 p-4 rounded-xl border-2 border-navy-100 bg-navy-50/50">
-                    <p className="text-xs text-navy-600 font-body leading-relaxed mb-3">
-                      By checking this box, you confirm your preference to receive SMS messages from
-                      Lamb Insurance Agency. Messages may include quotes, policy updates, and
-                      customer support. Frequency may vary and carrier rates may apply. Reply STOP
-                      to cancel or HELP for help. Your consent is not a condition of purchase. See
-                      our{" "}
-                      <Link
-                        href="/terms"
-                        className="underline hover:text-sage-700 text-sage-600"
-                      >
-                        Terms and Conditions
-                      </Link>{" "}
-                      and{" "}
-                      <Link
-                        href="/privacy-policy"
-                        className="underline hover:text-sage-700 text-sage-600"
-                      >
-                        Privacy Policy
-                      </Link>
-                      .
-                    </p>
-                    <label
-                      htmlFor="tcpa-consent"
-                      className="flex items-start gap-3 cursor-pointer group"
-                    >
-                      <div className="relative flex-shrink-0 mt-0.5">
-                        <input
-                          id="tcpa-consent"
-                          type="checkbox"
-                          name="tcpa-consent-checkbox"
-                          checked={tcpaConsent}
-                          onChange={(e) => setTcpaConsent(e.target.checked)}
-                          className="sr-only"
-                        />
-                        <div
-                          className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
-                            tcpaConsent
-                              ? "bg-sage-600 border-sage-600"
-                              : "border-navy-300 bg-white group-hover:border-sage-400"
-                          }`}
-                          aria-hidden="true"
-                        >
-                          {tcpaConsent && (
-                            <svg
-                              className="w-3 h-3 text-white"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth={3}
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M5 13l4 4L19 7"
-                              />
-                            </svg>
-                          )}
-                        </div>
-                      </div>
-                      <p className="text-xs text-navy-600 font-body leading-relaxed">
-                        I agree to receive SMS text messages from Lamb Insurance Agency at the
-                        number provided.
-                      </p>
-                    </label>
-                  </div>
-                </form>
-              )}
-            </div>
+            <HighLevelForm />
           </div>
         </div>
       </div>
