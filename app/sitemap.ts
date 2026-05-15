@@ -35,6 +35,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/commercial-insurance-sarasota-fl`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/life-insurance-sarasota-fl`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/insurance-bradenton-fl`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/insurance-lakewood-ranch-fl`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/insurance-siesta-key-fl`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/insurance-venice-fl`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/quote`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: new Date("2026-05-05"),
       changeFrequency: "monthly",
