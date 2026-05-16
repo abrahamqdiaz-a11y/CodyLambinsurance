@@ -11,9 +11,9 @@ const PHONE_HREF = "+19412252335";
 
 const coverageLinks = [
   {
-    label: "Homeowners Insurance",
-    href: "/homeowners-insurance-sarasota-fl",
-    description: "Dwelling, contents, and liability coverage — with carrier options that work for older Venice homes.",
+    label: "Bundle Insurance",
+    href: "/bundle-insurance-sarasota-fl",
+    description: "Home and auto bundling options — with carrier choices that work for older Venice properties.",
   },
   {
     label: "Flood Insurance",
@@ -26,9 +26,9 @@ const coverageLinks = [
     description: "Coverage for Venice residents, including low-mileage and seasonal storage options.",
   },
   {
-    label: "Boat & Watercraft",
-    href: "/boat-insurance-sarasota-fl",
-    description: "Physical damage and on-water liability for vessels using the Venice Inlet and ICW.",
+    label: "Commercial Insurance",
+    href: "/commercial-insurance-sarasota-fl",
+    description: "Liability and property coverage for businesses and marine-adjacent commercial operations in Venice.",
   },
   {
     label: "Life Insurance",
@@ -36,9 +36,9 @@ const coverageLinks = [
     description: "Term, whole life, and final expense options for retirees and fixed-income households.",
   },
   {
-    label: "Renters Insurance",
-    href: "/renters-insurance-sarasota-fl",
-    description: "Personal property and liability coverage for Venice tenants and seasonal renters.",
+    label: "Condo Insurance",
+    href: "/condo-insurance-sarasota-fl",
+    description: "HO-6 coverage for condo owners and personal property protection for Venice tenants.",
   },
 ];
 
