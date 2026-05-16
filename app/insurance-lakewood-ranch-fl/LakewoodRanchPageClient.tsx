@@ -16,9 +16,9 @@ const coverageLinks = [
     description: "Coverage review for new Florida residents, multi-car households, and out-of-state plate transfers.",
   },
   {
-    label: "Homeowners Insurance",
-    href: "/homeowners-insurance-sarasota-fl",
-    description: "Dwelling, liability, and contents coverage with HOA-compliant limits and replacement cost accuracy.",
+    label: "Bundle Insurance",
+    href: "/bundle-insurance-sarasota-fl",
+    description: "Home and auto bundling with HOA-compliant limits and replacement cost accuracy for LWR properties.",
   },
   {
     label: "Flood Insurance",
@@ -31,8 +31,8 @@ const coverageLinks = [
     description: "Term and permanent options for LWR's mix of younger professionals and retirees.",
   },
   {
-    label: "Renters Insurance",
-    href: "/renters-insurance-sarasota-fl",
+    label: "Condo Insurance",
+    href: "/condo-insurance-sarasota-fl",
     description: "Personal property and liability coverage for residents in LWR apartment communities like Bungalows and Ottava.",
   },
 ];
