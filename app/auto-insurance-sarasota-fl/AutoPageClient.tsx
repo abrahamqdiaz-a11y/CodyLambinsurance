@@ -11,71 +11,84 @@ const PHONE_HREF = "+19412252335";
 
 const switchReasons = [
   {
-    title: "My Price Went Up",
-    text: "A renewal increase is one of the biggest reasons people switch. We help you compare current options and check for discounts you may be missing.",
+    title: "Premium Increased",
+    text: "We'll compare your current coverage against available options and identify applicable discounts — even if your record is clean.",
   },
   {
-    title: "I Want Better Protection",
-    text: "Lowest price is not always best. We help you review coverage limits, deductibles, and protection options that match your real needs.",
+    title: "New Vehicle or Driver",
+    text: "Adding a young driver or buying a new car affects premiums significantly. We help you update your policy correctly and explain each tradeoff.",
   },
   {
-    title: "I'm Tired of Bad Service",
-    text: "You should be able to reach someone when you need help. Work with a local agency that answers questions and follows through.",
+    title: "Moving to Florida",
+    text: "New residents often don't know what Florida requires or what their prior coverage doesn't carry over. We walk you through it.",
   },
   {
-    title: "New Car or New Driver",
-    text: "Bought a vehicle or added a driver to the household? We make the process simple and explain each step.",
+    title: "Coverage Gaps",
+    text: "Many drivers don't discover gaps in their policy until after a claim. We find them first.",
   },
 ];
 
 const coverageItems = [
   {
-    title: "Liability Coverage",
-    text: "Helps pay for injuries or property damage you cause to others in an accident.",
+    title: "Liability",
+    text: "Covers injuries and property damage you cause to others. Required by Florida law.",
   },
   {
-    title: "Collision Coverage",
-    text: "Helps repair or replace your vehicle after a covered crash.",
+    title: "Collision",
+    text: "Repairs or replaces your vehicle after a covered accident.",
   },
   {
-    title: "Comprehensive Coverage",
-    text: "Helps protect against theft, vandalism, fire, weather, and other non-collision losses.",
+    title: "Comprehensive",
+    text: "Covers theft, vandalism, flooding, fire, hurricanes, and falling objects.",
   },
   {
-    title: "Uninsured Motorist Coverage",
-    text: "Helps protect you if another driver has little or no insurance.",
+    title: "Uninsured Motorist",
+    text: "Protects you when the other driver doesn't have adequate coverage. Florida has one of the highest rates of uninsured drivers in the country.",
   },
   {
-    title: "Full Coverage",
-    text: "A common term for combining multiple coverages for broader protection.",
+    title: "Medical Payments",
+    text: "Additional coverage for accident-related medical expenses beyond what PIP covers.",
+  },
+  {
+    title: "Roadside Assistance",
+    text: "Covers breakdowns, dead batteries, flat tires, and lockouts.",
+  },
+  {
+    title: "Rental Reimbursement",
+    text: "Pays for transportation costs while your vehicle is being repaired after a covered claim.",
   },
 ];
 
 const faqItems = [
   {
-    question: "How much is auto insurance in Sarasota?",
+    question: "Is Florida a no-fault state?",
     answer:
-      "Your rate depends on factors like driving history, vehicle, location, coverage choices, and discounts. We help you compare options based on your situation.",
+      "Yes. Florida's no-fault system requires PIP coverage and limits when you can sue after an accident. You're covered for medical expenses regardless of fault — but that doesn't mean you're fully protected.",
   },
   {
-    question: "Can I lower my monthly payment?",
+    question: "What does \"full coverage\" mean?",
     answer:
-      "Often, yes. Adjusting deductibles, reviewing discounts, bundling policies, or comparing carriers may reduce your premium.",
+      "Typically liability, collision, and comprehensive combined. The specifics vary by policy — we'll explain exactly what you're getting before you commit.",
   },
   {
-    question: "What coverage do I need in Florida?",
+    question: "Why did my rate go up?",
     answer:
-      "That depends on your car, budget, and risk tolerance. We'll explain your options clearly so you can decide with confidence.",
+      "Florida's insurance market is expensive and getting more so. Rising repair costs, increased medical claims, higher litigation rates, hurricane losses, and uninsured driver exposure all contribute — even if your driving record is clean.",
   },
   {
-    question: "Can I switch before renewal?",
+    question: "Can I lower my premium?",
     answer:
-      "Yes. Many drivers switch before their renewal date. We can help you review timing and next steps.",
+      "Often yes. Adjusting deductibles, applying discounts, and bundling policies are common options. We'll review what's available based on your specific situation.",
   },
   {
-    question: "Do you offer bilingual service?",
+    question: "How fast can I get a quote?",
     answer:
-      "Yes. We proudly help English- and Spanish-speaking customers.",
+      "Most quotes are completed same-day.",
+  },
+  {
+    question: "Do you offer Spanish-language service?",
+    answer:
+      "Yes. English and Spanish spoken.",
   },
 ];
 
@@ -108,16 +121,16 @@ function Hero() {
           <div className="inline-flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-4 py-1.5 mb-6">
             <span className="w-2 h-2 rounded-full bg-sage-400 animate-pulse" aria-hidden="true" />
             <span className="text-sage-300 text-xs font-body uppercase tracking-widest">
-              Free Quote · Fast Answers · Local Help
+              Same-Day Quotes · English & Spanish · Local Agency
             </span>
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Auto Insurance in Sarasota
+            Auto Insurance in Sarasota, FL
           </h1>
 
           <p className="text-navy-200 text-base md:text-lg leading-relaxed mb-10 font-body max-w-3xl">
-            Get coverage that fits your life and your budget. At Lamb Insurance Agency, we help Sarasota drivers compare options, understand what they&apos;re buying, and move forward with confidence.
+            Florida rates are up. Coverage gaps are common. Lamb Insurance Agency helps Sarasota drivers compare options, understand what they&apos;re actually buying, and get protected — without the runaround.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -128,12 +141,12 @@ function Hero() {
               href={`tel:${PHONE_HREF}`}
               className="px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center border border-white/40 text-white hover:bg-white/10 transition-colors"
             >
-              Call: {PHONE_DISPLAY}
+              Call {PHONE_DISPLAY}
             </a>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3" aria-label="Trust indicators">
-            {["Bilingual Service", "Local Sarasota Team", "Quick Quote Process", "Clear Guidance"].map((item) => (
+            {["Local Sarasota Agency", "Bilingual Service", "Same-Day Quotes", "Personalized Reviews"].map((item) => (
               <div key={item} className="bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-sm text-navy-100 font-body">
                 {item}
               </div>
@@ -152,7 +165,7 @@ function WhyPeopleSwitchSection() {
         <div className="max-w-3xl mb-10 animate-on-scroll">
           <div className="section-rule" />
           <h2 id="switch-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
-            Why Drivers Shop for New Coverage
+            Situations We Handle Every Day
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -175,7 +188,7 @@ function CoverageSection() {
         <div className="max-w-3xl mb-12 animate-on-scroll">
           <div className="section-rule" />
           <h2 id="coverage-heading" className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-            Coverage Options Explained Clearly
+            Coverage Options
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
@@ -198,17 +211,20 @@ function WhyChooseSection() {
         <div className="max-w-3xl mb-10 animate-on-scroll">
           <div className="section-rule" />
           <h2 id="choose-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
-            Why Choose Lamb Insurance Agency
+            Why Sarasota Drivers Work With Us
           </h2>
+          <p className="text-navy-600 font-body text-base leading-relaxed">
+            Most insurance websites give you a number. We give you an explanation. We take the time to walk you through what each coverage does, what Florida requires, and where your current policy might leave you exposed.
+          </p>
         </div>
         <ul className="grid md:grid-cols-2 gap-4 text-navy-700 font-body">
           {[
             "Local Sarasota agency",
-            "Real people, not a call center",
-            "Straight answers without jargon",
-            "Fast, simple quote process",
-            "Help finding coverage within your budget",
-            "Ongoing support after you buy",
+            "Bilingual service (English & Spanish)",
+            "Same-day quotes",
+            "Personalized coverage reviews",
+            "Ongoing policy support",
+            "Florida compliance guidance",
           ].map((item) => (
             <li key={item} className="bg-white border border-navy-100 rounded-xl p-4 animate-on-scroll">
               {item}
@@ -227,11 +243,17 @@ function SarasotaSection() {
         <div className="animate-on-scroll max-w-4xl">
           <div className="section-rule" />
           <h2 id="sarasota-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
-            Local Help for Sarasota Drivers
+            Sarasota&apos;s Driving Environment
           </h2>
           <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
             <p>
-              From daily commutes to school runs to weekend trips across Florida, your insurance should match how you actually drive. We help Sarasota drivers understand state requirements, compare options, and keep coverage on track at renewal.
+              Sarasota isn&apos;t a typical Florida market. Heavy seasonal traffic, consistent tourist volume, afternoon thunderstorms, and direct hurricane exposure create risk patterns that generic policies don&apos;t always address.
+            </p>
+            <p>
+              Uninsured and underinsured motorists are a real factor on Florida roads. Flooding and wind damage are annual concerns, not hypotheticals. Knowing the local environment matters when you&apos;re selecting coverage.
+            </p>
+            <p>
+              We serve Sarasota, Lakewood Ranch, Fruitville, Siesta Key, Palmer Ranch, Gulf Gate, Osprey, Nokomis, Venice, Bradenton, and Parrish.
             </p>
             <p>
               Need more than auto insurance? Ask about <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundling options in Sarasota</Link> for added convenience and possible savings.
@@ -293,10 +315,10 @@ function ContactForm() {
           <div className="lg:col-span-2 animate-on-scroll">
             <div className="section-rule" />
             <h2 id="contact-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
-              Get a Quote Today
+              Get a Free Auto Insurance Quote
             </h2>
             <p className="text-navy-600 font-body text-base leading-relaxed mb-8">
-              Don&apos;t wait for your next renewal notice or a problem on the road. Get local help, clear answers, and coverage options built around your needs.
+              Shopping for better rates. Reviewing existing coverage. Insuring a new vehicle. Moving to Florida. Whatever brought you here — we&apos;ll give you a straight answer.
             </p>
 
             <div className="space-y-4">
