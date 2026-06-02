@@ -1,59 +1,459 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
 
 const EMAIL = "calamb@acg.aaa.com";
+const PHONE_DISPLAY = "(941) 225-2335";
+const PHONE_HREF = "+19412252335";
 
 const condoCoverageItems = [
-  "Interior walls, flooring, and fixtures not covered by the master policy",
-  "Personal property — furniture, electronics, clothing, appliances",
-  "Loss assessment coverage — your share of association assessments after a covered loss",
-  "Personal liability — if someone is injured inside your unit",
-  "Additional living expenses — temporary housing if your unit is uninhabitable after a covered loss",
-  "Water damage from interior sources — plumbing failures, appliance leaks",
-  "Improvements and upgrades you have made to the unit",
+  {
+    title: "Interior Structure",
+    text: "Walls, flooring, ceilings, and fixtures not covered by the master policy. Under a bare walls policy, this is extensive.",
+  },
+  {
+    title: "Personal Property",
+    text: "Furniture, electronics, clothing, appliances, jewelry. Coverage limits should reflect actual replacement cost, not what you paid years ago.",
+  },
+  {
+    title: "Loss Assessment Coverage",
+    text: "Your share of association-level assessments after a covered loss. Florida law sets the statutory minimum at $2,000 — in today's Sarasota market, that number is effectively meaningless. We'll review your specific building when setting this limit.",
+  },
+  {
+    title: "Personal Liability",
+    text: "If a guest is injured in your unit, or you cause damage to a neighboring unit — an overflowing bathtub, for example — personal liability coverage responds. The master policy does not.",
+  },
+  {
+    title: "Additional Living Expenses",
+    text: "If your unit becomes uninhabitable after a covered loss, this covers temporary housing, meals, and related costs while repairs are made.",
+  },
+  {
+    title: "Water Damage from Interior Sources",
+    text: "Plumbing failures, appliance leaks, and HVAC issues are among the most common condo claims. Coverage terms vary significantly between carriers.",
+  },
+  {
+    title: "Improvements and Upgrades",
+    text: "If you renovated your kitchen, updated the flooring, or added custom finishes, those improvements are not covered by the original unit valuation under most master policies.",
+  },
 ];
 
 const faqItems = [
   {
     question: "Do I need condo insurance if my association has a master policy?",
     answer:
-      "Yes. The association's master policy covers the building and common areas — not your personal belongings, your interior improvements, or your personal liability. The gap between what the master policy covers and what you own is your financial responsibility. An HO-6 policy covers that gap.",
+      "Yes. The master policy covers the building and common areas. It does not cover your personal belongings, your unit interior (depending on policy type), your personal liability, or your share of special assessments. An HO-6 fills those gaps.",
   },
   {
-    question: "How much does condo insurance cost in Sarasota FL?",
+    question: "What is loss assessment coverage and why does it matter in Sarasota right now?",
     answer:
-      "HO-6 premiums in Sarasota typically range from $800 to $2,500 per year depending on your unit's value, location, building age, coverage amount, and deductible. An accurate quote requires knowing your unit's square footage, approximate replacement cost, and your association's master policy type. Contact Lamb Insurance Agency for a same-day quote.",
+      "Loss assessment coverage pays your share of an association-level assessment after a covered loss. Florida law sets the statutory minimum at $2,000 — and many basic HO-6 policies are written at exactly that floor. With Florida's reserve funding requirements driving large structural assessments in many Sarasota communities since late 2024 and into 2025, having adequate limits in your personal policy is more important than it's ever been.",
   },
   {
-    question: "What is loss assessment coverage and why do I need it?",
+    question: "Does condo insurance cover flooding?",
     answer:
-      "Loss assessment coverage pays your share of a special assessment levied by your condo association when a covered loss exceeds the association's master policy limits or deductible. Following Florida SB 4-D reserve requirements, special assessments have become more common in Sarasota communities. Without loss assessment coverage in your HO-6 policy that cost comes directly out of your pocket.",
+      "No. Standard HO-6 policies exclude flooding from external sources. If your unit is in a flood zone — or simply in a coastal or low-lying area — separate flood insurance is worth discussing. We cover this as part of every condo insurance conversation.",
   },
   {
-    question: "What is the difference between Bare Walls In and All In master policies?",
+    question: "What's the difference between actual cash value and replacement cost coverage?",
     answer:
-      "A Bare Walls In master policy covers only the building structure — everything inside your unit including flooring, fixtures, cabinets, and appliances is your responsibility. An All In master policy covers most of the unit interior including original fixtures and built-ins. Knowing which type your association carries determines how much HO-6 coverage you actually need.",
+      "Actual cash value pays depreciated value. Replacement cost pays what it actually costs to replace the item or rebuild the interior today. The difference on a full-unit water loss can be substantial. For most condo owners, replacement cost coverage is the better choice.",
   },
   {
-    question: "Does condo insurance cover flooding in Sarasota?",
+    question: "How does condo insurance work for seasonal residents?",
     answer:
-      "Standard HO-6 condo insurance does not cover flooding. Flood coverage requires a separate flood insurance policy. In Sarasota County flood risk is real — storm surge, heavy rainfall, and groundwater flooding affect condo properties as well as single family homes. Ask us about flood insurance options when you get your condo quote.",
+      "Policies for units that are vacant for extended periods have different terms than primary residence policies. Some standard HO-6 policies reduce or void coverage during vacancy periods. This is a common issue for Sarasota's seasonal population and one we address directly.",
+  },
+  {
+    question: "Can I get a quote the same day?",
+    answer: "Yes. Most quotes are completed same-day.",
+  },
+  {
+    question: "Do you offer Spanish-language service?",
+    answer: "Yes. English and Spanish spoken.",
   },
 ];
 
-function useScrollReveal() { useEffect(()=>{const els=document.querySelectorAll('.animate-on-scroll'); const observer=new IntersectionObserver((entries)=>{entries.forEach((e)=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.12}); els.forEach((el)=>observer.observe(el)); return ()=>observer.disconnect();},[]); }
+function useScrollReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll(".animate-on-scroll");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.12 }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+}
 
-function Hero(){return <section id="home" className="hero-pattern min-h-screen flex flex-col justify-center relative overflow-hidden"><div className="absolute top-1/4 right-0 w-96 h-96 rounded-full opacity-5 bg-sage-400 blur-3xl pointer-events-none" aria-hidden="true"/><div className="absolute bottom-0 left-1/4 w-64 h-64 rounded-full opacity-8 bg-navy-500 blur-2xl pointer-events-none" aria-hidden="true"/><div className="relative z-10 max-w-6xl mx-auto px-5 pt-28 pb-20 md:pt-36 md:pb-28"><div className="max-w-4xl"><div className="inline-flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-4 py-1.5 mb-6"><span className="w-2 h-2 rounded-full bg-sage-400 animate-pulse" aria-hidden="true"/><span className="text-sage-300 text-xs font-body uppercase tracking-widest">Condo Insurance — Sarasota FL</span></div><h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">Condo Insurance Sarasota FL — Know What Your Association Does Not Cover</h1><p className="text-navy-200 text-base md:text-lg leading-relaxed mb-10 font-body max-w-3xl">Your condo association has insurance on the building. It does not cover your belongings, your interior, or your personal liability. That gap is your responsibility — and most Sarasota condo owners do not know how large it is.</p><div className="flex flex-col sm:flex-row gap-3 mb-12"><a href="#contact" className="btn-primary px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center">Get Your Condo Insurance Quote — Same Day Response</a></div><div className="flex flex-wrap gap-6" aria-label="Trust indicators">{[{text:'Trusted Coverage'},{text:'Personalized Service'},{text:'Local Expertise'}].map((b)=><div key={b.text} className="flex items-center gap-2"><span className="text-navy-300 text-sm font-body">{b.text}</span></div>)}</div></div></div></section>;}
+function Hero() {
+  return (
+    <section id="home" className="hero-pattern min-h-screen flex flex-col justify-center relative overflow-hidden">
+      <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full opacity-5 bg-sage-400 blur-3xl pointer-events-none" aria-hidden="true" />
+      <div className="absolute bottom-0 left-1/4 w-64 h-64 rounded-full opacity-8 bg-navy-500 blur-2xl pointer-events-none" aria-hidden="true" />
 
-function ContentSections(){return <section className="bg-cream py-20 md:py-28"><div className="max-w-6xl mx-auto px-5 space-y-20"><div className="animate-on-scroll max-w-4xl"><div className="section-rule"/><h2 className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">What Your Association&apos;s Master Policy Actually Covers</h2><div className="space-y-5 text-navy-600 font-body text-base leading-relaxed"><p>Every Sarasota condo association carries a master insurance policy. That policy protects the building structure and common areas. What it covers inside your individual unit depends entirely on your association&apos;s specific policy type — and most condo owners have never read it.</p><p>There are three types of master policies:</p><p><strong>Bare Walls In</strong> — the most common. The association covers the structure only. Everything inside your unit — flooring, fixtures, cabinets, appliances, and all personal property — is your responsibility entirely.</p><p><strong>Single Entity</strong> — the association covers original built-in fixtures but not your improvements, upgrades, or personal property.</p><p><strong>All In</strong> — the most comprehensive. Covers most of the unit interior. Your HO-6 supplements for personal property and liability.</p><p>Do you know which type your association carries? Most Sarasota condo owners find out when they have a claim. We review your association&apos;s master policy as part of every condo insurance assessment — at no cost.</p></div></div><div className="animate-on-scroll max-w-4xl"><div className="section-rule"/><h2 className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">Florida Condo Rules Changed — Is Your Policy Keeping Up?</h2><div className="space-y-5 text-navy-600 font-body text-base leading-relaxed"><p>Florida Senate Bill 4-D changed the requirements for condo associations significantly. Associations are now required to conduct structural integrity reserve studies and maintain specific reserve funding levels. This has resulted in increased special assessments in many Sarasota communities.</p><p>Your HO-6 loss assessment coverage responds to your share of a special assessment following a covered loss. Without adequate loss assessment coverage in your personal policy, that bill comes directly out of your pocket.</p><p>If you own a condo in Sarasota and have not reviewed your HO-6 policy since 2022, there is a real chance your coverage does not reflect the current environment.</p></div></div><div className="animate-on-scroll max-w-4xl"><div className="section-rule"/><h2 className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-8 leading-tight">Sarasota Has One of the Largest Condo Markets in Florida</h2><div className="space-y-5 text-navy-600 font-body text-base leading-relaxed"><p>From downtown Sarasota high-rises to Siesta Key beachfront complexes to the golf course condos throughout the county — Sarasota&apos;s condo market is one of the most diverse in the state. Each building has its own master policy, its own association rules, and its own coverage gaps.</p><p>Lamb Insurance Agency works with Sarasota condo owners across all of these communities. We review your association&apos;s master policy, identify the gaps, and build an HO-6 policy that covers what the association does not. Ask us about <Link href="/flood-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">flood insurance for your Sarasota condo</Link> options at the same time.</p></div></div><div className="animate-on-scroll max-w-4xl"><div className="section-rule"/><h2 className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">Bundle Your Condo and Auto Coverage</h2><div className="space-y-5 text-navy-600 font-body text-base leading-relaxed"><p>Most Sarasota condo owners who also have a vehicle save money by placing both policies through the same agent. One renewal date. One point of contact. A real discount on your combined premium.</p><p>Ask about <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundle your condo and auto coverage</Link> when you get your quote. If needed, we also provide <Link href="/home-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">home insurance in Sarasota</Link> and <Link href="/auto-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">auto insurance in Sarasota</Link> through one local office.</p></div></div></div></section>;}
+      <div className="relative z-10 max-w-6xl mx-auto px-5 pt-28 pb-20 md:pt-36 md:pb-28">
+        <div className="max-w-4xl">
+          <div className="inline-flex items-center gap-2 bg-white/8 border border-white/12 rounded-full px-4 py-1.5 mb-6">
+            <span className="w-2 h-2 rounded-full bg-sage-400 animate-pulse" aria-hidden="true" />
+            <span className="text-sage-300 text-xs font-body uppercase tracking-widest">
+              Same-Day Quotes · English & Spanish · Local Agency
+            </span>
+          </div>
 
-function CoverageSection(){return <section className="bg-navy-900 py-20 md:py-28" aria-labelledby="coverage-heading"><div className="max-w-6xl mx-auto px-5"><div className="max-w-3xl mb-12 animate-on-scroll"><div className="section-rule"/><h2 id="coverage-heading" className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">What Your HO-6 Policy Needs to Cover</h2></div><ul className="grid md:grid-cols-2 gap-6" aria-label="Condo coverage checklist">{condoCoverageItems.map((item,index)=><li key={item} className={`flex items-start gap-4 animate-on-scroll animate-on-scroll-delay-${Math.min(index+1,4)}`}><div className="w-9 h-9 rounded-full bg-sage-500/20 border border-sage-400/40 flex items-center justify-center mt-0.5" aria-hidden="true"><svg className="w-4 h-4 text-sage-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg></div><p className="text-navy-200 font-body text-base leading-relaxed">{item}</p></li>)}</ul></div></section>;}
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Condo Insurance in Sarasota, FL
+          </h1>
 
-function FAQSection(){return <section className="bg-cream py-20 md:py-28" aria-labelledby="faq-heading"><div className="max-w-6xl mx-auto px-5"><div className="max-w-3xl mb-12 animate-on-scroll"><div className="section-rule"/><h2 id="faq-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">Frequently Asked Questions</h2></div><div className="space-y-4">{faqItems.map((item)=><details key={item.question} className="bg-white border border-navy-100 rounded-xl p-6 group animate-on-scroll"><summary className="font-display text-lg font-bold text-navy-800 cursor-pointer list-none pr-8 relative">{item.question}<span className="absolute right-0 top-1 text-sage-700 group-open:rotate-45 transition-transform">+</span></summary><p className="text-navy-600 font-body text-base leading-relaxed mt-4">{item.answer}</p></details>)}</div></div></section>;}
+          <p className="text-navy-200 text-base md:text-lg leading-relaxed mb-4 font-body max-w-3xl">
+            Your condo association has insurance. It doesn&apos;t cover you.
+          </p>
+
+          <p className="text-navy-300 text-base leading-relaxed mb-10 font-body max-w-3xl">
+            The building is insured. Your unit interior, your belongings, your personal liability, and your share of any special assessment after a covered loss? That&apos;s on you. Most Sarasota condo owners discover this gap at the worst possible time — after a water leak, a hurricane, or a special assessment notice arrives in the mail.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 mb-10">
+            <a href="#contact" className="btn-primary px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center">
+              Get a Free Quote
+            </a>
+            <a
+              href={`tel:${PHONE_HREF}`}
+              className="px-7 py-3.5 rounded-lg font-semibold font-body text-base text-center border border-white/40 text-white hover:bg-white/10 transition-colors"
+            >
+              Call {PHONE_DISPLAY}
+            </a>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3" aria-label="Trust indicators">
+            {["Local Sarasota Agency", "Bilingual Service", "Same-Day Quotes", "Master Policy Reviews"].map((item) => (
+              <div key={item} className="bg-white/8 border border-white/15 rounded-lg px-4 py-3 text-sm text-navy-100 font-body">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CoverageGapSection() {
+  return (
+    <section className="bg-cream py-20 md:py-28" aria-labelledby="gap-heading">
+      <div className="max-w-6xl mx-auto px-5 space-y-16">
+        <div className="animate-on-scroll max-w-4xl">
+          <div className="section-rule" />
+          <h2 id="gap-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
+            The Coverage Gap Most Sarasota Condo Owners Don&apos;t Know They Have
+          </h2>
+          <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
+            <p>
+              Your condo association pays premiums on a master insurance policy every year. That policy protects the building structure and common areas. What it covers inside your individual unit depends entirely on which type of master policy your association carries — and most condo owners have never read it.
+            </p>
+            <p>There are three types:</p>
+          </div>
+          <div className="mt-8 space-y-6">
+            {[
+              {
+                title: "Bare Walls In",
+                text: "The most common type in Sarasota. The association's policy covers the structure only — exterior walls, roof, common areas. Everything inside your unit is your responsibility. Flooring, cabinets, countertops, fixtures, appliances, and all personal property. If a pipe bursts in the wall and damages your kitchen, the association covers the pipe. You cover everything else.",
+              },
+              {
+                title: "Single Entity",
+                text: "The association covers original built-in fixtures as they were when the building was constructed. Any improvements, upgrades, or renovations you've made are not covered. Neither is your personal property.",
+              },
+              {
+                title: "All In",
+                text: "The most comprehensive master policy type. Covers most of the unit interior as originally built. Your HO-6 policy primarily fills the gap for personal property, improvements, and personal liability.",
+              },
+            ].map((item) => (
+              <article key={item.title} className="bg-white border border-navy-100 rounded-2xl p-6">
+                <h3 className="font-display text-xl font-bold text-navy-800 mb-3">{item.title}</h3>
+                <p className="text-navy-600 font-body text-base leading-relaxed">{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-navy-600 font-body text-base leading-relaxed">
+            Do you know which type your association carries? Most Sarasota condo owners find out when they file a claim. We review your association&apos;s master policy as part of every condo insurance assessment — at no cost.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SB4DSection() {
+  return (
+    <section className="bg-navy-900 py-20 md:py-28" aria-labelledby="sb4d-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-4xl animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="sb4d-heading" className="font-display text-3xl md:text-4xl font-bold text-white mb-5 leading-tight">
+            Florida&apos;s Condo Laws Changed. Your Coverage May Not Have Kept Up.
+          </h2>
+          <div className="space-y-5 text-navy-200 font-body text-base leading-relaxed">
+            <p>
+              Florida Senate Bill 4-D became law in May 2022, fundamentally changing the financial obligations of condo associations across the state. Associations are now required to complete structural integrity reserve studies and maintain fully funded reserves for critical building components — roofs, load-bearing walls, fire protection systems, plumbing, electrical, and more.
+            </p>
+            <p>
+              For many Sarasota condo communities, this has meant significant reserve shortfalls and resulting special assessments to fund them — with the bulk of those assessments materializing in late 2024 and into 2025. Owners in some buildings have received notices for tens of thousands of dollars, sometimes with limited notice.
+            </p>
+            <p>Here&apos;s where your HO-6 policy comes in.</p>
+            <p>
+              Loss assessment coverage is a component of your personal condo policy that responds when you&apos;re responsible for a share of an association assessment following a covered loss. Florida law sets the statutory minimum for loss assessment coverage at $2,000. Many basic HO-6 policies are written at exactly that floor. In today&apos;s Sarasota market, where structural assessments routinely run into five figures, the minimum is effectively meaningless.
+            </p>
+            <p>
+              If you own a condo in Sarasota and haven&apos;t reviewed your policy in the last two years, there&apos;s a real chance your loss assessment coverage doesn&apos;t reflect what assessments are actually looking like in your community.
+            </p>
+            <p className="text-sage-300 font-medium">
+              We review this as part of every condo insurance conversation — no obligation, no pressure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SarasotaMarketSection() {
+  return (
+    <section className="bg-cream py-20 md:py-28" aria-labelledby="market-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-4xl animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="market-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
+            What Sarasota&apos;s Condo Market Looks Like From an Insurance Perspective
+          </h2>
+          <p className="text-navy-600 font-body text-base leading-relaxed mb-8">
+            Sarasota has one of the most diverse condo markets in Florida. The insurance considerations vary significantly depending on where and what you own.
+          </p>
+          <div className="space-y-6">
+            {[
+              {
+                title: "Downtown and Gulf Gate high-rises",
+                text: "Older buildings face elevated insurance costs due to age, building systems, and the increased scrutiny that followed Florida's legislative changes. Master policy premiums in many of these communities have increased substantially, and those increases pass through to owners.",
+              },
+              {
+                title: "Siesta Key and barrier island properties",
+                text: "Flood zone exposure is a real factor. Many units in beachfront and near-beach communities sit in FEMA-designated flood zones, which affects both what the master policy covers and what your personal policy needs to address. Flood insurance for your condo contents and interior is a separate policy — and a conversation worth having.",
+              },
+              {
+                title: "Lakewood Ranch and inland communities",
+                text: "Generally lower flood risk, but special assessment exposure from aging infrastructure and reserve funding gaps is just as relevant here.",
+              },
+              {
+                title: "Golf course and resort communities",
+                text: "Often have unique association structures, amenity coverage considerations, and seasonal residency patterns that affect policy needs.",
+              },
+            ].map((item) => (
+              <article key={item.title} className="bg-white border border-navy-100 rounded-2xl p-6 animate-on-scroll">
+                <h3 className="font-display text-lg font-bold text-navy-800 mb-3">{item.title}</h3>
+                <p className="text-navy-600 font-body text-base leading-relaxed">{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-8 text-navy-600 font-body text-base leading-relaxed">
+            Every building is different. Every master policy is different. The right HO-6 for a downtown Sarasota high-rise looks nothing like the right policy for a Siesta Key ground-floor unit.
+          </p>
+          <p className="mt-4 text-navy-600 font-body text-base leading-relaxed">
+            Ask about <Link href="/flood-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">flood insurance options</Link> or <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundling your condo and auto coverage</Link> when you request a quote.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CoverageSection() {
+  return (
+    <section className="bg-navy-900 py-20 md:py-28" aria-labelledby="coverage-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl mb-12 animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="coverage-heading" className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+            What Your HO-6 Policy Needs to Cover
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {condoCoverageItems.map((item, index) => (
+            <article key={item.title} className={`bg-white/5 border border-white/10 rounded-2xl p-6 animate-on-scroll animate-on-scroll-delay-${Math.min(index + 1, 4)}`}>
+              <h3 className="font-display text-xl font-bold text-white mb-3">{item.title}</h3>
+              <p className="text-navy-200 font-body text-base leading-relaxed">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ScenariosSection() {
+  return (
+    <section className="bg-warm py-20 md:py-28" aria-labelledby="scenarios-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl mb-12 animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="scenarios-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
+            The Real Cost of Being Underinsured
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            {
+              label: "Scenario One",
+              text: "A pipe behind your bathroom wall fails. The association covers the pipe repair. Water damaged your floors, cabinets, vanity, and personal property. Without an HO-6, those costs are yours entirely.",
+            },
+            {
+              label: "Scenario Two",
+              text: "Your building's reserve fund is underfunded. The association issues a special assessment of $18,000 per unit to fund a required structural repair. Your loss assessment coverage limit is $2,000. You write a check for $16,000.",
+            },
+            {
+              label: "Scenario Three",
+              text: "A visitor trips and injures themselves in your unit. The association's master policy doesn't cover what happens inside your unit. Without personal liability coverage in your HO-6, legal costs and damages come out of pocket.",
+            },
+          ].map((item) => (
+            <article key={item.label} className="bg-white border border-navy-100 rounded-2xl p-6 animate-on-scroll">
+              <p className="text-xs font-body uppercase tracking-widest text-sage-700 mb-3">{item.label}</p>
+              <p className="text-navy-600 font-body text-base leading-relaxed">{item.text}</p>
+            </article>
+          ))}
+        </div>
+        <p className="mt-8 text-navy-600 font-body text-base leading-relaxed max-w-3xl animate-on-scroll">
+          None of these are rare events. All of them are preventable with the right policy in place.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function MistakesSection() {
+  return (
+    <section className="bg-cream py-20 md:py-28" aria-labelledby="mistakes-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl mb-12 animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="mistakes-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
+            Mistakes Sarasota Condo Owners Make
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "Assuming the association's policy covers them",
+              text: "The most common — and most costly — misunderstanding in condo insurance. The master policy covers the building. It does not cover you.",
+            },
+            {
+              title: "Carrying default loss assessment limits",
+              text: "Florida law sets the statutory minimum at $2,000. Many basic HO-6 policies are written at exactly that floor. In today's market, with large-scale structural assessments becoming more common, it's inadequate by an order of magnitude.",
+            },
+            {
+              title: "Not accounting for improvements",
+              text: "If your unit has been renovated — upgraded flooring, new kitchen, custom tile — those improvements won't be covered at their current value unless your policy specifically accounts for them.",
+            },
+            {
+              title: "Choosing actual cash value over replacement cost",
+              text: "Actual cash value policies pay depreciated value. Replacement cost policies pay what it actually costs to replace them today. The difference on a full-unit water loss can be substantial.",
+            },
+            {
+              title: "Skipping flood insurance on barrier island and coastal units",
+              text: "Standard HO-6 policies don't cover rising water from external sources. For Siesta Key, Lido Key, and other coastal locations, this is not an optional conversation.",
+            },
+            {
+              title: "Not reviewing after Florida's legislative changes",
+              text: "SB 4-D changed the financial landscape for condo associations statewide. Policies written before the wave of special assessments in late 2024–2025 were underwritten in a different environment. If yours hasn't been reviewed, it should be.",
+            },
+          ].map((item) => (
+            <article key={item.title} className="bg-white border border-navy-100 rounded-2xl p-6 animate-on-scroll">
+              <h3 className="font-display text-lg font-bold text-navy-800 mb-3">{item.title}</h3>
+              <p className="text-navy-600 font-body text-base leading-relaxed">{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhoWeHelpSection() {
+  return (
+    <section className="bg-warm py-20 md:py-28" aria-labelledby="who-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl mb-10 animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="who-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
+            Who We Help
+          </h2>
+        </div>
+        <ul className="grid md:grid-cols-2 gap-4">
+          {[
+            { label: "Full-time Sarasota residents", text: "Primary residence coverage with liability, personal property, and loss assessment limits appropriate for full-time occupancy." },
+            { label: "Seasonal residents", text: "Policies for owners who split time between Sarasota and another state. Vacancy periods affect coverage terms — this matters and is often overlooked." },
+            { label: "Investors and rental owners", text: "Units rented out require different coverage than owner-occupied units. Standard HO-6 policies often exclude rental activity." },
+            { label: "Recent buyers", text: "New condo owners frequently receive a policy requirement from their lender without understanding what they're buying. We explain it." },
+            { label: "Owners reviewing after an assessment notice", text: "If you've recently received a special assessment and want to understand your coverage options going forward, we can help." },
+          ].map((item) => (
+            <li key={item.label} className="bg-white border border-navy-100 rounded-xl p-5 animate-on-scroll">
+              <p className="font-display font-bold text-navy-800 mb-1">{item.label}</p>
+              <p className="text-navy-600 font-body text-sm leading-relaxed">{item.text}</p>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-10 text-navy-600 font-body text-base leading-relaxed max-w-3xl animate-on-scroll">
+          Serving: Downtown Sarasota · Siesta Key · Lido Key · Longboat Key · Gulf Gate · Palmer Ranch · Lakewood Ranch · Fruitville · Osprey · Nokomis · Venice · Bradenton
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  return (
+    <section className="bg-cream py-20 md:py-28" aria-labelledby="faq-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl mb-12 animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="faq-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div className="space-y-4">
+          {faqItems.map((item, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <article key={item.question} className="bg-white border border-navy-100 rounded-xl p-6 animate-on-scroll">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  className="w-full text-left font-display text-lg font-bold text-navy-800 pr-8 relative"
+                  aria-expanded={isOpen}
+                >
+                  {item.question}
+                  <span className={`absolute right-0 top-1 text-sage-700 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 mt-4" : "max-h-0"}`}>
+                  <p className="text-navy-600 font-body text-base leading-relaxed">{item.answer}</p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function ContactForm() {
   return (
@@ -62,18 +462,43 @@ function ContactForm() {
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           <div className="lg:col-span-2 animate-on-scroll">
             <div className="section-rule" />
-            <h2 id="contact-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">Get Your Condo Insurance Quote — Same Day Response</h2>
-            <p className="text-navy-600 font-body text-base leading-relaxed mb-8">Ready to protect your condo properly? Fill out the form and we&apos;ll review your association policy gap and your HO-6 options.</p>
+            <h2 id="contact-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
+              Get Your Sarasota Condo Insurance Quote
+            </h2>
+            <p className="text-navy-600 font-body text-base leading-relaxed mb-8">
+              Whether you&apos;re a new buyer, a longtime owner who hasn&apos;t reviewed your policy since before Florida&apos;s legislative changes, a seasonal resident, or someone who just received a special assessment notice — we&apos;ll give you a clear picture of where you stand and what it costs to be properly covered.
+            </p>
+
             <div className="space-y-4">
-              <a href={`mailto:${EMAIL}`} className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group" aria-label={`Email ${EMAIL}`}>
-                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">✉️</div>
+              <a
+                href={`tel:${PHONE_HREF}`}
+                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
+                aria-label={`Call ${PHONE_DISPLAY}`}
+              >
+                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
+                  📞
+                </div>
                 <div>
-                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">Email Us</p>
+                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">Call Now</p>
+                  <p className="font-display text-navy-800 font-bold text-sm group-hover:text-sage-700 transition-colors">{PHONE_DISPLAY}</p>
+                </div>
+              </a>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
+                aria-label={`Email ${EMAIL}`}
+              >
+                <div className="w-10 h-10 rounded-full bg-sage-50 flex items-center justify-center text-xl flex-shrink-0" aria-hidden="true">
+                  ✉️
+                </div>
+                <div>
+                  <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-0.5">Email</p>
                   <p className="font-display text-navy-800 font-bold text-sm group-hover:text-sage-700 transition-colors break-all">{EMAIL}</p>
                 </div>
               </a>
             </div>
           </div>
+
           <div className="lg:col-span-3 animate-on-scroll animate-on-scroll-delay-2">
             <HighLevelForm />
           </div>
@@ -83,4 +508,25 @@ function ContactForm() {
   );
 }
 
-export default function CondoPageClient(){useScrollReveal(); return <><ServicePageHeader/><main id="main-content"><Hero/><ContentSections/><CoverageSection/><ContactForm/><FAQSection/></main><ServicePageFooter email={EMAIL}/></>;}
+export default function CondoPageClient() {
+  useScrollReveal();
+
+  return (
+    <>
+      <ServicePageHeader />
+      <main id="main-content">
+        <Hero />
+        <CoverageGapSection />
+        <SB4DSection />
+        <SarasotaMarketSection />
+        <CoverageSection />
+        <ScenariosSection />
+        <MistakesSection />
+        <WhoWeHelpSection />
+        <FAQSection />
+        <ContactForm />
+      </main>
+      <ServicePageFooter email={EMAIL} />
+    </>
+  );
+}
