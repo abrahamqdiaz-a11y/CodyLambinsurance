@@ -105,7 +105,7 @@ export default function InsightsPostClient({ post }: { post: Post }) {
         <article className="bg-cream py-14 md:py-20">
           <div className="max-w-3xl mx-auto px-5">
             <div
-              className="prose-insights animate-on-scroll"
+              className="prose-insights"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
