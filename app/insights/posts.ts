@@ -41,7 +41,7 @@ export const POSTS: Post[] = [
     title: "Should You Bundle Home and Auto Insurance in Florida? What Homeowners Need to Know",
     date: "2026-06-08",
     excerpt: "Bundling home and auto insurance can save money — but in Florida's rapidly shifting market, it isn't always the best move. Here's how to evaluate whether a bundle actually works in your favor.",
-    thumbnail: "",
+    thumbnail: "/blog/bundle-home-auto-florida.png",
     content: `
       <p>For many homeowners, insurance is one of the largest recurring household expenses. In Florida, this burden has become particularly acute. Recent data indicates that the average annual home insurance premium in the state reached $8,292 in 2025 — an 18% rise from the previous year, with cumulative rate increases hitting roughly 30% since 2022.</p>
 
@@ -143,7 +143,7 @@ export const POSTS: Post[] = [
       <div style="background:#f0f7ff;border-left:4px solid #1a56db;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0;">
         <p style="margin:0 0 0.5rem;font-weight:700;font-size:1.1rem;">Not sure if your bundle is actually saving you money?</p>
         <p style="margin:0 0 1rem;">Cody Lamb is a licensed insurance agent based in Sarasota. He reviews home and auto policies at no cost and no obligation — a straightforward look at whether your current setup still makes sense.</p>
-        <a href="/contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Get a Free Policy Review →</a>
+        <a href="/#contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Get a Free Policy Review →</a>
       </div>
 
       <h2>Frequently Asked Questions</h2>
@@ -257,7 +257,7 @@ export const POSTS: Post[] = [
       <div style="background:#f0f7ff;border-left:4px solid #1a56db;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0;">
         <p style="margin:0 0 0.5rem;font-weight:700;font-size:1.1rem;">Find out in 15 minutes.</p>
         <p style="margin:0 0 1rem;">Cody Lamb is a licensed insurance agent based in Sarasota. He reviews car insurance policies at no cost and no obligation — just a straight answer about whether your policy still makes sense for your life.</p>
-        <a href="/contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Get a Free Policy Review →</a>
+        <a href="/#contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Get a Free Policy Review →</a>
       </div>
 
       <p><em>Cody Lamb is a licensed insurance agent serving Sarasota and the surrounding area. He specializes in helping Florida residents find coverage that fits their life — not the life they had when they first moved here.</em></p>
