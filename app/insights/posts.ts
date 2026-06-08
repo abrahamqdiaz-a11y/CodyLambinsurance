@@ -41,7 +41,7 @@ export const POSTS: Post[] = [
     title: "Should You Bundle Home and Auto Insurance in Florida? What Homeowners Need to Know",
     date: "2026-06-08",
     excerpt: "Bundling home and auto insurance can save money — but in Florida's rapidly shifting market, it isn't always the best move. Here's how to evaluate whether a bundle actually works in your favor.",
-    thumbnail: "",
+    thumbnail: "/blog/bundle-home-auto-florida.png",
     content: `
       <p>For many homeowners, insurance is one of the largest recurring household expenses. In Florida, this burden has become particularly acute. Recent data indicates that the average annual home insurance premium in the state reached $8,292 in 2025 — an 18% rise from the previous year, with cumulative rate increases hitting roughly 30% since 2022.</p>
 
