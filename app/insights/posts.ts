@@ -37,6 +37,75 @@ export type Post = {
 export const POSTS: Post[] = [
   // ← Add new posts here. Newest first.
   {
+    slug: "flood-zones-home-insurance-sarasota-neighborhoods",
+    title: "Flood Zones, Home Insurance, and Sarasota Neighborhoods: What New Residents Need to Know Before They Buy",
+    date: "2026-06-12",
+    excerpt: "Moving to Sarasota? Most out-of-state buyers have never had to think about flood zones, wind mitigation, or separate flood policies. Here's a practical orientation before you sign anything.",
+    thumbnail: "",
+    content: `
+      <p>I talk to a lot of people relocating to Sarasota. They've done their homework on neighborhoods, school ratings, commute times, and restaurant scenes. What almost none of them have done is think seriously about insurance — specifically, what Florida insurance actually costs and why.</p>
+
+      <p>That's not a criticism. If you're coming from Ohio, Michigan, or Connecticut, your homeowner's policy probably just renewed automatically every year without much drama. You paid it. You forgot about it. Here, that approach will cost you — sometimes a lot. Florida's insurance market is unlike any other in the country, and Sarasota's particular geography adds layers that catch out-of-state buyers completely off guard.</p>
+
+      <p>This post isn't meant to scare you. Sarasota is a genuinely wonderful place to live, and plenty of people buy homes here and manage their insurance intelligently. But "intelligently" means understanding what you're buying before you sign anything. Consider this your orientation.</p>
+
+      <h2>What Flood Zones Actually Mean</h2>
+
+      <p>The first thing to understand is that your standard homeowner's insurance policy does not cover flood damage. Not one dollar. Flood coverage is a separate policy, typically through the National Flood Insurance Program (NFIP) or a private flood carrier, and whether you're required to carry it — and what it costs — depends heavily on your flood zone designation.</p>
+
+      <p>FEMA maintains flood maps for every county in the country. In Sarasota County, the three zones you'll encounter most often are:</p>
+
+      <p><strong>Zone X</strong> is the baseline most buyers hope for. It indicates a lower flood risk area — outside the 100-year floodplain. Flood insurance isn't federally required in Zone X, and if you buy it anyway, premiums are generally modest. Many buyers in areas like Lakewood Ranch or parts of Palmer Ranch fall into Zone X, though that designation isn't universal even within those communities.</p>
+
+      <p><strong>Zone AE</strong> is where things get more serious. AE zones are within the 100-year floodplain, meaning FEMA estimates at least a 1% annual chance of flooding — which sounds small until you hold a 30-year mortgage. If you're financing a home in an AE zone, your lender will require flood insurance. Sarasota County has extensive AE coverage, particularly around Sarasota Bay, the barrier islands, and low-lying inland areas near waterways and retention systems. Premiums in AE zones vary significantly based on your home's elevation relative to the Base Flood Elevation (BFE) established for that zone.</p>
+
+      <p><strong>Zone VE</strong> is the coastal high-hazard zone — the most exposure-heavy designation. VE zones account for wave action in addition to flooding, and you'll find them along the Gulf-facing edges of Siesta Key, Lido Key, and similar barrier island locations. Insurance in VE zones is the most expensive category, and construction requirements are strict.</p>
+
+      <p>Here's something that genuinely surprises people: two houses on the same block can be in different flood zones, or share a zone but have dramatically different BFEs. Your neighbor's flood premium tells you almost nothing about yours. An elevation certificate — a survey document that establishes your home's finished floor elevation relative to the BFE — is the key to understanding your actual exposure and your actual premium.</p>
+
+      <h2>How Neighborhood Choice Affects Your Premium</h2>
+
+      <p>This is where I want to be direct with buyers: where you choose to live in Sarasota is not just a lifestyle decision. It's an insurance decision.</p>
+
+      <p>Siesta Key is one of the most desirable addresses in the region, and it carries one of the most complex insurance profiles. Much of the key sits in AE or VE flood zones. Wind exposure on a barrier island is significant. Combined premiums for flood and homeowner's insurance on Siesta Key can run considerably higher than an equivalent home several miles inland — sometimes by thousands of dollars annually.</p>
+
+      <p>Downtown Sarasota, particularly near the bayfront, has its own flood zone patchwork. Some blocks are fine; others carry meaningful AE exposure. The age and construction type of downtown homes — many built before modern wind codes — also affects wind mitigation credits, which I'll get to in a moment.</p>
+
+      <p>Palmer Ranch and Sarasota's established inland communities generally offer more favorable flood profiles, though "inland" doesn't mean immune. Some Palmer Ranch parcels near retention ponds or drainage corridors carry AE designations that surprise buyers who assumed they were in the clear.</p>
+
+      <p>Lakewood Ranch, which extends into Manatee County, is often Zone X for many of its developed communities — one reason it's attracted so much growth. But even there, individual lots vary, and newer FEMA map updates have reclassified some areas.</p>
+
+      <p>Before you fall in love with a specific neighborhood, understand its risk profile. A resource like <a href="https://mysarasotaguide.com/neighborhoods" target="_blank" rel="noopener noreferrer">this Sarasota neighborhoods guide</a> is a good starting point for understanding the geography of the area — then layer in the FEMA flood map data and get a quote. Don't do it in reverse.</p>
+
+      <h2>Wind Mitigation Inspections: Get One Before You Close</h2>
+
+      <p>Florida's building codes changed significantly after Hurricane Andrew in 1992 and again after the 2004–2005 hurricane seasons. Homes built or significantly retrofitted after those benchmarks often qualify for meaningful wind mitigation credits that reduce your homeowner's premium.</p>
+
+      <p>A wind mitigation inspection — typically $75 to $150 — examines your roof shape, roof covering, roof deck attachment, roof-to-wall connections, and opening protection (windows, doors, garage). The inspector produces a standardized report that you submit to your insurer.</p>
+
+      <p>The credits can be substantial. I've seen wind mitigation reports reduce a client's annual homeowner's premium by $800 to $1,500 or more, depending on the home's construction quality and the insurer's rating algorithm. A hip roof (sloped on all four sides) performs significantly better than a gable roof in wind, and that difference shows up in your premium. Homes with hurricane-rated windows and doors, reinforced roof-to-wall straps, and sealed roof decks can accumulate credits across multiple categories.</p>
+
+      <p>The mistake I see frequently: buyers get the inspection after closing, as an afterthought. Get it before. If the report reveals a meaningful credit, you can factor that into your insurance budget accurately. If it reveals deficiencies — say, an aging roof deck attachment — you may want to negotiate repairs before you're the one paying for them.</p>
+
+      <h2>Common Mistakes New Florida Homeowners Make</h2>
+
+      <ul>
+        <li><strong>Assuming homeowner's insurance covers flood.</strong> It never does. These are separate policies. If you're in a required flood zone and don't have a flood policy at closing, your lender will force-place one — at a much higher cost, with less favorable terms.</li>
+        <li><strong>Skipping the elevation certificate.</strong> If your home is in an AE zone, an elevation certificate can dramatically affect your NFIP premium. Without one, you may be rated at the worst-case assumption. A certificate costs a few hundred dollars and can save you that amount annually.</li>
+        <li><strong>Not comparing Citizens vs. the private market.</strong> Citizens Property Insurance Corporation is Florida's state-backed insurer of last resort. It's not always the cheapest or best option, but many buyers assume it's their only option. The private market — especially for newer construction in lower-risk zones — can offer better pricing and broader coverage. Work with a broker who has access to both.</li>
+        <li><strong>Waiting until June to think about this.</strong> Hurricane season runs June 1 through November 30. Some insurers tighten underwriting or pause new policies as storm activity increases. If you're buying a home and closing in the spring, don't put off your insurance review. Lock in your coverage early.</li>
+      </ul>
+
+      <div style="background:#f0f7ff;border-left:4px solid #1a56db;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0;">
+        <p style="margin:0 0 0.5rem;font-weight:700;font-size:1.1rem;">Buying in Sarasota? Let's talk through your coverage before you close.</p>
+        <p style="margin:0 0 1rem;">Reach out to Lamb Insurance for a no-pressure coverage review — whether you're still shopping for a home or already under contract. A 20-minute conversation now can prevent an expensive surprise later.</p>
+        <a href="/#contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Get a Free Coverage Review →</a>
+      </div>
+
+      <p><em>Cody Lamb is a licensed insurance agent serving Sarasota and the surrounding area. He specializes in helping Florida homeowners — and future homeowners — find coverage that fits their actual situation.</em></p>
+    `,
+  },
+  {
     slug: "should-you-bundle-home-and-auto-insurance-florida",
     title: "Should You Bundle Home and Auto Insurance in Florida? What Homeowners Need to Know",
     date: "2026-06-08",
