@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Car, House, AlertTriangle, Phone, Mail, ChevronDown } from "lucide-react";
+import { Car, House, AlertTriangle, Phone, Mail, ChevronDown, Building2, Waves, Heart, PackagePlus, Briefcase } from "lucide-react";
 import { INSURANCE_LINKS } from "./constants/insuranceLinks";
 import HighLevelForm from "./components/HighLevelForm";
 
@@ -442,6 +442,31 @@ function CoverageExplained() {
       body: "Protects your structure, belongings, and liability. In Florida, coverage gaps are common due to weather exposure and policy exclusions. We make sure you understand what's included before you need it.",
     },
     {
+      icon: <Building2 className="w-6 h-6" aria-hidden="true" />,
+      title: "Condo Insurance",
+      body: "Covers your unit's interior, personal belongings, and liability — filling the gaps your HOA master policy leaves behind. Florida condo owners face unique exposures we help you navigate.",
+    },
+    {
+      icon: <Waves className="w-6 h-6" aria-hidden="true" />,
+      title: "Flood Insurance",
+      body: "Standard homeowner policies don't cover flooding. In Florida, flood risk is everywhere — not just coastal areas. We help you get the right NFIP or private flood coverage before the storm arrives.",
+    },
+    {
+      icon: <Heart className="w-6 h-6" aria-hidden="true" />,
+      title: "Life Insurance",
+      body: "Protects the people who depend on you. Whether you need term or permanent coverage, we help you choose the right amount and structure so your family is secure no matter what.",
+    },
+    {
+      icon: <PackagePlus className="w-6 h-6" aria-hidden="true" />,
+      title: "Bundle & Save",
+      body: "Combining auto and home — or adding other policies — with one carrier often unlocks meaningful discounts. We review your full picture to find bundling opportunities that actually make sense.",
+    },
+    {
+      icon: <Briefcase className="w-6 h-6" aria-hidden="true" />,
+      title: "Commercial Insurance",
+      body: "Covers your business property, liability, and employees. From small local shops to larger operations, we build a policy around what your business actually does — not a generic template.",
+    },
+    {
       icon: <AlertTriangle className="w-6 h-6" aria-hidden="true" />,
       title: "Why Coverage Fails",
       body: "Most gaps come from outdated policies, unclear language, or choosing coverage based on price alone. We identify those gaps early — before a claim forces the issue.",
@@ -468,7 +493,7 @@ function CoverageExplained() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, i) => (
             <article
               key={card.title}
