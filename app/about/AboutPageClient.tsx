@@ -8,6 +8,9 @@ import HighLevelForm from "../components/HighLevelForm";
 const EMAIL = "calamb@acg.aaa.com";
 const PHONE_DISPLAY = "(941) 225-2335";
 const PHONE_HREF = "+19412252335";
+const LICENSE_NUMBER = "G034846";
+const ADDRESS_LINE1 = "5893 Whitfield Ave";
+const ADDRESS_LINE2 = "Sarasota, FL 34243";
 
 function useScrollReveal() {
   useEffect(() => {
@@ -92,7 +95,7 @@ function Hero() {
             {[
               "Property & Casualty Licensed",
               "Life & Health Licensed",
-              "Local Sarasota Team",
+              "Local Sarasota Agency",
               "No-Pressure Policy Reviews",
             ].map((item) => (
               <div
@@ -109,18 +112,25 @@ function Hero() {
   );
 }
 
-function ExperienceSection() {
+function MeetYourAgentSection() {
   return (
-    <section className="bg-cream py-20 md:py-28" aria-labelledby="experience-heading">
+    <section
+      id="meet-your-agent"
+      className="bg-cream py-20 md:py-28"
+      aria-labelledby="agent-heading"
+    >
       <div className="max-w-6xl mx-auto px-5">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="animate-on-scroll">
             <div className="section-rule" />
             <h2
-              id="experience-heading"
+              id="agent-heading"
               className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-6 leading-tight"
             >
-              Real Experience in Insurance
+              Meet Your Agent
+              <span className="block text-sage-700 text-xl md:text-2xl mt-1 font-semibold">
+                Cody Lamb — Licensed Insurance Agent
+              </span>
             </h2>
             <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
               <p>
@@ -131,16 +141,50 @@ function ExperienceSection() {
               </p>
               <p>
                 Cody is licensed in Florida for Property &amp; Casualty (2-20) and Life &amp; Health
-                (215), giving clients guidance across auto, home, life, and business coverage.
+                (2-15), which means he can help with auto, home, flood, commercial, and life coverage
+                all in one place—without handing you off to someone else.
               </p>
+              <p>
+                When you work with Lamb Insurance Agency, you&apos;re working directly with Cody.
+                Not a call center. Not an automated system. A real, licensed person who knows your
+                policy and can answer your questions.
+              </p>
+            </div>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <a
+                href={`tel:${PHONE_HREF}`}
+                className="btn-primary px-6 py-3 rounded-lg font-semibold font-body text-sm text-center"
+              >
+                Call Cody: {PHONE_DISPLAY}
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-3 rounded-lg font-semibold font-body text-sm text-center border border-navy-300 text-navy-700 hover:bg-navy-50 transition-colors"
+              >
+                Send a Message
+              </a>
             </div>
           </div>
 
-          <div className="animate-on-scroll animate-on-scroll-delay-2">
-            <div className="bg-white border border-navy-100 rounded-2xl p-8 space-y-5">
-              <h3 className="font-display text-xl font-bold text-navy-800">
-                Florida Licenses
+          <div className="animate-on-scroll animate-on-scroll-delay-2 space-y-5">
+            <div className="bg-white border border-navy-100 rounded-2xl p-8">
+              <h3 className="font-display text-xl font-bold text-navy-800 mb-6">
+                Florida Insurance Credentials
               </h3>
+
+              <div className="bg-sage-50 border border-sage-200 rounded-xl p-5 mb-6">
+                <p className="text-navy-500 font-body text-xs uppercase tracking-wider mb-1">
+                  Florida Insurance License
+                </p>
+                <p className="font-display font-bold text-navy-800 text-2xl tracking-wide">
+                  {LICENSE_NUMBER}
+                </p>
+                <p className="text-navy-500 font-body text-sm mt-1">
+                  State of Florida — Department of Financial Services
+                </p>
+              </div>
+
               <ul className="space-y-4">
                 {[
                   {
@@ -172,8 +216,22 @@ function ExperienceSection() {
                   </li>
                 ))}
               </ul>
-              <p className="text-navy-400 font-body text-xs pt-2">
-                Licensed Insurance Agent · State of Florida
+
+              <p className="text-navy-400 font-body text-xs pt-4 mt-2 border-t border-navy-50">
+                License {LICENSE_NUMBER} · Licensed Insurance Agent · State of Florida
+              </p>
+            </div>
+
+            <div className="bg-navy-900 border border-white/10 rounded-2xl p-6">
+              <h3 className="font-display text-base font-bold text-white mb-3">
+                What the License Means for You
+              </h3>
+              <p className="text-navy-300 font-body text-sm leading-relaxed">
+                A Florida insurance license isn&apos;t just a formality. It means Cody has passed
+                state-required exams, meets continuing education requirements, and is accountable to
+                the Florida Department of Financial Services. When you work with a licensed agent,
+                you have legal protections and a clear path to resolve disputes—something you
+                don&apos;t get buying coverage online without guidance.
               </p>
             </div>
           </div>
@@ -183,36 +241,107 @@ function ExperienceSection() {
   );
 }
 
-function DifferentSection() {
+function TrustSection() {
   return (
-    <section className="bg-navy-900 py-20 md:py-28" aria-labelledby="different-heading">
+    <section className="bg-white py-16 md:py-20" aria-labelledby="trust-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-2xl mb-12 animate-on-scroll">
+          <div className="section-rule" />
+          <h2
+            id="trust-heading"
+            className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight"
+          >
+            Why Clients Trust Lamb Insurance
+          </h2>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Licensed Florida Professional",
+              desc: `Cody holds Florida insurance license ${LICENSE_NUMBER}, covering Property & Casualty and Life & Health lines. Verified with the Florida Department of Financial Services.`,
+            },
+            {
+              title: "Local Sarasota Agency",
+              desc: "Based at 5893 Whitfield Ave, Sarasota. Not a national call center—a local office you can actually visit.",
+            },
+            {
+              title: "Personal Insurance Guidance",
+              desc: "Every client receives a thorough policy review so you know exactly what you have, what's missing, and what to do about it.",
+            },
+            {
+              title: "Business & Personal Coverage",
+              desc: "From auto and home to commercial liability and business owner policies, Cody handles both personal and business lines.",
+            },
+            {
+              title: "Direct Access to Your Agent",
+              desc: "You work with Cody directly. He knows your name, your policy, and your situation—not a general support line.",
+            },
+            {
+              title: "No-Pressure Approach",
+              desc: "There&apos;s no upselling here. Guidance is honest and based on what actually makes sense for your coverage needs.",
+            },
+          ].map((item, index) => (
+            <article
+              key={item.title}
+              className={`bg-cream border border-navy-100 rounded-2xl p-6 animate-on-scroll animate-on-scroll-delay-${(index % 3) + 1}`}
+            >
+              <h3 className="font-display text-base font-bold text-navy-800 mb-3">
+                {item.title}
+              </h3>
+              <p
+                className="text-navy-500 font-body text-sm leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: item.desc }}
+              />
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhyLicensedAgentSection() {
+  return (
+    <section className="bg-navy-900 py-20 md:py-28" aria-labelledby="why-agent-heading">
       <div className="max-w-6xl mx-auto px-5">
         <div className="max-w-3xl mb-12 animate-on-scroll">
           <div className="section-rule" />
           <h2
-            id="different-heading"
+            id="why-agent-heading"
             className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
           >
-            What Makes Lamb Insurance Different
+            Why Work With a Licensed Agent
           </h2>
           <p className="text-navy-200 font-body text-base md:text-lg leading-relaxed">
-            Most agencies focus on price.{" "}
-            <span className="text-sage-300 font-semibold">
-              Lamb Insurance focuses on protection and clarity.
-            </span>
+            It&apos;s easy to buy insurance online. It&apos;s harder to know whether what you bought
+            actually protects you.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 gap-10 mb-12">
           <div className="animate-on-scroll animate-on-scroll-delay-1">
             <h3 className="font-display text-xl font-bold text-sage-300 mb-5">
-              Every client goes through a full policy review to understand:
+              What you get with a licensed agent:
             </h3>
             <ul className="space-y-3">
               {[
-                { label: "What&apos;s covered", detail: "Know exactly what your policy protects" },
-                { label: "What&apos;s missing", detail: "Find the gaps before they cost you" },
-                { label: "What actually matters", detail: "Focus on coverage that fits your life" },
+                {
+                  label: "Coverage that fits your actual situation",
+                  detail: "Online quotes are based on general inputs. An agent asks the questions that change what you need.",
+                },
+                {
+                  label: "Someone who explains your policy",
+                  detail: "Deductibles, exclusions, and coverage limits get reviewed in plain language—before you have a claim.",
+                },
+                {
+                  label: "Access to multiple carriers",
+                  detail: "Rather than one company's rates, an independent agent can compare options across carriers to find better fit.",
+                },
+                {
+                  label: "Advocacy when you need it",
+                  detail: "If a claim goes sideways, your agent is someone who can help navigate the process and speak on your behalf.",
+                },
               ].map((item) => (
                 <li
                   key={item.label}
@@ -233,10 +362,7 @@ function DifferentSection() {
                     </svg>
                   </span>
                   <div>
-                    <p
-                      className="font-display font-bold text-white text-base"
-                      dangerouslySetInnerHTML={{ __html: item.label }}
-                    />
+                    <p className="font-display font-bold text-white text-base">{item.label}</p>
                     <p className="text-navy-300 font-body text-sm mt-0.5">{item.detail}</p>
                   </div>
                 </li>
@@ -246,17 +372,85 @@ function DifferentSection() {
 
           <div className="animate-on-scroll animate-on-scroll-delay-2">
             <h3 className="font-display text-xl font-bold text-sage-300 mb-5">
-              Clients typically come to Lamb Insurance when:
+              Common problems that come from skipping an agent:
             </h3>
             <ul className="space-y-3">
               {[
-                "Their rates increase unexpectedly",
-                "They're confused about what their policy covers",
-                "Their current agent isn't responsive",
+                "Discovering gaps in coverage after a loss",
+                "Overpaying because policies weren't compared or bundled correctly",
+                "No one available to help when a claim is filed",
+                "Policy renews automatically at a higher rate with no review",
               ].map((item) => (
                 <li
                   key={item}
                   className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-xl p-4"
+                >
+                  <span
+                    className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-800/60 flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      className="w-3 h-3 text-red-200"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </span>
+                  <p className="font-body text-navy-200 text-base">{item}</p>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 bg-white/5 border border-white/10 rounded-xl p-5">
+              <p className="text-navy-200 font-body text-sm leading-relaxed">
+                A licensed agent like Cody doesn&apos;t cost you extra—agent compensation comes from
+                the insurance carrier, not a surcharge on your premium. You get professional guidance
+                at no additional cost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DifferentSection() {
+  return (
+    <section className="bg-warm py-20 md:py-28" aria-labelledby="different-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl mb-12 animate-on-scroll">
+          <div className="section-rule" />
+          <h2
+            id="different-heading"
+            className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight"
+          >
+            What Makes Lamb Insurance Different
+          </h2>
+          <p className="text-navy-600 font-body text-base md:text-lg leading-relaxed">
+            Most agencies focus on price.{" "}
+            <span className="text-sage-700 font-semibold">
+              Lamb Insurance focuses on protection and clarity.
+            </span>
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-10">
+          <div className="animate-on-scroll animate-on-scroll-delay-1">
+            <h3 className="font-display text-xl font-bold text-navy-700 mb-5">
+              Every client goes through a full policy review to understand:
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { label: "What's covered", detail: "Know exactly what your policy protects" },
+                { label: "What's missing", detail: "Find the gaps before they cost you" },
+                { label: "What actually matters", detail: "Focus on coverage that fits your life" },
+              ].map((item) => (
+                <li
+                  key={item.label}
+                  className="flex items-start gap-4 bg-white border border-navy-100 rounded-xl p-4"
                 >
                   <span
                     className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-sage-500 flex items-center justify-center"
@@ -272,12 +466,130 @@ function DifferentSection() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </span>
-                  <p className="font-body text-navy-200 text-base">{item}</p>
+                  <div>
+                    <p className="font-display font-bold text-navy-800 text-base">{item.label}</p>
+                    <p className="text-navy-500 font-body text-sm mt-0.5">{item.detail}</p>
+                  </div>
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-navy-300 font-body text-base leading-relaxed">
+          </div>
+
+          <div className="animate-on-scroll animate-on-scroll-delay-2">
+            <h3 className="font-display text-xl font-bold text-navy-700 mb-5">
+              Clients typically come to Lamb Insurance when:
+            </h3>
+            <ul className="space-y-3">
+              {[
+                "Their rates increase unexpectedly",
+                "They're confused about what their policy covers",
+                "Their current agent isn't responsive",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-4 bg-white border border-navy-100 rounded-xl p-4"
+                >
+                  <span
+                    className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-sage-500 flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <p className="font-body text-navy-700 text-base">{item}</p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-navy-600 font-body text-base leading-relaxed bg-white border border-navy-100 rounded-xl p-4">
               Here, communication is direct, honest, and consistent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ServiceAreaSection() {
+  const areas = [
+    { name: "Sarasota", note: "Agency headquarters" },
+    { name: "Bradenton", note: "Manatee County" },
+    { name: "Lakewood Ranch", note: "Manatee & Sarasota counties" },
+    { name: "Venice", note: "South Sarasota County" },
+    { name: "North Port", note: "South Sarasota County" },
+    { name: "Siesta Key", note: "Sarasota barrier island" },
+    { name: "Parrish", note: "North Manatee County" },
+  ];
+
+  return (
+    <section className="bg-cream py-20 md:py-28" aria-labelledby="service-area-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="animate-on-scroll">
+            <div className="section-rule" />
+            <h2
+              id="service-area-heading"
+              className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-6 leading-tight"
+            >
+              Serving Sarasota and the Surrounding Area
+            </h2>
+            <div className="space-y-4 text-navy-600 font-body text-base leading-relaxed">
+              <p>
+                Lamb Insurance Agency is based in Sarasota and works with clients throughout the
+                region. Whether you&apos;re in a beachfront condo on Siesta Key, a new home in
+                Lakewood Ranch, or running a business in Bradenton, coverage needs in this area have
+                specific considerations—coastal exposure, flood risk, and Florida&apos;s unique
+                insurance market all factor in.
+              </p>
+              <p>
+                Being local means Cody understands the neighborhoods, the carriers that operate here,
+                and what types of coverage actually matter for where you live.
+              </p>
+            </div>
+
+            <div className="mt-8 bg-white border border-navy-100 rounded-xl p-5">
+              <p className="text-navy-500 font-body text-xs uppercase tracking-wider mb-2">Office Location</p>
+              <address className="text-navy-800 font-display font-semibold not-italic">
+                {ADDRESS_LINE1}<br />
+                {ADDRESS_LINE2}
+              </address>
+              <p className="text-navy-500 font-body text-sm mt-2">
+                <a href={`tel:${PHONE_HREF}`} className="text-sage-700 hover:underline font-semibold">
+                  {PHONE_DISPLAY}
+                </a>
+                {" · "}
+                <a href={`mailto:${EMAIL}`} className="text-sage-700 hover:underline">
+                  {EMAIL}
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="animate-on-scroll animate-on-scroll-delay-2">
+            <h3 className="font-display text-xl font-bold text-navy-800 mb-5">Service Areas</h3>
+            <ul className="space-y-2">
+              {areas.map((area, index) => (
+                <li
+                  key={area.name}
+                  className={`flex items-center justify-between bg-white border border-navy-100 rounded-xl px-5 py-4 animate-on-scroll animate-on-scroll-delay-${(index % 3) + 1}`}
+                >
+                  <span className="font-display font-bold text-navy-800 text-base">
+                    {area.name}
+                  </span>
+                  <span className="text-navy-400 font-body text-sm">{area.note}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-navy-400 font-body text-sm mt-4 leading-relaxed">
+              Don&apos;t see your city? Reach out. Cody works with clients across Sarasota and
+              Manatee counties.
             </p>
           </div>
         </div>
@@ -288,7 +600,7 @@ function DifferentSection() {
 
 function ClientsSection() {
   return (
-    <section className="bg-warm py-20 md:py-28" aria-labelledby="clients-heading">
+    <section className="bg-white py-20 md:py-28" aria-labelledby="clients-heading">
       <div className="max-w-6xl mx-auto px-5">
         <div className="max-w-3xl mb-12 animate-on-scroll">
           <div className="section-rule" />
@@ -301,12 +613,12 @@ function ClientsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-10">
-          <article className="bg-white border border-navy-100 rounded-2xl p-6 animate-on-scroll animate-on-scroll-delay-1">
+          <article className="bg-cream border border-navy-100 rounded-2xl p-6 animate-on-scroll animate-on-scroll-delay-1">
             <h3 className="font-display text-xl font-bold text-navy-800 mb-4">
               Lamb Insurance works with:
             </h3>
             <ul className="space-y-2">
-              {["Drivers", "Families", "Homeowners", "Small business owners"].map((item) => (
+              {["Drivers", "Families", "Homeowners", "Small business owners", "Landlords", "New Florida residents"].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-navy-600 font-body text-base">
                   <span
                     className="w-1.5 h-1.5 rounded-full bg-sage-500 flex-shrink-0"
@@ -318,15 +630,16 @@ function ClientsSection() {
             </ul>
           </article>
 
-          <article className="bg-white border border-navy-100 rounded-2xl p-6 animate-on-scroll animate-on-scroll-delay-2">
+          <article className="bg-cream border border-navy-100 rounded-2xl p-6 animate-on-scroll animate-on-scroll-delay-2">
             <h3 className="font-display text-xl font-bold text-navy-800 mb-4">
               Common problems we solve:
             </h3>
             <ul className="space-y-2">
               {[
-                "Rising premiums",
-                "Coverage gaps",
-                "Policies that don't make sense",
+                "Rising premiums with no explanation",
+                "Coverage gaps discovered after a loss",
+                "Policies that don't match what was promised",
+                "No agent to call when something happens",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-navy-600 font-body text-base">
                   <span
@@ -340,7 +653,7 @@ function ClientsSection() {
           </article>
         </div>
 
-        <div className="bg-white border border-navy-100 rounded-2xl p-6 md:p-8 animate-on-scroll">
+        <div className="bg-cream border border-navy-100 rounded-2xl p-6 md:p-8 animate-on-scroll">
           <p className="text-navy-600 font-body text-base md:text-lg leading-relaxed">
             We restructure policies, bundle coverage correctly, and make sure there are no surprises
             when it matters most—during a claim.
@@ -351,138 +664,36 @@ function ClientsSection() {
   );
 }
 
-function ServiceSection() {
+function CommunitySection() {
   return (
-    <section className="bg-cream py-20 md:py-28" aria-labelledby="service-heading">
+    <section className="bg-warm py-20 md:py-28" aria-labelledby="community-heading">
       <div className="max-w-6xl mx-auto px-5">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="animate-on-scroll">
             <div className="section-rule" />
             <h2
-              id="service-heading"
+              id="community-heading"
               className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-6 leading-tight"
             >
-              Simple, Reliable Service
+              Part of the Sarasota Community
             </h2>
-            <p className="text-navy-600 font-body text-base leading-relaxed mb-8">
-              From quote to binding to ongoing service, everything is handled with consistency and
-              attention to detail. Every client receives a policy review so they always know what
-              they have.
-            </p>
-          </div>
-
-          <div className="animate-on-scroll animate-on-scroll-delay-2">
-            <h3 className="font-display text-xl font-bold text-navy-800 mb-5">Clients can expect:</h3>
-            <ul className="space-y-4">
-              {[
-                {
-                  title: "Fast Responses",
-                  desc: "Questions answered quickly—no waiting on hold or lost in a queue.",
-                },
-                {
-                  title: "Clear Explanations",
-                  desc: "Coverage explained in plain language, not insurance jargon.",
-                },
-                {
-                  title: "No Pressure",
-                  desc:
-                    "Honest guidance so you can make the right decision for your situation.",
-                },
-              ].map((item, index) => (
-                <li
-                  key={item.title}
-                  className={`bg-white border border-navy-100 rounded-xl p-5 animate-on-scroll animate-on-scroll-delay-${index + 1}`}
-                >
-                  <p className="font-display font-bold text-navy-800 text-base mb-1">
-                    {item.title}
-                  </p>
-                  <p className="text-navy-500 font-body text-sm leading-relaxed">{item.desc}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function LocalSection() {
-  return (
-    <section className="bg-navy-900 py-20 md:py-28" aria-labelledby="local-heading">
-      <div className="max-w-6xl mx-auto px-5">
-        <div className="max-w-3xl mb-12 animate-on-scroll">
-          <div className="section-rule" />
-          <h2
-            id="local-heading"
-            className="font-display text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
-          >
-            Local to Sarasota
-          </h2>
-          <p className="text-navy-200 font-body text-base leading-relaxed">
-            Lamb Insurance Agency is based in Sarasota and focused on serving the local community.
-            Being local matters.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {
-              title: "Florida Weather Risks",
-              desc: "We understand the storms, flooding, and seasonal conditions that affect Sarasota coverage needs.",
-            },
-            {
-              title: "Coastal Exposure",
-              desc:
-                "Coastal properties face unique risks. We help you get coverage that reflects where you actually live.",
-            },
-            {
-              title: "Florida Insurance Market",
-              desc:
-                "The Florida insurance market is complex. We know the carriers, the rules, and how to navigate it.",
-            },
-          ].map((item, index) => (
-            <article
-              key={item.title}
-              className={`bg-white/5 border border-white/10 rounded-2xl p-6 animate-on-scroll animate-on-scroll-delay-${index + 1}`}
-            >
-              <h3 className="font-display text-xl font-bold text-white mb-3">{item.title}</h3>
-              <p className="text-navy-300 font-body text-base leading-relaxed">{item.desc}</p>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-10 bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 animate-on-scroll">
-          <p className="text-navy-200 font-body text-base md:text-lg leading-relaxed">
-            Clients don&apos;t call a 1-800 number. They work with someone local who knows the area
-            and is available when it counts.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function LongTermSection() {
-  return (
-    <section className="bg-warm py-20 md:py-28" aria-labelledby="longterm-heading">
-      <div className="max-w-6xl mx-auto px-5">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="animate-on-scroll">
-            <div className="section-rule" />
-            <h2
-              id="longterm-heading"
-              className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-6 leading-tight"
-            >
-              Built for the Long Term
-            </h2>
-            <p className="text-navy-600 font-body text-base leading-relaxed mb-6">
-              Lamb Insurance was built to create something long-term—for clients and for family.
-            </p>
-            <p className="text-navy-500 font-body text-sm leading-relaxed">
-              Outside of insurance, Cody stays connected to the community through a local pet care
-              business and time spent on the water in Sarasota.
-            </p>
+            <div className="space-y-4 text-navy-600 font-body text-base leading-relaxed">
+              <p>
+                Lamb Insurance was built to create something long-term—for clients and for family.
+                The agency isn&apos;t a stepping stone. It&apos;s a commitment to building real
+                relationships with people in this community.
+              </p>
+              <p>
+                Outside of insurance, Cody stays connected to the Sarasota area through local
+                involvement, a pet care business, and time spent on the water. This isn&apos;t
+                someone passing through—it&apos;s a neighbor who chose to build a business here.
+              </p>
+              <p>
+                That matters when it comes to insurance. A local agent has real stakes in getting
+                things right because they&apos;ll see you at the same places, talk to the same
+                people, and still be here years from now.
+              </p>
+            </div>
           </div>
 
           <div className="animate-on-scroll animate-on-scroll-delay-2">
@@ -495,13 +706,11 @@ function LongTermSection() {
                 },
                 {
                   title: "Build Real Relationships",
-                  desc:
-                    "Not transactional. Clients know who they're working with and can reach them directly.",
+                  desc: "Not transactional. Clients know who they're working with and can reach them directly.",
                 },
                 {
                   title: "Provide Consistent, Reliable Service",
-                  desc:
-                    "The same level of care at quote, at binding, and every renewal after that.",
+                  desc: "The same level of care at quote, at binding, and every renewal after that.",
                 },
               ].map((item, index) => (
                 <li
@@ -522,9 +731,66 @@ function LongTermSection() {
   );
 }
 
+function FAQSection() {
+  const faqs = [
+    {
+      question: "Is Lamb Insurance Agency licensed in Florida?",
+      answer: `Yes. Cody Lamb holds Florida insurance license ${LICENSE_NUMBER}, issued by the Florida Department of Financial Services. He is licensed for Property & Casualty (2-20) and Life & Health (2-15), which covers auto, home, flood, commercial, and life insurance lines.`,
+    },
+    {
+      question: "What types of insurance do you help with?",
+      answer:
+        "Lamb Insurance Agency helps with auto insurance, homeowners insurance, renters insurance, flood insurance, umbrella policies, business owner policies (BOP), commercial auto, general liability, and life insurance. Most coverage needs for individuals and small businesses can be handled in one place.",
+    },
+    {
+      question: "Why work with a local Sarasota insurance agency?",
+      answer:
+        "A local agent understands the specific risks in this area—hurricane exposure, flood zones, coastal property considerations, and the Florida insurance market. You also get a real person to call, not a national support line. Cody is based at 5893 Whitfield Ave in Sarasota and works directly with each client.",
+    },
+    {
+      question: "Can you help compare multiple insurance options?",
+      answer:
+        "Yes. As an independent agent, Cody works with multiple carriers rather than being tied to a single company. That means he can compare rates and coverage options across carriers to find what actually fits your situation—not just whatever one company offers.",
+    },
+  ];
+
+  return (
+    <section className="bg-cream py-20 md:py-28" aria-labelledby="faq-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-2xl mb-12 animate-on-scroll">
+          <div className="section-rule" />
+          <h2
+            id="faq-heading"
+            className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-4 leading-tight"
+          >
+            Frequently Asked Questions
+          </h2>
+          <p className="text-navy-600 font-body text-base leading-relaxed">
+            Common questions about working with Lamb Insurance Agency.
+          </p>
+        </div>
+
+        <div className="max-w-3xl space-y-5">
+          {faqs.map((faq, index) => (
+            <article
+              key={faq.question}
+              className={`bg-white border border-navy-100 rounded-2xl p-6 md:p-8 animate-on-scroll animate-on-scroll-delay-${(index % 3) + 1}`}
+            >
+              <h3 className="font-display text-lg font-bold text-navy-800 mb-3">
+                {faq.question}
+              </h3>
+              <p className="text-navy-600 font-body text-base leading-relaxed">{faq.answer}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ContactForm() {
   return (
-    <section id="contact" className="bg-cream py-20 md:py-28" aria-labelledby="contact-heading">
+    <section id="contact" className="bg-white py-20 md:py-28" aria-labelledby="contact-heading">
       <div className="max-w-6xl mx-auto px-5">
         <div className="grid lg:grid-cols-5 gap-12 items-start">
           <div className="lg:col-span-2 animate-on-scroll">
@@ -543,7 +809,7 @@ function ContactForm() {
             <div className="space-y-4">
               <a
                 href={`tel:${PHONE_HREF}`}
-                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
+                className="flex items-center gap-4 bg-cream rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
                 aria-label={`Call ${PHONE_DISPLAY}`}
               >
                 <div
@@ -563,7 +829,7 @@ function ContactForm() {
               </a>
               <a
                 href={`mailto:${EMAIL}`}
-                className="flex items-center gap-4 bg-white rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
+                className="flex items-center gap-4 bg-cream rounded-xl p-4 border border-navy-100 hover:border-sage-300 transition-colors group"
                 aria-label={`Email ${EMAIL}`}
               >
                 <div
@@ -581,6 +847,17 @@ function ContactForm() {
                   </p>
                 </div>
               </a>
+
+              <div className="bg-cream rounded-xl p-4 border border-navy-100">
+                <p className="text-navy-400 font-body text-xs uppercase tracking-wider mb-1">Office</p>
+                <address className="text-navy-700 font-body text-sm not-italic leading-snug">
+                  {ADDRESS_LINE1}<br />
+                  {ADDRESS_LINE2}
+                </address>
+                <p className="text-navy-400 font-body text-xs mt-2">
+                  FL License: {LICENSE_NUMBER}
+                </p>
+              </div>
             </div>
           </div>
 
@@ -601,12 +878,14 @@ export default function AboutPageClient() {
       <ServicePageHeader />
       <main id="main-content">
         <Hero />
-        <ExperienceSection />
+        <MeetYourAgentSection />
+        <TrustSection />
+        <WhyLicensedAgentSection />
         <DifferentSection />
+        <ServiceAreaSection />
         <ClientsSection />
-        <ServiceSection />
-        <LocalSection />
-        <LongTermSection />
+        <CommunitySection />
+        <FAQSection />
         <ContactForm />
       </main>
       <ServicePageFooter email={EMAIL} />

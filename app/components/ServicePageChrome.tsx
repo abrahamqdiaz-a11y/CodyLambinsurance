@@ -256,7 +256,7 @@ export function ServicePageFooter({ email }: { email: string }) {
       <div className="border-t border-white/8">
         <div className="max-w-6xl mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-body text-navy-500">
           <p>© {year} Lamb Insurance Agency. All rights reserved.</p>
-          <p>Licensed Insurance Agency &nbsp;|&nbsp; Florida</p>
+          <p>Licensed Insurance Agency &nbsp;|&nbsp; Florida &nbsp;|&nbsp; License #G034846</p>
         </div>
         <div className="max-w-6xl mx-auto px-5 pb-5 text-center">
           <p className="text-xs font-body text-navy-600 opacity-75">
