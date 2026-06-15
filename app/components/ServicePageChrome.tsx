@@ -111,7 +111,6 @@ export function ServicePageHeader() {
           </div>
           <Link href="/about" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">About</Link>
           <Link href="/insights" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Insights</Link>
-          <Link href="/careers" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Careers</Link>
           <Link href="/#contact" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Contact</Link>
           <Link href="/espanol" className="nav-link text-sage-300 hover:text-white text-sm font-body tracking-wide transition-colors">Español</Link>
           <Link
@@ -164,7 +163,6 @@ export function ServicePageHeader() {
             )}
             <Link href="/about" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>About</Link>
             <Link href="/insights" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Insights</Link>
-            <Link href="/careers" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Careers</Link>
             <Link href="/#contact" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Contact</Link>
             <Link href="/espanol" className="text-sage-300 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Español</Link>
             <Link
