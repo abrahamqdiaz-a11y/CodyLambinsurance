@@ -177,7 +177,7 @@ export function ServicePageHeader() {
   );
 }
 
-export function ServicePageFooter({ email }: { email: string }) {
+export function ServicePageFooter({ email, phone }: { email: string; phone?: string }) {
   const year = new Date().getFullYear();
 
   return (
@@ -216,6 +216,12 @@ export function ServicePageFooter({ email }: { email: string }) {
         <div>
           <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-5">Contact Us</h3>
           <ul className="space-y-3 font-body text-sm">
+            {phone && (
+              <li>
+                <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Phone</span>
+                <a href={`tel:${phone.replace(/\D/g, "").replace(/^/, "+")}`} className="text-navy-200 hover:text-white transition-colors" aria-label={`Call ${phone}`}>{phone}</a>
+              </li>
+            )}
             <li>
               <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Email</span>
               <a href={`mailto:${email}`} className="text-navy-200 hover:text-white transition-colors break-all" aria-label={`Send email to ${email}`}>{email}</a>

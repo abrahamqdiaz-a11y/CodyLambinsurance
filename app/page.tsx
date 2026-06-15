@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Car, House, AlertTriangle, Phone, Mail, ChevronDown, Building2, Waves, Heart, PackagePlus, Briefcase } from "lucide-react";
 import { INSURANCE_LINKS } from "./constants/insuranceLinks";
 import HighLevelForm from "./components/HighLevelForm";
+import { ServicePageFooter } from "./components/ServicePageChrome";
 
 // ── Constants ──────────────────────────────────────────────
 const EMAIL = "calamb@acg.aaa.com";
@@ -789,136 +790,6 @@ function BottomCTA() {
   );
 }
 
-// ── Footer ─────────────────────────────────────────────────
-function Footer() {
-  const year = new Date().getFullYear();
-
-  return (
-    <footer className="bg-navy-950 text-navy-300" role="contentinfo">
-      <div className="max-w-6xl mx-auto px-5 py-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {/* Brand */}
-        <div className="lg:col-span-1">
-          <div className="mb-4">
-            <p className="font-display text-white text-xl font-bold">Lamb Insurance Agency</p>
-            <p className="text-sage-400 text-xs uppercase tracking-widest mt-1">
-              Simple. Personal. Built for You.
-            </p>
-          </div>
-          <p className="text-navy-400 font-body text-sm leading-relaxed max-w-xs">
-            Protecting families, homes, vehicles, and businesses throughout Florida with coverage
-            tailored to your life.
-          </p>
-          <div className="flex gap-3 mt-5">
-            <a
-              href="https://www.linkedin.com/company/lamb-insurance-agency-llc"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Lamb Insurance Agency on LinkedIn"
-              className="text-navy-500 hover:text-navy-200 transition-colors"
-            >
-              <LinkedinIcon size={18} />
-            </a>
-            <a
-              href="https://www.facebook.com/people/Lamb-Insurance-Agency-LLC/61572033134721/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Lamb Insurance Agency on Facebook"
-              className="text-navy-500 hover:text-navy-200 transition-colors"
-            >
-              <FacebookIcon size={18} />
-            </a>
-          </div>
-        </div>
-
-        {/* Contact */}
-        <div>
-          <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-5">
-            Contact Us
-          </h3>
-          <ul className="space-y-3 font-body text-sm">
-            <li>
-              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Phone</span>
-              <a
-                href="tel:+19412252335"
-                className="text-navy-200 hover:text-white transition-colors"
-                aria-label="Call (941) 225-2335"
-              >
-                (941) 225-2335
-              </a>
-            </li>
-            <li>
-              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Email</span>
-              <a
-                href={`mailto:${EMAIL}`}
-                className="text-navy-200 hover:text-white transition-colors break-all"
-                aria-label={`Send email to ${EMAIL}`}
-              >
-                {EMAIL}
-              </a>
-            </li>
-            <li>
-              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Address</span>
-              <address className="text-navy-200 not-italic text-sm leading-snug">
-                5893 Whitfield Ave<br />
-                Sarasota, FL 34243<br />
-                United States
-              </address>
-            </li>
-          </ul>
-        </div>
-
-        {/* Services + Legal */}
-        <div>
-          <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-5">
-            Insurance
-          </h3>
-          <ul className="space-y-2 font-body text-sm mb-8">
-            <li><Link href="/auto-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Auto Insurance</Link></li>
-            <li><Link href="/condo-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Condo Insurance</Link></li>
-            <li><Link href="/flood-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Flood Insurance</Link></li>
-            <li><Link href="/bundle-insurance-sarasota-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Bundle Insurance</Link></li>
-          </ul>
-
-          <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-4">
-            Legal
-          </h3>
-          <ul className="space-y-2 font-body text-sm">
-            <li>
-              <Link href="/privacy-policy" className="text-navy-400 hover:text-navy-200 transition-colors">Privacy Policy</Link>
-            </li>
-            <li>
-              <Link href="/terms" className="text-navy-400 hover:text-navy-200 transition-colors">Terms &amp; Conditions</Link>
-            </li>
-            <li>
-              <Link href="/faq" className="text-navy-400 hover:text-navy-200 transition-colors">FAQ</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-white/8">
-        <div className="max-w-6xl mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-body text-navy-500">
-          <p>© {year} Lamb Insurance Agency. All rights reserved.</p>
-          <p>Licensed Insurance Agency &nbsp;|&nbsp; Florida</p>
-        </div>
-        <div className="max-w-6xl mx-auto px-5 pb-5 text-center">
-          <p className="text-xs font-body text-navy-600 opacity-75">
-            Built by{" "}
-            <a
-              href="https://echelonfox.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-navy-400 transition-colors duration-300"
-            >
-              EchelonFox AI
-            </a>
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 // ── Page ───────────────────────────────────────────────────
 export default function Home() {
   useScrollReveal();
@@ -934,7 +805,7 @@ export default function Home() {
         <FAQSection />
         <BottomCTA />
       </main>
-      <Footer />
+      <ServicePageFooter email={EMAIL} phone="(941) 225-2335" />
     </>
   );
 }
