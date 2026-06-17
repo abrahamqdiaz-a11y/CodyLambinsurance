@@ -37,6 +37,138 @@ export type Post = {
 export const POSTS: Post[] = [
   // ← Add new posts here. Newest first.
   {
+    slug: "florida-insurance-rates-dropping-2026",
+    title: "Florida Insurance Rates Are Dropping in 2026: What It Means for Your Coverage",
+    date: "2026-06-17",
+    excerpt: "More than 40 Florida insurers have filed rate decreases. A Sarasota licensed insurance agent explains why rates are falling, how much, and how to make sure you actually capture the savings.",
+    thumbnail: "",
+    content: `
+      <p>After several brutal years of rising premiums, Florida's auto and home insurance markets have turned a corner. More than 40 companies have filed for rate decreases since the start of 2025, and the state's five largest auto insurers are now averaging roughly an 8% reduction for 2026. For Sarasota homeowners and drivers, this is the best opportunity in over a decade to review coverage and recapture savings.</p>
+
+      <p>But here's what most coverage of this story leaves out: lower filed rates do <strong>not</strong> automatically lower <em>your</em> bill. Savings depend on your carrier, your renewal date, your roof, your claims history, and discounts you may not even know you qualify for. This is where working with a local agent who knows the Florida market makes a measurable difference.</p>
+
+      <p>Below is a plain-English breakdown of what's actually happening, the verified numbers, and the specific steps to take right now.</p>
+
+      <h2>Why Florida Rates Are Falling</h2>
+
+      <p>The turnaround traces back to legislative reform. In 2023, Florida passed comprehensive tort reform (HB 837) that shortened the statute of limitations to two years, eliminated "phantom" damages, and ended one-way attorney fee awards — changes designed to curb the litigation that had made Florida one of the most expensive insurance markets in the country.</p>
+
+      <p>The effect on lawsuit volume was sharp. According to a Milliman white paper cited by USAA, auto glass lawsuits fell from roughly <strong>24,000 in Q2 2023 to about 2,600 in Q2 2024</strong> <a href="https://www.cnbc.com/2026/06/08/usaa-to-return-nearly-1-billion-to-florida-members-as-legal-reforms-help-lower-insurance-costs.html" target="_blank" rel="noopener noreferrer">(CNBC)</a>. Insurance Commissioner Mike Yaworsky has credited those reforms directly for the rate relief now reaching consumers, noting that nearly 80% of Florida auto policyholders are seeing lower rates for 2026 <a href="https://floir.gov/newsroom/archives/item-details/2026/01/28/commissioner-mike-yaworsky-approves-more-auto-rate-cuts-for-consumers-in-2026--including-military-service-members" target="_blank" rel="noopener noreferrer">(Florida OIR)</a>.</p>
+
+      <p>Fewer lawsuits meant lower claim costs, which meant insurers could file for lower rates — and new competitors could afford to enter the market.</p>
+
+      <h2>Auto Insurance: The Verified Rate Cuts</h2>
+
+      <p>Florida's top five auto groups — Progressive, GEICO, State Farm, Allstate, and USAA — represent about 78% of the market and are indicating an average <strong>-8%</strong> rate change for 2026 <a href="https://floir.gov/newsroom/archives/item-details/2026/03/05/commissioner-mike-yaworsky-announces-more-significant-auto-rate-decreases-for-florida-s-top-5-auto-insurance-groups" target="_blank" rel="noopener noreferrer">(Florida OIR, March 2026)</a>. Specific filings approved by the Office of Insurance Regulation include:</p>
+
+      <table style="width:100%;border-collapse:collapse;margin:1.5rem 0;">
+        <thead>
+          <tr style="background:#f0f7ff;">
+            <th style="text-align:left;padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Insurer</th>
+            <th style="text-align:left;padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Approved Rate Change</th>
+            <th style="text-align:left;padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">State Farm</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">-10.1%</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Third reduction since 2024; more than 20% cumulative, over $1B in statewide savings</td>
+          </tr>
+          <tr style="background:#f9fafb;">
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">AAA</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">-15%</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Three reductions over the year, plus a fourth round in early 2026; more than $16M in annual auto savings for 133,000+ Florida policyholders</td>
+          </tr>
+          <tr>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Florida Farm Bureau</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">-8.7%</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;"></td>
+          </tr>
+          <tr style="background:#f9fafb;">
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Progressive</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">-8%</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Plus a separate refund of over $1 billion to policyholders</td>
+          </tr>
+          <tr>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">USAA</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">-7%</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">More than $125M in estimated annual savings for FL members</td>
+          </tr>
+          <tr style="background:#f9fafb;">
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Allstate</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">-4%</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>Source: <a href="https://floir.gov/newsroom/archives/item-details/2026/01/28/commissioner-mike-yaworsky-approves-more-auto-rate-cuts-for-consumers-in-2026--including-military-service-members" target="_blank" rel="noopener noreferrer">Florida Office of Insurance Regulation, Jan. 28, 2026</a>. Rate figures are current as of June 2026 and change as carriers file new rates — confirm current pricing before relying on any specific number.</em></p>
+
+      <p>USAA went further, announcing it will return <strong>nearly $1 billion</strong> in combined rate reductions and direct member returns between December 2025 and July 2026 — including a <strong>$500 million dividend</strong> to roughly 830,000 members who held Florida auto policies between 2023 and 2025. The average payment is about $760, with more than a quarter of members receiving over $1,000 <a href="https://newsroom.usaa360.com/news/usaa-broadens-national-effort-to-help-military-families-navigate-rising-costs" target="_blank" rel="noopener noreferrer">(USAA Newsroom)</a>. If you're a veteran or active military family in the Sarasota area, this one is worth a direct conversation.</p>
+
+      <h2>Home Insurance: Stabilizing, With Relief Arriving at Renewal</h2>
+
+      <p>The homeowners market is improving more gradually, but the direction is clear:</p>
+
+      <ul>
+        <li><strong>17 new insurance companies</strong> have entered the Florida market, adding capacity and competition <a href="https://floir.gov/newsroom/archives/item-details/2026/01/28/commissioner-mike-yaworsky-approves-more-auto-rate-cuts-for-consumers-in-2026--including-military-service-members" target="_blank" rel="noopener noreferrer">(Florida OIR)</a>.</li>
+        <li><strong>Citizens Property Insurance</strong>, the state-backed insurer of last resort, has shrunk from about 1.42 million policies in October 2023 to roughly 395,000 by January 2026 — a sign private carriers are taking policies back.</li>
+        <li>Citizens has filed for an average statewide decrease of about <strong>8.7%</strong> effective 2026, with South Florida counties seeing larger cuts.</li>
+        <li>Multiple private carriers, including Florida Peninsula, have filed decreases in the <strong>8%+</strong> range <a href="https://mynews13.com/fl/orlando/news/2025/12/19/more-home-insurance-companies-plan-rate-decreases-for-2026" target="_blank" rel="noopener noreferrer">(Spectrum News)</a>.</li>
+      </ul>
+
+      <p>The catch for homeowners: home savings show up at <strong>renewal</strong>, not mid-term. If your renewal is months away, that's exactly the window to review your options.</p>
+
+      <h2>How to Actually Capture the Savings</h2>
+
+      <p>Filed rate decreases are the headline. Whether you see them on your bill comes down to a handful of factors a local agent can help you work through.</p>
+
+      <h3>1. Maximize the discounts you may be missing</h3>
+      <p>Florida homeowners can stack significant savings:</p>
+      <ul>
+        <li><strong>Wind mitigation</strong> — features like hurricane straps, a properly rated roof, and impact-resistant openings can substantially reduce the wind portion of your premium. This single inspection is often the highest-ROI step a Gulf Coast homeowner can take.</li>
+        <li><strong>Newer roof</strong> — many carriers reward roofs under 10 years old.</li>
+        <li><strong>Claims-free history</strong>, <strong>bundling</strong> home and auto, and <strong>security/water-leak devices</strong> can each add savings.</li>
+      </ul>
+
+      <h3>2. Work with an agent who reviews the market for you</h3>
+      <p>Cody Lamb personally reviews your current coverage, checks it against today's market, and makes sure you're getting every discount you qualify for.</p>
+
+      <h3>3. Don't wait for the renewal notice</h3>
+      <p>Talk to your agent now — you may have made an improvement like a new roof that they don't know about, and that could mean a decrease.</p>
+
+      <h3>4. Get a wind mitigation inspection</h3>
+      <p>If you've never had one on your current home, this is the first call to make. The inspection typically costs $75–$150 and can reduce your annual premium by hundreds of dollars.</p>
+
+      <h2>Why Work With a Local Sarasota Agent</h2>
+
+      <p>Florida's market is unlike anywhere else — hurricane and flood exposure, roof age rules, and carrier appetite that changes by ZIP code all drive pricing. A Sarasota-based agent who lives and works in this market understands those dynamics firsthand and can match your coverage to the realities of the Gulf Coast, not a generic national rate table.</p>
+
+      <p>If you haven't reviewed your coverage in the last 12 months, you are very likely leaving money on the table in the current environment.</p>
+
+      <div style="background:#f0f7ff;border-left:4px solid #1a56db;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0;">
+        <p style="margin:0 0 0.5rem;font-weight:700;font-size:1.1rem;">Ready to capture your 2026 rate savings?</p>
+        <p style="margin:0 0 1rem;">Cody Lamb is a licensed insurance agent based in Sarasota. He reviews auto and home policies at no cost and no obligation — a straightforward look at whether you're getting today's best rates.</p>
+        <a href="/#contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Get a Free Coverage Review →</a>
+      </div>
+
+      <h2>References</h2>
+      <ol>
+        <li>CNBC — <a href="https://www.cnbc.com/2026/06/08/usaa-to-return-nearly-1-billion-to-florida-members-as-legal-reforms-help-lower-insurance-costs.html" target="_blank" rel="noopener noreferrer">"USAA to return nearly $1 billion to Florida members as legal reforms help lower insurance costs"</a> (June 2026)</li>
+        <li>Florida OIR — <a href="https://floir.gov/newsroom/archives/item-details/2026/01/28/commissioner-mike-yaworsky-approves-more-auto-rate-cuts-for-consumers-in-2026--including-military-service-members" target="_blank" rel="noopener noreferrer">"Commissioner Yaworsky Approves More Auto Rate Cuts for Consumers in 2026"</a> (Jan. 2026)</li>
+        <li>Florida OIR — <a href="https://floir.gov/newsroom/archives/item-details/2026/03/05/commissioner-mike-yaworsky-announces-more-significant-auto-rate-decreases-for-florida-s-top-5-auto-insurance-groups" target="_blank" rel="noopener noreferrer">"Top 5 Auto Insurance Groups Indicating Average -8% Rate Change"</a> (March 2026)</li>
+        <li>USAA Newsroom — <a href="https://newsroom.usaa360.com/news/usaa-broadens-national-effort-to-help-military-families-navigate-rising-costs" target="_blank" rel="noopener noreferrer">"USAA Broadens National Effort to Help Military Families Navigate Rising Costs"</a> (June 2026)</li>
+        <li>Spectrum News 13 — <a href="https://mynews13.com/fl/orlando/news/2025/12/19/more-home-insurance-companies-plan-rate-decreases-for-2026" target="_blank" rel="noopener noreferrer">"More home insurance companies plan Florida rate decreases for 2026"</a> (Dec. 2025)</li>
+        <li>Insurance Journal — <a href="https://www.insurancejournal.com/news/southeast/2026/06/09/873045.htm" target="_blank" rel="noopener noreferrer">"USAA Not Done With Dividends: Florida Reforms Prompt $500M Payout"</a> (June 2026)</li>
+      </ol>
+
+      <p><em>This article is provided by Lamb Insurance Agency for general informational purposes only and does not constitute legal, tax, or financial advice. Insurance rates, discounts, eligibility, and availability vary by carrier and individual circumstances. Contact a licensed agent for guidance specific to your situation.</em></p>
+
+      <p><em>Cody Alexander Lamb is a licensed Florida insurance agent (License No. G034846) serving Sarasota and the surrounding Gulf Coast, licensed in Life including Variable Annuity &amp; Health (0215), General Lines — Property &amp; Casualty (0220), and Personal Lines (2044). License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com/division/agents" target="_blank" rel="noopener noreferrer">myfloridacfo.com/division/agents</a>. Reviewed for accuracy as of June 17, 2026.</em></p>
+    `,
+  },
+  {
     slug: "flood-zones-home-insurance-sarasota-neighborhoods",
     title: "Flood Zones, Home Insurance, and Sarasota Neighborhoods: What New Residents Need to Know Before They Buy",
     date: "2026-06-12",
