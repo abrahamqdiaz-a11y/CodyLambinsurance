@@ -264,7 +264,7 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
       <div className="border-t border-white/8">
         <div className="max-w-6xl mx-auto px-5 pt-5 pb-2 text-center">
           <p className="text-xs font-body text-navy-400">
-            Cody Alexander Lamb &middot; FL License #G034846 &nbsp;&mdash;&nbsp;{" "}
+            Cody Lamb &middot; FL License #G034846 &nbsp;&mdash;&nbsp;{" "}
             <a
               href="https://www.myfloridacfo.com/division/agents"
               target="_blank"

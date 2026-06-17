@@ -165,7 +165,7 @@ export const POSTS: Post[] = [
 
       <p><em>This article is provided by Lamb Insurance Agency for general informational purposes only and does not constitute legal, tax, or financial advice. Insurance rates, discounts, eligibility, and availability vary by carrier and individual circumstances. Contact a licensed agent for guidance specific to your situation.</em></p>
 
-      <p><em>Cody Alexander Lamb is a licensed Florida insurance agent (License No. G034846) serving Sarasota and the surrounding Gulf Coast, licensed in Life including Variable Annuity &amp; Health (0215), General Lines — Property &amp; Casualty (0220), and Personal Lines (2044). License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com/division/agents" target="_blank" rel="noopener noreferrer">myfloridacfo.com/division/agents</a>. Reviewed for accuracy as of June 17, 2026.</em></p>
+      <p><em>Cody Lamb is a licensed Florida insurance agent (License No. G034846) serving Sarasota and the surrounding Gulf Coast, licensed in Life including Variable Annuity &amp; Health (0215), General Lines — Property &amp; Casualty (0220), and Personal Lines (2044). License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com/division/agents" target="_blank" rel="noopener noreferrer">myfloridacfo.com/division/agents</a>. Reviewed for accuracy as of June 17, 2026.</em></p>
     `,
   },
   {

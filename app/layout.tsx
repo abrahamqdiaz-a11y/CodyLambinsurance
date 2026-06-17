@@ -105,7 +105,7 @@ export default function RootLayout({
               },
               employee: {
                 "@type": "Person",
-                name: "Cody Alexander Lamb",
+                name: "Cody Lamb",
                 jobTitle: "Licensed Florida Insurance Agent",
                 identifier: "FL License #G034846",
               },

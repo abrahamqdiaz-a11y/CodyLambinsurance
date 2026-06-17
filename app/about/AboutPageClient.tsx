@@ -130,7 +130,7 @@ function ExperienceSection() {
                 Insurance Agency to do things differently.
               </p>
               <p>
-                Cody Alexander Lamb is a licensed Florida insurance agent serving Sarasota and the
+                Cody Lamb is a licensed Florida insurance agent serving Sarasota and the
                 surrounding Gulf Coast, licensed for General Lines Property &amp; Casualty (0220),
                 Life including Variable Annuity &amp; Health (0215), and Personal Lines (2044).
               </p>
@@ -141,7 +141,7 @@ function ExperienceSection() {
             <div className="bg-white border border-navy-100 rounded-2xl p-8 space-y-5">
               <div>
                 <h3 className="font-display text-xl font-bold text-navy-800">
-                  Cody Alexander Lamb
+                  Cody Lamb
                 </h3>
                 <p className="text-navy-500 font-body text-sm mt-0.5">
                   Licensed Florida Insurance Agent &middot; License No. G034846
@@ -603,7 +603,7 @@ function ContactForm() {
               </a>
             </div>
             <div className="mt-6 p-4 bg-white rounded-xl border border-navy-100 text-xs font-body text-navy-500 space-y-1">
-              <p className="font-bold text-navy-700">Cody Alexander Lamb</p>
+              <p className="font-bold text-navy-700">Cody Lamb</p>
               <p>FL License #G034846</p>
               <address className="not-italic">
                 5893 Whitfield Ave<br />
