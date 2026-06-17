@@ -235,6 +235,20 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
                 United States
               </address>
             </li>
+            <li>
+              <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Hours</span>
+              <ul className="space-y-0.5 text-sm">
+                {[
+                  { days: "Mon – Fri", hours: "9 am – 5 pm" },
+                  { days: "Sat – Sun",  hours: "Closed" },
+                ].map(({ days, hours }) => (
+                  <li key={days} className="flex justify-between gap-4">
+                    <span className="text-navy-400">{days}</span>
+                    <span className={hours === "Closed" ? "text-navy-600" : "text-navy-200"}>{hours}</span>
+                  </li>
+                ))}
+              </ul>
+            </li>
           </ul>
         </div>
 
