@@ -40,7 +40,7 @@ export const POSTS: Post[] = [
     slug: "florida-insurance-rates-dropping-2026",
     title: "Florida Insurance Rates Are Dropping in 2026: What It Means for Your Coverage",
     date: "2026-06-17",
-    excerpt: "More than 40 Florida insurers have filed rate decreases. A Sarasota AAA agent explains why rates are falling, how much, and how to make sure you actually capture the savings.",
+    excerpt: "More than 40 Florida insurers have filed rate decreases. A Sarasota licensed insurance agent explains why rates are falling, how much, and how to make sure you actually capture the savings.",
     thumbnail: "",
     content: `
       <p>After several brutal years of rising premiums, Florida's auto and home insurance markets have turned a corner. More than 40 companies have filed for rate decreases since the start of 2025, and the state's five largest auto insurers are now averaging roughly an 8% reduction for 2026. For Sarasota homeowners and drivers, this is the best opportunity in over a decade to review coverage and recapture savings.</p>
@@ -132,8 +132,8 @@ export const POSTS: Post[] = [
         <li><strong>Claims-free history</strong>, <strong>bundling</strong> home and auto, and <strong>security/water-leak devices</strong> can each add savings.</li>
       </ul>
 
-      <h3>2. Use AAA's strength plus access to additional carriers</h3>
-      <p>As an Auto Club Group (AAA) agent, Cody Lamb places coverage through AAA — one of the carriers cutting Florida rates most aggressively — and can also tap additional carriers when AAA isn't the right fit for a particular home, vehicle, or risk. That means you get AAA's member pricing and bundling where it wins, and an alternative where it doesn't, without shopping the whole market yourself.</p>
+      <h3>2. Work with an agent who reviews the market for you</h3>
+      <p>Cody Lamb personally reviews your current coverage, checks it against today's market, and makes sure you're getting every discount you qualify for.</p>
 
       <h3>3. Don't wait for the renewal notice</h3>
       <p>Talk to your agent now — you may have made an improvement like a new roof that they don't know about, and that could mean a decrease.</p>
@@ -149,7 +149,7 @@ export const POSTS: Post[] = [
 
       <div style="background:#f0f7ff;border-left:4px solid #1a56db;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0;">
         <p style="margin:0 0 0.5rem;font-weight:700;font-size:1.1rem;">Ready to capture your 2026 rate savings?</p>
-        <p style="margin:0 0 1rem;">Cody Lamb is a licensed AAA agent based in Sarasota. He reviews auto and home policies at no cost and no obligation — a straightforward look at whether you're getting today's best rates.</p>
+        <p style="margin:0 0 1rem;">Cody Lamb is a licensed insurance agent based in Sarasota. He reviews auto and home policies at no cost and no obligation — a straightforward look at whether you're getting today's best rates.</p>
         <a href="/#contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Get a Free Coverage Review →</a>
       </div>
 
@@ -165,7 +165,7 @@ export const POSTS: Post[] = [
 
       <p><em>This article is provided by Lamb Insurance Agency for general informational purposes only and does not constitute legal, tax, or financial advice. Insurance rates, discounts, eligibility, and availability vary by carrier and individual circumstances. Contact a licensed agent for guidance specific to your situation.</em></p>
 
-      <p><em>Cody Alexander Lamb is a licensed Florida insurance agent (License No. G034846) and an Auto Club Group (AAA) agent serving Sarasota and the surrounding Gulf Coast, licensed in Life including Variable Annuity &amp; Health (0215), General Lines — Property &amp; Casualty (0220), and Personal Lines (2044). License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com/division/agents" target="_blank" rel="noopener noreferrer">myfloridacfo.com/division/agents</a>. Reviewed for accuracy as of June 17, 2026.</em></p>
+      <p><em>Cody Alexander Lamb is a licensed Florida insurance agent (License No. G034846) serving Sarasota and the surrounding Gulf Coast, licensed in Life including Variable Annuity &amp; Health (0215), General Lines — Property &amp; Casualty (0220), and Personal Lines (2044). License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com/division/agents" target="_blank" rel="noopener noreferrer">myfloridacfo.com/division/agents</a>. Reviewed for accuracy as of June 17, 2026.</em></p>
     `,
   },
   {
