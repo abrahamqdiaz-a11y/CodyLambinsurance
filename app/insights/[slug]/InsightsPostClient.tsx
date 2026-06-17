@@ -7,7 +7,7 @@ import type { Post } from "../posts";
 import { formatDate } from "../posts";
 import { useEffect } from "react";
 
-const EMAIL = "calamb@acg.aaa.com";
+const EMAIL = "contact@lambinsuranceagency.com";
 
 function useScrollReveal() {
   useEffect(() => {

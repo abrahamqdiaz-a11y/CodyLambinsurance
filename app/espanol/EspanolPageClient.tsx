@@ -6,7 +6,7 @@ import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageC
 
 const PHONE_DISPLAY = "(941) 225-2335";
 const PHONE_HREF = "+19412252335";
-const EMAIL = "calamb@acg.aaa.com";
+const EMAIL = "contact@lambinsuranceagency.com";
 
 type IconType = "auto" | "home" | "life" | "bundle";
 

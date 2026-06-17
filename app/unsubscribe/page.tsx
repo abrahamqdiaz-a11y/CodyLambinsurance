@@ -40,7 +40,7 @@ export default function Unsubscribe() {
       body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
     })
       .then(() => setSubmitted(true))
-      .catch(() => setError("Something went wrong. Please email us directly at calamb@acg.aaa.com."));
+      .catch(() => setError("Something went wrong. Please email us directly at contact@lambinsuranceagency.com."));
   };
 
   return (
@@ -70,8 +70,8 @@ export default function Unsubscribe() {
             </p>
             <p className="font-body text-navy-500 text-sm mb-10">
               If you have questions, reach us at{" "}
-              <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
-                calamb@acg.aaa.com
+              <a href="mailto:contact@lambinsuranceagency.com" className="text-sage-600 hover:underline">
+                contact@lambinsuranceagency.com
               </a>
               .
             </p>
@@ -237,8 +237,8 @@ export default function Unsubscribe() {
 
             <p className="font-body text-xs text-navy-400 mt-8 text-center">
               For immediate assistance, contact us at{" "}
-              <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
-                calamb@acg.aaa.com
+              <a href="mailto:contact@lambinsuranceagency.com" className="text-sage-600 hover:underline">
+                contact@lambinsuranceagency.com
               </a>
               . See our{" "}
               <Link href="/privacy-policy" className="text-sage-600 hover:underline">

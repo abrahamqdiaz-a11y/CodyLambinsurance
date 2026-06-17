@@ -10,7 +10,7 @@ import HighLevelForm from "./components/HighLevelForm";
 import { ServicePageFooter } from "./components/ServicePageChrome";
 
 // ── Constants ──────────────────────────────────────────────
-const EMAIL = "calamb@acg.aaa.com";
+const EMAIL = "contact@lambinsuranceagency.com";
 
 const HOW_IT_WORKS = [
   {

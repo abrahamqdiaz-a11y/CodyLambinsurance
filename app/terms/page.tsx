@@ -168,8 +168,8 @@ export default function Terms() {
               </li>
               <li>
                 You may also contact us at{" "}
-                <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
-                  calamb@acg.aaa.com
+                <a href="mailto:contact@lambinsuranceagency.com" className="text-sage-600 hover:underline">
+                  contact@lambinsuranceagency.com
                 </a>{" "}
                 for assistance.
               </li>
@@ -240,10 +240,10 @@ export default function Terms() {
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:calamb@acg.aaa.com"
+                  href="mailto:contact@lambinsuranceagency.com"
                   className="text-sage-600 hover:underline"
                 >
-                  calamb@acg.aaa.com
+                  contact@lambinsuranceagency.com
                 </a>
               </p>
             </address>
