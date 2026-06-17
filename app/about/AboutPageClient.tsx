@@ -610,6 +610,19 @@ function ContactForm() {
                 Sarasota, FL 34243
               </address>
             </div>
+            <div className="mt-3 p-4 bg-white rounded-xl border border-navy-100 font-body">
+              <p className="text-navy-500 text-xs uppercase tracking-widest mb-2">Office Hours</p>
+              <ul className="space-y-1 text-sm">
+                <li className="flex justify-between gap-4">
+                  <span className="text-navy-500">Mon – Fri</span>
+                  <span className="text-navy-800 font-medium">9 am – 5 pm</span>
+                </li>
+                <li className="flex justify-between gap-4">
+                  <span className="text-navy-500">Sat – Sun</span>
+                  <span className="text-navy-400">Closed</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="lg:col-span-3 animate-on-scroll animate-on-scroll-delay-2">

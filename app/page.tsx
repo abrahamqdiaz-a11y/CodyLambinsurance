@@ -783,6 +783,21 @@ function BottomCTA() {
               </div>
             </a>
 
+            {/* Hours */}
+            <div className="bg-white/5 border border-white/10 rounded-2xl px-7 py-5">
+              <p className="text-navy-500 font-body text-xs uppercase tracking-widest mb-3">Office Hours</p>
+              <ul className="space-y-1.5 font-body text-sm">
+                <li className="flex justify-between gap-4">
+                  <span className="text-navy-300">Mon – Fri</span>
+                  <span className="text-white font-medium">9 am – 5 pm</span>
+                </li>
+                <li className="flex justify-between gap-4">
+                  <span className="text-navy-300">Sat – Sun</span>
+                  <span className="text-navy-600">Closed</span>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </div>
