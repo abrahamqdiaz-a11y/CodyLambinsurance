@@ -225,6 +225,7 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
             <li>
               <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Email</span>
               <a href={`mailto:${email}`} className="text-navy-200 hover:text-white transition-colors break-all" aria-label={`Send email to ${email}`}>{email}</a>
+              <a href="mailto:calamb@acg.aaa.com" className="text-navy-200 hover:text-white transition-colors break-all block mt-1" aria-label="Send email to calamb@acg.aaa.com">calamb@acg.aaa.com</a>
             </li>
             <li>
               <span className="text-navy-500 text-xs block mb-0.5 uppercase tracking-wider">Address</span>
