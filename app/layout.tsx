@@ -92,14 +92,22 @@ export default function RootLayout({
               name: "Lamb Insurance Agency",
               url: "https://lambinsuranceagency.com",
               telephone: "(941) 225-2335",
-              email: "calamb@acg.aaa.com",
+              email: "contact@lambinsuranceagency.com",
               description:
                 "Local licensed insurance agency in Sarasota, FL offering auto, home, and life insurance with direct agent access and thorough policy reviews.",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "5893 Whitfield Ave",
                 addressLocality: "Sarasota",
                 addressRegion: "FL",
+                postalCode: "34243",
                 addressCountry: "US",
+              },
+              employee: {
+                "@type": "Person",
+                name: "Cody Alexander Lamb",
+                jobTitle: "Licensed Florida Insurance Agent",
+                identifier: "FL License #G034846",
               },
               sameAs: [],
               serviceArea: {

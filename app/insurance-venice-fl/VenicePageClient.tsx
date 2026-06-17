@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ServicePageHeader, ServicePageFooter } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
 
-const EMAIL = "calamb@acg.aaa.com";
+const EMAIL = "contact@lambinsuranceagency.com";
 const PHONE_DISPLAY = "(941) 225-2335";
 const PHONE_HREF = "+19412252335";
 

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const OWNER_EMAIL = "calamb@acg.aaa.com";
+const OWNER_EMAIL = "contact@lambinsuranceagency.com";
 const FROM_EMAIL = "careers@lambinsuranceagency.com";
 const RESEND_API_KEY = process.env.RESEND_API_KEY ?? "";
 
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
     <p style="font-size:14px;color:#8a9ab5;margin:24px 0 0;">Role applied for: <strong style="color:#1e3a5f;">${roleLabel(role)}</strong></p>
     <p style="font-size:14px;color:#8a9ab5;margin:4px 0 0;">Submitted: ${new Date(submittedAt).toLocaleString("en-US", { timeZone: "America/New_York" })} ET</p>
     <hr style="border:none;border-top:1px solid #e0d8cc;margin:24px 0;" />
-    <p style="font-size:13px;color:#8a9ab5;margin:0;">Lamb Insurance Agency<br>5893 Whitfield Ave, Sarasota, FL 34243<br><a href="mailto:calamb@acg.aaa.com" style="color:#38653d;">calamb@acg.aaa.com</a></p>
+    <p style="font-size:13px;color:#8a9ab5;margin:0;">Lamb Insurance Agency<br>5893 Whitfield Ave, Sarasota, FL 34243<br><a href="mailto:contact@lambinsuranceagency.com" style="color:#38653d;">contact@lambinsuranceagency.com</a></p>
   </div>
 </div>`;
 

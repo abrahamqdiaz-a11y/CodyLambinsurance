@@ -28,7 +28,7 @@ const schemas = {
       "@type": ["LocalBusiness", "InsuranceAgency"],
       name: "Lamb Insurance Agency",
       url: "https://lambinsuranceagency.com",
-      email: "calamb@acg.aaa.com",
+      email: "contact@lambinsuranceagency.com",
       telephone: "+19412252335",
       address: {
         "@type": "PostalAddress",

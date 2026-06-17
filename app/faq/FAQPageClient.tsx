@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ServicePageHeader, ServicePageFooter } from "../components/ServicePageChrome";
 
-const EMAIL = "calamb@acg.aaa.com";
+const EMAIL = "contact@lambinsuranceagency.com";
 
 const FAQS = [
   {

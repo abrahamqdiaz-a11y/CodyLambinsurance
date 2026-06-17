@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
 
-const EMAIL = "calamb@acg.aaa.com";
+const EMAIL = "contact@lambinsuranceagency.com";
 const PHONE_DISPLAY = "(941) 225-2335";
 const PHONE_HREF = "+19412252335";
 
@@ -130,37 +130,48 @@ function ExperienceSection() {
                 Insurance Agency to do things differently.
               </p>
               <p>
-                Cody is licensed in Florida for Property &amp; Casualty (2-20) and Life &amp; Health
-                (215), giving clients guidance across auto, home, life, and business coverage.
+                Cody Alexander Lamb is a licensed Florida insurance agent serving Sarasota and the
+                surrounding Gulf Coast, licensed for General Lines Property &amp; Casualty (0220),
+                Life including Variable Annuity &amp; Health (0215), and Personal Lines (2044).
               </p>
             </div>
           </div>
 
           <div className="animate-on-scroll animate-on-scroll-delay-2">
             <div className="bg-white border border-navy-100 rounded-2xl p-8 space-y-5">
-              <h3 className="font-display text-xl font-bold text-navy-800">
-                Florida Licenses
-              </h3>
+              <div>
+                <h3 className="font-display text-xl font-bold text-navy-800">
+                  Cody Alexander Lamb
+                </h3>
+                <p className="text-navy-500 font-body text-sm mt-0.5">
+                  Licensed Florida Insurance Agent &middot; License No. G034846
+                </p>
+              </div>
               <ul className="space-y-4">
                 {[
                   {
-                    license: "2-20",
-                    title: "Property & Casualty",
+                    code: "0215",
+                    title: "Life including Variable Annuity & Health",
+                    desc: "Life insurance, variable annuities, and health-related coverage",
+                  },
+                  {
+                    code: "0220",
+                    title: "General Lines (Property & Casualty)",
                     desc: "Auto, home, flood, commercial, and bundled coverage",
                   },
                   {
-                    license: "2-15",
-                    title: "Life & Health",
-                    desc: "Life insurance and health-related coverage options",
+                    code: "2044",
+                    title: "Personal Lines",
+                    desc: "Personal auto and residential property coverage",
                   },
                 ].map((item) => (
                   <li
-                    key={item.license}
+                    key={item.code}
                     className="flex items-start gap-4 border-b border-navy-50 last:border-0 pb-4 last:pb-0"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-sage-50 border border-sage-200 flex items-center justify-center">
-                      <span className="font-display font-bold text-sage-700 text-sm">
-                        {item.license}
+                    <div className="flex-shrink-0 w-14 h-12 rounded-xl bg-sage-50 border border-sage-200 flex items-center justify-center">
+                      <span className="font-display font-bold text-sage-700 text-xs">
+                        {item.code}
                       </span>
                     </div>
                     <div>
@@ -173,7 +184,16 @@ function ExperienceSection() {
                 ))}
               </ul>
               <p className="text-navy-400 font-body text-xs pt-2">
-                Licensed Insurance Agent · State of Florida
+                License status can be verified through the{" "}
+                <a
+                  href="https://www.myfloridacfo.com/division/agents"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-navy-600 transition-colors"
+                >
+                  Florida Department of Financial Services
+                </a>
+                .
               </p>
             </div>
           </div>
@@ -581,6 +601,14 @@ function ContactForm() {
                   </p>
                 </div>
               </a>
+            </div>
+            <div className="mt-6 p-4 bg-white rounded-xl border border-navy-100 text-xs font-body text-navy-500 space-y-1">
+              <p className="font-bold text-navy-700">Cody Alexander Lamb</p>
+              <p>FL License #G034846</p>
+              <address className="not-italic">
+                5893 Whitfield Ave<br />
+                Sarasota, FL 34243
+              </address>
             </div>
           </div>
 

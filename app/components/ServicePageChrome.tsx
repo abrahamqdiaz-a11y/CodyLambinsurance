@@ -261,7 +261,20 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
       </div>
 
       <div className="border-t border-white/8">
-        <div className="max-w-6xl mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-body text-navy-500">
+        <div className="max-w-6xl mx-auto px-5 pt-5 pb-2 text-center">
+          <p className="text-xs font-body text-navy-400">
+            Cody Alexander Lamb &middot; FL License #G034846 &nbsp;&mdash;&nbsp;{" "}
+            <a
+              href="https://www.myfloridacfo.com/division/agents"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-navy-200 transition-colors"
+            >
+              Licensed in Florida — verify license
+            </a>
+          </p>
+        </div>
+        <div className="max-w-6xl mx-auto px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-body text-navy-500">
           <p>© {year} Lamb Insurance Agency. All rights reserved.</p>
           <p>Licensed Insurance Agency &nbsp;|&nbsp; Florida</p>
         </div>

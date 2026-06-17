@@ -276,7 +276,7 @@ export default function CareersPage() {
         </section>
       </main>
 
-      <ServicePageFooter email="calamb@acg.aaa.com" />
+      <ServicePageFooter email="contact@lambinsuranceagency.com" />
     </>
   );
 }

@@ -6,7 +6,7 @@ import { ServicePageHeader, ServicePageFooter } from "../components/ServicePageC
 import { POSTS, formatDate } from "./posts";
 import { useEffect } from "react";
 
-const EMAIL = "calamb@acg.aaa.com";
+const EMAIL = "contact@lambinsuranceagency.com";
 
 function useScrollReveal() {
   useEffect(() => {

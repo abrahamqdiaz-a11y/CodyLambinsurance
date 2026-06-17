@@ -118,8 +118,8 @@ export default function PrivacyPolicy() {
               </li>
               <li>
                 You may also contact us at{" "}
-                <a href="mailto:calamb@acg.aaa.com" className="text-sage-600 hover:underline">
-                  calamb@acg.aaa.com
+                <a href="mailto:contact@lambinsuranceagency.com" className="text-sage-600 hover:underline">
+                  contact@lambinsuranceagency.com
                 </a>{" "}
                 for assistance.
               </li>
@@ -196,10 +196,10 @@ export default function PrivacyPolicy() {
               Florida residents may also have rights under the Florida Digital
               Bill of Rights. To exercise your rights, contact us at{" "}
               <a
-                href="mailto:calamb@acg.aaa.com"
+                href="mailto:contact@lambinsuranceagency.com"
                 className="text-sage-600 hover:underline"
               >
-                calamb@acg.aaa.com
+                contact@lambinsuranceagency.com
               </a>
               .
             </p>
@@ -256,10 +256,10 @@ export default function PrivacyPolicy() {
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:calamb@acg.aaa.com"
+                  href="mailto:contact@lambinsuranceagency.com"
                   className="text-sage-600 hover:underline"
                 >
-                  calamb@acg.aaa.com
+                  contact@lambinsuranceagency.com
                 </a>
               </p>
             </address>
