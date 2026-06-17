@@ -321,11 +321,11 @@ function Hero() {
               id="hero-heading"
               className="font-display text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-navy-900 leading-[1.08] mb-6"
             >
-              Sarasota Insurance Agent — Coverage You Can Actually Understand
+              Sarasota Insurance Agency — Home, Condo &amp; Auto
             </h1>
 
             <p className="text-navy-600 font-body text-base leading-relaxed mb-7 max-w-lg">
-              Local, licensed, and available when you need us. We explain your policy clearly, respond fast, and make sure you&apos;re covered for what actually matters — not just what&apos;s cheapest.
+              Independent agency. Same-day quotes in English and Spanish. We review what you actually own — not just what&apos;s cheapest to write.
             </p>
 
             <ul className="space-y-2.5 mb-8" aria-label="Key benefits">

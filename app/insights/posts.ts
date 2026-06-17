@@ -41,7 +41,7 @@ export const POSTS: Post[] = [
     title: "Florida Insurance Rates Are Dropping in 2026: What It Means for Your Coverage",
     date: "2026-06-17",
     excerpt: "More than 40 Florida insurers have filed rate decreases. A Sarasota licensed insurance agent explains why rates are falling, how much, and how to make sure you actually capture the savings.",
-    thumbnail: "",
+    thumbnail: "/florida rates dropping.png",
     content: `
       <p>After several brutal years of rising premiums, Florida's auto and home insurance markets have turned a corner. More than 40 companies have filed for rate decreases since the start of 2025, and the state's five largest auto insurers are now averaging roughly an 8% reduction for 2026. For Sarasota homeowners and drivers, this is the best opportunity in over a decade to review coverage and recapture savings.</p>
 
