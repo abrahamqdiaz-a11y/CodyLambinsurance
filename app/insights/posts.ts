@@ -53,7 +53,7 @@ export const POSTS: Post[] = [
     date: "2026-06-22",
     excerpt: "What high value home insurance covers, what it costs, and how to buy it through a local agent who reviews your home's real replacement value.",
     metaDescription: "What high value home insurance covers, what it costs, and how to buy it through a local agent who reviews your home's real replacement value.",
-    thumbnail: "",
+    thumbnail: "/blog/high-net-worth-home-insurance.jpg",
     author: "Cody Lamb",
     authorTitle: "Licensed Insurance Agent — FL License #G034846",
     faqItems: [
