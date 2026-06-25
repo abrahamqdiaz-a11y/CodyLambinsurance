@@ -278,6 +278,19 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
           <p>© {year} Lamb Insurance Agency. All rights reserved.</p>
           <p>Licensed Insurance Agency &nbsp;|&nbsp; Florida</p>
         </div>
+        <div className="max-w-6xl mx-auto px-5 pb-3 text-center">
+          <p className="text-xs font-body text-navy-500">
+            Member of the{" "}
+            <a
+              href="https://web.sarasotachamber.com/active-member-directory/Details/lamb-insurance-agency-4865336"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-navy-300 transition-colors duration-300"
+            >
+              Greater Sarasota Chamber of Commerce
+            </a>
+          </p>
+        </div>
         <div className="max-w-6xl mx-auto px-5 pb-5 text-center">
           <p className="text-xs font-body text-navy-600 opacity-75">
             Built by{" "}
