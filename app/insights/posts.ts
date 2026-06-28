@@ -25,6 +25,12 @@
 // },
 // ─────────────────────────────────────────────────────────────────────────────
 
+export type FaqItem = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
 export type Post = {
   slug: string;
   title: string;
@@ -32,10 +38,163 @@ export type Post = {
   excerpt: string;     // 1–2 sentence summary shown on listing page
   thumbnail: string;   // Path relative to /public, e.g. "/blog/image.jpg"
   content: string;     // Full post body as an HTML string
+  // Optional extended fields
+  metaDescription?: string;
+  author?: string;
+  authorTitle?: string;
+  faqItems?: FaqItem[];
 };
 
 export const POSTS: Post[] = [
   // ← Add new posts here. Newest first.
+  {
+    slug: "high-net-worth-home-insurance-sarasota",
+    title: "High Value Home Insurance: What Coverage Actually Costs",
+    date: "2026-06-22",
+    excerpt: "What high value home insurance covers, what it costs, and how to buy it through a local agent who reviews your home's real replacement value.",
+    metaDescription: "What high value home insurance covers, what it costs, and how to buy it through a local agent who reviews your home's real replacement value.",
+    thumbnail: "/blog/high-net-worth-home-insurance.jpg",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
+    faqItems: [
+      {
+        id: "what-is-high-net-worth",
+        question: "What is considered a high net worth home for insurance purposes?",
+        answer: "It's less about market value and more about rebuild cost, the value of contents like art and jewelry, and liability exposure from things like pools, docks, or staff. A home can be high net worth at $900K and standard at $3M, depending on these factors.",
+      },
+      {
+        id: "same-as-high-value",
+        question: "Is high net worth home insurance the same as high value home insurance?",
+        answer: "Yes. The two terms are used interchangeably in the industry to describe homes that exceed what a standard insurer is comfortable writing, based on rebuild cost, contents value, and liability exposure, not market value alone.",
+      },
+      {
+        id: "standard-carrier",
+        question: "Will a standard homeowners carrier insure a high-value home?",
+        answer: "Standard carriers write strong policies for homes within their limits, generally up to roughly $1M in rebuild cost with moderate valuables and liability exposure. Above that, a specialty high net worth carrier is usually a better fit.",
+      },
+      {
+        id: "real-difference",
+        question: "What's the real difference between standard homeowners insurance and high net worth homeowners insurance?",
+        answer: "The biggest differences are replacement cost guarantees, sub-limits on valuables, liability ceilings, and claims handling built around long-term retention rather than non-renewal after a loss.",
+      },
+      {
+        id: "dwelling-coverage-2m",
+        question: "How much dwelling coverage do I need for a $2 million home in Florida?",
+        answer: "Dwelling coverage should be based on rebuild cost, not market value or purchase price, and in Florida that calculation needs to separately account for named storm deductibles and flood exposure, since NFIP limits cap out well below what a home at this value typically needs.",
+      },
+      {
+        id: "specialist-carriers",
+        question: "What carriers specialize in high net worth home insurance?",
+        answer: "PURE, Chubb, AIG Private Client Group, Cincinnati Private Client, Berkley One, Nationwide Private Client, and Vault are the names that come up most often in this space.",
+      },
+    ],
+    content: `
+      <p>If you own a home on Siesta Key, Longboat Key, or in one of the gated communities around Lakewood Ranch, you've probably already noticed that homeowners insurance doesn't scale the way you'd expect. Double the home value and you don't just pay double the premium. At some point, the coverage itself changes shape.</p>
+
+      <p>That point is what most people mean by "high net worth home insurance," sometimes called "high value home insurance," and it's where standard carriers start to show real limits. I review policies like this every week, and I'm going to tell you plainly where a standard policy is the right call and where it isn't. That's the only way this is useful to you.</p>
+
+      <h2>What Actually Makes a Home "High Net Worth" for Insurance Purposes</h2>
+
+      <p>It's not your net worth and it's not your home's market value. It's rebuild cost, plus a few risk factors layered on top:</p>
+
+      <ul>
+        <li><strong>Rebuild cost</strong>, not resale value. A waterfront lot can inflate market value without changing what it actually costs to rebuild the structure.</li>
+        <li><strong>Contents that exceed standard sub-limits</strong>: fine art, jewelry, wine collections, firearms, watches.</li>
+        <li><strong>Liability exposure</strong>: a pool, a dock, a trampoline, a dog, household staff, or simply a higher public profile.</li>
+        <li><strong>Multiple properties</strong>, especially if one is seasonal or unoccupied part of the year.</li>
+        <li><strong>A claims history</strong> that makes a standard carrier nervous about renewal.</li>
+      </ul>
+
+      <p>A home can check zero of these boxes and be worth $3M, and a standard policy fits fine. Another home can check three of them at $900K, and it's already outgrowing the standard market. Value alone is the wrong filter.</p>
+
+      <h2>Where Standard Homeowners Coverage Does This Well</h2>
+
+      <p>For homes within standard limits, a well-chosen standard policy is a strong fit, and I say that as the person who has to stand behind the policy at claim time. You get solid dwelling, other structures, personal property, loss of use, and liability coverage, backed by a carrier with real financial stability and a claims process that doesn't disappear when you need it most. Bundled with auto and an umbrella policy, the pricing is usually competitive with anything else in that range.</p>
+
+      <p>"Standard limits" generally means a rebuild cost under roughly $1M, valuables that don't exceed everyday sub-limits, and liability exposure that an umbrella policy can adequately cover on top of the homeowners base.</p>
+
+      <h2>Where the Ceiling Actually Is</h2>
+
+      <p>This is the part most agents gloss over. Here's where standard homeowners coverage starts to strain:</p>
+
+      <p><strong>Dwelling coverage caps.</strong> Every standard carrier has a point past which they simply won't write the dwelling limit you need, or they'll write it with conditions that don't hold up well in a major loss.</p>
+
+      <p><strong>Scheduled personal property sub-limits.</strong> Standard policies cap jewelry, art, and collectibles at low per-item amounts (often $1,500–$2,500) unless you schedule them individually, and even scheduling has an aggregate ceiling. If you have a real collection, this matters more than the dwelling limit does.</p>
+
+      <p><strong>No guaranteed replacement cost.</strong> Standard policies pay "up to" your limit. High net worth carriers offer guaranteed or extended replacement cost, sometimes with no cap at all, which matters enormously after a total loss during a construction cost spike.</p>
+
+      <p><strong>Liability ceilings.</strong> An umbrella helps, but it sits on top of an underlying limit. If that underlying limit is thin, the umbrella has less to work with in a serious claim.</p>
+
+      <p><strong>Equipment breakdown, water backup, and service line limits</strong> are usually modest on standard policies and meaningfully higher on specialty ones.</p>
+
+      <p><strong>Non-renewal risk after a claim.</strong> Standard carriers are quicker to non-renew after one large loss. High net worth carriers are built around long-term retention even after a claim, which is part of what you're paying for.</p>
+
+      <h3>Florida adds its own layer</h3>
+
+      <p>None of the above is unique to Florida, but Florida makes it worse:</p>
+
+      <ul>
+        <li><strong>Named storm deductibles</strong> are often a separate, overlooked percentage-based deductible that hits high-value homes hardest in dollar terms.</li>
+        <li><strong>Flood coverage through NFIP caps at $250K building / $100K contents.</strong> That's far below what a Sarasota waterfront home needs, regardless of which company writes your homeowners policy. Private or excess flood is usually necessary on top of whatever else you buy.</li>
+        <li><strong>Sinkhole and catastrophic ground cover collapse coverage</strong> have Florida-specific rules worth understanding before you assume you're covered.</li>
+        <li><strong>Wind mitigation credits</strong> are worth verifying no matter who underwrites the policy. They're often left on the table.</li>
+      </ul>
+
+      <!-- mid-article CTA -->
+      <div style="background:#f0f8f4;border:2px solid #4a8050;border-radius:12px;padding:1.75rem 2rem;margin:2.5rem 0;">
+        <p style="margin:0 0 0.4rem;font-weight:700;font-size:1.1rem;color:#1a2e1c;">Not sure where your coverage actually stands?</p>
+        <p style="margin:0 0 1.25rem;color:#374151;font-size:0.975rem;">A 20-minute review of your current declarations page is usually all it takes to know for sure.</p>
+        <a href="/#contact" style="display:inline-block;background:linear-gradient(135deg,#4a8050,#38653d);color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.95rem;">Book a 20-minute coverage review</a>
+      </div>
+
+      <h2>The Specialist Carriers, and What They Actually Add</h2>
+
+      <p>When a home outgrows standard limits, the usual names are PURE, Chubb, AIG Private Client Group, Cincinnati Private Client, Berkley One, Nationwide Private Client, and Vault. What you're actually buying from them:</p>
+
+      <ul>
+        <li>Guaranteed or cash-settlement replacement cost</li>
+        <li>Higher liability limits, often $5M–$25M+</li>
+        <li>Real coverage for valuables, not token sub-limits</li>
+        <li>Cyber, identity theft, and in some cases kidnap and ransom coverage</li>
+        <li>Dedicated claims handling and, with several of these, in-house risk engineers who'll walk your property before there's ever a loss</li>
+      </ul>
+
+      <p>The tradeoff is cost and, with a couple of these carriers, membership-style eligibility criteria. You also generally lose the multi-line bundling discount you'd get keeping auto and home under one roof.</p>
+
+      <h2>A Quick Way to Know Which Camp You're In</h2>
+
+      <p>If two or more of these apply to your home, it's worth a second look before you renew on autopilot:</p>
+
+      <ul>
+        <li>Rebuild cost (not market value) is over $1M</li>
+        <li>You're holding $50K+ in unscheduled valuables in the house</li>
+        <li>Your liability exposure includes a pool, dock, trampoline, specific dog breed, or a public-facing role</li>
+        <li>You own or insure more than one property</li>
+        <li>You've had a claim in the last five years and you're not sure where you stand on renewal</li>
+        <li>You want guaranteed replacement cost, not "up to policy limit"</li>
+      </ul>
+
+      <h2>Where I Land on This, Honestly</h2>
+
+      <p>If your home's rebuild cost is under roughly $1M and your liability and valuables exposure is moderate, I can usually put together a strong standard policy for you, often with a meaningful bundled discount alongside auto and umbrella.</p>
+
+      <p>If you're above that, or several of the risk factors above apply, I'll tell you that directly, and I'll point you toward the carrier that actually fits, even when it's not something I personally write. I'd rather you end up with the right policy somewhere else than the wrong one with my name on it. That's not a sales pitch. It's the only version of this job that holds up over time.</p>
+
+      <h2>What Happens If You Reach Out</h2>
+
+      <p>I'll review your current declarations page, walk through the checklist above against your actual home, and give you a straight answer. If a standard policy fits, I'll write it and bundle it with whatever else makes sense. If it doesn't, I'll tell you which specialist market does and make the introduction myself.</p>
+
+      <p><strong>Book a 20-minute coverage review with Cody Lamb</strong> and bring your current policy. You'll know within the call where your home actually stands.</p>
+
+      <div style="background:#f0f7ff;border-left:4px solid #1a56db;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0;">
+        <p style="margin:0 0 0.5rem;font-weight:700;font-size:1.1rem;">Ready to find out where your home actually stands?</p>
+        <p style="margin:0 0 1rem;">Bring your current declarations page. One call is usually all it takes.</p>
+        <a href="/#contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Book a 20-minute coverage review →</a>
+      </div>
+
+      <p><em>This article is general information, not a personalized coverage recommendation. Every policy is subject to underwriting. For a specific review of your home, reach out directly.</em></p>
+    `,
+  },
   {
     slug: "florida-insurance-rates-dropping-2026",
     title: "Florida Insurance Rates Are Dropping in 2026: What It Means for Your Coverage",
