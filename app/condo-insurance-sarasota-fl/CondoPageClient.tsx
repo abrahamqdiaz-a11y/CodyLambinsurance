@@ -495,6 +495,48 @@ function WhoWeHelpSection() {
   );
 }
 
+function ReviewedBySection() {
+  return (
+    <section className="bg-cream py-14 md:py-20 border-t border-navy-100" aria-labelledby="reviewed-by-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl animate-on-scroll">
+          <h2 id="reviewed-by-heading" className="font-display text-2xl font-bold text-navy-800 mb-3">
+            Reviewed by Cody Lamb, Licensed Florida Insurance Agent
+          </h2>
+          <p className="text-navy-600 font-body text-base leading-relaxed mb-4">
+            This page was reviewed by Cody Alexander Lamb, a licensed insurance agent serving Sarasota and the surrounding communities. Cody holds Florida license #G034846 with active appointments across personal lines, property &amp; casualty, and life &amp; health — covering auto, home, flood, condo, commercial, and bundled coverage for Sarasota-area clients since 2024.
+          </p>
+          <div className="flex flex-wrap gap-3 mb-5">
+            {[
+              { code: "0215", label: "Life, Variable Annuity & Health" },
+              { code: "0220", label: "General Lines — Property & Casualty" },
+              { code: "2044", label: "Personal Lines" },
+            ].map((lic) => (
+              <span key={lic.code} className="inline-flex items-center gap-1.5 bg-white border border-navy-100 rounded-full px-3 py-1 text-xs font-body text-navy-600">
+                <span className="font-bold text-navy-800">{lic.code}</span>
+                <span>{lic.label}</span>
+              </span>
+            ))}
+          </div>
+          <p className="text-navy-500 font-body text-sm">
+            License status can be verified through the{" "}
+            <a
+              href="https://www.myfloridacfo.com/division/agents"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sage-700 underline hover:text-sage-800"
+            >
+              Florida Department of Financial Services
+            </a>
+            . If you have questions about your condo coverage or want a no-obligation review of your current policy,{" "}
+            <a href="#contact" className="text-sage-700 underline hover:text-sage-800">reach out directly</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -606,6 +648,7 @@ export default function CondoPageClient() {
         <ScenariosSection />
         <MistakesSection />
         <WhoWeHelpSection />
+        <ReviewedBySection />
         <FAQSection />
         <ContactForm />
       </main>
