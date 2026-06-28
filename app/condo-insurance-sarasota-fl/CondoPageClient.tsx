@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
@@ -40,41 +40,93 @@ const condoCoverageItems = [
   },
 ];
 
-const faqItems = [
+const faqItems: { question: string; answer: React.ReactNode }[] = [
   {
-    question: "Do I need condo insurance if my association has a master policy?",
+    question: "Is condo insurance required in Florida?",
     answer:
-      "Yes. The master policy covers the building and common areas. It does not cover your personal belongings, your unit interior (depending on policy type), your personal liability, or your share of special assessments. An HO-6 fills those gaps.",
+      "No Florida law requires you to carry an HO-6 policy. However, if you have a mortgage, your lender will almost always require it. Even with no mortgage, going without leaves your interior, belongings, and liability completely exposed, since the association's master policy doesn't cover them.",
   },
   {
-    question: "What is loss assessment coverage and why does it matter in Sarasota right now?",
+    question: "What does an HO-6 policy cover that the association's master policy doesn't?",
     answer:
-      "Loss assessment coverage pays your share of an association-level assessment after a covered loss. Florida law sets the statutory minimum at $2,000 — and many basic HO-6 policies are written at exactly that floor. With Florida's reserve funding requirements driving large structural assessments in many Sarasota communities since late 2024 and into 2025, having adequate limits in your personal policy is more important than it's ever been.",
+      "Your HO-6 covers the interior of your unit (to the extent the master policy doesn't), your personal belongings, your personal liability, additional living expenses if your unit becomes uninhabitable, and your share of association assessments after a covered loss. The master policy generally covers only the building structure and common areas.",
   },
   {
-    question: "Does condo insurance cover flooding?",
+    question: "How much loss assessment coverage do I need in Sarasota?",
     answer:
-      "No. Standard HO-6 policies exclude flooding from external sources. If your unit is in a flood zone — or simply in a coastal or low-lying area — separate flood insurance is worth discussing. We cover this as part of every condo insurance conversation.",
+      "The legal minimum under Florida Statute § 627.714 is $2,000, but that's rarely enough given recent structural assessments running into five and six figures. Most Sarasota condo owners should consider $25,000 to $50,000. The added premium is usually under $50 a year.",
   },
   {
-    question: "What's the difference between actual cash value and replacement cost coverage?",
+    question: "Does condo insurance cover flood damage?",
+    answer: (
+      <>
+        No. Standard HO-6 policies exclude flooding from external sources like storm surge and rising water. If your unit is on a lower floor, in a flood zone, or in a coastal area like Siesta Key or Lido Key, you need a separate flood policy through the{" "}
+        <a
+          href="https://www.floodsmart.gov"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sage-700 underline hover:text-sage-800"
+        >
+          NFIP
+        </a>{" "}
+        or a private flood insurer.
+      </>
+    ),
+  },
+  {
+    question: "How much does condo insurance cost in Sarasota?",
     answer:
-      "Actual cash value pays depreciated value. Replacement cost pays what it actually costs to replace the item or rebuild the interior today. The difference on a full-unit water loss can be substantial. For most condo owners, replacement cost coverage is the better choice.",
+      "Most owners pay roughly $950 to $2,000 a year, depending on building location, walls-in coverage limit, hurricane deductible, and whether the unit is owner-occupied or rented. We provide same-day quotes specific to your building.",
   },
   {
-    question: "How does condo insurance work for seasonal residents?",
+    question: "Should I get actual cash value or replacement cost coverage?",
     answer:
-      "Policies for units that are vacant for extended periods have different terms than primary residence policies. Some standard HO-6 policies reduce or void coverage during vacancy periods. This is a common issue for Sarasota's seasonal population and one we address directly.",
-  },
-  {
-    question: "Can I get a quote the same day?",
-    answer: "Yes. Most quotes are completed same-day.",
-  },
-  {
-    question: "Do you offer Spanish-language service?",
-    answer: "Yes. English and Spanish spoken.",
+      "Replacement cost is almost always the better choice. It pays what it costs to replace damaged property today, while actual cash value pays a depreciated amount. On a significant loss, the difference can be thousands of dollars.",
   },
 ];
+
+function CostSection() {
+  return (
+    <section className="bg-warm py-20 md:py-28" aria-labelledby="cost-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-4xl animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="cost-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
+            How Much Does Condo Insurance Cost in Sarasota?
+          </h2>
+          <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
+            <p>
+              Most Sarasota condo owners pay between $80 and $170 per month — roughly $950 to $2,000 a year — for an HO-6 condo policy. Florida is the most expensive state in the country for condo insurance, with statewide averages running from about $962 to over $1,400 per year, more than double the national average of around $815.
+            </p>
+            <p>Where you land in that range depends on a handful of factors specific to your unit:</p>
+          </div>
+          <ul className="mt-6 space-y-3">
+            {[
+              { label: "Walls-in (Coverage A) limit", text: "Most Sarasota condos need between $75,000 and $250,000 to rebuild the interior, depending on size and finish level. Renovated or waterfront units run higher." },
+              { label: "Building location and age", text: "A Siesta Key barrier-island unit and a Lakewood Ranch garden condo are priced very differently." },
+              { label: "Hurricane deductible", text: "Most Florida HO-6 policies carry a 2% hurricane deductible. Choosing 5% lowers your premium but raises out-of-pocket cost if a named storm hits." },
+              { label: "Loss assessment limit", text: "The amount you choose here barely moves your premium but dramatically changes your exposure." },
+              { label: "Owner-occupied vs. rental", text: "Owner-occupied units price better. Rentals need different coverage." },
+            ].map((item) => (
+              <li key={item.label} className="flex gap-3 text-navy-600 font-body text-base leading-relaxed">
+                <span className="mt-1 w-2 h-2 rounded-full bg-sage-400 flex-shrink-0" aria-hidden="true" />
+                <span><strong className="text-navy-800">{item.label}</strong> — {item.text}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-navy-600 font-body text-base leading-relaxed">
+            No online estimate replaces a real quote, because two units in the same building can need very different limits based on what&apos;s been renovated inside. We provide same-day quotes and review your specific building at no cost.
+          </p>
+          <div className="mt-8">
+            <a href="#contact" className="btn-primary px-7 py-3.5 rounded-lg font-semibold font-body text-base inline-block">
+              Get Your Same-Day Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function useScrollReveal() {
   useEffect(() => {
@@ -200,17 +252,41 @@ function SB4DSection() {
           </h2>
           <div className="space-y-5 text-navy-200 font-body text-base leading-relaxed">
             <p>
-              Florida Senate Bill 4-D became law in May 2022, fundamentally changing the financial obligations of condo associations across the state. Associations are now required to complete structural integrity reserve studies and maintain fully funded reserves for critical building components — roofs, load-bearing walls, fire protection systems, plumbing, electrical, and more.
+              Florida Senate Bill 4-D became law in May 2022, fundamentally changing the financial obligations of condo associations across the state. The law followed the 2021 Surfside collapse and has since been amended three times — by SB 154 (2023), HB 1021 (2024), and HB 913 (2025) — so the rules in effect today are not the rules as originally written.
             </p>
             <p>
-              For many Sarasota condo communities, this has meant significant reserve shortfalls and resulting special assessments to fund them — with the bulk of those assessments materializing in late 2024 and into 2025. Owners in some buildings have received notices for tens of thousands of dollars, sometimes with limited notice.
+              Associations with buildings three habitable stories or higher must now complete a{" "}
+              <a
+                href="https://condos.myfloridalicense.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sage-300 underline hover:text-sage-200"
+              >
+                structural integrity reserve study (SIRS)
+              </a>{" "}
+              and maintain fully funded reserves for critical components: roof, load-bearing walls, fire protection, plumbing, electrical, waterproofing, windows, and exterior doors. The initial SIRS deadline was originally December 31, 2024, but HB 913 extended it to December 31, 2025. Reserves for these structural items can no longer be waived.
             </p>
-            <p>Here&apos;s where your HO-6 policy comes in.</p>
             <p>
-              Loss assessment coverage is a component of your personal condo policy that responds when you&apos;re responsible for a share of an association assessment following a covered loss. Florida law sets the statutory minimum for loss assessment coverage at $2,000. Many basic HO-6 policies are written at exactly that floor. In today&apos;s Sarasota market, where structural assessments routinely run into five figures, the minimum is effectively meaningless.
+              For many Sarasota condo communities, this has meant significant reserve shortfalls and resulting special assessments — with the bulk of those notices materializing across 2024 and 2025. Owners in some buildings have received assessments for tens of thousands of dollars, occasionally six figures, sometimes with limited notice.
+            </p>
+            <p>Here&apos;s where your HO-6 comes in.</p>
+            <p>
+              Loss assessment coverage responds when you&apos;re responsible for a share of an association assessment following a covered loss. Under{" "}
+              <a
+                href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0600-0699/0627/Sections/0627.714.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sage-300 underline hover:text-sage-200"
+              >
+                Florida Statute § 627.714
+              </a>
+              , every residential condo unit policy must include at least $2,000 of loss assessment coverage — and that statute caps the deductible on it at $250. Many basic HO-6 policies are written at exactly that $2,000 floor. In today&apos;s Sarasota market, where structural assessments routinely run into five and six figures, the minimum is effectively meaningless.
             </p>
             <p>
-              If you own a condo in Sarasota and haven&apos;t reviewed your policy in the last two years, there&apos;s a real chance your loss assessment coverage doesn&apos;t reflect what assessments are actually looking like in your community.
+              The good news: raising this limit is cheap. Moving from $2,000 to $25,000 or $50,000 of loss assessment coverage typically adds well under $50 a year on most carriers. It&apos;s one of the most cost-effective coverage decisions a Florida condo owner can make.
+            </p>
+            <p>
+              If you own a condo in Sarasota and haven&apos;t reviewed your policy in the last two years, there&apos;s a real chance your loss assessment coverage doesn&apos;t reflect what assessments actually look like in your community now.
             </p>
             <p className="text-sage-300 font-medium">
               We review this as part of every condo insurance conversation — no obligation, no pressure.
@@ -241,10 +317,6 @@ function SarasotaMarketSection() {
                 text: "Older buildings face elevated insurance costs due to age, building systems, and the increased scrutiny that followed Florida's legislative changes. Master policy premiums in many of these communities have increased substantially, and those increases pass through to owners.",
               },
               {
-                title: "Siesta Key and barrier island properties",
-                text: "Flood zone exposure is a real factor. Many units in beachfront and near-beach communities sit in FEMA-designated flood zones, which affects both what the master policy covers and what your personal policy needs to address. Flood insurance for your condo contents and interior is a separate policy — and a conversation worth having.",
-              },
-              {
                 title: "Lakewood Ranch and inland communities",
                 text: "Generally lower flood risk, but special assessment exposure from aging infrastructure and reserve funding gaps is just as relevant here.",
               },
@@ -258,6 +330,16 @@ function SarasotaMarketSection() {
                 <p className="text-navy-600 font-body text-base leading-relaxed">{item.text}</p>
               </article>
             ))}
+            <article className="bg-white border border-navy-100 rounded-2xl p-6 animate-on-scroll">
+              <h3 className="font-display text-lg font-bold text-navy-800 mb-3">Siesta Key and barrier island properties</h3>
+              <p className="text-navy-600 font-body text-base leading-relaxed">
+                Flood zone exposure is a real factor. Many units in beachfront and near-beach communities sit in FEMA-designated flood zones, which affects both what the master policy covers and what your personal policy needs to address. Flood insurance for your condo contents and interior is a{" "}
+                <Link href="/flood-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">
+                  separate policy
+                </Link>{" "}
+                — and a conversation worth having.
+              </p>
+            </article>
           </div>
           <p className="mt-8 text-navy-600 font-body text-base leading-relaxed">
             Every building is different. Every master policy is different. The right HO-6 for a downtown Sarasota high-rise looks nothing like the right policy for a Siesta Key ground-floor unit.
@@ -516,6 +598,7 @@ export default function CondoPageClient() {
       <ServicePageHeader />
       <main id="main-content">
         <Hero />
+        <CostSection />
         <CoverageGapSection />
         <SB4DSection />
         <SarasotaMarketSection />
