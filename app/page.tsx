@@ -570,31 +570,21 @@ function AboutAgent() {
             </ul>
           </div>
 
-          {/* Right — trust visual */}
+          {/* Right — agent photo */}
           <div className="animate-on-scroll animate-on-scroll-delay-2 flex justify-center">
             <div className="w-full max-w-sm">
-              {/* AAA badge card */}
-              <div className="bg-navy-900 rounded-2xl p-8 text-center border border-navy-800 shadow-xl shadow-navy-900/20 mb-6">
-                <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mx-auto mb-5 border-4 border-sage-400">
-                  <Image
-                    src="/favicon.png"
-                    alt="Lamb Insurance Agency"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12 object-contain"
-                  />
-                </div>
-                <p className="font-display text-white text-xl font-bold mb-1">Lamb Insurance Agency</p>
-                <p className="text-sage-400 text-xs uppercase tracking-[0.2em] font-body mb-5">AAA Authorized Agent</p>
-                <div className="border-t border-white/10 pt-5">
-                  <p className="text-navy-300 font-body text-sm">Sarasota, Florida</p>
-                  <a
-                    href="tel:+19412252335"
-                    className="text-sage-300 font-body text-sm font-semibold hover:text-white transition-colors mt-1 block"
-                  >
-                    (941) 225-2335
-                  </a>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden border border-navy-100 shadow-xl shadow-navy-900/10 mb-5">
+                <Image
+                  src="/hero example.jpg"
+                  alt="Cody Alexander Lamb, Licensed Florida Insurance Agent"
+                  width={480}
+                  height={560}
+                  className="object-cover object-top w-full"
+                />
+              </div>
+              <div className="mb-5">
+                <p className="font-display font-bold text-navy-800 text-lg">Cody Alexander Lamb</p>
+                <p className="text-navy-500 font-body text-sm">Licensed Florida Insurance Agent &middot; License No. G034846</p>
               </div>
 
               {/* Credential pills */}
