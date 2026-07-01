@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
@@ -113,29 +114,50 @@ function ExperienceSection() {
   return (
     <section className="bg-cream py-20 md:py-28" aria-labelledby="experience-heading">
       <div className="max-w-6xl mx-auto px-5">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          <div className="animate-on-scroll">
-            <div className="section-rule" />
-            <h2
-              id="experience-heading"
-              className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-6 leading-tight"
-            >
-              Real Experience in Insurance
-            </h2>
-            <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
-              <p>
-                Cody Lamb got into insurance through sales and quickly saw the gap—people were buying
-                policies they didn&apos;t fully understand. After working in high-volume insurance
-                environments and managing sales teams across multiple locations, he opened Lamb
-                Insurance Agency to do things differently.
-              </p>
-              <p>
-                Cody Alexander Lamb is a licensed Florida insurance agent serving Sarasota and the
-                surrounding Gulf Coast, licensed for General Lines Property &amp; Casualty (0220),
-                Life including Variable Annuity &amp; Health (0215), and Personal Lines (2044).
-              </p>
+        <div className="grid lg:grid-cols-5 gap-12 items-start">
+          {/* Photo column */}
+          <div className="lg:col-span-2 animate-on-scroll flex flex-col items-center lg:items-start gap-4">
+            <div className="relative w-full max-w-xs rounded-2xl overflow-hidden border border-navy-100 shadow-md">
+              <Image
+                src="/hero example.jpg"
+                alt="Cody Alexander Lamb, Licensed Florida Insurance Agent"
+                width={400}
+                height={480}
+                className="object-cover object-top w-full"
+                priority
+              />
+            </div>
+            <div>
+              <p className="font-display font-bold text-navy-800 text-lg">Cody Alexander Lamb</p>
+              <p className="text-navy-500 font-body text-sm">Licensed Florida Insurance Agent</p>
+              <p className="text-navy-400 font-body text-xs mt-0.5">License No. G034846</p>
             </div>
           </div>
+
+          {/* Bio + license card */}
+          <div className="lg:col-span-3 space-y-8">
+            <div className="animate-on-scroll">
+              <div className="section-rule" />
+              <h2
+                id="experience-heading"
+                className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-6 leading-tight"
+              >
+                Real Experience in Insurance
+              </h2>
+              <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
+                <p>
+                  Cody Lamb got into insurance through sales and quickly saw the gap—people were buying
+                  policies they didn&apos;t fully understand. After working in high-volume insurance
+                  environments and managing sales teams across multiple locations, he opened Lamb
+                  Insurance Agency to do things differently.
+                </p>
+                <p>
+                  Cody Alexander Lamb is a licensed Florida insurance agent serving Sarasota and the
+                  surrounding Gulf Coast, licensed for General Lines Property &amp; Casualty (0220),
+                  Life including Variable Annuity &amp; Health (0215), and Personal Lines (2044).
+                </p>
+              </div>
+            </div>
 
           <div className="animate-on-scroll animate-on-scroll-delay-2">
             <div className="bg-white border border-navy-100 rounded-2xl p-8 space-y-5">
@@ -196,6 +218,7 @@ function ExperienceSection() {
                 .
               </p>
             </div>
+          </div>
           </div>
         </div>
       </div>
