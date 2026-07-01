@@ -571,14 +571,15 @@ function AboutAgent() {
           </div>
 
           {/* Right — agent photo */}
-          <div className="animate-on-scroll animate-on-scroll-delay-2">
-            <div className="w-full">
-              <div className="relative rounded-2xl overflow-hidden border border-navy-100 shadow-xl shadow-navy-900/10 mb-5 h-80 md:h-96">
+          <div className="animate-on-scroll animate-on-scroll-delay-2 flex justify-center">
+            <div className="w-full max-w-xs">
+              <div className="relative rounded-2xl overflow-hidden border border-navy-100 shadow-xl shadow-navy-900/10 mb-5">
                 <Image
                   src="/hero example.jpg"
                   alt="Cody Alexander Lamb, Licensed Florida Insurance Agent"
-                  fill
-                  className="object-cover object-top"
+                  width={320}
+                  height={380}
+                  className="object-cover object-top w-full"
                 />
               </div>
               <div className="mb-5">
