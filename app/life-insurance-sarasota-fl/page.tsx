@@ -2,35 +2,12 @@ import type { Metadata } from "next";
 import LifePageClient from "./LifePageClient";
 
 export const metadata: Metadata = {
-  title: "Life Insurance in Sarasota, FL",
+  title: { absolute: "Life Insurance Sarasota, FL | Term & Whole Life | Lamb" },
   description:
-    "Get life insurance in Sarasota that protects your family and fits your budget. Compare term and permanent coverage options with a local agency that explains everything clearly.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/life-insurance-sarasota-fl",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/life-insurance-sarasota-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Life Insurance in Sarasota, FL | Lamb Insurance Agency",
-    description:
-      "Get life insurance in Sarasota that protects your family and fits your budget. Compare term and permanent coverage options with a local agency that explains everything clearly.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — Life Insurance in Sarasota, FL",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Life Insurance in Sarasota, FL | Lamb Insurance Agency",
-    description:
-      "Get life insurance in Sarasota that protects your family and fits your budget. Compare term and permanent coverage options with a local agency that explains everything clearly.",
-  },
+    "Life insurance in Sarasota, FL. Compare term and permanent coverage with a local licensed agent. Simple quotes, honest answers, no pressure.",
+  alternates: { canonical: "/life-insurance-sarasota-fl" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schemas = {

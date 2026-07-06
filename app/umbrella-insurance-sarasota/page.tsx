@@ -28,35 +28,15 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Umbrella Insurance in Sarasota, FL",
+  title: { absolute: "Umbrella Insurance Sarasota, FL | Personal Liability | Lamb" },
   description:
-    "Protect your home, savings, and future from a single lawsuit. See your liability exposure in 60 seconds with a free Asset Protection Review.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/umbrella-insurance-sarasota",
-  },
+    "$1M+ personal umbrella coverage for Sarasota homeowners. Protect your home, savings, and future from a single lawsuit. Free asset-protection review.",
+  alternates: { canonical: "/umbrella-insurance-sarasota" },
   openGraph: {
-    type: "website",
-    url: "https://lambinsuranceagency.com/umbrella-insurance-sarasota",
-    siteName: "Lamb Insurance Agency",
-    title: "Umbrella Insurance in Sarasota, FL | Lamb Insurance Agency",
-    description:
-      "Protect your home, savings, and future from a single lawsuit. See your liability exposure in 60 seconds with a free Asset Protection Review.",
-    images: [
-      {
-        url: "/og/umbrella.png", // TODO: create OG image at /public/og/umbrella.png (1200×630)
-        width: 1200,
-        height: 630,
-        alt: "Umbrella Insurance in Sarasota — Lamb Insurance Agency",
-      },
-    ],
+    title: "Umbrella Insurance Sarasota, FL | Personal Liability | Lamb",
+    images: ["/og-image.png"],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Umbrella Insurance in Sarasota, FL | Lamb Insurance Agency",
-    description:
-      "Protect your home, savings, and future from a single lawsuit. See your liability exposure in 60 seconds with a free Asset Protection Review.",
-    images: ["/og/umbrella.png"],
-  },
+  twitter: { card: "summary_large_image", images: ["/og-image.png"] },
 };
 
 // ─── JSON-LD Schemas ──────────────────────────────────────────────────────────
@@ -96,7 +76,7 @@ const schemas = {
       "@id": "https://lambinsuranceagency.com/#agency",
       name: "Lamb Insurance Agency",
       description:
-        "Licensed independent insurance agency in Sarasota, FL specializing in personal umbrella policies, excess liability coverage, and high-value home insurance for Sarasota and Manatee county households.",
+        "Licensed insurance agency in Sarasota, FL specializing in personal umbrella policies, excess liability coverage, and high-value home insurance for Sarasota and Manatee county households.",
       url: "https://lambinsuranceagency.com",
       telephone: "(941) 225-2335", // TODO: confirm
       email: "contact@lambinsuranceagency.com",
@@ -748,7 +728,7 @@ export default function UmbrellaInsuranceSarasotaPage() {
                     Licensed Insurance Agent · FL License #G034846
                   </p>
                   <p className="[font-family:var(--font-inter)] text-[#A9B2A8] text-sm leading-relaxed mb-4">
-                    Cody Lamb is a Florida-licensed independent insurance agent at Lamb Insurance Agency in Sarasota. He specializes in personal umbrella policies, excess liability insurance, and high-value home coverage for Sarasota and Manatee county households. The content on this page reflects his direct experience reviewing and placing personal umbrella policies for clients throughout the region.
+                    Cody Lamb is a Florida-licensed insurance agent at Lamb Insurance Agency in Sarasota. He specializes in personal umbrella policies, excess liability insurance, and high-value home coverage for Sarasota and Manatee county households. The content on this page reflects his direct experience reviewing and placing personal umbrella policies for clients throughout the region.
                   </p>
                   <p className="[font-family:var(--font-inter)] text-[#A9B2A8] text-xs flex items-center gap-2">
                     <span className="text-[#7CA37C]" aria-hidden="true">✓</span>

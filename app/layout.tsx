@@ -4,68 +4,35 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://lambinsuranceagency.com"),
   title: {
-    default: "Lamb Insurance Agency | Personal & Commercial Insurance in Sarasota, FL",
+    default: "Sarasota Insurance Agency | Auto, Home, Flood & Life | Lamb",
     template: "%s | Lamb Insurance Agency",
   },
   description:
-    "Lamb Insurance Agency offers personalized auto, home, life, and commercial insurance in the Sarasota area. Simple, personal, and built around you. Get a free quote today.",
-  keywords: [
-    "insurance agency Sarasota",
-    "auto insurance Florida",
-    "home insurance Sarasota",
-    "life insurance",
-    "commercial insurance",
-    "Lamb Insurance Agency",
-    "insurance quotes Florida",
-    "personal insurance",
-    "business insurance Sarasota",
-  ],
-  authors: [{ name: "Lamb Insurance Agency" }],
-  creator: "Lamb Insurance Agency",
-  publisher: "Lamb Insurance Agency",
+    "Local Sarasota insurance agency for auto, homeowners, flood, condo, life, and commercial coverage. Same-day quotes, bilingual service, no jargon.",
   openGraph: {
-    type: "website",
-    locale: "en_US",
+    title: "Sarasota Insurance Agency | Auto, Home, Flood & Life | Lamb",
+    description:
+      "Auto, homeowners, flood, condo, life, and commercial insurance in Sarasota, FL. Same-day quotes from a local agent.",
+    images: ["/og-image.png"],
     url: "https://lambinsuranceagency.com",
     siteName: "Lamb Insurance Agency",
-    title: "Lamb Insurance Agency | Personal & Commercial Insurance",
-    description:
-      "Insurance should be simple, personal, and built around you. Get a free quote for auto, home, life, or commercial coverage from Lamb Insurance Agency.",
-    images: [
-      {
-        url: "/lamb.logo.jpg",
-        width: 200,
-        height: 200,
-        alt: "Lamb Insurance Agency — Protecting What Matters Most",
-      },
-    ],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Lamb Insurance Agency | Personal & Commercial Insurance",
+    card: "summary_large_image",
+    title: "Sarasota Insurance Agency | Auto, Home, Flood & Life | Lamb",
     description:
-      "Insurance should be simple, personal, and built around you. Free quotes for auto, home, life, and commercial coverage.",
-    images: [
-      {
-        url: "/lamb.logo.jpg",
-        alt: "Lamb Insurance Agency — Protecting What Matters Most",
-      },
-    ],
+      "Auto, homeowners, flood, condo, life, and commercial insurance in Sarasota, FL. Same-day quotes from a local agent.",
+    images: ["/og-image.png"],
   },
+  alternates: { canonical: "https://lambinsuranceagency.com" },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
-  alternates: {
-    canonical: "https://lambinsuranceagency.com",
-  },
+  verification: { google: "KIXQJA3RX_fdHOLHP9_6v-vPVa8t2k6lBtGTZ727pQQ" },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },

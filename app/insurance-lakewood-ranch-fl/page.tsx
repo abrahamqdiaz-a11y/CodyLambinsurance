@@ -2,28 +2,12 @@ import type { Metadata } from "next";
 import LakewoodRanchPageClient from "./LakewoodRanchPageClient";
 
 export const metadata: Metadata = {
-  title: "Insurance Agency in Lakewood Ranch, FL | Lamb Insurance",
+  title: { absolute: "Insurance in Lakewood Ranch, FL | Home & Auto | Lamb" },
   description:
-    "Local independent insurance for Lakewood Ranch residents. Auto, home, flood, and life coverage tailored to LWR's master-planned communities. Get a quote today.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/insurance-lakewood-ranch-fl",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/insurance-lakewood-ranch-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Insurance Agency in Lakewood Ranch, FL | Lamb Insurance",
-    description:
-      "Local independent insurance for Lakewood Ranch residents. Auto, home, flood, and life coverage tailored to LWR's master-planned communities. Get a quote today.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Lamb Insurance Agency — Lakewood Ranch, FL" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Insurance Agency in Lakewood Ranch, FL | Lamb Insurance",
-    description:
-      "Local independent insurance for Lakewood Ranch residents. Auto, home, flood, and life coverage tailored to LWR's master-planned communities. Get a quote today.",
-  },
+    "Insurance for Lakewood Ranch, FL: homeowners, auto, flood, and life coverage built for LWR's master-planned communities. Same-day quotes.",
+  alternates: { canonical: "/insurance-lakewood-ranch-fl" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schema = {

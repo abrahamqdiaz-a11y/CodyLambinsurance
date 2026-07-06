@@ -2,35 +2,17 @@ import type { Metadata } from "next";
 import CondoPageClient from "./CondoPageClient";
 
 export const metadata: Metadata = {
-  title: "Condo Insurance Sarasota FL | HO-6 Coverage & Same-Day Quotes | Lamb Insurance",
+  title: { absolute: "Condo Insurance Sarasota FL | HO-6 Same-Day Quotes | Lamb" },
   description:
-    "Sarasota condo insurance (HO-6) from a local bilingual agency. Same-day quotes, master policy reviews, loss assessment coverage. Call (941) 225-2335.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/condo-insurance-sarasota-fl",
-  },
+    "Sarasota condo insurance (HO-6) from a local bilingual agent. Master-policy review, loss assessment, and same-day quotes. Call (941) 225-2335.",
+  alternates: { canonical: "/condo-insurance-sarasota-fl" },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/condo-insurance-sarasota-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Condo Insurance Sarasota FL | Lamb Insurance Agency",
+    title: "Condo Insurance Sarasota FL | HO-6 Same-Day Quotes | Lamb",
     description:
-      "Condo insurance in Sarasota FL through Lamb Insurance Agency. Florida condo rules changed — make sure your HO-6 policy keeps up. Local agent, same-day quotes.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — Condo Insurance Sarasota FL",
-      },
-    ],
+      "Sarasota condo insurance (HO-6) from a local bilingual agent. Master-policy review, loss assessment, and same-day quotes.",
+    images: ["/og-image.png"],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Condo Insurance Sarasota FL | Lamb Insurance Agency",
-    description:
-      "Condo insurance in Sarasota FL through Lamb Insurance Agency. Florida condo rules changed — make sure your HO-6 policy keeps up. Local agent, same-day quotes.",
-  },
+  twitter: { card: "summary_large_image" },
 };
 
 const schemas = {

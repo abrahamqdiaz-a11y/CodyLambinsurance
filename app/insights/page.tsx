@@ -2,34 +2,19 @@ import type { Metadata } from "next";
 import InsightsPageClient from "./InsightsPageClient";
 
 export const metadata: Metadata = {
-  title: "Insights | Lamb Insurance Agency",
+  title: { absolute: "Florida Insurance Insights & Tips | Lamb Insurance Agency" },
   description:
-    "Insurance tips, Florida coverage news, and practical guidance from Lamb Insurance Agency in Sarasota, FL. Stay informed and protect what matters most.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/insights",
-  },
+    "Practical Florida insurance tips, rate news, and coverage guidance from a local Sarasota agent. Auto, homeowners, flood, and more.",
+  alternates: { canonical: "/insights" },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/insights",
-    siteName: "Lamb Insurance Agency",
-    title: "Insights | Lamb Insurance Agency",
     description:
-      "Insurance tips, Florida coverage news, and practical guidance from Lamb Insurance Agency in Sarasota, FL.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — Insights",
-      },
-    ],
+      "Practical Florida insurance tips, rate news, and coverage guidance from a local Sarasota agent. Auto, homeowners, flood, and more.",
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Insights | Lamb Insurance Agency",
     description:
-      "Insurance tips, Florida coverage news, and practical guidance from Lamb Insurance Agency in Sarasota, FL.",
+      "Practical Florida insurance tips, rate news, and coverage guidance from a local Sarasota agent. Auto, homeowners, flood, and more.",
   },
   robots: { index: true, follow: true },
 };

@@ -2,35 +2,12 @@ import type { Metadata } from "next";
 import FloodPageClient from "./FloodPageClient";
 
 export const metadata: Metadata = {
-  title: "Flood Insurance Sarasota FL | Lamb Insurance Agency",
+  title: { absolute: "Flood Insurance Sarasota FL | NFIP & Private Quotes | Lamb" },
   description:
-    "Your home insurance does not cover flooding. Lamb Insurance Agency helps Sarasota homeowners understand their flood zone and get the right flood coverage. Local agent, same-day quotes.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/flood-insurance-sarasota-fl",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/flood-insurance-sarasota-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Flood Insurance Sarasota FL | Lamb Insurance Agency",
-    description:
-      "Your home insurance does not cover flooding. Lamb Insurance Agency helps Sarasota homeowners understand their flood zone and get the right flood coverage. Local agent, same-day quotes.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — Flood Insurance Sarasota FL",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Flood Insurance Sarasota FL | Lamb Insurance Agency",
-    description:
-      "Your home insurance does not cover flooding. Lamb Insurance Agency helps Sarasota homeowners understand their flood zone and get the right flood coverage. Local agent, same-day quotes.",
-  },
+    "Flood insurance in Sarasota, FL. Your home policy doesn't cover flooding. Know your zone, understand NFIP vs private, get a same-day quote.",
+  alternates: { canonical: "/flood-insurance-sarasota-fl" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schemas = {

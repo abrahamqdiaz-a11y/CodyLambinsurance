@@ -235,7 +235,7 @@ export const POSTS: Post[] = [
             <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Third reduction since 2024; more than 20% cumulative, over $1B in statewide savings</td>
           </tr>
           <tr style="background:#f9fafb;">
-            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">AAA</td>
+            <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Auto Club Group</td>
             <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">-15%</td>
             <td style="padding:0.6rem 0.8rem;border:1px solid #d1d5db;">Three reductions over the year, plus a fourth round in early 2026; more than $16M in annual auto savings for 133,000+ Florida policyholders</td>
           </tr>

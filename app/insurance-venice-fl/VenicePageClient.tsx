@@ -46,7 +46,7 @@ const faqItems = [
   {
     question: "My home was built in 1978 — can I still get homeowners insurance in Florida?",
     answer:
-      "Yes, but the carrier options narrow as a home ages. A 4-point inspection will likely be required before any new policy is issued, and the results — particularly roof age and electrical condition — determine which carriers will write it and at what premium. The good news is that an independent agent can shop across multiple companies rather than stopping at the first declination. We work with carriers experienced in Venice's older housing stock.",
+      "Yes, but the carrier options narrow as a home ages. A 4-point inspection will likely be required before any new policy is issued, and the results — particularly roof age and electrical condition — determine which carriers will write it and at what premium. The good news is that a local agent can work with multiple companies rather than stopping at the first declination. We work with carriers experienced in Venice's older housing stock.",
   },
   {
     question: "What does a 4-point inspection cover and do I need one?",
@@ -66,7 +66,7 @@ const faqItems = [
   {
     question: "What's the difference between Medicare Advantage and Medicare supplement?",
     answer:
-      "Medicare Advantage (Part C) replaces original Medicare with a private plan — often an HMO or PPO — that may include dental and vision but comes with network restrictions. Medicare supplement (Medigap) works alongside original Medicare to cover out-of-pocket costs like deductibles and coinsurance, with no network restrictions. Medigap typically carries a higher monthly premium but more predictable out-of-pocket costs. Which is better depends on your health, how often you travel, and your financial priorities. An independent agent can compare both across carriers.",
+      "Medicare Advantage (Part C) replaces original Medicare with a private plan — often an HMO or PPO — that may include dental and vision but comes with network restrictions. Medicare supplement (Medigap) works alongside original Medicare to cover out-of-pocket costs like deductibles and coinsurance, with no network restrictions. Medigap typically carries a higher monthly premium but more predictable out-of-pocket costs. Which is better depends on your health, how often you travel, and your financial priorities. A local agent can compare both across carriers.",
   },
   {
     question: "Can I drop to comprehensive-only on a car I'm leaving in storage?",
@@ -156,7 +156,7 @@ function FourPointSection() {
               Roof age is the single biggest factor. Many carriers won&apos;t write a policy on a roof older than 15 years, and some set the threshold lower. Homes with knob-and-tube wiring, older aluminum branch wiring, or galvanized plumbing are also flagged. A flat roof adds another layer of scrutiny.
             </p>
             <p>
-              The answer isn&apos;t to accept the first declination. An independent agent can shop across the carriers who specialize in older properties rather than the standard market — finding coverage that reflects the actual condition of the home, not just its age. We do that regularly for Venice residents.
+              The answer isn&apos;t to accept the first declination. A local agent can work across the carriers who specialize in older properties rather than the standard market — finding coverage that reflects the actual condition of the home, not just its age. We do that regularly for Venice residents.
             </p>
           </div>
         </div>
@@ -226,7 +226,7 @@ function MedicareSection() {
               Venice has one of the highest concentrations of Medicare-eligible residents in Sarasota County. Medigap plans — which work alongside original Medicare to cover deductibles, coinsurance, and other out-of-pocket gaps — vary significantly in premium, covered benefits, and carrier stability. The plan letter stays standardized by law, but the price for the same plan can differ hundreds of dollars per year between carriers.
             </p>
             <p>
-              An independent agent can compare Medigap plans across multiple carriers rather than steering you toward one company&apos;s product. Plans also reprice at renewal, and switching windows exist — annual review is worth doing even if you&apos;re satisfied with your current coverage.
+              A local agent can compare Medigap plans across multiple carriers rather than steering you toward one company&apos;s product. Plans also reprice at renewal, and switching windows exist — annual review is worth doing even if you&apos;re satisfied with your current coverage.
             </p>
           </div>
         </div>

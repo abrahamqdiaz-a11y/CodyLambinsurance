@@ -2,35 +2,15 @@ import type { Metadata } from "next";
 import AutoPageClient from "./AutoPageClient";
 
 export const metadata: Metadata = {
-  title: "Auto Insurance in Sarasota, FL",
+  title: { absolute: "Auto Insurance Sarasota FL | Car Insurance Quotes | Lamb" },
   description:
-    "Get auto insurance in Sarasota that fits your life and budget. Compare coverage options, get fast answers, and work with a local agency that explains everything clearly.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl",
-  },
+    "Auto and car insurance in Sarasota, FL from a local agent. Coverage explained in plain English, same-day quotes. SR-22 and non-standard drivers welcome.",
+  alternates: { canonical: "/auto-insurance-sarasota-fl" },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Auto Insurance in Sarasota, FL | Lamb Insurance Agency",
-    description:
-      "Get auto insurance in Sarasota that fits your life and budget. Compare coverage options, get fast answers, and work with a local agency that explains everything clearly.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — Auto Insurance in Sarasota, FL",
-      },
-    ],
+    title: "Auto Insurance Sarasota FL | Car Insurance Quotes | Lamb",
+    images: ["/og-image.png"],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Auto Insurance in Sarasota, FL | Lamb Insurance Agency",
-    description:
-      "Get auto insurance in Sarasota that fits your life and budget. Compare coverage options, get fast answers, and work with a local agency that explains everything clearly.",
-  },
+  twitter: { card: "summary_large_image" },
 };
 
 const schemas = {

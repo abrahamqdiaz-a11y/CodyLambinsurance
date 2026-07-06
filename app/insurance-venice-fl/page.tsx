@@ -2,28 +2,12 @@ import type { Metadata } from "next";
 import VenicePageClient from "./VenicePageClient";
 
 export const metadata: Metadata = {
-  title: "Insurance Agency in Venice, FL | Lamb Insurance",
+  title: { absolute: "Insurance in Venice, FL | Home, Auto & Flood | Lamb" },
   description:
-    "Independent insurance agency serving Venice, FL. Home, auto, flood, Medicare supplement, and life coverage for Venice residents. Local advice, same-day quotes.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/insurance-venice-fl",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/insurance-venice-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Insurance Agency in Venice, FL | Lamb Insurance",
-    description:
-      "Independent insurance agency serving Venice, FL. Home, auto, flood, Medicare supplement, and life coverage for Venice residents. Local advice, same-day quotes.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Lamb Insurance Agency — Venice, FL" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Insurance Agency in Venice, FL | Lamb Insurance",
-    description:
-      "Independent insurance agency serving Venice, FL. Home, auto, flood, Medicare supplement, and life coverage for Venice residents. Local advice, same-day quotes.",
-  },
+    "Insurance in Venice, FL: homeowners, auto, flood, and life coverage. Local agency with same-day quotes and plain-English advice. Call (941) 225-2335.",
+  alternates: { canonical: "/insurance-venice-fl" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schema = {
@@ -47,7 +31,7 @@ const schema = {
           name: "My home was built in 1978 — can I still get homeowners insurance in Florida?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes, but the carrier options narrow as a home ages. A 4-point inspection will likely be required, and the results — particularly roof age and electrical condition — determine which carriers will write it and at what premium. An independent agent can shop across multiple companies rather than stopping at the first declination.",
+            text: "Yes, but the carrier options narrow as a home ages. A 4-point inspection will likely be required, and the results — particularly roof age and electrical condition — determine which carriers will write it and at what premium. A local agent can help you find the right carrier rather than stopping at the first declination.",
           },
         },
         {

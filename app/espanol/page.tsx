@@ -2,23 +2,15 @@ import type { Metadata } from "next";
 import EspanolPageClient from "./EspanolPageClient";
 
 export const metadata: Metadata = {
-  title: "Seguro en Sarasota y Bradenton | Lamb Insurance Agency",
+  title: { absolute: "Seguros en Sarasota y Bradenton, FL | Auto, Casa y Vida" },
   description:
-    "Seguro de auto, casa y vida en Sarasota y Bradenton. Atención profesional con personas reales y ayuda en español.",
+    "Seguros de auto, casa, vida y comercial en Sarasota y Bradenton. Agente local con atención en español. Cotización gratis el mismo día.",
   alternates: {
-    canonical: "https://lambinsuranceagency.com/espanol",
-    languages: {
-      "es-US": "https://lambinsuranceagency.com/espanol",
-      "en-US": "https://lambinsuranceagency.com",
-    },
+    canonical: "/espanol",
+    languages: { "es-US": "/espanol", "en-US": "/" },
   },
-  openGraph: {
-    title: "Seguro en Sarasota y Bradenton | Lamb Insurance Agency",
-    description:
-      "Seguro de auto, casa y vida en Sarasota y Bradenton. Atención profesional con personas reales y ayuda en español.",
-    url: "https://lambinsuranceagency.com/espanol",
-    locale: "es_US",
-  },
+  openGraph: { locale: "es_US", images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schemas = {

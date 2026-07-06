@@ -2,35 +2,12 @@ import type { Metadata } from "next";
 import CommercialPageClient from "./CommercialPageClient";
 
 export const metadata: Metadata = {
-  title: "Commercial Insurance in Sarasota, FL",
+  title: { absolute: "Commercial Insurance Sarasota FL | BOP & Liability | Lamb" },
   description:
-    "Protect your Sarasota business with the right commercial insurance. General liability, property, BOP, workers' comp, and more. Local help, clear answers, fast quotes.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/commercial-insurance-sarasota-fl",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/commercial-insurance-sarasota-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Commercial Insurance in Sarasota, FL | Lamb Insurance Agency",
-    description:
-      "Protect your Sarasota business with the right commercial insurance. General liability, property, BOP, workers' comp, and more. Local help, clear answers, fast quotes.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — Commercial Insurance in Sarasota, FL",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Commercial Insurance in Sarasota, FL | Lamb Insurance Agency",
-    description:
-      "Protect your Sarasota business with the right commercial insurance. General liability, property, BOP, workers' comp, and more. Local help, clear answers, fast quotes.",
-  },
+    "Business insurance in Sarasota, FL: general liability, BOP, commercial property, workers' comp, and commercial auto. Local advice, fast quotes.",
+  alternates: { canonical: "/commercial-insurance-sarasota-fl" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schemas = {

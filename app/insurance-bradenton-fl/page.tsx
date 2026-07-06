@@ -2,28 +2,12 @@ import type { Metadata } from "next";
 import BradentonPageClient from "./BradentonPageClient";
 
 export const metadata: Metadata = {
-  title: "Insurance in Bradenton, FL | Lamb Insurance Agency",
+  title: { absolute: "Insurance in Bradenton, FL | Auto, Home & Flood | Lamb" },
   description:
-    "Auto, SR-22, commercial, and flood insurance for Bradenton residents and businesses. Local agency serving Manatee County with bilingual service and non-standard auto coverage.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/insurance-bradenton-fl",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/insurance-bradenton-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Insurance in Bradenton, FL | Lamb Insurance Agency",
-    description:
-      "Auto, SR-22, commercial, and flood insurance for Bradenton residents and businesses. Local agency serving Manatee County with bilingual service and non-standard auto coverage.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Lamb Insurance Agency — Bradenton, FL" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Insurance in Bradenton, FL | Lamb Insurance Agency",
-    description:
-      "Auto, SR-22, commercial, and flood insurance for Bradenton residents and businesses. Local agency serving Manatee County with bilingual service and non-standard auto coverage.",
-  },
+    "Insurance in Bradenton, FL: auto, homeowners, flood, SR-22, and commercial coverage. Bilingual local agency serving Manatee County. Same-day quotes.",
+  alternates: { canonical: "/insurance-bradenton-fl" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schema = {

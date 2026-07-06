@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "SMS Communication Policy",
   description:
     "SMS Communication Policy for Lamb Insurance Agency. Learn how we use SMS to communicate with clients.",
+  alternates: { canonical: "/sms" },
   robots: { index: true, follow: true },
 };
 
