@@ -289,6 +289,15 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
             >
               Greater Sarasota Chamber of Commerce
             </a>
+            {" "}&nbsp;&middot;&nbsp;{" "}
+            <a
+              href="https://locator.acg.aaa.com/fl/sarasota/aaa-insurance-lamb-insurance-agency-llc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-navy-300 transition-colors duration-300"
+            >
+              Authorized AAA Agent
+            </a>
           </p>
         </div>
         <div className="max-w-6xl mx-auto px-5 pb-5 text-center">
