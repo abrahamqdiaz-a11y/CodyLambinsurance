@@ -3,15 +3,19 @@ import Link from "next/link";
 import { ServicePageHeader, ServicePageFooter } from "../components/ServicePageChrome";
 
 export const metadata: Metadata = {
-  title: "Careers | Lamb Insurance Agency — Sarasota, FL",
+  title: { absolute: "Insurance Sales Careers in Sarasota, FL | Lamb Insurance" },
   description:
-    "Join Lamb Insurance Agency, a newly opening AAA agency in Sarasota, FL. Ground-floor sales opportunity with uncapped earning potential, a real lead system, and the backing of a nationally recognized brand.",
+    "Ground-floor insurance sales role at a brand-new agency in Sarasota, FL. Base pay plus uncapped commission and real lead flow. Apply today.",
+  alternates: { canonical: "/careers" },
   openGraph: {
-    title: "Careers at Lamb Insurance Agency",
+    title: "Insurance Sales Careers in Sarasota, FL | Lamb Insurance",
     description:
-      "Ground-floor sales role at a brand-new AAA agency in Sarasota. Base + uncapped commission, real leads, nationally recognized brand.",
+      "Ground-floor sales role at a brand-new Sarasota agency. Base + uncapped commission, real leads. Apply today.",
     url: "https://lambinsuranceagency.com/careers",
+    images: ["/og-image.png"],
   },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 function BadgePill({ children }: { children: React.ReactNode }) {
@@ -56,13 +60,13 @@ export default function CareersPage() {
               Careers · Sarasota, FL
             </p>
             <h1 className="font-display text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
-              Ground-floor sales role at a brand-new AAA agency
+              Ground-floor sales role at a brand-new agency
             </h1>
             <p className="text-navy-200 font-body text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-              Lamb Insurance Agency is a newly opening AAA agency in Sarasota, FL. This is a
-              ground-floor opportunity to join a nationally recognized brand with a real lead system
-              and uncapped earning potential. If you can sell and you want a system you can actually
-              earn from, this is the conversation worth having.
+              Lamb Insurance Agency is a newly opening agency in Sarasota, FL. This is a
+              ground-floor opportunity with a real lead system and uncapped earning potential. If you
+              can sell and you want a system you can actually earn from, this is the conversation
+              worth having.
             </p>
             <Link
               href="/apply?role=sales-agent"
@@ -100,9 +104,8 @@ export default function CareersPage() {
                 </h2>
 
                 <p className="text-navy-700 font-body text-base leading-relaxed mb-8">
-                  This isn't a role at a crowded, mature office — you're joining a newly opening AAA
-                  agency at the ground floor, with a nationally recognized brand, a real lead system,
-                  and upside that grows with you.
+                  This isn't a role at a crowded, mature office — you're joining a newly opening
+                  agency at the ground floor, with a real lead system and upside that grows with you.
                 </p>
 
                 <div className="grid sm:grid-cols-2 gap-8 mb-8">
@@ -114,7 +117,7 @@ export default function CareersPage() {
                       <CheckItem>Work inbound leads and make outbound calls daily</CheckItem>
                       <CheckItem>Quote and close auto, home, and bundled policies</CheckItem>
                       <CheckItem>Run full policy reviews with every client</CheckItem>
-                      <CheckItem>Offer AAA memberships and additional products</CheckItem>
+                      <CheckItem>Cross-sell memberships and additional products</CheckItem>
                       <CheckItem>Hit weekly and monthly production targets</CheckItem>
                     </ul>
                   </div>
@@ -157,8 +160,8 @@ export default function CareersPage() {
                 <div className="bg-sage-500/8 border border-sage-500/20 rounded-xl p-5 mb-8">
                   <p className="text-navy-800 font-body text-sm leading-relaxed">
                     <strong className="font-semibold text-navy-900">Why now:</strong> Ground-floor
-                    access at a AAA agency is rare. Leads are provided, the brand does the heavy
-                    lifting on trust — your job is to close.
+                    access at a brand-new agency is rare. Leads are provided and your job is to
+                    close.
                   </p>
                 </div>
 
@@ -232,8 +235,8 @@ export default function CareersPage() {
             <div className="grid sm:grid-cols-3 gap-6">
               {[
                 {
-                  title: "AAA brand recognition",
-                  body: "Walk into every sales call with the trust of one of the most recognized insurance brands in the country already working for you.",
+                  title: "Nationally recognized brand",
+                  body: "Walk into every sales call with the trust of an established, nationally recognized brand already working for you.",
                 },
                 {
                   title: "Real leads, no cold prospecting",

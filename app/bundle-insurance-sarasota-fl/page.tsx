@@ -2,54 +2,13 @@ import type { Metadata } from "next";
 import BundleInsurancePage from "./BundleInsurancePage";
 
 export const metadata: Metadata = {
-  title: "Bundle Home and Auto Insurance Sarasota FL | Lamb Insurance Agency",
+  title: { absolute: "Bundle Home and Auto Insurance | Sarasota FL | Lamb" },
   description:
-    "Bundle your home and auto insurance in Sarasota with Lamb Insurance Agency. Local agent, real savings, same-day quotes. One call covers everything.",
-  keywords: [
-    "bundle home and auto insurance Sarasota",
-    "home auto bundle Sarasota FL",
-    "bundle insurance Sarasota",
-    "home and auto insurance Sarasota",
-    "Lamb Insurance Agency bundle",
-    "insurance bundle Sarasota Florida",
-  ],
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/bundle-insurance-sarasota-fl",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/bundle-insurance-sarasota-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Bundle Home and Auto Insurance Sarasota FL | Lamb Insurance Agency",
-    description:
-      "Bundle your home and auto insurance in Sarasota with Lamb Insurance Agency. Local agent, real savings, same-day quotes. One call covers everything.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — Bundle Home and Auto Insurance Sarasota FL",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bundle Home and Auto Insurance Sarasota FL | Lamb Insurance Agency",
-    description:
-      "Bundle your home and auto insurance in Sarasota with Lamb Insurance Agency. Local agent, real savings, same-day quotes. One call covers everything.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+    "Bundle home and auto insurance and save. One local Sarasota agent, one renewal date, same-day quotes and real savings. Call (941) 225-2335.",
+  alternates: { canonical: "/bundle-insurance-sarasota-fl" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 const schemaData = {

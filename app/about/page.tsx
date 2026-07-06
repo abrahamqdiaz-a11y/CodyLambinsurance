@@ -2,35 +2,12 @@ import type { Metadata } from "next";
 import AboutPageClient from "./AboutPageClient";
 
 export const metadata: Metadata = {
-  title: "About Lamb Insurance Agency | Local Insurance in Sarasota",
+  title: { absolute: "About Lamb Insurance Agency | Local Sarasota Agent" },
   description:
-    "Lamb Insurance Agency helps Sarasota drivers, homeowners, and business owners understand their coverage and get properly protected. Work with Cody Lamb, licensed in Florida for Property & Casualty and Life & Health.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/about",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/about",
-    siteName: "Lamb Insurance Agency",
-    title: "About Lamb Insurance Agency | Local Insurance in Sarasota",
-    description:
-      "Lamb Insurance Agency helps Sarasota drivers, homeowners, and business owners understand their coverage and get properly protected. Work with Cody Lamb, licensed in Florida for Property & Casualty and Life & Health.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — About Us",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Lamb Insurance Agency | Local Insurance in Sarasota",
-    description:
-      "Lamb Insurance Agency helps Sarasota drivers, homeowners, and business owners understand their coverage and get properly protected. Work with Cody Lamb, licensed in Florida for Property & Casualty and Life & Health.",
-  },
+    "Meet Cody Lamb, a licensed Florida P&C and Life & Health agent. Local Sarasota insurance help for drivers, homeowners, and business owners.",
+  alternates: { canonical: "/about" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schemas = {

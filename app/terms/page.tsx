@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description:
-    "Terms and Conditions for using the Lamb Insurance Agency website and services.",
-  robots: { index: true, follow: true },
+  description: "Terms and Conditions for using the Lamb Insurance Agency website and services.",
+  alternates: { canonical: "/terms" },
+  robots: { index: false, follow: true },
 };
 
 export default function Terms() {
@@ -51,7 +51,7 @@ export default function Terms() {
               2. Services Described
             </h2>
             <p>
-              Lamb Insurance Agency is an independent insurance agency licensed
+              Lamb Insurance Agency is a licensed insurance agency licensed
               to operate in the State of Florida. Our website provides general
               information about insurance products and allows prospective clients
               to submit quote requests. Nothing on this website constitutes a

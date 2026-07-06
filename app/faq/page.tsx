@@ -2,35 +2,12 @@ import type { Metadata } from "next";
 import FAQPageClient from "./FAQPageClient";
 
 export const metadata: Metadata = {
-  title: "Florida Insurance FAQ | Lamb Insurance Agency",
+  title: { absolute: "Florida Insurance FAQ | Auto, Home & Flood Answers | Lamb" },
   description:
-    "Answers to common Florida insurance questions about auto, home, life, renewals, and coverage options in Sarasota and Bradenton. Get a free quote today.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/faq",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/faq",
-    siteName: "Lamb Insurance Agency",
-    title: "Florida Insurance FAQ | Lamb Insurance Agency",
-    description:
-      "Answers to common Florida insurance questions about auto, home, life, renewals, and coverage options in Sarasota and Bradenton. Get a free quote today.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Lamb Insurance Agency — Florida Insurance FAQ",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Florida Insurance FAQ | Lamb Insurance Agency",
-    description:
-      "Answers to common Florida insurance questions about auto, home, life, renewals, and coverage options in Sarasota and Bradenton. Get a free quote today.",
-  },
+    "Answers to common Florida insurance questions on auto, homeowners, flood, and renewals in Sarasota and Bradenton. Get a free quote today.",
+  alternates: { canonical: "/faq" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
 };
 

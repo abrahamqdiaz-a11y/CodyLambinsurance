@@ -2,28 +2,12 @@ import type { Metadata } from "next";
 import SiestaKeyPageClient from "./SiestaKeyPageClient";
 
 export const metadata: Metadata = {
-  title: "Insurance in Siesta Key, FL | Lamb Insurance Agency",
+  title: { absolute: "Insurance on Siesta Key, FL | Flood, Condo & Rental | Lamb" },
   description:
-    "Flood, condo, auto, and vacation rental insurance for Siesta Key property owners. Local Sarasota agency with expertise in Gulf-front flood zones and short-term rental coverage.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/insurance-siesta-key-fl",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://lambinsuranceagency.com/insurance-siesta-key-fl",
-    siteName: "Lamb Insurance Agency",
-    title: "Insurance in Siesta Key, FL | Lamb Insurance Agency",
-    description:
-      "Flood, condo, auto, and vacation rental insurance for Siesta Key property owners. Local Sarasota agency with expertise in Gulf-front flood zones and short-term rental coverage.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Lamb Insurance Agency — Siesta Key, FL" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Insurance in Siesta Key, FL | Lamb Insurance Agency",
-    description:
-      "Flood, condo, auto, and vacation rental insurance for Siesta Key property owners. Local Sarasota agency with expertise in Gulf-front flood zones and short-term rental coverage.",
-  },
+    "Siesta Key insurance: flood, condo (HO-6), homeowners, auto, and short-term rental coverage. Gulf-front flood-zone expertise. Same-day quotes.",
+  alternates: { canonical: "/insurance-siesta-key-fl" },
+  openGraph: { images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image" },
 };
 
 const schema = {

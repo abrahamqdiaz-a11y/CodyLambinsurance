@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: `${post.title} | Lamb Insurance Agency`,
-      description: post.excerpt,
+      description: post.metaDescription ?? post.excerpt,
     },
     robots: { index: true, follow: true },
   };

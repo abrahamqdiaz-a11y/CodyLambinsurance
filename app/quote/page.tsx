@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import QuotePageClient from "./QuotePageClient";
 
 export const metadata: Metadata = {
-  title: "Get a Free Insurance Quote | Lamb Insurance Agency Sarasota",
+  title: { absolute: "Free Insurance Quote | Sarasota, FL | Lamb Insurance Agency" },
   description:
-    "Request a free insurance quote from Lamb Insurance Agency in Sarasota, FL. Local, licensed coverage for auto, home, condo, flood, and more — no pressure, no jargon.",
-  alternates: {
-    canonical: "https://lambinsuranceagency.com/quote",
+    "Get a free insurance quote in Sarasota, FL. Auto, homeowners, condo, flood, and life. Local licensed agent, no pressure, no jargon. Reply in 24 hrs.",
+  alternates: { canonical: "/quote" },
+  openGraph: {
+    title: "Free Insurance Quote | Sarasota, FL | Lamb Insurance Agency",
+    description:
+      "Auto, homeowners, condo, flood, and life quotes from a local Sarasota agent. No pressure, no jargon. Reply in 24 hrs.",
+    images: ["/og-image.png"],
   },
+  twitter: { card: "summary_large_image" },
 };
 
 const schemas = {
