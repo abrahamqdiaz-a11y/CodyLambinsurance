@@ -48,6 +48,128 @@ export type Post = {
 export const POSTS: Post[] = [
   // ← Add new posts here. Newest first.
   {
+    slug: "paid-off-mortgage-homeowners-insurance-sarasota",
+    title: "You Paid Off Your Mortgage — Should You Drop Your Homeowners Insurance?",
+    date: "2026-07-08",
+    excerpt: "Florida doesn't require homeowners insurance once your mortgage is paid off — but the risk doesn't disappear with the loan. A Sarasota-based look at the real numbers before you cancel.",
+    metaDescription: "Florida doesn't require homeowners insurance once your mortgage is paid off — but the risk doesn't disappear with the loan. A Sarasota-based look at the real numbers before you cancel.",
+    thumbnail: "",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
+    faqItems: [
+      {
+        id: "required-after-payoff",
+        question: "Is homeowners insurance required in Florida after paying off a mortgage?",
+        answer: "No. Florida law does not mandate homeowners insurance — it is a lender requirement while a loan is active. Once the mortgage is paid off, no state or federal rule compels you to maintain the policy. The decision becomes entirely yours, which is exactly why it deserves careful thought.",
+      },
+      {
+        id: "wind-vs-flood",
+        question: "Does homeowners insurance cover both wind damage and flood damage in Florida?",
+        answer: "No — these are two separate coverages. A standard homeowners policy typically covers wind damage and rain that enters through a wind-created opening. It does not cover flooding or rising water; that requires a separate flood insurance policy through the National Flood Insurance Program or a private flood carrier.",
+      },
+      {
+        id: "fema-backstop",
+        question: "Can I rely on FEMA disaster assistance instead of homeowners insurance?",
+        answer: "FEMA disaster assistance is not a substitute for insurance. Current federal caps sit at $43,600 for housing assistance and $43,600 for other needs assistance per disaster event — and FEMA explicitly states this assistance is not designed to make a homeowner whole after a serious loss. A major rebuild in Sarasota County can run into the hundreds of thousands of dollars.",
+      },
+      {
+        id: "hurricane-deductible",
+        question: "What is a hurricane deductible and how does it work in Florida?",
+        answer: "Florida homeowners policies typically include a separate named storm or hurricane deductible expressed as a percentage of the dwelling coverage amount — commonly 2% to 5%. On a $400,000 insured home, a 2% deductible means $8,000 comes out of your pocket before insurance pays; a 5% deductible is $20,000. This deductible applies per hurricane event, not per year.",
+      },
+      {
+        id: "gap-in-coverage",
+        question: "What happens if I cancel homeowners insurance and want to get it back later?",
+        answer: "Re-entering the insurance market after a gap isn't automatic. Insurers can require underwriting inspections — including a four-point inspection covering roofing, electrical, plumbing, and HVAC — before writing a new policy. Older roofs often need documentation of remaining useful life. Some carriers also price less favorably for homeowners with a prior coverage gap versus those who stayed continuously insured.",
+      },
+      {
+        id: "wind-mitigation-credits",
+        question: "What are wind mitigation credits and can they lower my Sarasota home insurance premium?",
+        answer: "Wind mitigation credits are premium discounts Florida insurers are required to offer based on features that reduce hurricane damage: roof shape, roof-to-wall connections, roof deck attachment, and opening protection (windows, doors, garage). A hip roof, hurricane straps, and impact-rated openings can each generate credits that stack — sometimes reducing the wind portion of a premium by hundreds of dollars annually. A wind mitigation inspection typically costs $75–$150.",
+      },
+    ],
+    content: `
+      <p>Paying off a mortgage is one of the best financial milestones a homeowner can hit. It also opens a door that a lot of Sarasota homeowners don't realize is there: once the lender is out of the picture, Florida law does not require you to carry homeowners insurance at all.</p>
+
+      <p>That's a fact, not a suggestion. And for some households working through what to do with a newly freed-up monthly payment, dropping the policy looks like an easy way to keep more of that cash.</p>
+
+      <p>Before making that call, it's worth separating two very different things: the <em>legal requirement</em> to carry insurance, and the <em>physical risk</em> the insurance was covering. Paying off the loan removes the first one entirely. It does nothing to the second.</p>
+
+      <h2>What Actually Changes When the Mortgage Is Gone</h2>
+
+      <p>Florida's Department of Financial Services is clear that homeowners insurance isn't mandated by the state — it's a lender requirement while a loan exists. The same is true for flood insurance, with one exception: if your home sits in a federally designated high-risk flood zone and had a federally backed mortgage, flood coverage was federally required, not just lender-required.</p>
+
+      <p>Once the loan is paid off, both of those lender-driven mandates go away. Florida also allows homeowners to formally exclude windstorm coverage under specific conditions, and — importantly — if there's still a mortgage or lien on the property, the lender has to consent in writing before that exclusion can happen. The day your mortgage is paid off is also the day one of the last real obstacles to dropping wind coverage disappears.</p>
+
+      <p>That's exactly why this decision deserves more thought once the loan is gone, not less.</p>
+
+      <h2>The Sarasota Numbers</h2>
+
+      <p>Local context matters here. Statewide data reported through Florida's Office of Insurance Regulation puts the average Sarasota County homeowners premium (including wind coverage) at roughly $3,482 a year, with policies excluding wind averaging closer to $1,459. That's meaningfully lower than what homeowners in Monroe County ($7,829), Palm Beach ($6,412), or Broward ($6,220) are paying — but it's still real money, and it's the number that tempts people to consider going without.</p>
+
+      <p>Here's what that number doesn't show: the potential loss on the other side of that decision isn't proportional to the premium. A $30,000 wind-damage repair doesn't care whether your annual premium was $2,500 or $7,500. It's the same $30,000 bill either way — the only question is whether insurance is standing between you and that bill, or whether you are.</p>
+
+      <h2>Run the Actual Math Before You Decide</h2>
+
+      <p>A simple way to think about it: how many years of premium savings would it take to equal one bad claim?</p>
+
+      <ul>
+        <li><strong>A moderate wind-damage repair</strong> — say $30,000 — against a Sarasota-area premium of roughly $2,500–$3,500 a year works out to somewhere around 9–12 years of "savings" wiped out by a single event.</li>
+        <li><strong>A serious rebuild</strong> after a total-loss event can run into the hundreds of thousands of dollars. Ten years of skipped premiums, even at Sarasota's relatively moderate rates, wouldn't come close to covering it.</li>
+        <li><strong>FEMA disaster assistance is not a backstop.</strong> Current federal caps sit at $43,600 for housing assistance and $43,600 for other needs assistance per disaster — and FEMA says outright that this assistance is not a substitute for insurance and won't make a homeowner whole after a serious loss.</li>
+      </ul>
+
+      <p>None of this means insurance is "cheap" or that premiums don't matter. It means the potential downside is large and uneven in a way that a single year's premium comparison doesn't capture.</p>
+
+      <!-- mid-article CTA -->
+      <div style="background:#f0f8f4;border:2px solid #4a8050;border-radius:12px;padding:1.75rem 2rem;margin:2.5rem 0;">
+        <p style="margin:0 0 0.4rem;font-weight:700;font-size:1.1rem;color:#1a2e1c;">Wondering what your coverage actually costs to keep — and what you'd be giving up?</p>
+        <p style="margin:0 0 1.25rem;color:#374151;font-size:0.975rem;">A 20-minute review is usually all it takes to see the real picture on your specific home.</p>
+        <a href="/#contact" style="display:inline-block;background:linear-gradient(135deg,#4a8050,#38653d);color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.95rem;">Book a 20-minute coverage review</a>
+      </div>
+
+      <h2>Wind Coverage and Flood Coverage Are Two Separate Questions</h2>
+
+      <p>This is one of the most common points of confusion after a storm. A standard <a href="/homeowners-insurance-sarasota-fl">homeowners policy</a> generally covers wind damage and rain that enters through an opening the wind itself created. It does not cover flood or rising water — that's a separate product, whether through the National Flood Insurance Program or a <a href="/flood-insurance-sarasota-fl">private flood policy</a>.</p>
+
+      <p>Florida officials note that roughly a quarter of flood claims happen outside officially designated high-risk zones. Sarasota's flat terrain, proximity to the coast, and heavy seasonal rain events mean flood exposure isn't limited to homes right on the water.</p>
+
+      <p>If you're weighing whether to keep, drop, or restructure coverage after paying off a mortgage, "storm damage" isn't one decision — it's at least two: wind, and water.</p>
+
+      <h2>Dropping Coverage Now Can Make It Harder — and Pricier — to Get Back Later</h2>
+
+      <p>Something homeowners don't always plan for: re-entering the insurance market after a gap isn't automatic. Insurers can require underwriting inspections before writing a new policy, and for older homes that often means a four-point inspection covering roofing, electrical, plumbing, and HVAC systems. Roofs beyond a certain age typically need documentation showing several years of remaining useful life before a carrier will write a new policy.</p>
+
+      <p>On top of that, some insurers price less favorably for homeowners who had a gap in coverage rather than staying continuously insured. So the choice isn't just "save money this year" — it's "save money this year, and potentially pay more, or face more hoops, to get covered again later."</p>
+
+      <h2>A Short Checklist Before You Cancel Anything</h2>
+
+      <ol>
+        <li><strong>Recalculate what it would actually cost to rebuild</strong> your home today — not what it's worth on the market, and not what you owe. Land isn't insured; the structure is.</li>
+        <li><strong>Separate wind coverage from flood coverage.</strong> Confirm which one(s) you currently carry, and which one(s) you'd be walking away from.</li>
+        <li><strong>Know your hurricane deductible in dollars, not just percent.</strong> A 2% deductible on a $400,000 home is $8,000. A 5% deductible is $20,000.</li>
+        <li><strong>Ask about wind mitigation credits</strong> before assuming your premium can't come down. Roof shape, roof-to-wall connections, and opening protection can all reduce cost without reducing coverage.</li>
+        <li><strong>If your roof or systems are older,</strong> get ahead of a four-point inspection now — before you need one to get re-covered later.</li>
+        <li><strong>Be honest about liquid reserves.</strong> Going without coverage only makes financial sense if you could personally absorb a six-figure loss without touching retirement savings, a business, or your kids' future plans.</li>
+        <li><strong>Model the bad year, not the average year.</strong> Ten quiet years followed by one bad one is still a net loss if that one year is bad enough.</li>
+      </ol>
+
+      <h2>The Bottom Line</h2>
+
+      <p>Paying off your mortgage removes a lender's insistence that you carry insurance. It does not remove the wind, the water, the liability exposure, or the cost of rebuilding a home in Sarasota County. For a small number of households with the liquid capital to genuinely self-insure, dropping coverage can be a deliberate, informed decision. For most mortgage-free homeowners, going without isn't self-insurance — it's just uninsured risk with a lower monthly cash outflow.</p>
+
+      <p>If you've recently paid off your home and are trying to figure out what coverage actually makes sense now — what to keep, what to adjust, and where you might be able to reduce premium without giving up protection — that's exactly the kind of review worth having before you make any changes.</p>
+
+      <div style="background:#f0f7ff;border-left:4px solid #1a56db;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0;">
+        <p style="margin:0 0 0.5rem;font-weight:700;font-size:1.1rem;">Ready to find out what your coverage is actually worth keeping?</p>
+        <p style="margin:0 0 1rem;">Reach out to Lamb Insurance Agency for a coverage review built around your specific home, your specific risk, and your specific numbers — not a generic statewide average.</p>
+        <a href="/#contact" style="display:inline-block;background:#1a56db;color:#fff;padding:0.65rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;">Book a 20-minute coverage review →</a>
+      </div>
+
+      <p><em>Cody Alexander Lamb is a licensed Florida insurance agent (License No. G034846) serving Sarasota and the surrounding Gulf Coast, licensed in Life including Variable Annuity &amp; Health (0215), General Lines — Property &amp; Casualty (0220), and Personal Lines (2044). License status can be verified through the Florida Department of Financial Services at <a href="https://www.myfloridacfo.com/division/agents" target="_blank" rel="noopener noreferrer">myfloridacfo.com/division/agents</a>. This article is for general informational purposes and does not constitute legal, financial, or insurance advice specific to your situation. Coverage availability, requirements, and pricing vary by carrier, property, and individual circumstances. Reviewed for accuracy as of July 8, 2026.</em></p>
+    `,
+  },
+  {
     slug: "high-net-worth-home-insurance-sarasota",
     title: "High Value Home Insurance: What Coverage Actually Costs",
     date: "2026-06-22",
