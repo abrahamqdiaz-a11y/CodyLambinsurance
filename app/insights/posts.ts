@@ -53,7 +53,7 @@ export const POSTS: Post[] = [
     date: "2026-07-08",
     excerpt: "Florida doesn't require homeowners insurance once your mortgage is paid off — but the risk doesn't disappear with the loan. A Sarasota-based look at the real numbers before you cancel.",
     metaDescription: "Florida doesn't require homeowners insurance once your mortgage is paid off — but the risk doesn't disappear with the loan. A Sarasota-based look at the real numbers before you cancel.",
-    thumbnail: "",
+    thumbnail: "/paid off home.png",
     author: "Cody Lamb",
     authorTitle: "Licensed Insurance Agent — FL License #G034846",
     faqItems: [
@@ -89,6 +89,8 @@ export const POSTS: Post[] = [
       },
     ],
     content: `
+      <img src="/paid off home.png" alt="Paid off home with no mortgage" style="width:100%;border-radius:12px;margin-bottom:2rem;object-fit:cover;max-height:420px;" />
+
       <p>Paying off a mortgage is one of the best financial milestones a homeowner can hit. It also opens a door that a lot of Sarasota homeowners don't realize is there: once the lender is out of the picture, Florida law does not require you to carry homeowners insurance at all.</p>
 
       <p>That's a fact, not a suggestion. And for some households working through what to do with a newly freed-up monthly payment, dropping the policy looks like an easy way to keep more of that cash.</p>
