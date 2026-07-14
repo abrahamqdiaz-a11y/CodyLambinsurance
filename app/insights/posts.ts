@@ -325,6 +325,8 @@ export const POSTS: Post[] = [
     date: "2026-06-17",
     excerpt: "More than 40 Florida insurers have filed rate decreases. A Sarasota licensed insurance agent explains why rates are falling, how much, and how to make sure you actually capture the savings.",
     thumbnail: "/florida rates dropping 2026.png",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
       <p>After several brutal years of rising premiums, Florida's auto and home insurance markets have turned a corner. More than 40 companies have filed for rate decreases since the start of 2025, and the state's five largest auto insurers are now averaging roughly an 8% reduction for 2026. For Sarasota homeowners and drivers, this is the best opportunity in over a decade to review coverage and recapture savings.</p>
 
@@ -457,6 +459,8 @@ export const POSTS: Post[] = [
     date: "2026-06-12",
     excerpt: "Moving to Sarasota? Most out-of-state buyers have never had to think about flood zones, wind mitigation, or separate flood policies. Here's a practical orientation before you sign anything.",
     thumbnail: "",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
       <p>I talk to a lot of people relocating to Sarasota. They've done their homework on neighborhoods, school ratings, commute times, and restaurant scenes. What almost none of them have done is think seriously about insurance — specifically, what Florida insurance actually costs and why.</p>
 
@@ -526,6 +530,8 @@ export const POSTS: Post[] = [
     date: "2026-06-08",
     excerpt: "Bundling home and auto insurance can save money — but in Florida's rapidly shifting market, it isn't always the best move. Here's how to evaluate whether a bundle actually works in your favor.",
     thumbnail: "/blog/bundle-home-auto-florida.png",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
       <p>For many homeowners, insurance is one of the largest recurring household expenses. In Florida, this burden has become particularly acute. Recent data indicates that the average annual home insurance premium in the state reached $8,292 in 2025 — an 18% rise from the previous year, with cumulative rate increases hitting roughly 30% since 2022.</p>
 
@@ -659,6 +665,8 @@ export const POSTS: Post[] = [
     date: "2026-06-05",
     excerpt: "Florida car insurance rates are finally dropping — but only if you're shopping. A Sarasota agent explains what local drivers over 55 are missing and how a free 15-minute review can make a real difference.",
     thumbnail: "",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
       <p>You open the renewal notice. The number is higher than you remembered — or maybe it's the same, and you're just now wondering if it should be lower. Either way, that feeling is worth paying attention to.</p>
 

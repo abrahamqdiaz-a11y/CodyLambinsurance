@@ -252,6 +252,13 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
             <li><Link href="/faq" className="text-navy-400 hover:text-navy-200 transition-colors">FAQ</Link></li>
             <li><Link href="/careers" className="text-navy-400 hover:text-navy-200 transition-colors">Careers</Link></li>
           </ul>
+          <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-4">Neighborhoods</h3>
+          <ul className="space-y-2 font-body text-sm mb-8">
+            <li><Link href="/insurance-lakewood-ranch-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Lakewood Ranch</Link></li>
+            <li><Link href="/insurance-venice-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Venice</Link></li>
+            <li><Link href="/insurance-siesta-key-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Siesta Key</Link></li>
+            <li><Link href="/insurance-bradenton-fl" className="text-navy-400 hover:text-navy-200 transition-colors">Bradenton</Link></li>
+          </ul>
           <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-4">Legal</h3>
           <ul className="space-y-2 font-body text-sm">
             <li><Link href="/privacy-policy" className="text-navy-400 hover:text-navy-200 transition-colors">Privacy Policy</Link></li>

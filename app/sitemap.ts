@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { POSTS } from "./insights/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://lambinsuranceagency.com";
@@ -118,5 +119,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/homeowners-insurance-sarasota-fl`,
+      lastModified: new Date("2025-01-01"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/umbrella-insurance-sarasota`,
+      lastModified: new Date("2025-01-01"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    ...POSTS.map((post) => ({
+      url: `${baseUrl}/insights/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
   ];
 }
