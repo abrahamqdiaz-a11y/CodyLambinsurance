@@ -64,11 +64,6 @@ const faqItems = [
       "Parts of it are. The area around Venice Beach, the Inlet, and properties near Roberts Bay and the Intracoastal Waterway carry FEMA AE and VE zone designations, where flood insurance is required by most lenders and priced accordingly. Properties further inland may be in Zone X, where flood coverage is optional but still worth reviewing given Florida's storm history. A two-minute FEMA address lookup tells you your zone — we can walk you through it.",
   },
   {
-    question: "What's the difference between Medicare Advantage and Medicare supplement?",
-    answer:
-      "Medicare Advantage (Part C) replaces original Medicare with a private plan — often an HMO or PPO — that may include dental and vision but comes with network restrictions. Medicare supplement (Medigap) works alongside original Medicare to cover out-of-pocket costs like deductibles and coinsurance, with no network restrictions. Medigap typically carries a higher monthly premium but more predictable out-of-pocket costs. Which is better depends on your health, how often you travel, and your financial priorities. A local agent can compare both across carriers.",
-  },
-  {
     question: "Can I drop to comprehensive-only on a car I'm leaving in storage?",
     answer:
       "Yes, and it's usually the right move. If a vehicle is in storage and not being driven, dropping liability and collision and keeping only comprehensive coverage eliminates most of the premium while still protecting against theft, fire, hurricane damage, or a tree falling on it. You'll want to notify your lender first if the car is financed — some require full coverage regardless. And make sure the policy reinstates automatically before you drive it again.",
@@ -211,30 +206,6 @@ function SnowbirdSection() {
   );
 }
 
-// Remove MedicareSection from the page export below if Cody is not licensed to sell Medicare supplement/Medigap
-function MedicareSection() {
-  return (
-    <section className="bg-cream py-20 md:py-28" aria-labelledby="medicare-heading">
-      <div className="max-w-6xl mx-auto px-5">
-        <div className="max-w-4xl animate-on-scroll">
-          <div className="section-rule" />
-          <h2 id="medicare-heading" className="font-display text-3xl md:text-4xl font-bold text-navy-800 mb-5 leading-tight">
-            Medicare Supplement Coverage
-          </h2>
-          <div className="space-y-4 text-navy-600 font-body text-base leading-relaxed">
-            <p>
-              Venice has one of the highest concentrations of Medicare-eligible residents in Sarasota County. Medigap plans — which work alongside original Medicare to cover deductibles, coinsurance, and other out-of-pocket gaps — vary significantly in premium, covered benefits, and carrier stability. The plan letter stays standardized by law, but the price for the same plan can differ hundreds of dollars per year between carriers.
-            </p>
-            <p>
-              A local agent can compare Medigap plans across multiple carriers rather than steering you toward one company&apos;s product. Plans also reprice at renewal, and switching windows exist — annual review is worth doing even if you&apos;re satisfied with your current coverage.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function CoverageLinksSection() {
   return (
     <section className="bg-navy-900 py-20 md:py-28" aria-labelledby="coverage-heading">
@@ -313,6 +284,41 @@ function FAQSection() {
   );
 }
 
+function NearbyAreasSection() {
+  const nearby = [
+    {
+      href: "/insurance-north-port-fl",
+      name: "North Port",
+      sentence: "South on US-41, we also serve homeowners in North Port, where rapid growth and new construction create a different but equally important set of coverage questions.",
+    },
+    {
+      href: "/insurance-palmer-ranch-fl",
+      name: "Palmer Ranch",
+      sentence: "Just north along the Tamiami Trail corridor, we help residents in Palmer Ranch navigate HOA requirements and newer construction insurance.",
+    },
+  ];
+  return (
+    <section className="bg-cream py-16 md:py-20" aria-labelledby="nearby-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="nearby-heading" className="font-display text-2xl md:text-3xl font-bold text-navy-800 mb-6 leading-tight">
+            Nearby Areas We Serve
+          </h2>
+          <ul className="space-y-4">
+            {nearby.map((area) => (
+              <li key={area.href} className="flex gap-3 items-start">
+                <Link href={area.href} className="font-semibold text-sage-700 hover:text-sage-900 transition-colors whitespace-nowrap font-body">{area.name} →</Link>
+                <p className="text-navy-600 font-body text-base leading-relaxed">{area.sentence}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ContactSection() {
   return (
     <section id="contact" className="bg-cream py-20 md:py-28" aria-labelledby="contact-heading">
@@ -371,9 +377,9 @@ export default function VenicePageClient() {
         <FourPointSection />
         <FloodZoneSection />
         <SnowbirdSection />
-        <MedicareSection />
         <CoverageLinksSection />
         <FAQSection />
+        <NearbyAreasSection />
         <ContactSection />
       </main>
       <ServicePageFooter email={EMAIL} />

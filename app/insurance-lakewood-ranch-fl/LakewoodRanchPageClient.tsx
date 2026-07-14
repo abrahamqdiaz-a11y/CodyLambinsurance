@@ -267,6 +267,37 @@ function FAQSection() {
   );
 }
 
+function NearbyAreasSection() {
+  return (
+    <section className="bg-navy-900 py-16 md:py-20" aria-labelledby="nearby-heading">
+      <div className="max-w-6xl mx-auto px-5">
+        <div className="max-w-3xl animate-on-scroll">
+          <div className="section-rule" />
+          <h2 id="nearby-heading" className="font-display text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+            Nearby Areas We Serve
+          </h2>
+          <p className="text-navy-300 font-body text-base leading-relaxed mb-6">
+            We cover all of Manatee and Sarasota County. If you&apos;re near Lakewood Ranch, we likely serve your neighborhood too.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/insurance-bradenton-fl"
+              className="group block bg-white/5 border border-white/10 rounded-xl p-5 hover:border-sage-400 transition-colors"
+            >
+              <p className="font-display text-base font-bold text-white group-hover:text-sage-300 transition-colors mb-1">
+                Bradenton, FL →
+              </p>
+              <p className="text-navy-300 font-body text-sm leading-relaxed">
+                Just west on SR-64. Older home expertise, 4-point inspections, and Manatee River flood coverage.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ContactSection() {
   return (
     <section id="contact" className="bg-warm py-20 md:py-28" aria-labelledby="contact-heading">
@@ -326,6 +357,7 @@ export default function LakewoodRanchPageClient() {
         <HOASection />
         <CoverageLinksSection />
         <FAQSection />
+        <NearbyAreasSection />
         <ContactSection />
       </main>
       <ServicePageFooter email={EMAIL} />

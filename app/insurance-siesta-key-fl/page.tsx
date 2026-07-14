@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import SiestaKeyPageClient from "./SiestaKeyPageClient";
 
 export const metadata: Metadata = {
-  title: { absolute: "Insurance on Siesta Key, FL | Flood, Condo & Rental | Lamb" },
+  title: { absolute: "Condo and Home Insurance on Siesta Key, FL | Lamb Insurance" },
   description:
-    "Siesta Key insurance: flood, condo (HO-6), homeowners, auto, and short-term rental coverage. Gulf-front flood-zone expertise. Same-day quotes.",
+    "HO-6 condo insurance, flood coverage, and short-term rental protection on Siesta Key, FL. VE and AE flood zone specialists. Same-day quotes from a local Sarasota agent.",
   alternates: { canonical: "/insurance-siesta-key-fl" },
   openGraph: { images: ["/og-image.png"] },
   twitter: { card: "summary_large_image" },
@@ -24,6 +24,7 @@ const schema = {
         addressRegion: "FL",
         addressCountry: "US",
       },
+      areaServed: { "@type": "Place", name: "Siesta Key, Sarasota County, FL" },
       serviceArea: { "@type": "Place", name: "Siesta Key, Sarasota, FL" },
     },
     {

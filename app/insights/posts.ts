@@ -134,7 +134,7 @@ export const POSTS: Post[] = [
 
       <p>This is one of the most common points of confusion after a storm. A standard <a href="/homeowners-insurance-sarasota-fl">homeowners policy</a> generally covers wind damage and rain that enters through an opening the wind itself created. It does not cover flood or rising water — that's a separate product, whether through the National Flood Insurance Program or a <a href="/flood-insurance-sarasota-fl">private flood policy</a>.</p>
 
-      <p>Florida officials note that roughly a quarter of flood claims happen outside officially designated high-risk zones. Sarasota's flat terrain, proximity to the coast, and heavy seasonal rain events mean flood exposure isn't limited to homes right on the water.</p>
+      <p>Florida officials note that roughly a quarter of flood claims happen outside officially designated high-risk zones. Sarasota's flat terrain, proximity to the coast, and heavy seasonal rain events mean flood exposure isn't limited to homes right on the water. Homeowners in older neighborhoods around <a href="/insurance-bradenton-fl">Bradenton</a>, for instance, often discover riverine flood risk from the Manatee and Braden rivers that has nothing to do with proximity to the Gulf.</p>
 
       <p>If you're weighing whether to keep, drop, or restructure coverage after paying off a mortgage, "storm damage" isn't one decision — it's at least two: wind, and water.</p>
 
@@ -213,7 +213,7 @@ export const POSTS: Post[] = [
       },
     ],
     content: `
-      <p>If you own a home on Siesta Key, Longboat Key, or in one of the gated communities around Lakewood Ranch, you've probably already noticed that homeowners insurance doesn't scale the way you'd expect. Double the home value and you don't just pay double the premium. At some point, the coverage itself changes shape.</p>
+      <p>If you own a home on <a href="/insurance-siesta-key-fl">Siesta Key</a>, Longboat Key, or in one of the gated communities around <a href="/insurance-lakewood-ranch-fl">Lakewood Ranch</a>, you've probably already noticed that homeowners insurance doesn't scale the way you'd expect. Double the home value and you don't just pay double the premium. At some point, the coverage itself changes shape.</p>
 
       <p>That point is what most people mean by "high net worth home insurance," sometimes called "high value home insurance," and it's where standard carriers start to show real limits. I review policies like this every week, and I'm going to tell you plainly where a standard policy is the right call and where it isn't. That's the only way this is useful to you.</p>
 
@@ -325,6 +325,8 @@ export const POSTS: Post[] = [
     date: "2026-06-17",
     excerpt: "More than 40 Florida insurers have filed rate decreases. A Sarasota licensed insurance agent explains why rates are falling, how much, and how to make sure you actually capture the savings.",
     thumbnail: "/florida rates dropping 2026.png",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
       <p>After several brutal years of rising premiums, Florida's auto and home insurance markets have turned a corner. More than 40 companies have filed for rate decreases since the start of 2025, and the state's five largest auto insurers are now averaging roughly an 8% reduction for 2026. For Sarasota homeowners and drivers, this is the best opportunity in over a decade to review coverage and recapture savings.</p>
 
@@ -428,7 +430,7 @@ export const POSTS: Post[] = [
 
       <p>Florida's market is unlike anywhere else — hurricane and flood exposure, roof age rules, and carrier appetite that changes by ZIP code all drive pricing. A Sarasota-based agent who lives and works in this market understands those dynamics firsthand and can match your coverage to the realities of the Gulf Coast, not a generic national rate table.</p>
 
-      <p>If you haven't reviewed your coverage in the last 12 months, you are very likely leaving money on the table in the current environment.</p>
+      <p>If you haven't reviewed your coverage in the last 12 months, you are very likely leaving money on the table in the current environment. That's especially true in fast-growing communities like <a href="/insurance-lakewood-ranch-fl">Lakewood Ranch</a>, where residents who moved from out of state often carry policies that were never calibrated to Florida's flood, wind, and roof-age underwriting rules.</p>
 
       <div style="background:#f0f7ff;border-left:4px solid #1a56db;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 8px 8px 0;">
         <p style="margin:0 0 0.5rem;font-weight:700;font-size:1.1rem;">Ready to capture your 2026 rate savings?</p>
@@ -457,6 +459,8 @@ export const POSTS: Post[] = [
     date: "2026-06-12",
     excerpt: "Moving to Sarasota? Most out-of-state buyers have never had to think about flood zones, wind mitigation, or separate flood policies. Here's a practical orientation before you sign anything.",
     thumbnail: "",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
       <p>I talk to a lot of people relocating to Sarasota. They've done their homework on neighborhoods, school ratings, commute times, and restaurant scenes. What almost none of them have done is think seriously about insurance — specifically, what Florida insurance actually costs and why.</p>
 
@@ -482,13 +486,13 @@ export const POSTS: Post[] = [
 
       <p>This is where I want to be direct with buyers: where you choose to live in Sarasota is not just a lifestyle decision. It's an insurance decision.</p>
 
-      <p>Siesta Key is one of the most desirable addresses in the region, and it carries one of the most complex insurance profiles. Much of the key sits in AE or VE flood zones. Wind exposure on a barrier island is significant. Combined premiums for flood and homeowner's insurance on Siesta Key can run considerably higher than an equivalent home several miles inland — sometimes by thousands of dollars annually.</p>
+      <p><a href="/insurance-siesta-key-fl">Siesta Key</a> is one of the most desirable addresses in the region, and it carries one of the most complex insurance profiles. Much of the key sits in AE or VE flood zones. Wind exposure on a barrier island is significant. Combined premiums for flood and homeowner's insurance on Siesta Key can run considerably higher than an equivalent home several miles inland — sometimes by thousands of dollars annually.</p>
 
       <p>Downtown Sarasota, particularly near the bayfront, has its own flood zone patchwork. Some blocks are fine; others carry meaningful AE exposure. The age and construction type of downtown homes — many built before modern wind codes — also affects wind mitigation credits, which I'll get to in a moment.</p>
 
       <p>Palmer Ranch and Sarasota's established inland communities generally offer more favorable flood profiles, though "inland" doesn't mean immune. Some Palmer Ranch parcels near retention ponds or drainage corridors carry AE designations that surprise buyers who assumed they were in the clear.</p>
 
-      <p>Lakewood Ranch, which extends into Manatee County, is often Zone X for many of its developed communities — one reason it's attracted so much growth. But even there, individual lots vary, and newer FEMA map updates have reclassified some areas.</p>
+      <p><a href="/insurance-lakewood-ranch-fl">Lakewood Ranch</a>, which extends into Manatee County, is often Zone X for many of its developed communities — one reason it's attracted so much growth. But even there, individual lots vary, and newer FEMA map updates have reclassified some areas.</p>
 
       <p>Before you fall in love with a specific neighborhood, understand its risk profile. A resource like <a href="https://mysarasotaguide.com/neighborhoods" target="_blank" rel="noopener noreferrer">this Sarasota neighborhoods guide</a> is a good starting point for understanding the geography of the area — then layer in the FEMA flood map data and get a quote. Don't do it in reverse.</p>
 
@@ -526,6 +530,8 @@ export const POSTS: Post[] = [
     date: "2026-06-08",
     excerpt: "Bundling home and auto insurance can save money — but in Florida's rapidly shifting market, it isn't always the best move. Here's how to evaluate whether a bundle actually works in your favor.",
     thumbnail: "/blog/bundle-home-auto-florida.png",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
       <p>For many homeowners, insurance is one of the largest recurring household expenses. In Florida, this burden has become particularly acute. Recent data indicates that the average annual home insurance premium in the state reached $8,292 in 2025 — an 18% rise from the previous year, with cumulative rate increases hitting roughly 30% since 2022.</p>
 
@@ -557,7 +563,7 @@ export const POSTS: Post[] = [
 
       <h3>New Players Entering the Market</h3>
 
-      <p>Since major legislative reforms were enacted, 20 new insurance companies have entered or re-entered the Florida market, bringing over $850 million in capital. Recent partnerships between regional insurers have been specifically designed to offer bundled home and auto options statewide, and several digital-first insurers have launched auto insurance in Florida, advertising bundle savings of up to 20% on auto premiums.</p>
+      <p>Since major legislative reforms were enacted, 20 new insurance companies have entered or re-entered the Florida market, bringing over $850 million in capital. Recent partnerships between regional insurers have been specifically designed to offer bundled home and auto options statewide, and several digital-first insurers have launched auto insurance in Florida, advertising bundle savings of up to 20% on auto premiums. Communities like <a href="/insurance-lakewood-ranch-fl">Lakewood Ranch</a>, where newer construction often qualifies for favorable underwriting, have seen particularly competitive bundled options emerge as carriers compete for this market.</p>
 
       <h3>Rate Reductions on the Horizon</h3>
 
@@ -659,6 +665,8 @@ export const POSTS: Post[] = [
     date: "2026-06-05",
     excerpt: "Florida car insurance rates are finally dropping — but only if you're shopping. A Sarasota agent explains what local drivers over 55 are missing and how a free 15-minute review can make a real difference.",
     thumbnail: "",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
       <p>You open the renewal notice. The number is higher than you remembered — or maybe it's the same, and you're just now wondering if it should be lower. Either way, that feeling is worth paying attention to.</p>
 
@@ -696,7 +704,7 @@ export const POSTS: Post[] = [
 
       <h2>What Sarasota Drivers in Their 60s and 70s Actually Pay</h2>
 
-      <p>According to local rate data, drivers in their 60s in Sarasota pay around $159 per month on average for car insurance. Drivers in their 70s pay closer to $203 per month — rates do tick up again with age, and that's a real factor worth understanding honestly.</p>
+      <p>According to local rate data, drivers in their 60s in Sarasota pay around $159 per month on average for car insurance. Drivers in their 70s pay closer to $203 per month — rates do tick up again with age, and that's a real factor worth understanding honestly. The same dynamics apply to drivers throughout Manatee County, including <a href="/insurance-bradenton-fl">Bradenton</a>, where many residents share similar retirement and commuting patterns.</p>
 
       <p>But those are averages. They include people who haven't shopped, haven't asked about discounts, and haven't adjusted their coverage as their cars aged and their driving changed. The drivers paying below those averages aren't lucky — they made a call.</p>
 

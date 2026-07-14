@@ -19,7 +19,9 @@ const content = `# Lamb Insurance Agency
 - [Bradenton, FL](${BASE_URL}/insurance-bradenton-fl): Auto, SR-22, commercial, and flood insurance for Bradenton and Manatee County
 - [Lakewood Ranch, FL](${BASE_URL}/insurance-lakewood-ranch-fl): Auto, home, flood, and life insurance for Lakewood Ranch residents
 - [Siesta Key, FL](${BASE_URL}/insurance-siesta-key-fl): Flood, condo, auto, and vacation rental insurance for Siesta Key property owners
-- [Venice, FL](${BASE_URL}/insurance-venice-fl): Home, auto, flood, Medicare supplement, and life insurance for Venice residents
+- [Venice, FL](${BASE_URL}/insurance-venice-fl): Home, auto, flood, and life insurance for Venice residents
+- [Palmer Ranch, FL](${BASE_URL}/insurance-palmer-ranch-fl): Home, condo, flood, and auto insurance for Palmer Ranch residents
+- [North Port, FL](${BASE_URL}/insurance-north-port-fl): Home and auto insurance for North Port and Wellen Park residents
 - [Get a Quote](${BASE_URL}/quote): Request an insurance quote
 - [En Español](${BASE_URL}/espanol): Insurance services in Spanish / Servicios de seguro en español
 - [FAQ](${BASE_URL}/faq): Frequently asked questions about insurance coverage

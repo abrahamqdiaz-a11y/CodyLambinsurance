@@ -24,13 +24,25 @@ function FacebookIcon({ size = 18 }: { size?: number }) {
   );
 }
 
+const SERVICE_AREA_LINKS = [
+  { href: "/insurance-siesta-key-fl", label: "Siesta Key" },
+  { href: "/insurance-lakewood-ranch-fl", label: "Lakewood Ranch" },
+  { href: "/insurance-bradenton-fl", label: "Bradenton" },
+  { href: "/insurance-venice-fl", label: "Venice" },
+  { href: "/insurance-palmer-ranch-fl", label: "Palmer Ranch" },
+  { href: "/insurance-north-port-fl", label: "North Port" },
+];
+
 export function ServicePageHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [insuranceOpen, setInsuranceOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
   const [mobileInsuranceOpen, setMobileInsuranceOpen] = useState(false);
+  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const pathname = usePathname();
   const insuranceMenuRef = useRef<HTMLDivElement>(null);
+  const areasMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -42,6 +54,9 @@ export function ServicePageHeader() {
     const onPointerDown = (event: MouseEvent) => {
       if (insuranceMenuRef.current && !insuranceMenuRef.current.contains(event.target as Node)) {
         setInsuranceOpen(false);
+      }
+      if (areasMenuRef.current && !areasMenuRef.current.contains(event.target as Node)) {
+        setAreasOpen(false);
       }
     };
 
@@ -109,6 +124,34 @@ export function ServicePageHeader() {
               </div>
             )}
           </div>
+          <div
+            ref={areasMenuRef}
+            className="relative"
+            onMouseEnter={() => setAreasOpen(true)}
+            onMouseLeave={() => setAreasOpen(false)}
+          >
+            <button
+              type="button"
+              onClick={() => setAreasOpen(!areasOpen)}
+              className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors"
+            >
+              Service Areas
+            </button>
+            {areasOpen && (
+              <div className="absolute top-full left-0 min-w-56 rounded-lg border border-white/10 bg-navy-950 shadow-lg shadow-black/20 py-2">
+                {SERVICE_AREA_LINKS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                    onClick={() => setAreasOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           <Link href="/about" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">About</Link>
           <Link href="/insights" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Insights</Link>
           <Link href="/#contact" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Contact</Link>
@@ -161,6 +204,28 @@ export function ServicePageHeader() {
                 ))}
               </div>
             )}
+            <button
+              type="button"
+              onClick={() => setMobileAreasOpen((prev) => !prev)}
+              className="text-left text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors"
+              aria-expanded={mobileAreasOpen}
+            >
+              Service Areas
+            </button>
+            {mobileAreasOpen && (
+              <div className="pl-4">
+                {SERVICE_AREA_LINKS.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`block min-h-11 py-3 px-3 rounded-lg font-body text-sm tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
             <Link href="/about" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>About</Link>
             <Link href="/insights" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Insights</Link>
             <Link href="/#contact" className="text-navy-200 hover:text-white min-h-11 py-3 px-3 rounded-lg hover:bg-white/5 font-body text-sm tracking-wide transition-colors" onClick={() => setOpen(false)}>Contact</Link>
@@ -182,7 +247,7 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
 
   return (
     <footer className="bg-navy-950 text-navy-300" role="contentinfo">
-      <div className="max-w-6xl mx-auto px-5 py-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto px-5 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="lg:col-span-1">
           <div className="mb-4">
             <p className="font-display text-white text-xl font-bold">Lamb Insurance Agency</p>
@@ -252,6 +317,17 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
             <li><Link href="/faq" className="text-navy-400 hover:text-navy-200 transition-colors">FAQ</Link></li>
             <li><Link href="/careers" className="text-navy-400 hover:text-navy-200 transition-colors">Careers</Link></li>
           </ul>
+        </div>
+
+        <div>
+          <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-5">Areas We Serve</h3>
+          <ul className="space-y-2 font-body text-sm mb-8">
+            {SERVICE_AREA_LINKS.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="text-navy-400 hover:text-navy-200 transition-colors">{item.label}</Link>
+              </li>
+            ))}
+          </ul>
           <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-4">Legal</h3>
           <ul className="space-y-2 font-body text-sm">
             <li><Link href="/privacy-policy" className="text-navy-400 hover:text-navy-200 transition-colors">Privacy Policy</Link></li>
@@ -259,6 +335,7 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
           </ul>
         </div>
       </div>
+
 
       <div className="border-t border-white/8">
         <div className="max-w-6xl mx-auto px-5 pt-5 pb-2 text-center">
