@@ -1,7 +1,15 @@
 import { MetadataRoute } from "next";
+import { POSTS } from "./insights/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://lambinsuranceagency.com";
+
+  const blogEntries: MetadataRoute.Sitemap = POSTS.map((post) => ({
+    url: `${baseUrl}/insights/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -35,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/homeowners-insurance-sarasota-fl`,
+      lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/commercial-insurance-sarasota-fl`,
       lastModified: new Date("2026-05-15"),
       changeFrequency: "monthly",
@@ -47,8 +61,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/insurance-bradenton-fl`,
+      url: `${baseUrl}/umbrella-insurance-sarasota`,
       lastModified: new Date("2026-05-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/insurance-bradenton-fl`,
+      lastModified: new Date("2026-07-14"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -60,13 +80,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/insurance-siesta-key-fl`,
-      lastModified: new Date("2026-05-15"),
+      lastModified: new Date("2026-07-14"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/insurance-venice-fl`,
-      lastModified: new Date("2026-05-15"),
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/insurance-palmer-ranch-fl`,
+      lastModified: new Date("2026-07-14"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/insurance-north-port-fl`,
+      lastModified: new Date("2026-07-14"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -90,7 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/insights`,
-      lastModified: new Date("2026-06-01"),
+      lastModified: new Date("2026-07-08"),
       changeFrequency: "weekly",
       priority: 0.7,
     },
@@ -118,5 +150,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    ...blogEntries,
   ];
 }

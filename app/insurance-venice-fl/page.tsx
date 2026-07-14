@@ -60,14 +60,6 @@ const schema = {
         },
         {
           "@type": "Question",
-          name: "What's the difference between Medicare Advantage and Medicare supplement?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Medicare Advantage replaces original Medicare with a private plan, often with network restrictions. Medicare supplement (Medigap) works alongside original Medicare to cover out-of-pocket costs like deductibles and coinsurance, with no network restrictions. Which is better depends on your health, travel habits, and financial priorities.",
-          },
-        },
-        {
-          "@type": "Question",
           name: "Can I drop to comprehensive-only on a car I'm leaving in storage?",
           acceptedAnswer: {
             "@type": "Answer",
