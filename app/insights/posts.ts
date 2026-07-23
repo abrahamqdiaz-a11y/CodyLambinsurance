@@ -136,7 +136,7 @@ export const POSTS: Post[] = [
 
       <p>Florida officials note that roughly a quarter of flood claims happen outside officially designated high-risk zones. Sarasota's flat terrain, proximity to the coast, and heavy seasonal rain events mean flood exposure isn't limited to homes right on the water. Homeowners in older neighborhoods around <a href="/insurance-bradenton-fl">Bradenton</a>, for instance, often discover riverine flood risk from the Manatee and Braden rivers that has nothing to do with proximity to the Gulf.</p>
 
-      <p>If you're weighing whether to keep, drop, or restructure coverage after paying off a mortgage, "storm damage" isn't one decision — it's at least two: wind, and water.</p>
+      <p>If you're weighing whether to keep, drop, or restructure coverage after paying off a mortgage, "storm damage" isn't one decision — it's at least two: wind, and water. It's also worth considering whether an <a href="/umbrella-insurance-sarasota">umbrella insurance policy</a> makes sense alongside your home coverage — it adds excess liability protection at relatively low cost and is often overlooked by mortgage-free homeowners who think they're fully covered.</p>
 
       <h2>Dropping Coverage Now Can Make It Harder — and Pricier — to Get Back Later</h2>
 
@@ -213,7 +213,7 @@ export const POSTS: Post[] = [
       },
     ],
     content: `
-      <p>If you own a home on <a href="/insurance-siesta-key-fl">Siesta Key</a>, Longboat Key, or in one of the gated communities around <a href="/insurance-lakewood-ranch-fl">Lakewood Ranch</a>, you've probably already noticed that homeowners insurance doesn't scale the way you'd expect. Double the home value and you don't just pay double the premium. At some point, the coverage itself changes shape.</p>
+      <p>If you own a home on <a href="/insurance-siesta-key-fl">Siesta Key</a>, Longboat Key, or in one of the gated communities around <a href="/insurance-lakewood-ranch-fl">Lakewood Ranch</a>, you've probably already noticed that <a href="/homeowners-insurance-sarasota-fl">homeowners insurance</a> doesn't scale the way you'd expect. Double the home value and you don't just pay double the premium. At some point, the coverage itself changes shape.</p>
 
       <p>That point is what most people mean by "high net worth home insurance," sometimes called "high value home insurance," and it's where standard carriers start to show real limits. I review policies like this every week, and I'm going to tell you plainly where a standard policy is the right call and where it isn't. That's the only way this is useful to you.</p>
 
@@ -233,7 +233,7 @@ export const POSTS: Post[] = [
 
       <h2>Where Standard Homeowners Coverage Does This Well</h2>
 
-      <p>For homes within standard limits, a well-chosen standard policy is a strong fit, and I say that as the person who has to stand behind the policy at claim time. You get solid dwelling, other structures, personal property, loss of use, and liability coverage, backed by a carrier with real financial stability and a claims process that doesn't disappear when you need it most. Bundled with auto and an umbrella policy, the pricing is usually competitive with anything else in that range.</p>
+      <p>For homes within standard limits, a well-chosen standard policy is a strong fit, and I say that as the person who has to stand behind the policy at claim time. You get solid dwelling, other structures, personal property, loss of use, and liability coverage, backed by a carrier with real financial stability and a claims process that doesn't disappear when you need it most. Bundled with auto and an <a href="/umbrella-insurance-sarasota">umbrella insurance policy</a>, the pricing is usually competitive with anything else in that range.</p>
 
       <p>"Standard limits" generally means a rebuild cost under roughly $1M, valuables that don't exceed everyday sub-limits, and liability exposure that an umbrella policy can adequately cover on top of the homeowners base.</p>
 
@@ -259,7 +259,7 @@ export const POSTS: Post[] = [
 
       <ul>
         <li><strong>Named storm deductibles</strong> are often a separate, overlooked percentage-based deductible that hits high-value homes hardest in dollar terms.</li>
-        <li><strong>Flood coverage through NFIP caps at $250K building / $100K contents.</strong> That's far below what a Sarasota waterfront home needs, regardless of which company writes your homeowners policy. Private or excess flood is usually necessary on top of whatever else you buy.</li>
+        <li><strong><a href="/flood-insurance-sarasota-fl">Flood coverage</a> through NFIP caps at $250K building / $100K contents.</strong> That's far below what a Sarasota waterfront home needs, regardless of which company writes your homeowners policy. Private or excess flood is usually necessary on top of whatever else you buy.</li>
         <li><strong>Sinkhole and catastrophic ground cover collapse coverage</strong> have Florida-specific rules worth understanding before you assume you're covered.</li>
         <li><strong>Wind mitigation credits</strong> are worth verifying no matter who underwrites the policy. They're often left on the table.</li>
       </ul>
@@ -328,7 +328,7 @@ export const POSTS: Post[] = [
     author: "Cody Lamb",
     authorTitle: "Licensed Insurance Agent — FL License #G034846",
     content: `
-      <p>After several brutal years of rising premiums, Florida's auto and home insurance markets have turned a corner. More than 40 companies have filed for rate decreases since the start of 2025, and the state's five largest auto insurers are now averaging roughly an 8% reduction for 2026. For Sarasota homeowners and drivers, this is the best opportunity in over a decade to review coverage and recapture savings.</p>
+      <p>After several brutal years of rising premiums, Florida's <a href="/auto-insurance-sarasota-fl">auto</a> and <a href="/homeowners-insurance-sarasota-fl">home insurance</a> markets have turned a corner. More than 40 companies have filed for rate decreases since the start of 2025, and the state's five largest auto insurers are now averaging roughly an 8% reduction for 2026. For Sarasota homeowners and drivers, this is the best opportunity in over a decade to review coverage and recapture savings.</p>
 
       <p>But here's what most coverage of this story leaves out: lower filed rates do <strong>not</strong> automatically lower <em>your</em> bill. Savings depend on your carrier, your renewal date, your roof, your claims history, and discounts you may not even know you qualify for. This is where working with a local agent who knows the Florida market makes a measurable difference.</p>
 
@@ -414,7 +414,7 @@ export const POSTS: Post[] = [
       <ul>
         <li><strong>Wind mitigation</strong> — features like hurricane straps, a properly rated roof, and impact-resistant openings can substantially reduce the wind portion of your premium. This single inspection is often the highest-ROI step a Gulf Coast homeowner can take.</li>
         <li><strong>Newer roof</strong> — many carriers reward roofs under 10 years old.</li>
-        <li><strong>Claims-free history</strong>, <strong>bundling</strong> home and auto, and <strong>security/water-leak devices</strong> can each add savings.</li>
+        <li><strong>Claims-free history</strong>, <strong><a href="/bundle-insurance-sarasota-fl">bundling home and auto</a></strong>, and <strong>security/water-leak devices</strong> can each add savings.</li>
       </ul>
 
       <h3>2. Work with an agent who reviews the market for you</h3>
@@ -470,7 +470,7 @@ export const POSTS: Post[] = [
 
       <h2>What Flood Zones Actually Mean</h2>
 
-      <p>The first thing to understand is that your standard homeowner's insurance policy does not cover flood damage. Not one dollar. Flood coverage is a separate policy, typically through the National Flood Insurance Program (NFIP) or a private flood carrier, and whether you're required to carry it — and what it costs — depends heavily on your flood zone designation.</p>
+      <p>The first thing to understand is that your standard homeowner's insurance policy does not cover flood damage. Not one dollar. <a href="/flood-insurance-sarasota-fl">Flood coverage</a> is a separate policy, typically through the National Flood Insurance Program (NFIP) or a private flood carrier, and whether you're required to carry it — and what it costs — depends heavily on your flood zone designation.</p>
 
       <p>FEMA maintains flood maps for every county in the country. In Sarasota County, the three zones you'll encounter most often are:</p>
 
@@ -490,7 +490,7 @@ export const POSTS: Post[] = [
 
       <p>Downtown Sarasota, particularly near the bayfront, has its own flood zone patchwork. Some blocks are fine; others carry meaningful AE exposure. The age and construction type of downtown homes — many built before modern wind codes — also affects wind mitigation credits, which I'll get to in a moment.</p>
 
-      <p>Palmer Ranch and Sarasota's established inland communities generally offer more favorable flood profiles, though "inland" doesn't mean immune. Some Palmer Ranch parcels near retention ponds or drainage corridors carry AE designations that surprise buyers who assumed they were in the clear.</p>
+      <p><a href="/insurance-palmer-ranch-fl">Palmer Ranch</a> and Sarasota's established inland communities generally offer more favorable flood profiles, though "inland" doesn't mean immune. Some Palmer Ranch parcels near retention ponds or drainage corridors carry AE designations that surprise buyers who assumed they were in the clear.</p>
 
       <p><a href="/insurance-lakewood-ranch-fl">Lakewood Ranch</a>, which extends into Manatee County, is often Zone X for many of its developed communities — one reason it's attracted so much growth. But even there, individual lots vary, and newer FEMA map updates have reclassified some areas.</p>
 
@@ -509,7 +509,7 @@ export const POSTS: Post[] = [
       <h2>Common Mistakes New Florida Homeowners Make</h2>
 
       <ul>
-        <li><strong>Assuming homeowner's insurance covers flood.</strong> It never does. These are separate policies. If you're in a required flood zone and don't have a flood policy at closing, your lender will force-place one — at a much higher cost, with less favorable terms.</li>
+        <li><strong>Assuming homeowner's insurance covers flood.</strong> It never does. <a href="/homeowners-insurance-sarasota-fl">Standard homeowners insurance</a> and flood are always separate policies. If you're in a required flood zone and don't have a flood policy at closing, your lender will force-place one — at a much higher cost, with less favorable terms.</li>
         <li><strong>Skipping the elevation certificate.</strong> If your home is in an AE zone, an elevation certificate can dramatically affect your NFIP premium. Without one, you may be rated at the worst-case assumption. A certificate costs a few hundred dollars and can save you that amount annually.</li>
         <li><strong>Not comparing Citizens vs. the private market.</strong> Citizens Property Insurance Corporation is Florida's state-backed insurer of last resort. It's not always the cheapest or best option, but many buyers assume it's their only option. The private market — especially for newer construction in lower-risk zones — can offer better pricing and broader coverage. Work with a broker who has access to both.</li>
         <li><strong>Waiting until June to think about this.</strong> Hurricane season runs June 1 through November 30. Some insurers tighten underwriting or pause new policies as storm activity increases. If you're buying a home and closing in the spring, don't put off your insurance review. Lock in your coverage early.</li>
@@ -535,7 +535,7 @@ export const POSTS: Post[] = [
     content: `
       <p>For many homeowners, insurance is one of the largest recurring household expenses. In Florida, this burden has become particularly acute. Recent data indicates that the average annual home insurance premium in the state reached $8,292 in 2025 — an 18% rise from the previous year, with cumulative rate increases hitting roughly 30% since 2022.</p>
 
-      <p>As premiums continue to fluctuate, it is common to hear recommendations to bundle home and auto insurance policies with the same carrier. The concept is simple: purchase multiple policies from one insurer and receive a discount.</p>
+      <p>As premiums continue to fluctuate, it is common to hear recommendations to <a href="/bundle-insurance-sarasota-fl">bundle home and auto insurance</a> policies with the same carrier. The concept is simple: purchase multiple policies from one insurer and receive a discount.</p>
 
       <p>While bundling can provide savings in some situations, the reality is more nuanced. The best insurance arrangement depends on the homeowner's individual circumstances, the available carriers in their market, and the specific coverage being compared. Understanding how bundling works — and where its limitations exist — can help homeowners make more informed decisions, especially as the Florida market undergoes significant regulatory and structural changes.</p>
 
@@ -555,7 +555,7 @@ export const POSTS: Post[] = [
         <li>Rental property insurance</li>
       </ul>
 
-      <p>The specific discounts and eligibility requirements vary significantly between carriers.</p>
+      <p>The specific discounts and eligibility requirements vary significantly between carriers. Whether you own a home in Sarasota, your <a href="/homeowners-insurance-sarasota-fl">homeowners insurance</a> and <a href="/auto-insurance-sarasota-fl">auto insurance</a> policies each have different pricing dynamics that affect how bundling plays out.</p>
 
       <h2>The Shifting Florida Market: New Opportunities and Competition</h2>
 
@@ -718,7 +718,7 @@ export const POSTS: Post[] = [
 
       <p>Mileage is the next lever. If you're retired and your car is used primarily for errands, appointments, and occasional longer trips rather than a daily commute, you're likely under 7,500 miles a year — and most carriers have a discount tier for exactly that. Usage-based programs go further, monitoring actual driving behavior and rewarding safe, low-mileage drivers with reductions that can reach 25–30%. If your policy was set up when you were still working, it was almost certainly not priced around retirement mileage.</p>
 
-      <p>Then there's bundling. If your homeowner's insurance and auto insurance are with different carriers, that's one of the cleanest savings available — and one of the most commonly overlooked, because most people set up their policies at different times without thinking about the relationship between them. Running both through a single carrier typically earns a discount on each.</p>
+      <p>Then there's <a href="/bundle-insurance-sarasota-fl">bundling</a>. If your homeowner's insurance and <a href="/auto-insurance-sarasota-fl">auto insurance</a> are with different carriers, that's one of the cleanest savings available — and one of the most commonly overlooked, because most people set up their policies at different times without thinking about the relationship between them. Running both through a single carrier typically earns a discount on each.</p>
 
       <p>A clean claims history should also be working in your favor. If you haven't filed in several years, most carriers have a credit for it. Whether that credit is actually on your policy is worth confirming.</p>
 

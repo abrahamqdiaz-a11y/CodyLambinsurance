@@ -4,8 +4,27 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
+import RelatedGuides from "../components/RelatedGuides";
 
 const EMAIL = "contact@lambinsuranceagency.com";
+
+const relatedGuides = [
+  {
+    href: "/insights/flood-zones-home-insurance-sarasota-neighborhoods",
+    title: "Flood Zones, Home Insurance, and Sarasota Neighborhoods",
+    excerpt: "Moving to Sarasota? Most out-of-state buyers have never had to think about flood zones, wind mitigation, or separate flood policies. Here's a practical orientation before you sign anything.",
+  },
+  {
+    href: "/insights/paid-off-mortgage-homeowners-insurance-sarasota",
+    title: "You Paid Off Your Mortgage — Should You Drop Your Homeowners Insurance?",
+    excerpt: "Florida doesn't require homeowners insurance once your mortgage is paid off — but the risk doesn't disappear with the loan. A Sarasota-based look at the real numbers before you cancel.",
+  },
+  {
+    href: "/insights/high-net-worth-home-insurance-sarasota",
+    title: "High Value Home Insurance: What Coverage Actually Costs",
+    excerpt: "What high value home insurance covers, what it costs, and how to buy it through a local agent who reviews your home's real replacement value.",
+  },
+];
 
 const coveredItems = [
   "Physical structure of your home — foundation, walls, roof, electrical, plumbing, HVAC",
@@ -138,7 +157,7 @@ function ContentSections() {
             <p><strong>Zone AE</strong> — High-risk area. Base Flood Elevation applies. Flood insurance typically required by lenders.</p>
             <p><strong>Zone X Shaded</strong> — Moderate risk. Flood insurance not usually required but strongly recommended in Sarasota County.</p>
             <p><strong>Zone X Unshaded</strong> — Lower risk on paper. But 25% of all flood insurance claims nationally come from properties in Zone X. In Florida that percentage is higher.</p>
-            <p>Do you know which zone your property is in? We can tell you — and explain exactly what it means for your coverage. We can also review how this works alongside your <Link href="/home-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">home insurance in Sarasota</Link> or <Link href="/condo-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">condo insurance</Link> policy.</p>
+            <p>Do you know which zone your property is in? We can tell you — and explain exactly what it means for your coverage. We can also review how this works alongside your <Link href="/homeowners-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">homeowners insurance in Sarasota</Link> or <Link href="/condo-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">condo insurance</Link> policy.</p>
           </div>
         </div>
 
@@ -210,7 +229,7 @@ function DisclosureSection() {
           <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
             <p>As of October 2025 Florida law requires sellers and landlords to provide clearer flood risk disclosures to buyers and tenants before a transaction closes. If you are buying a home in Sarasota, flood insurance should be part of your coverage conversation before closing — not after.</p>
             <p>If you received a flood disclosure notice and are not sure what it means for your coverage needs, call us. We explain flood zones and coverage requirements in plain English.</p>
-            <p>You can also ask us to <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundle your home and auto coverage</Link> and review whether your current carrier is still the right <Link href="/citizens-insurance-alternative-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">Citizens Insurance alternative</Link> for your household.</p>
+            <p>You can also ask us to <Link href="/bundle-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">bundle your home and auto coverage</Link> and review how your <Link href="/homeowners-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">homeowners insurance in Sarasota</Link> works alongside your flood policy.</p>
           </div>
         </div>
 
@@ -289,6 +308,7 @@ export default function FloodPageClient() {
         <DisclosureSection />
         <ContactForm />
         <FAQSection />
+        <RelatedGuides guides={relatedGuides} />
       </main>
       <ServicePageFooter email={EMAIL} />
     </>

@@ -4,12 +4,31 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
+import RelatedGuides from "../components/RelatedGuides";
 
 const EMAIL = "contact@lambinsuranceagency.com";
 
+const relatedGuides = [
+  {
+    href: "/insights/should-you-bundle-home-and-auto-insurance-florida",
+    title: "Should You Bundle Home and Auto Insurance in Florida?",
+    excerpt: "Bundling home and auto insurance can save money — but in Florida's rapidly shifting market, it isn't always the best move. Here's how to evaluate whether a bundle actually works in your favor.",
+  },
+  {
+    href: "/insights/am-i-overpaying-car-insurance-sarasota",
+    title: "Am I Overpaying for Car Insurance in Sarasota? Here's How to Tell",
+    excerpt: "Florida car insurance rates are finally dropping — but only if you're shopping. A Sarasota agent explains what local drivers are missing and how a free 15-minute review can make a real difference.",
+  },
+  {
+    href: "/insights/florida-insurance-rates-dropping",
+    title: "Florida Insurance Rates Are Dropping in 2026",
+    excerpt: "More than 40 Florida insurers have filed rate decreases. A Sarasota licensed insurance agent explains why rates are falling, how much, and how to make sure you actually capture the savings.",
+  },
+];
+
 const bundleBenefits = [
   "Bundle savings applied to your combined premium",
-  "One renewal date for both policies",
+  "One renewal date for both policies — with most carriers",
   "One local agent manages everything",
   "One call for questions, changes, or claims support",
   "Coverage built around your specific Sarasota property and vehicle",
@@ -160,7 +179,7 @@ function ContentSections() {
               We know Sarasota&#39;s neighborhoods, the local coverage considerations that matter here, and what makes sense for homes and vehicles in this specific market. That local knowledge is something a national website or call center cannot offer.
             </p>
             <p>
-              If you need standalone coverage, we can also help with <Link href="/home-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">home insurance in Sarasota</Link>, <Link href="/auto-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">auto insurance in Sarasota</Link>, and <Link href="/condo-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">condo insurance</Link>.
+              If you need standalone coverage, we can also help with <Link href="/homeowners-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">homeowners insurance in Sarasota</Link>, <Link href="/auto-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">auto insurance in Sarasota</Link>, and <Link href="/condo-insurance-sarasota-fl" className="text-sage-700 underline hover:text-sage-800">condo insurance</Link>.
             </p>
           </div>
         </div>
@@ -272,6 +291,7 @@ export default function BundleInsurancePage() {
         <ProcessSection />
         <ContactForm />
         <FAQSection />
+        <RelatedGuides guides={relatedGuides} />
       </main>
       <ServicePageFooter email={EMAIL} />
     </>

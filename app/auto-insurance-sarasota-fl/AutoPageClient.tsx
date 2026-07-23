@@ -4,10 +4,29 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
+import RelatedGuides from "../components/RelatedGuides";
 
 const EMAIL = "contact@lambinsuranceagency.com";
 const PHONE_DISPLAY = "(941) 225-2335";
 const PHONE_HREF = "+19412252335";
+
+const relatedGuides = [
+  {
+    href: "/insights/am-i-overpaying-car-insurance-sarasota",
+    title: "Am I Overpaying for Car Insurance in Sarasota? Here's How to Tell",
+    excerpt: "Florida car insurance rates are finally dropping — but only if you're shopping. A Sarasota agent explains what local drivers over 55 are missing and how a free 15-minute review can make a real difference.",
+  },
+  {
+    href: "/insights/should-you-bundle-home-and-auto-insurance-florida",
+    title: "Should You Bundle Home and Auto Insurance in Florida?",
+    excerpt: "Bundling home and auto insurance can save money — but in Florida's rapidly shifting market, it isn't always the best move. Here's how to evaluate whether a bundle actually works in your favor.",
+  },
+  {
+    href: "/insights/florida-insurance-rates-dropping",
+    title: "Florida Insurance Rates Are Dropping in 2026",
+    excerpt: "More than 40 Florida insurers have filed rate decreases. A Sarasota licensed insurance agent explains why rates are falling, how much, and how to make sure you actually capture the savings.",
+  },
+];
 
 const switchReasons = [
   {
@@ -71,9 +90,9 @@ const faqItems = [
       "Typically liability, collision, and comprehensive combined. The specifics vary by policy — we'll explain exactly what you're getting before you commit.",
   },
   {
-    question: "Why did my rate go up?",
+    question: "Why did my rate go up — and will it come down?",
     answer:
-      "Florida's insurance market is expensive and getting more so. Rising repair costs, increased medical claims, higher litigation rates, hurricane losses, and uninsured driver exposure all contribute — even if your driving record is clean.",
+      "Florida auto rates surged in 2022–2023 due to rising repair costs, litigation, and hurricane losses. The good news: tort reform enacted in 2023 has reversed that trend. Florida's top five auto insurers are averaging an 8% rate decrease for 2026. But filed rate cuts don't automatically reach your bill — you need to review your policy and compare options to capture the savings.",
   },
   {
     question: "Can I lower my premium?",
@@ -130,7 +149,7 @@ function Hero() {
           </h1>
 
           <p className="text-navy-200 text-base md:text-lg leading-relaxed mb-10 font-body max-w-3xl">
-            Florida rates are up. Coverage gaps are common. Lamb Insurance Agency helps Sarasota drivers compare options, understand what they&apos;re actually buying, and get protected — without the runaround.
+            Florida auto rates are finally dropping in 2026 — but only if you&apos;re actively shopping. Coverage gaps are still common. Lamb Insurance Agency helps Sarasota drivers compare options, understand what they&apos;re actually buying, and make sure the savings reach you.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -374,6 +393,7 @@ export default function AutoPageClient() {
         <SarasotaSection />
         <FAQSection />
         <ContactForm />
+        <RelatedGuides guides={relatedGuides} />
       </main>
       <ServicePageFooter email={EMAIL} />
     </>

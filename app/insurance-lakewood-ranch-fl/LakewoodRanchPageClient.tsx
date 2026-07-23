@@ -11,6 +11,11 @@ const PHONE_HREF = "+19412252335";
 
 const coverageLinks = [
   {
+    label: "Homeowners Insurance",
+    href: "/homeowners-insurance-sarasota-fl",
+    description: "Wind, hurricane, and replacement-cost coverage calibrated to Lakewood Ranch construction costs and HOA requirements.",
+  },
+  {
     label: "Auto Insurance",
     href: "/auto-insurance-sarasota-fl",
     description: "Coverage review for new Florida residents, multi-car households, and out-of-state plate transfers.",
@@ -24,6 +29,11 @@ const coverageLinks = [
     label: "Flood Insurance",
     href: "/flood-insurance-sarasota-fl",
     description: "Separate NFIP or private flood policy — not included in any standard homeowners coverage.",
+  },
+  {
+    label: "Umbrella Insurance",
+    href: "/umbrella-insurance-sarasota",
+    description: "Excess liability coverage that sits above your auto and homeowners limits — increasingly relevant as LWR home values rise.",
   },
   {
     label: "Life Insurance",
@@ -208,14 +218,6 @@ function CoverageLinksSection() {
               </Link>
             </li>
           ))}
-          <li>
-            <div className="block bg-white border border-navy-100 rounded-2xl p-6 animate-on-scroll">
-              <p className="font-display text-lg font-bold text-navy-800 mb-2">Umbrella Policies</p>
-              <p className="text-navy-500 font-body text-sm leading-relaxed">
-                Excess liability coverage that sits above your auto and homeowners limits — increasingly relevant as LWR home values rise. Ask about options when you call.
-              </p>
-            </div>
-          </li>
         </ul>
       </div>
     </section>

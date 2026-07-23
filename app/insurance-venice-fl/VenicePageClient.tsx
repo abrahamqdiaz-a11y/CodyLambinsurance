@@ -11,6 +11,11 @@ const PHONE_HREF = "+19412252335";
 
 const coverageLinks = [
   {
+    label: "Homeowners Insurance",
+    href: "/homeowners-insurance-sarasota-fl",
+    description: "HO-3 and HO-5 policies for Venice homes — including carriers experienced with older construction and 4-point inspection requirements.",
+  },
+  {
     label: "Bundle Insurance",
     href: "/bundle-insurance-sarasota-fl",
     description: "Home and auto bundling options — with carrier choices that work for older Venice properties.",
@@ -34,6 +39,11 @@ const coverageLinks = [
     label: "Life Insurance",
     href: "/life-insurance-sarasota-fl",
     description: "Term, whole life, and final expense options for retirees and fixed-income households.",
+  },
+  {
+    label: "Umbrella Insurance",
+    href: "/umbrella-insurance-sarasota",
+    description: "Excess liability coverage above your home and auto limits — important for Venice homeowners with waterfront exposure and real asset risk.",
   },
   {
     label: "Condo Insurance",
