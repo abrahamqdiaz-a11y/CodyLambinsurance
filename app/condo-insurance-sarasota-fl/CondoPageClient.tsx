@@ -4,10 +4,29 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ServicePageFooter, ServicePageHeader } from "../components/ServicePageChrome";
 import HighLevelForm from "../components/HighLevelForm";
+import RelatedGuides from "../components/RelatedGuides";
 
 const EMAIL = "contact@lambinsuranceagency.com";
 const PHONE_DISPLAY = "(941) 225-2335";
 const PHONE_HREF = "+19412252335";
+
+const relatedGuides = [
+  {
+    href: "/insights/paid-off-mortgage-homeowners-insurance-sarasota",
+    title: "You Paid Off Your Mortgage — Should You Drop Your Homeowners Insurance?",
+    excerpt: "Florida doesn't require homeowners insurance once your mortgage is paid off — but the risk doesn't disappear with the loan. A Sarasota-based look at the real numbers before you cancel.",
+  },
+  {
+    href: "/insights/flood-zones-home-insurance-sarasota-neighborhoods",
+    title: "Flood Zones, Home Insurance, and Sarasota Neighborhoods",
+    excerpt: "Moving to Sarasota? Most out-of-state buyers have never had to think about flood zones, wind mitigation, or separate flood policies. Here's a practical orientation before you sign anything.",
+  },
+  {
+    href: "/insights/high-net-worth-home-insurance-sarasota",
+    title: "High Value Home Insurance: What Coverage Actually Costs",
+    excerpt: "What high value home insurance covers, what it costs, and how to buy it through a local agent who reviews your home's real replacement value.",
+  },
+];
 
 const condoCoverageItems = [
   {
@@ -651,6 +670,7 @@ export default function CondoPageClient() {
         <ReviewedBySection />
         <FAQSection />
         <ContactForm />
+        <RelatedGuides guides={relatedGuides} />
       </main>
       <ServicePageFooter email={EMAIL} />
     </>

@@ -11,6 +11,11 @@ const PHONE_HREF = "+19412252335";
 
 const coverageLinks = [
   {
+    label: "Homeowners Insurance",
+    href: "/homeowners-insurance-sarasota-fl",
+    description: "Wind, hurricane, and replacement-cost coverage for Siesta Key homes — separate from condo HO-6 and flood policies.",
+  },
+  {
     label: "Condo Insurance (HO-6)",
     href: "/condo-insurance-sarasota-fl",
     description: "Unit interior, personal belongings, loss assessment coverage, and personal liability — what the association master policy leaves out.",
@@ -29,6 +34,11 @@ const coverageLinks = [
     label: "Bundle Insurance",
     href: "/bundle-insurance-sarasota-fl",
     description: "Combine auto and condo policies for potential savings without sacrificing Gulf-coast coverage quality.",
+  },
+  {
+    label: "Umbrella Insurance",
+    href: "/umbrella-insurance-sarasota",
+    description: "Excess liability above your home and auto limits — important for barrier island property owners with pools, docks, or short-term rental exposure.",
   },
   {
     label: "Life Insurance",

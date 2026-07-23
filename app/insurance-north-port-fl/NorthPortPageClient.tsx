@@ -31,6 +31,11 @@ const coverageLinks = [
     description: "Home and auto bundled for new North Port homeowners looking to simplify and save.",
   },
   {
+    label: "Umbrella Insurance",
+    href: "/umbrella-insurance-sarasota",
+    description: "Excess liability protection above your home and auto limits — relevant for North Port homeowners with growing equity and asset exposure.",
+  },
+  {
     label: "Life Insurance",
     href: "/life-insurance-sarasota-fl",
     description: "Term and permanent life options for North Port families and retirees.",

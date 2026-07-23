@@ -8,3 +8,8 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[[redirects]]
+  from = "/high-value-home-insurance-sarasota"
+  to = "/insights/high-net-worth-home-insurance-sarasota"
+  status = 301
+

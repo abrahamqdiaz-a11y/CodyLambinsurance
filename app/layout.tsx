@@ -118,7 +118,7 @@ export default function RootLayout({
                 name: "Insurance Services",
                 itemListElement: [
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Auto Insurance", url: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl" } },
-                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Home Insurance", url: "https://lambinsuranceagency.com" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Service", name: "Homeowners Insurance", url: "https://lambinsuranceagency.com/homeowners-insurance-sarasota-fl" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Condo Insurance", url: "https://lambinsuranceagency.com/condo-insurance-sarasota-fl" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Flood Insurance", url: "https://lambinsuranceagency.com/flood-insurance-sarasota-fl" } },
                   { "@type": "Offer", itemOffered: { "@type": "Service", name: "Life Insurance", url: "https://lambinsuranceagency.com/life-insurance-sarasota-fl" } },

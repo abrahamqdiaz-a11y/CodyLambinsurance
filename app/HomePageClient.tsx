@@ -435,42 +435,50 @@ function CoverageExplained() {
     {
       icon: <Car className="w-6 h-6" aria-hidden="true" />,
       title: "Auto Insurance",
+      href: "/auto-insurance-sarasota-fl",
       body: "Covers liability, collision, and comprehensive protection. Many Florida drivers are underinsured without realizing it. We review your policy against how you actually drive and what you actually own.",
     },
     {
       icon: <House className="w-6 h-6" aria-hidden="true" />,
-      title: "Home Insurance",
+      title: "Homeowners Insurance",
+      href: "/homeowners-insurance-sarasota-fl",
       body: "Protects your structure, belongings, and liability. In Florida, coverage gaps are common due to weather exposure and policy exclusions. We make sure you understand what's included before you need it.",
     },
     {
       icon: <Building2 className="w-6 h-6" aria-hidden="true" />,
       title: "Condo Insurance",
+      href: "/condo-insurance-sarasota-fl",
       body: "Covers your unit's interior, personal belongings, and liability — filling the gaps your HOA master policy leaves behind. Florida condo owners face unique exposures we help you navigate.",
     },
     {
       icon: <Waves className="w-6 h-6" aria-hidden="true" />,
       title: "Flood Insurance",
+      href: "/flood-insurance-sarasota-fl",
       body: "Standard homeowner policies don't cover flooding. In Florida, flood risk is everywhere — not just coastal areas. We help you get the right NFIP or private flood coverage before the storm arrives.",
     },
     {
       icon: <Heart className="w-6 h-6" aria-hidden="true" />,
       title: "Life Insurance",
+      href: "/life-insurance-sarasota-fl",
       body: "Protects the people who depend on you. Whether you need term or permanent coverage, we help you choose the right amount and structure so your family is secure no matter what.",
     },
     {
       icon: <PackagePlus className="w-6 h-6" aria-hidden="true" />,
       title: "Bundle & Save",
+      href: "/bundle-insurance-sarasota-fl",
       body: "Combining auto and home — or adding other policies — with one carrier often unlocks meaningful discounts. We review your full picture to find bundling opportunities that actually make sense.",
     },
     {
       icon: <Briefcase className="w-6 h-6" aria-hidden="true" />,
       title: "Commercial Insurance",
+      href: "/commercial-insurance-sarasota-fl",
       body: "Covers your business property, liability, and employees. From small local shops to larger operations, we build a policy around what your business actually does — not a generic template.",
     },
     {
       icon: <AlertTriangle className="w-6 h-6" aria-hidden="true" />,
-      title: "Why Coverage Fails",
-      body: "Most gaps come from outdated policies, unclear language, or choosing coverage based on price alone. We identify those gaps early — before a claim forces the issue.",
+      title: "Umbrella Insurance",
+      href: "/umbrella-insurance-sarasota",
+      body: "Excess liability protection above your home and auto limits. When a serious claim exceeds your base policy, an umbrella policy covers the difference — up to $1M or more.",
     },
   ];
 
@@ -496,18 +504,19 @@ function CoverageExplained() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, i) => (
-            <article
+            <Link
               key={card.title}
-              className={`bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/8 transition-colors animate-on-scroll animate-on-scroll-delay-${i + 1}`}
+              href={card.href}
+              className={`group bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-sage-500/40 transition-colors animate-on-scroll animate-on-scroll-delay-${i + 1} block`}
             >
               <div
                 className="w-12 h-12 rounded-xl bg-sage-600/20 border border-sage-500/30 flex items-center justify-center mb-5 text-sage-300"
               >
                 {card.icon}
               </div>
-              <h3 className="font-display text-lg font-bold text-white mb-3">{card.title}</h3>
+              <h3 className="font-display text-lg font-bold text-white mb-3 group-hover:text-sage-300 transition-colors">{card.title}</h3>
               <p className="text-navy-300 font-body text-sm leading-relaxed">{card.body}</p>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

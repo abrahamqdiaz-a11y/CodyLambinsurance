@@ -36,6 +36,11 @@ const coverageLinks = [
     description: "General liability and property coverage for Bradenton's retail, service, and contractor businesses.",
   },
   {
+    label: "Umbrella Insurance",
+    href: "/umbrella-insurance-sarasota",
+    description: "Excess liability protection above your home and auto limits — important for Bradenton homeowners with older properties and real asset exposure.",
+  },
+  {
     label: "Life Insurance",
     href: "/life-insurance-sarasota-fl",
     description: "Term and permanent options for families and households at every income level.",
