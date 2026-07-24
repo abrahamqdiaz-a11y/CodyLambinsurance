@@ -17,7 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: { absolute: `${post.title} | Lamb Insurance Agency` },
+    title: post.metaTitle
+      ? { absolute: post.metaTitle }
+      : { absolute: `${post.title} | Lamb Insurance Agency` },
     description: post.metaDescription ?? post.excerpt,
     alternates: {
       canonical: `https://lambinsuranceagency.com/insights/${post.slug}`,
@@ -27,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: "en_US",
       url: `https://lambinsuranceagency.com/insights/${post.slug}`,
       siteName: "Lamb Insurance Agency",
-      title: `${post.title} | Lamb Insurance Agency`,
+      title: post.metaTitle ?? `${post.title} | Lamb Insurance Agency`,
       description: post.metaDescription ?? post.excerpt,
       publishedTime: post.date,
       images: post.thumbnail
@@ -54,6 +56,8 @@ export default async function InsightsPostRoute({ params }: Props) {
       headline: post.title,
       description: post.metaDescription ?? post.excerpt,
       datePublished: post.date,
+      dateModified: post.date,
+      mainEntityOfPage: `https://lambinsuranceagency.com/insights/${post.slug}`,
       author: {
         "@type": "Person",
         name: post.author ?? "Cody Lamb",

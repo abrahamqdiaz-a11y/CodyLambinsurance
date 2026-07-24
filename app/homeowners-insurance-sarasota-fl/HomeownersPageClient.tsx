@@ -109,6 +109,11 @@ const faqItems = [
 
 const relatedGuides = [
   {
+    href: "/insights/florida-hurricane-deductible",
+    title: "How Florida Hurricane Deductibles Actually Work (And What Yours Probably Is)",
+    excerpt: "Your hurricane deductible is almost always a percentage of your dwelling limit, not the flat dollar amount on the front page. Here is how the math works and when the deductible triggers.",
+  },
+  {
     href: "/insights/paid-off-mortgage-homeowners-insurance-sarasota",
     title: "You Paid Off Your Mortgage — Should You Drop Homeowners Insurance?",
     excerpt: "The lender requirement is gone. The risk isn't. A Sarasota-based look at the real numbers before you cancel.",

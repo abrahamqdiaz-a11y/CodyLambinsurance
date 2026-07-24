@@ -10,6 +10,11 @@ const EMAIL = "contact@lambinsuranceagency.com";
 
 const relatedGuides = [
   {
+    href: "/insights/florida-hurricane-deductible",
+    title: "How Florida Hurricane Deductibles Actually Work (And What Yours Probably Is)",
+    excerpt: "Flood and wind are two separate coverages. Here is how the named storm deductible on your homeowners policy works alongside your flood policy, and what triggers each.",
+  },
+  {
     href: "/insights/flood-zones-home-insurance-sarasota-neighborhoods",
     title: "Flood Zones, Home Insurance, and Sarasota Neighborhoods",
     excerpt: "Moving to Sarasota? Most out-of-state buyers have never had to think about flood zones, wind mitigation, or separate flood policies. Here's a practical orientation before you sign anything.",

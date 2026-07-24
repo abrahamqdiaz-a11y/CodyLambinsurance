@@ -184,7 +184,7 @@ function FloodZoneSection() {
               Venice has a mix of X, AE, and VE flood zones — and the premium difference between them is significant. Properties near the Intracoastal, Roberts Bay, the Venice Inlet, or either beach access area are more likely to sit in a higher-risk zone. But Zone X properties can still flood during major storms; they just aren&apos;t required by lenders to carry coverage.
             </p>
             <p>
-              Flood is not included in any standard homeowners policy. It&apos;s a separate policy through the National Flood Insurance Program (NFIP) or a private carrier, and it has a 30-day waiting period before it takes effect. A quick address lookup in FEMA&apos;s flood map takes two minutes, and we can walk any Venice resident through what their zone designation actually means for their coverage and their premium.
+              Flood is not included in any standard homeowners policy. It&apos;s a separate policy through the National Flood Insurance Program (NFIP) or a private carrier, and it has a 30-day waiting period before it takes effect. Separate from flood coverage, Venice homeowners policies also carry a named storm deductible -- typically a percentage of your dwelling limit -- that activates during a hurricane watch or warning. Our guide covers <Link href="/insights/florida-hurricane-deductible" className="text-sage-300 underline hover:text-sage-200">how the named storm window works</Link> and the once-a-year rule that applies across multiple storms. A quick address lookup in FEMA&apos;s flood map takes two minutes, and we can walk any Venice resident through what their zone designation actually means for their coverage and their premium.
             </p>
           </div>
         </div>
