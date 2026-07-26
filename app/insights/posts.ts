@@ -40,6 +40,7 @@ export type Post = {
   content: string;     // Full post body as an HTML string
   // Optional extended fields
   metaDescription?: string;
+  metaTitle?: string;
   author?: string;
   authorTitle?: string;
   faqItems?: FaqItem[];
@@ -47,6 +48,142 @@ export type Post = {
 
 export const POSTS: Post[] = [
   // ← Add new posts here. Newest first.
+  {
+    slug: "florida-hurricane-deductible",
+    title: "How Florida Hurricane Deductibles Actually Work (And What Yours Probably Is)",
+    metaTitle: "Florida Hurricane Deductibles Explained | Sarasota, FL",
+    date: "2026-07-24",
+    excerpt: "Most Florida homeowners policies include a separate hurricane deductible expressed as a percentage of your dwelling limit, not a flat dollar amount. Here is how the math works, when the deductible triggers, and the calendar year rule that protects you after multiple storms.",
+    metaDescription: "Your hurricane deductible isn't the $1,000 on your policy. How the 2%, 5%, and 10% options work, what triggers them, and the once-a-year rule in Florida.",
+    thumbnail: "",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent, FL License #[INSERT]",
+    content: `
+      <p>Every hurricane season I have the same conversation with someone in Sarasota. A storm turns toward the Gulf, they pull out their policy for the first time in three years, and they call me to confirm their deductible is $1,000.</p>
+
+      <p>It usually isn't. Not for wind damage from a named hurricane.</p>
+
+      <p>Most Florida homeowners policies carry two separate deductibles. There is the all other perils deductible, which is the flat dollar amount people remember, and it applies to things like a kitchen fire or a burst supply line. Then there is the hurricane deductible, which is almost always written as a percentage of your dwelling limit and is a much larger number.<sup>[<a href="#ref-1">1</a>]</sup></p>
+
+      <p>That gap is where people get hurt. Here is how it actually works, and what I want you to check on your own policy before the next storm forms.</p>
+
+      <h2>Your hurricane deductible is a percentage, not a flat amount</h2>
+
+      <p>Florida law requires insurers to offer hurricane deductible options of $500, 2 percent, 5 percent, or 10 percent of the dwelling or structure limits on the policy, with some exceptions based on how much your home is insured for.<sup>[<a href="#ref-2">2</a>]</sup></p>
+
+      <p>The percentage applies to your <a href="/homeowners-insurance-sarasota-fl">Coverage A dwelling limit</a>. That is the amount it would cost to rebuild your home, not what you paid for it and not what Zillow says it is worth today.</p>
+
+      <p>The math is simple once you see it:</p>
+
+      <ul>
+        <li>$400,000 dwelling limit with a 2 percent hurricane deductible: $8,000 out of pocket</li>
+        <li>$400,000 dwelling limit with a 5 percent hurricane deductible: $20,000 out of pocket</li>
+        <li>$600,000 dwelling limit with a 5 percent hurricane deductible: $30,000 out of pocket</li>
+      </ul>
+
+      <p>If your home is insured for $250,000 or more, your insurer is not required to offer you the $500 option at all. It only has to offer 2, 5, or 10 percent.<sup>[<a href="#ref-2">2</a>]</sup> So if you bought a home in <a href="/insurance-lakewood-ranch-fl">Lakewood Ranch</a> or <a href="/insurance-palmer-ranch-fl">Palmer Ranch</a> in the last few years, there is a good chance a percentage deductible was the only thing on the table.</p>
+
+      <p>One detail worth knowing: even when your deductible is expressed as a percentage, Florida requires it to be shown on your policy as a dollar amount.<sup>[<a href="#ref-2">2</a>]</sup> Pull up your declarations page and look for it. It should be sitting right there in plain numbers.</p>
+
+      <h2>What actually triggers the hurricane deductible</h2>
+
+      <p>This is the part almost nobody knows, and it matters more than the percentage.</p>
+
+      <p>The hurricane deductible does not apply just because it was windy. Florida defines a hurricane as a storm system declared to be a hurricane by the National Hurricane Center, and the deductible applies during a specific window:<sup>[<a href="#ref-1">1</a>]</sup></p>
+
+      <ul>
+        <li>It begins when a hurricane watch or warning is issued for any part of Florida, not just Sarasota County</li>
+        <li>It ends 72 hours after the last hurricane watch or warning for any part of Florida is terminated<sup>[<a href="#ref-1">1</a>]</sup></li>
+      </ul>
+
+      <p>So a storm that makes landfall in the Panhandle can still open the hurricane deductible window for a home in <a href="/insurance-venice-fl">Venice</a>. And damage from a summer thunderstorm, a tropical storm that never reached hurricane strength, or a straight line wind event generally falls under your all other perils deductible instead.</p>
+
+      <p>I have seen this go the other way too, where a hurricane deductible gets applied to a wind loss that happened outside that window. If that happens to you, say something. It is worth a conversation.</p>
+
+      <p>One more thing: when the hurricane deductible applies, no other deductible under the policy can be applied on top of it.<sup>[<a href="#ref-1">1</a>]</sup> You are not paying both.</p>
+
+      <h2>The once-a-year rule that protects you</h2>
+
+      <p>Florida runs the hurricane deductible on a calendar year basis rather than per storm, which is a real protection in a bad season.<sup>[<a href="#ref-1">1</a>]</sup></p>
+
+      <p>If you stay with the same insurer or an insurer in the same group, the deductible for a second hurricane in the same calendar year is the greater of the amount left over from your first hurricane deductible, or your all other perils deductible.<sup>[<a href="#ref-1">1</a>]</sup> Once the full hurricane deductible has been satisfied, later hurricane claims that year fall to the all other perils deductible.</p>
+
+      <p>The state's own example makes it concrete. A home insured for $200,000 with a 2 percent hurricane deductible has a $4,000 hurricane deductible and a $1,000 all other perils deductible. The first hurricane causes $2,000 in damage, which is under the deductible, so it is paid out of pocket but credited against the $4,000. A second hurricane causes $5,000 in damage. The remaining $2,000 balance applies, the deductible is now fully met, and the insurer pays the $3,000 balance. Every hurricane claim after that in the same calendar year is subject only to the $1,000 all other perils deductible.</p>
+
+      <p>Two things follow from this that I tell every client.</p>
+
+      <p>File the claim even when the damage is below your deductible. You get no credit toward the calendar year deductible if there is no claim on record.<sup>[<a href="#ref-1">1</a>]</sup> That $3,000 of soffit and screen damage you decided to just eat could have counted toward the next storm. It is also common to find hidden damage once a contractor opens things up, and a claim already on file makes a supplemental claim much easier.</p>
+
+      <p>Moving your policy mid-season resets the clock. If you move to an insurer outside your current insurer's group after a hurricane loss, the full hurricane deductible applies again to the next claim with no credit for what you already paid that year.<sup>[<a href="#ref-1">1</a>]</sup></p>
+
+      <h2>Your hurricane deductible does not cover flood</h2>
+
+      <p>This one costs people the most money in our area.</p>
+
+      <p>Hurricane coverage under a homeowners policy is coverage for windstorm damage during a hurricane. It includes rain that gets inside after wind first creates an opening in the building. It does not include flooding.<sup>[<a href="#ref-1">1</a>]</sup></p>
+
+      <p>Storm surge is flood. Rising water is flood. That is a separate policy, and after what we have seen come across the barrier islands and up through the low-lying parts of Sarasota and Manatee County, it is not a theoretical distinction. If you do not have a <a href="/flood-insurance-sarasota-fl">flood policy</a>, that is a separate conversation I would like to have with you before August.</p>
+
+      <h2>Condo owners have a third exposure</h2>
+
+      <p>If you own a condo on <a href="/insurance-siesta-key-fl">Siesta Key</a> or anywhere else in the county, you have your own HO-6 hurricane deductible on your interior improvements and personal property. You also have exposure to your association's master policy deductible.</p>
+
+      <p>Master policies on larger buildings carry percentage hurricane deductibles too, and on a building insured in the tens of millions that deductible runs into the hundreds of thousands or higher. Associations commonly pass that cost to unit owners as a special assessment.</p>
+
+      <p>Florida requires condo unit owner policies to include at least $2,000 in loss assessment coverage.<sup>[<a href="#ref-3">3</a>]</sup> After a serious storm, $2,000 is not close to enough. Assessments in the five figures per unit are not unusual. If you own a condo, look at your loss assessment limit specifically, not just your deductible.</p>
+
+      <h2>Mitigation can lower your hurricane deductible</h2>
+
+      <p>Florida law also says that when you have taken appropriate hurricane mitigation measures on your home, your insurer must give you the option of either an appropriate reduction in your hurricane deductible or a premium credit.<sup>[<a href="#ref-2">2</a>]</sup></p>
+
+      <p>That is the part of your policy you have the most control over. Impact windows, a roof-to-wall connection upgrade, opening protection, and a current wind mitigation inspection all feed into this. If you have made improvements to your home and never sent me the documentation, that is real money sitting on the table.</p>
+
+      <h2>What to do this week</h2>
+
+      <p>Pull your declarations page and find four numbers:</p>
+
+      <ol>
+        <li>Your Coverage A dwelling limit</li>
+        <li>Your hurricane deductible, shown as a dollar amount</li>
+        <li>Your all other perils deductible</li>
+        <li>Whether you have a separate flood policy at all</li>
+      </ol>
+
+      <p>Then ask yourself the honest question: if a named storm hit tomorrow, could you write a check for that hurricane deductible number?</p>
+
+      <p>If the answer is no, we should talk. There are levers here. Mitigation credits, deductible structure, and making sure your dwelling limit is accurate rather than inflated all change that number.</p>
+
+      <p>I am in Sarasota, I write policies for homeowners across Sarasota and Manatee County, and I would rather have this conversation in July than in September. Give me a call or <a href="/#contact">reach out through the site</a> and we will go through your declarations page together.</p>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>Does a tropical storm trigger my hurricane deductible?</h3>
+      <p>Generally no. The deductible window is tied to a hurricane declared by the National Hurricane Center and to hurricane watches or warnings issued for Florida.<sup>[<a href="#ref-1">1</a>]</sup> A tropical storm that never reaches hurricane strength typically falls under your all other perils deductible.</p>
+
+      <h3>A hurricane hit the Panhandle. Does my Sarasota policy's hurricane deductible apply?</h3>
+      <p>It can. The window opens when a hurricane watch or warning is issued for any part of Florida, not only your county.<sup>[<a href="#ref-1">1</a>]</sup></p>
+
+      <h3>Do I pay the hurricane deductible for every storm in a season?</h3>
+      <p>No. It applies on an annual calendar year basis with the same insurer or insurer group. After it is satisfied, later hurricane claims that year are subject to the greater of the remaining balance or your all other perils deductible.<sup>[<a href="#ref-1">1</a>]</sup></p>
+
+      <h3>Does my hurricane deductible apply to roof damage?</h3>
+      <p>A separate roof deductible cannot be applied to a roof loss resulting from a hurricane.<sup>[<a href="#ref-1">1</a>]</sup> Your hurricane deductible is what applies.</p>
+
+      <h3>Is my hurricane deductible amount fixed all year?</h3>
+      <p>Not necessarily. If your policy has an inflation guard endorsement, your dwelling limit increases at intervals, and a percentage deductible increases along with it. Your insurer has to disclose on the declarations page when inflation guard may push the deductible higher than shown.<sup>[<a href="#ref-1">1</a>]</sup></p>
+
+      <h2>References</h2>
+
+      <ol>
+        <li id="ref-1">Florida Department of Financial Services, Division of Consumer Services. <a href="https://www.myfloridacfo.com/division/consumers/consumerprotections/floridashurricanedeductible" target="_blank" rel="noopener">Florida's Hurricane Deductible</a>. myfloridacfo.com.</li>
+        <li id="ref-2"><a href="https://www.flsenate.gov/laws/statutes/2024/627.701" target="_blank" rel="noopener">Florida Statutes § 627.701</a>, Liability of insureds; coinsurance; deductibles. The Florida Senate.</li>
+        <li id="ref-3"><a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0718/Sections/0718.111.html" target="_blank" rel="noopener">Florida Statutes § 718.111</a>, condominium insurance requirements. The Florida Legislature.</li>
+        <li id="ref-4"><a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0600-0699/0627/Sections/0627.4025.html" target="_blank" rel="noopener">Florida Statutes § 627.4025</a>, hurricane definition and deductible trigger window. The Florida Legislature.</li>
+      </ol>
+
+      <p><em>The hurricane definition and deductible trigger window referenced throughout are set in Florida Statutes § 627.4025. This article is general information about how Florida hurricane deductibles are structured under state law. Your own policy language controls. Review your declarations page and talk with your agent about your specific coverage.</em></p>
+    `,
+  },
   {
     slug: "paid-off-mortgage-homeowners-insurance-sarasota",
     title: "You Paid Off Your Mortgage — Should You Drop Your Homeowners Insurance?",
