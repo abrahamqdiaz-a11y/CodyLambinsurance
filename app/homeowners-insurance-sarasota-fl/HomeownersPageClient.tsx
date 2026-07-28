@@ -298,7 +298,7 @@ function SarasotaNeighborhoodsSection() {
           </h2>
           <div className="space-y-5 text-navy-600 font-body text-base leading-relaxed">
             <p>
-              Different neighborhoods in Sarasota County carry different insurance considerations. Homes near the Gulf on Siesta Key or barrier islands face VE flood zone designation and significant wind exposure. Properties in established inland neighborhoods like Palmer Ranch or Lakewood Ranch deal with HOA liability requirements and, in some parcels, AE flood zone designations near retention ponds and drainage corridors. Older homes in Bradenton and downtown Sarasota face 4-point inspection requirements and may need carriers with specific appetite for aging roofs.
+              Different neighborhoods in Sarasota County carry different insurance considerations. Homes near the Gulf on Siesta Key or barrier islands face VE flood zone designation and significant wind exposure. Properties in established inland neighborhoods like Palmer Ranch or Lakewood Ranch deal with HOA liability requirements and, in some parcels, AE flood zone designations near retention ponds and drainage corridors. Older homes in Bradenton and downtown Sarasota face 4-point inspection requirements and may need carriers with specific appetite for aging roofs. If a roof age non-renewal arrives, <Link href="/insights/florida-roof-age-non-renewal" className="text-sage-600 hover:underline">Florida law gives you inspection rights before you are required to replace anything</Link>.
             </p>
             <p>
               We know the local underwriting environment for each of these communities. If you're in one of the areas below, we can tell you exactly what to expect before you start the quote process:

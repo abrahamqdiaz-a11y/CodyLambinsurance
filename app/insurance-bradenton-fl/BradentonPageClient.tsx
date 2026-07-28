@@ -159,7 +159,7 @@ function OlderHomesSection() {
               Wind mitigation credits are where Bradenton homeowners often leave money on the table. Florida insurers are required to offer discounts for features that reduce hurricane damage. Roof shape matters: a hip roof — sloped on all four sides — performs significantly better in wind than a gable roof, and that difference shows up in your premium. Roof-to-wall connections, specifically hurricane straps or clips rather than just toe-nailed boards, generate another credit. Properly rated roof deck attachment and opening protection (impact windows, hurricane-rated doors, reinforced garage doors) each add their own credits. A wind mitigation inspection typically costs $75 to $150. On an older Bradenton home with a hip roof and straps, stacking those credits can reduce the wind portion of a premium by $300 to $700 annually.
             </p>
             <p>
-              If you&apos;re buying in downtown Bradenton, Palma Sola, or any older neighborhood and you haven&apos;t had a wind mitigation inspection, that&apos;s the first call to make — before you renew, not after.
+              If you&apos;re buying in downtown Bradenton, Palma Sola, or any older neighborhood and you haven&apos;t had a wind mitigation inspection, that&apos;s the first call to make — before you renew, not after. And if your carrier sends a roof age non-renewal, <Link href="/insights/florida-roof-age-non-renewal" className="text-sage-700 underline hover:text-sage-800">Florida&apos;s 15-year rule gives you the right to an inspection before you are required to replace anything</Link>.
             </p>
           </div>
         </div>

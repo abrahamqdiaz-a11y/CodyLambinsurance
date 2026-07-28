@@ -104,7 +104,17 @@ function FaqSection({ items }: { items: FaqItem[] }) {
   );
 }
 
-function AuthorBio({ name, title }: { name: string; title: string }) {
+function AuthorBio({
+  name,
+  title,
+  reviewedBy,
+  lastUpdated,
+}: {
+  name: string;
+  title: string;
+  reviewedBy?: string;
+  lastUpdated?: string;
+}) {
   return (
     <aside
       className="mt-12 bg-white border border-navy-100 rounded-2xl p-6 md:p-8"
@@ -129,6 +139,20 @@ function AuthorBio({ name, title }: { name: string; title: string }) {
         </a>
         .
       </p>
+      {(reviewedBy || lastUpdated) && (
+        <div className="mt-4 pt-4 border-t border-navy-100 flex flex-col gap-1">
+          {reviewedBy && (
+            <p className="font-body text-navy-500 text-xs">
+              <span className="font-semibold">Reviewed by:</span> {reviewedBy}
+            </p>
+          )}
+          {lastUpdated && (
+            <p className="font-body text-navy-500 text-xs">
+              <span className="font-semibold">Last updated:</span> {formatDate(lastUpdated)}
+            </p>
+          )}
+        </div>
+      )}
     </aside>
   );
 }
@@ -219,7 +243,12 @@ export default function InsightsPostClient({ post }: { post: Post }) {
 
             {/* Author bio */}
             {post.author && post.authorTitle && (
-              <AuthorBio name={post.author} title={post.authorTitle} />
+              <AuthorBio
+                name={post.author}
+                title={post.authorTitle}
+                reviewedBy={post.reviewedBy}
+                lastUpdated={post.lastUpdated}
+              />
             )}
 
             {/* FAQ accordion */}
