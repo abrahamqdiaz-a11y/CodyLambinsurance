@@ -58,7 +58,7 @@ export const POSTS: Post[] = [
     lastUpdated: "2026-07-28",
     excerpt: "A Florida roof non-renewal notice does not always mean you have to replace the roof. Here is the 15-year rule, your inspection right, and what to do first.",
     metaDescription: "A Florida roof non-renewal notice does not always mean you have to replace the roof. Here is the 15-year rule, your inspection right, and what to do first.",
-    thumbnail: "",
+    thumbnail: "/roof. letter.png",
     author: "Cody Lamb",
     authorTitle: "Licensed Insurance Agent, FL License #G034846",
     reviewedBy: "Cody Lamb, Licensed Insurance Agent",
