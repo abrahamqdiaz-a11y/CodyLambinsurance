@@ -307,6 +307,13 @@ function SB4DSection() {
             <p>
               If you own a condo in Sarasota and haven&apos;t reviewed your policy in the last two years, there&apos;s a real chance your loss assessment coverage doesn&apos;t reflect what assessments actually look like in your community now.
             </p>
+            <p>
+              When a named storm is the triggering event, the master policy&apos;s hurricane deductible -- typically a percentage of the building&apos;s insured value -- can itself generate the shortfall that becomes a per-unit assessment. Our guide covers{" "}
+              <a href="/insights/florida-hurricane-deductible" className="text-sage-300 underline hover:text-sage-200">
+                how Florida&apos;s percentage hurricane deductible works
+              </a>{" "}
+              for condo owners on both the building and unit levels.
+            </p>
             <p className="text-sage-300 font-medium">
               We review this as part of every condo insurance conversation — no obligation, no pressure.
             </p>

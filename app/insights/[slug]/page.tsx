@@ -16,9 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return {};
 
-  const displayTitle = post.metaTitle ?? post.title;
+  const displayTitle = post.metaTitle ?? `${post.title} | Lamb Insurance Agency`;
   return {
-    title: { absolute: `${displayTitle}` },
+    title: { absolute: displayTitle },
     description: post.metaDescription ?? post.excerpt,
     alternates: {
       canonical: `https://lambinsuranceagency.com/insights/${post.slug}`,
