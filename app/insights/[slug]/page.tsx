@@ -16,10 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return {};
 
+  const displayTitle = post.metaTitle ?? `${post.title} | Lamb Insurance Agency`;
   return {
-    title: post.metaTitle
-      ? { absolute: post.metaTitle }
-      : { absolute: `${post.title} | Lamb Insurance Agency` },
+    title: { absolute: displayTitle },
     description: post.metaDescription ?? post.excerpt,
     alternates: {
       canonical: `https://lambinsuranceagency.com/insights/${post.slug}`,
@@ -29,16 +28,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: "en_US",
       url: `https://lambinsuranceagency.com/insights/${post.slug}`,
       siteName: "Lamb Insurance Agency",
-      title: post.metaTitle ?? `${post.title} | Lamb Insurance Agency`,
+      title: displayTitle,
       description: post.metaDescription ?? post.excerpt,
       publishedTime: post.date,
+      modifiedTime: post.lastUpdated ?? post.date,
       images: post.thumbnail
         ? [{ url: post.thumbnail, width: 1200, height: 630, alt: post.title }]
         : [{ url: "/og-image.png", width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Lamb Insurance Agency`,
+      title: displayTitle,
       description: post.metaDescription ?? post.excerpt,
     },
     robots: { index: true, follow: true },
@@ -56,13 +56,21 @@ export default async function InsightsPostRoute({ params }: Props) {
       headline: post.title,
       description: post.metaDescription ?? post.excerpt,
       datePublished: post.date,
-      dateModified: post.date,
+      dateModified: post.lastUpdated ?? post.date,
       mainEntityOfPage: `https://lambinsuranceagency.com/insights/${post.slug}`,
       author: {
         "@type": "Person",
         name: post.author ?? "Cody Lamb",
         ...(post.authorTitle ? { jobTitle: post.authorTitle } : {}),
       },
+      ...(post.reviewedBy
+        ? {
+            reviewedBy: {
+              "@type": "Person",
+              name: post.reviewedBy,
+            },
+          }
+        : {}),
       publisher: {
         "@type": "Organization",
         name: "Lamb Insurance Agency",

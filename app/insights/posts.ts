@@ -43,11 +43,140 @@ export type Post = {
   metaTitle?: string;
   author?: string;
   authorTitle?: string;
+  reviewedBy?: string;
+  lastUpdated?: string;
   faqItems?: FaqItem[];
 };
 
 export const POSTS: Post[] = [
   // ← Add new posts here. Newest first.
+  {
+    slug: "florida-roof-age-non-renewal",
+    title: "Got a Roof Non-Renewal in Florida? You May Not Need a New Roof",
+    metaTitle: "Florida Roof Non-Renewal & the 15-Year Rule | Sarasota",
+    date: "2026-07-28",
+    lastUpdated: "2026-07-28",
+    excerpt: "A Florida roof non-renewal notice does not always mean you have to replace the roof. Here is the 15-year rule, your inspection right, and what to do first.",
+    metaDescription: "A Florida roof non-renewal notice does not always mean you have to replace the roof. Here is the 15-year rule, your inspection right, and what to do first.",
+    thumbnail: "",
+    author: "Cody Lamb",
+    authorTitle: "Licensed Insurance Agent, FL License #G034846",
+    reviewedBy: "Cody Lamb, Licensed Insurance Agent",
+    faqItems: [
+      {
+        id: "can-insurer-drop-roof-age",
+        question: "Can my insurer really drop me just because my roof is old?",
+        answer: "For a roof 15 years or older, an insurer can require proof of condition as a renewal condition, but it must first allow you to get an authorized inspection, and it cannot non-renew based on roof age alone if that inspection shows 5 or more years of remaining useful life. For a roof under 15 years, it cannot non-renew based on roof age alone at all.",
+      },
+      {
+        id: "roof-age-calculation",
+        question: "How is my roof's age calculated?",
+        answer: "From the last date the entire roof surface, 100 percent of it, was built or replaced under the building code in effect then. A full re-roof resets that clock, even on an old house.",
+      },
+      {
+        id: "who-can-inspect",
+        question: "Who can perform the roof inspection?",
+        answer: "An authorized inspector, which as of the 2024 change includes licensed roofing contractors along with licensed home inspectors, engineers, and architects. Make sure the report addresses remaining useful life specifically, because that is the finding the statute hangs on.",
+      },
+      {
+        id: "condo-rental-coverage",
+        question: "Does this roof age protection cover my condo or my rental property?",
+        answer: "Not in the same way. The standard homeowners statute applies to homeowners policies. A 2026 effort to extend it to condo and landlord policies did not pass. If you own one of those, talk with your agent about what your specific policy form provides.",
+      },
+      {
+        id: "four-point-vs-wind-mitigation",
+        question: "What is the difference between a 4-point and a wind mitigation inspection?",
+        answer: "A 4-point looks at roof, electrical, plumbing, and HVAC and is a carrier underwriting requirement that decides whether you can be covered at all. A wind mitigation inspection documents wind-resistant features that trigger mandatory discounts on the windstorm portion of your premium under Florida law. They serve different purposes and are often worth getting at the same time if you are already scheduling roof access.",
+      },
+    ],
+    content: `
+      <p>The letter shows up, and it ruins the week. Your insurer says it will not renew your homeowners policy because of the age of your roof. The number that follows in your head is usually somewhere north of twenty thousand dollars, and if you are like most people I talk to in Sarasota, your next call is to a roofer.</p>
+
+      <p>Hold on before you make that call. In a lot of these cases, Florida law gives you a way to keep your coverage without replacing anything. Most homeowners never find out about it, and they spend money they did not have to spend. I want you to know your options before you sign a roofing contract you may not need.</p>
+
+      <p>Here is how the roof age rules actually work in Florida, in plain terms, with the law cited so you can check every word of it yourself.</p>
+
+      <h2>The 15-Year Rule</h2>
+
+      <p>Florida has a specific statute that governs this, section 627.7011 of the Florida Statutes. Two parts of it matter to you.</p>
+
+      <p>First, an insurer cannot refuse to issue or renew a homeowners policy on a home with a roof that is less than 15 years old just because of the roof's age <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[1]</a></sup>. If your roof is under 15 and you got a non-renewal that blames roof age alone, that notice is on shaky ground. Something else may be going on, and it is worth a hard look at the exact wording of the letter.</p>
+
+      <p>Second, and this is the part that saves people real money: for a roof that is 15 years or older, the law requires your insurer to let you have the roof inspected by an authorized inspector, at your own expense, before it can make you replace the roof as a condition of coverage <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[1]</a></sup>. If that inspection shows the roof has 5 years or more of useful life remaining, the insurer cannot refuse to renew you based on roof age alone <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[1]</a></sup>.</p>
+
+      <p>Read that again, because it is the whole game. A qualifying inspection can force the carrier to keep you. You are not at the mercy of a replace-it-or-lose-coverage ultimatum. You have a documented right to prove the roof is fine.</p>
+
+      <p>I see this most with metal and tile roofs. A 20-year-old tile or standing seam metal roof can have decades of life left, but an underwriting system sees the age number and fires off a notice anyway. That homeowner does not need a new roof. They need an inspector to put the remaining useful life in writing.</p>
+
+      <h2>How Your Roof's Age Is Actually Counted</h2>
+
+      <p>People assume roof age runs from the day the house was built. Not always. Under the statute, a roof's age is calculated from the last date on which 100 percent of the roof's surface area was built or replaced in line with the building code in effect at that time <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[2]</a></sup>.</p>
+
+      <p>So if you replaced the entire roof surface eight years ago, your roof is eight years old for this purpose, not the age of the house. If you only did a partial replacement, that is a different conversation, because the rule points to the last time the full surface was done. Dig up your permit or your roofing invoice. The date on that paperwork may be worth thousands to you.</p>
+
+      <h2>Who Counts as an Authorized Inspector</h2>
+
+      <p>The inspection only helps you if the right kind of professional performs it. Florida expanded the list of who qualifies. As of a 2024 change to the law, licensed roofing contractors are authorized to perform these inspections, alongside the home inspectors, engineers, and architects who already qualified <sup>[3]</sup>.</p>
+
+      <p>That expansion matters in practice because roofing contractors are often faster to schedule and already know exactly what an insurer wants to see documented. When you order the inspection, be clear about what you need: a report that speaks to remaining useful life, not just a general condition note. The remaining useful life finding is the specific thing the statute hangs on <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[1]</a></sup>.</p>
+
+      <h2>What the 2026 Legislature Did and Did Not Change</h2>
+
+      <p>I want to be straight with you about the current state of the law, because there was a lot of noise about it this year.</p>
+
+      <p>During the 2026 legislative session, lawmakers introduced bills that would have extended this roof age protection beyond standard homeowners policies to reach condominium association policies, landlord policies, and other residential forms, and would have set a separate standard for low-slope roofs <sup><a href="https://www.liveinsurancenews.com/florida-legal-roof-inspection/8574151/" target="_blank" rel="noopener nofollow">[4]</a></sup>. Those bills did not pass <sup><a href="https://www.liveinsurancenews.com/florida-legal-roof-inspection/8574151/" target="_blank" rel="noopener nofollow">[4]</a></sup>.</p>
+
+      <p>What that means for you is simple. If you own a single-family home, the protection in section 627.7011 is in force right now and has been since the 2022 and 2023 reforms, unchanged <sup><a href="https://www.liveinsurancenews.com/florida-legal-roof-inspection/8574151/" target="_blank" rel="noopener nofollow">[4]</a></sup>. If you own a <a href="/condo-insurance-sarasota-fl">condo unit or rental property</a>, the standard homeowners statute does not reach your policy type the same way, and that gap the legislature tried to close is still open <sup><a href="https://www.liveinsurancenews.com/florida-legal-roof-inspection/8574151/" target="_blank" rel="noopener nofollow">[4]</a></sup>. If that is your situation, do not assume the 15-year rule covers you. Call me and we will look at what your specific policy form actually provides.</p>
+
+      <h2>The Two Inspections People Confuse</h2>
+
+      <p>There are two different roof-related inspections in the Florida market, and homeowners mix them up constantly. They do different jobs.</p>
+
+      <p>The 4-point inspection looks at four systems: roof, electrical, plumbing, and HVAC. Carriers commonly require it on older homes, often around the 20-year mark, before they will write or renew a policy. This is underwriting practice rather than a statute, and the exact age threshold varies by carrier <sup><a href="https://www.livecovered.com/florida-homeowners-insurance-guide/" target="_blank" rel="noopener nofollow">[5]</a></sup>. Think of the 4-point as the gate. It tells the insurer whether it is willing to cover the home at all.</p>
+
+      <p>The wind mitigation inspection is a different animal, and this one can put money back in your pocket. Florida law, section 627.0629, requires insurers to build discounts into their rates for homes with verified wind-resistant features, and those credits apply to the windstorm portion of your premium <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.0629" target="_blank" rel="noopener">[6]</a></sup>. The features that count include roof shape, roof deck attachment, roof-to-wall connections like clips and straps, a secondary water barrier, and opening protection <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.0629" target="_blank" rel="noopener">[6]</a></sup>.</p>
+
+      <p>These are not favors the carrier does for you. When a licensed inspector documents qualifying features on the state's uniform mitigation form, the discount is required, not optional <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.0629" target="_blank" rel="noopener">[6]</a></sup><sup><a href="https://floir.gov/consumers/wind-mitigation-resources" target="_blank" rel="noopener">[7]</a></sup>. The report is generally good for five years <sup><a href="https://floir.gov/consumers/wind-mitigation-resources" target="_blank" rel="noopener">[7]</a></sup>. If you have a newer roof, impact windows, or hurricane shutters and you have never had a current wind mitigation inspection on file, there is a real chance you are paying more than the law requires you to. That is the first thing I check when a homeowner comes to me frustrated about their bill.</p>
+
+      <p>Wind mitigation credits and your <a href="/insights/florida-hurricane-deductible">storm deductible structure</a> work together to shape your total out-of-pocket exposure after a named storm. Understanding both at the same time is worth the hour.</p>
+
+      <h2>What to Do the Day the Notice Arrives</h2>
+
+      <p>Here is the order of operations I walk clients through when a roof non-renewal lands.</p>
+
+      <ol>
+        <li><strong>Read the notice carefully and note the date.</strong> Non-renewal notices come with a response window, often several months before the policy actually ends. You have more time than the panic suggests, but not unlimited time. Mark the expiration date.</li>
+        <li><strong>Find out your roof's true age.</strong> Pull the permit or invoice from the last full roof replacement. Remember the age is measured from the last time the entire surface was redone <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[2]</a></sup>, not from when the house was built.</li>
+        <li><strong>If the roof is under 15 years, question the notice.</strong> The law does not allow a non-renewal based on roof age alone for a roof that young <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[1]</a></sup>. Send me the letter and let me look at the exact reason cited.</li>
+        <li><strong>If the roof is 15 or older, order the inspection before you order a roofer.</strong> Get an authorized inspector to assess remaining useful life <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[1]</a></sup><sup>[3]</sup>. If the report shows 5 or more years remaining, that document is your protection <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">[1]</a></sup>. A few hundred dollars for an inspection can save you a roof you did not need to replace.</li>
+        <li><strong>Ask about wind mitigation at the same time.</strong> If you are already getting someone up on the roof, a wind mitigation inspection can document credits you may be owed <sup><a href="https://www.flsenate.gov/Laws/Statutes/2025/627.0629" target="_blank" rel="noopener">[6]</a></sup>. Two birds.</li>
+        <li><strong>Call your agent early, not late.</strong> The worst version of this is the homeowner who does nothing until two weeks before the policy lapses. Options narrow fast at the end. Options are wide open at the beginning.</li>
+      </ol>
+
+      <h2>Where I Come In</h2>
+
+      <p>I write <a href="/homeowners-insurance-sarasota-fl">homeowners policies</a> for people across Sarasota and Manatee County, from older properties in <a href="/insurance-bradenton-fl">Bradenton neighborhoods</a> where aging tile and shingle roofs are common, to newer builds in <a href="/insurance-north-port-fl">North Port communities</a> where the homes are younger but the carriers are still selective. Roof non-renewals are one of the most common reasons someone new calls me. A good chunk of the time, once we pull the paperwork and look at the actual roof age and condition, the problem is smaller than the letter made it feel.</p>
+
+      <p>I am not going to tell you a roof never needs replacing. Sometimes the inspection comes back short and replacement really is the answer. But I am not going to let you spend twenty or thirty thousand dollars because an underwriting system flagged a date, when the law gives you a documented way to prove the roof has life left in it.</p>
+
+      <p>If you have a non-renewal notice in hand, or you can see one coming because your roof is getting up there in years, <a href="/#contact">reach out through the site or give me a call</a>. Bring the notice and whatever roof paperwork you have. We will go through it together and figure out the cheapest honest path to keeping you covered.</p>
+
+      <div style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid #d1d5db;">
+        <h2 style="font-size:1.125rem;margin-bottom:1rem;">References</h2>
+        <ol style="font-size:0.875rem;color:#4b5563;line-height:1.75;padding-left:1.25rem;">
+          <li>Fla. Stat. &sect;&nbsp;627.7011(3)(b)&ndash;(c) (2025). Homeowners' policies; offer of replacement cost coverage and law and ordinance coverage. The Florida Senate. <a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">flsenate.gov/Laws/Statutes/2025/627.7011</a></li>
+          <li>Fla. Stat. &sect;&nbsp;627.7011(3)(d) (2025). Roof age calculation based on the last date 100 percent of the roof surface was built or replaced. The Florida Senate. <a href="https://www.flsenate.gov/Laws/Statutes/2025/627.7011" target="_blank" rel="noopener">flsenate.gov/Laws/Statutes/2025/627.7011</a></li>
+          <li>Expansion of authorized inspectors to include licensed roofing contractors, effective July 2024 (House Bill 1611), amending the authorized inspector provisions applicable to Fla. Stat. &sect;&nbsp;627.7011. Confirm current inspector list against the statute before relying on it.</li>
+          <li>2026 Florida legislative session, House Bill 815 and Senate Bill 808, proposing to extend roof age protection to condominium association, landlord, and other residential policies and to create a low-slope roof standard; the bills did not become law. <a href="https://www.liveinsurancenews.com/florida-legal-roof-inspection/8574151/" target="_blank" rel="noopener nofollow">Live Insurance News, reporting on the failed expansion, July 2026</a>.</li>
+          <li>Four-point inspection requirements are carrier underwriting practice rather than statute; thresholds vary by insurer, commonly around 20 years of home age. See industry overview: <a href="https://www.livecovered.com/florida-homeowners-insurance-guide/" target="_blank" rel="noopener nofollow">Florida Homeowners Insurance Guide (2026)</a>.</li>
+          <li>Fla. Stat. &sect;&nbsp;627.0629(1). Requirement that residential property insurance rate filings include actuarially reasonable discounts, credits, or rate differentials for verified windstorm mitigation features. The Florida Senate. <a href="https://www.flsenate.gov/Laws/Statutes/2025/627.0629" target="_blank" rel="noopener">flsenate.gov/Laws/Statutes/2025/627.0629</a></li>
+          <li>Florida Office of Insurance Regulation, Wind Mitigation Resources, describing the uniform mitigation verification form (OIR-B1-1802) and the mitigation discount framework. <a href="https://floir.gov/consumers/wind-mitigation-resources" target="_blank" rel="noopener">floir.gov/consumers/wind-mitigation-resources</a></li>
+        </ol>
+      </div>
+
+      <p style="font-size:0.8125rem;color:#6b7280;margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid #e5e7eb;">This article is general educational information about Florida roof age and homeowners insurance rules as of July 2026. It is not legal advice, and your own policy language and the current statutes control. Laws and carrier requirements change. Verify current statutory language with the Florida Legislature and review your specific policy with a licensed agent before acting.</p>
+    `,
+  },
   {
     slug: "florida-hurricane-deductible",
     title: "How Florida Hurricane Deductibles Actually Work (And What Yours Probably Is)",
@@ -137,6 +266,8 @@ export const POSTS: Post[] = [
       <p>Florida law also says that when you have taken appropriate hurricane mitigation measures on your home, your insurer must give you the option of either an appropriate reduction in your hurricane deductible or a premium credit.<sup>[<a href="#ref-2">2</a>]</sup></p>
 
       <p>That is the part of your policy you have the most control over. Impact windows, a roof-to-wall connection upgrade, opening protection, and a current wind mitigation inspection all feed into this. If you have made improvements to your home and never sent me the documentation, that is real money sitting on the table.</p>
+
+      <p>Roof age also factors into coverage continuity. If your carrier has questioned your roof's condition alongside any deductible or renewal discussion, our guide to <a href="/insights/florida-roof-age-non-renewal">Florida's roof age rules and the 15-year inspection right</a> explains what the law requires before a non-renewal can take effect.</p>
 
       <h2>What to do this week</h2>
 
