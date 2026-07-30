@@ -14,37 +14,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: new Date("2025-01-01"),
+      lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: `${baseUrl}/bundle-insurance-sarasota-fl`,
-      lastModified: new Date("2025-01-01"),
+      lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/auto-insurance-sarasota-fl`,
-      lastModified: new Date("2025-01-01"),
+      lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/flood-insurance-sarasota-fl`,
-      lastModified: new Date("2025-01-01"),
+      lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/condo-insurance-sarasota-fl`,
-      lastModified: new Date("2025-01-01"),
+      lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/homeowners-insurance-sarasota-fl`,
-      lastModified: new Date("2026-05-15"),
+      lastModified: new Date("2026-07-06"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -122,9 +122,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/insights`,
-      lastModified: new Date("2026-07-08"),
+      lastModified: new Date("2026-07-28"),
       changeFrequency: "weekly",
       priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/careers`,
+      lastModified: new Date("2026-06-15"),
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/faq`,
