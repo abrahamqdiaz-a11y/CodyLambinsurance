@@ -136,9 +136,9 @@ function Header() {
           aria-label="Lamb Insurance Agency — home"
         >
           <Image
-            src="/lamb.logo.jpg"
+            src="/favicon.png"
             alt="Lamb Insurance Agency logo"
-            width={44}
+            width={40}
             height={44}
             className="h-9 md:h-11 w-auto"
             priority
