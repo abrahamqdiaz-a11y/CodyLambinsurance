@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Homeowners Insurance Sarasota, FL | Lamb Insurance Agency",
     description:
       "Local licensed agent explains what Sarasota homeowners insurance actually covers — wind, hurricane deductibles, flood gaps, replacement cost, and 4-point inspections. Same-day quotes.",
-    images: ["/og-image.png"],
+    images: ["/lamb.logo.jpg"],
   },
   twitter: { card: "summary_large_image" },
 };

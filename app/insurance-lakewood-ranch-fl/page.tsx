@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Insurance for Lakewood Ranch, FL: homeowners, auto, flood, and life coverage built for LWR's master-planned communities. Same-day quotes.",
   alternates: { canonical: "/insurance-lakewood-ranch-fl" },
-  openGraph: { images: ["/og-image.png"] },
+  openGraph: { images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

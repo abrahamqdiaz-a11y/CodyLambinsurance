@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Condo Insurance Sarasota FL | HO-6 Same-Day Quotes | Lamb",
     description:
       "Sarasota condo insurance (HO-6) from a local bilingual agent. Master-policy review, loss assessment, and same-day quotes.",
-    images: ["/og-image.png"],
+    images: ["/lamb.logo.jpg"],
   },
   twitter: { card: "summary_large_image" },
 };

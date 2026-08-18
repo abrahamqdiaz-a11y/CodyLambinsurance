@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Sarasota Insurance Agency | Auto, Home, Flood & Life | Lamb",
     description:
       "Auto, homeowners, flood, condo, life, and commercial insurance in Sarasota, FL. Same-day quotes from a local agent.",
-    images: ["/og-image.png"],
+    images: ["/lamb.logo.jpg"],
     url: "https://lambinsuranceagency.com",
     siteName: "Lamb Insurance Agency",
     locale: "en_US",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Sarasota Insurance Agency | Auto, Home, Flood & Life | Lamb",
     description:
       "Auto, homeowners, flood, condo, life, and commercial insurance in Sarasota, FL. Same-day quotes from a local agent.",
-    images: ["/og-image.png"],
+    images: ["/lamb.logo.jpg"],
   },
   alternates: { canonical: "https://lambinsuranceagency.com" },
   robots: {

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     description:
       "Practical Florida insurance tips, rate news, and coverage guidance from a local Sarasota agent. Auto, homeowners, flood, and more.",
-    images: ["/og-image.png"],
+    images: ["/lamb.logo.jpg"],
   },
   twitter: {
     card: "summary_large_image",

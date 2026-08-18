@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Flood insurance in Sarasota, FL. Your home policy doesn't cover flooding. Know your zone, understand NFIP vs private, get a same-day quote.",
   alternates: { canonical: "/flood-insurance-sarasota-fl" },
-  openGraph: { images: ["/og-image.png"] },
+  openGraph: { images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

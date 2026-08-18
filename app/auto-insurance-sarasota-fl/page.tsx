@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/auto-insurance-sarasota-fl" },
   openGraph: {
     title: "Auto Insurance Sarasota FL | Car Insurance Quotes | Lamb",
-    images: ["/og-image.png"],
+    images: ["/lamb.logo.jpg"],
   },
   twitter: { card: "summary_large_image" },
 };
