@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description:
     "New construction, well and septic coverage, and flood insurance near the Myakka River in North Port, FL. Wellen Park specialists with same-day quotes from a local Sarasota agent.",
   alternates: { canonical: "/insurance-north-port-fl" },
-  openGraph: { images: ["/lamb.logo.jpg"] },
+  openGraph: { url: "https://lambinsuranceagency.com/insurance-north-port-fl",
+    type: "website",
+    images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

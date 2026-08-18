@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   openGraph: {
     description:
       "Practical Florida insurance tips, rate news, and coverage guidance from a local Sarasota agent. Auto, homeowners, flood, and more.",
+    url: "https://lambinsuranceagency.com/insights",
+    type: "website",
     images: ["/lamb.logo.jpg"],
   },
   twitter: {

@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description:
     "Insurance in Venice, FL: homeowners, auto, flood, and life coverage. Local agency with same-day quotes and plain-English advice. Call (941) 225-2335.",
   alternates: { canonical: "/insurance-venice-fl" },
-  openGraph: { images: ["/lamb.logo.jpg"] },
+  openGraph: { url: "https://lambinsuranceagency.com/insurance-venice-fl",
+    type: "website",
+    images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

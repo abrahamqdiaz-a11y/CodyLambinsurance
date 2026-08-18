@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     title: "Sarasota Insurance Agency | Same-Day Quotes | Lamb Insurance",
     description:
       "Auto, homeowners, flood, condo, life, and commercial coverage in Sarasota, FL. Bilingual service, same-day quotes.",
+    url: "https://lambinsuranceagency.com",
+    type: "website",
     images: ["/lamb.logo.jpg"],
   },
   twitter: { card: "summary_large_image" },

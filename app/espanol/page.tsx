@@ -9,7 +9,9 @@ export const metadata: Metadata = {
     canonical: "/espanol",
     languages: { "es-US": "/espanol", "en-US": "/" },
   },
-  openGraph: { locale: "es_US", images: ["/lamb.logo.jpg"] },
+  openGraph: { locale: "es_US", url: "https://lambinsuranceagency.com/espanol",
+    type: "website",
+    images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

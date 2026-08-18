@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description:
     "Bundle home and auto insurance and save. One local Sarasota agent, one renewal date, same-day quotes and real savings. Call (941) 225-2335.",
   alternates: { canonical: "/bundle-insurance-sarasota-fl" },
-  openGraph: { images: ["/lamb.logo.jpg"] },
+  openGraph: { url: "https://lambinsuranceagency.com/bundle-insurance-sarasota-fl",
+    type: "website",
+    images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
 };

@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description:
     "Life insurance in Sarasota, FL. Compare term and permanent coverage with a local licensed agent. Simple quotes, honest answers, no pressure.",
   alternates: { canonical: "/life-insurance-sarasota-fl" },
-  openGraph: { images: ["/lamb.logo.jpg"] },
+  openGraph: { url: "https://lambinsuranceagency.com/life-insurance-sarasota-fl",
+    type: "website",
+    images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 
