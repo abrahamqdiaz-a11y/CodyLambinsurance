@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description:
       "Ground-floor sales role at a brand-new Sarasota agency. Base + uncapped commission, real leads. Apply today.",
     url: "https://lambinsuranceagency.com/careers",
+    type: "website",
     images: ["/lamb.logo.jpg"],
   },
   twitter: { card: "summary_large_image" },

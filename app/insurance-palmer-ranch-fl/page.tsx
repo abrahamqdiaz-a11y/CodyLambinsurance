@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description:
     "HOA coverage gaps, wind mitigation discounts, and flood insurance for Palmer Ranch, FL. Newer construction expertise and same-day binders from a local Sarasota agent.",
   alternates: { canonical: "/insurance-palmer-ranch-fl" },
-  openGraph: { images: ["/lamb.logo.jpg"] },
+  openGraph: { url: "https://lambinsuranceagency.com/insurance-palmer-ranch-fl",
+    type: "website",
+    images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

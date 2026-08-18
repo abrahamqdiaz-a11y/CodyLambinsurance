@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description:
     "HO-6 condo insurance, flood coverage, and short-term rental protection on Siesta Key, FL. VE and AE flood zone specialists. Same-day quotes from a local Sarasota agent.",
   alternates: { canonical: "/insurance-siesta-key-fl" },
-  openGraph: { images: ["/lamb.logo.jpg"] },
+  openGraph: { url: "https://lambinsuranceagency.com/insurance-siesta-key-fl",
+    type: "website",
+    images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 
