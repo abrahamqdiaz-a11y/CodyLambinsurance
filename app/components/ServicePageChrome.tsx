@@ -79,9 +79,9 @@ export function ServicePageHeader() {
           aria-label="Lamb Insurance Agency — home"
         >
           <Image
-            src="/favicon.png"
+            src="/lamb.logo.jpg"
             alt="Lamb Insurance Agency logo"
-            width={40}
+            width={44}
             height={44}
             className="h-9 md:h-11 w-auto"
             priority
