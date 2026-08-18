@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Business insurance in Sarasota, FL: general liability, BOP, commercial property, workers' comp, and commercial auto. Local advice, fast quotes.",
   alternates: { canonical: "/commercial-insurance-sarasota-fl" },
-  openGraph: { images: ["/og-image.png"] },
+  openGraph: { images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

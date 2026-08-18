@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "4-point inspections, wind mitigation discounts, and Manatee River flood coverage for Bradenton, FL homeowners. Older home expertise and same-day quotes from a local Sarasota agent.",
   alternates: { canonical: "/insurance-bradenton-fl" },
-  openGraph: { images: ["/og-image.png"] },
+  openGraph: { images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

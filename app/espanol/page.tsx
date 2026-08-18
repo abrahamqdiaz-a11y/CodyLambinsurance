@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/espanol",
     languages: { "es-US": "/espanol", "en-US": "/" },
   },
-  openGraph: { locale: "es_US", images: ["/og-image.png"] },
+  openGraph: { locale: "es_US", images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

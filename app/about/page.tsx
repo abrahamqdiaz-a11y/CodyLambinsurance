@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Meet Cody Lamb, a licensed Florida P&C and Life & Health agent. Local Sarasota insurance help for drivers, homeowners, and business owners.",
   alternates: { canonical: "/about" },
-  openGraph: { images: ["/og-image.png"] },
+  openGraph: { images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Answers to common Florida insurance questions on auto, homeowners, flood, and renewals in Sarasota and Bradenton. Get a free quote today.",
   alternates: { canonical: "/faq" },
-  openGraph: { images: ["/og-image.png"] },
+  openGraph: { images: ["/lamb.logo.jpg"] },
   twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
 };

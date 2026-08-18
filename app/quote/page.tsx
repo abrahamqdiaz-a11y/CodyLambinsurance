@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Free Insurance Quote | Sarasota, FL | Lamb Insurance Agency",
     description:
       "Auto, homeowners, condo, flood, and life quotes from a local Sarasota agent. No pressure, no jargon. Reply in 24 hrs.",
-    images: ["/og-image.png"],
+    images: ["/lamb.logo.jpg"],
   },
   twitter: { card: "summary_large_image" },
 };

@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/umbrella-insurance-sarasota" },
   openGraph: {
     title: "Umbrella Insurance Sarasota, FL | Personal Liability | Lamb",
-    images: ["/og-image.png"],
+    images: ["/lamb.logo.jpg"],
   },
-  twitter: { card: "summary_large_image", images: ["/og-image.png"] },
+  twitter: { card: "summary_large_image", images: ["/lamb.logo.jpg"] },
 };
 
 // ─── JSON-LD Schemas ──────────────────────────────────────────────────────────
