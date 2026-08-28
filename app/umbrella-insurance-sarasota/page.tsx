@@ -75,35 +75,15 @@ const schemas = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "InsuranceAgency"],
-      "@id": "https://lambinsuranceagency.com/#agency",
-      name: "Lamb Insurance Agency",
-      description:
-        "Licensed insurance agency in Sarasota, FL specializing in personal umbrella policies, excess liability coverage, and high-value home insurance for Sarasota and Manatee county households.",
-      url: "https://lambinsuranceagency.com",
-      telephone: "(941) 225-2335", // TODO: confirm
-      email: "contact@lambinsuranceagency.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "5893 Whitfield Ave", // TODO: confirm
-        addressLocality: "Sarasota",
-        addressRegion: "FL",
-        postalCode: "34243", // TODO: confirm
-        addressCountry: "US",
-      },
+      "@type": "Service",
+      name: "Personal Umbrella Insurance",
+      serviceType: "Personal Umbrella Insurance",
+      url: "https://lambinsuranceagency.com/umbrella-insurance-sarasota",
+      provider: { "@id": "https://lambinsuranceagency.com/#organization" },
       areaServed: [
-        {
-          "@type": "City",
-          name: "Sarasota",
-          containedInPlace: { "@type": "State", name: "Florida" },
-        },
-        {
-          "@type": "County",
-          name: "Manatee County",
-          containedInPlace: { "@type": "State", name: "Florida" },
-        },
+        { "@type": "City", name: "Sarasota", containedInPlace: { "@type": "State", name: "Florida" } },
+        { "@type": "County", name: "Manatee County", containedInPlace: { "@type": "State", name: "Florida" } },
       ],
-      sameAs: [], // TODO: add social profile URLs
     },
     {
       "@type": "FAQPage",
@@ -121,12 +101,7 @@ const schemas = {
       familyName: "Lamb",
       jobTitle: "Licensed Insurance Agent",
       identifier: "FL License #G034846",
-      worksFor: {
-        "@type": "Organization",
-        "@id": "https://lambinsuranceagency.com/#agency",
-        name: "Lamb Insurance Agency",
-        url: "https://lambinsuranceagency.com",
-      },
+      worksFor: { "@id": "https://lambinsuranceagency.com/#organization" },
       knowsAbout: [
         "umbrella insurance",
         "personal umbrella policy",

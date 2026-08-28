@@ -16,14 +16,12 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "InsuranceAgency",
-      name: "Lamb Insurance Agency",
-      url: "https://lambinsuranceagency.com",
-      email: "contact@lambinsuranceagency.com",
-      areaServed: {
-        "@type": "Place",
-        name: "Lakewood Ranch, Florida",
-      },
+      "@type": "Service",
+      name: "Insurance Services in Lakewood Ranch, FL",
+      serviceType: "Insurance Agency Services",
+      url: "https://lambinsuranceagency.com/insurance-lakewood-ranch-fl",
+      provider: { "@id": "https://lambinsuranceagency.com/#organization" },
+      areaServed: { "@type": "Place", name: "Lakewood Ranch, Florida" },
     },
     {
       "@type": "FAQPage",

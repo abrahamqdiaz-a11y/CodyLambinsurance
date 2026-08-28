@@ -71,11 +71,7 @@ export default async function InsightsPostRoute({ params }: Props) {
             },
           }
         : {}),
-      publisher: {
-        "@type": "Organization",
-        name: "Lamb Insurance Agency",
-        url: "https://lambinsuranceagency.com",
-      },
+      publisher: { "@id": "https://lambinsuranceagency.com/#organization" },
       ...(post.thumbnail ? { image: post.thumbnail } : {}),
       url: `https://lambinsuranceagency.com/insights/${post.slug}`,
     },

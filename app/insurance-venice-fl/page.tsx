@@ -16,14 +16,12 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "InsuranceAgency",
-      name: "Lamb Insurance Agency",
-      url: "https://lambinsuranceagency.com",
-      email: "contact@lambinsuranceagency.com",
-      areaServed: {
-        "@type": "Place",
-        name: "Venice, Florida",
-      },
+      "@type": "Service",
+      name: "Insurance Services in Venice, FL",
+      serviceType: "Insurance Agency Services",
+      url: "https://lambinsuranceagency.com/insurance-venice-fl",
+      provider: { "@id": "https://lambinsuranceagency.com/#organization" },
+      areaServed: { "@type": "Place", name: "Venice, Florida" },
     },
     {
       "@type": "FAQPage",

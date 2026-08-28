@@ -19,26 +19,6 @@ const schemas = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "InsuranceAgency"],
-      name: "Lamb Insurance Agency",
-      url: "https://lambinsuranceagency.com",
-      email: "contact@lambinsuranceagency.com",
-      telephone: "+19412252335",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "5893 Whitfield Ave",
-        addressLocality: "Sarasota",
-        addressRegion: "FL",
-        postalCode: "34243",
-        addressCountry: "US",
-      },
-      areaServed: [
-        { "@type": "City", name: "Sarasota" },
-        { "@type": "City", name: "Bradenton" },
-      ],
-      inLanguage: "es",
-    },
-    {
       "@type": "FAQPage",
       inLanguage: "es",
       mainEntity: [
