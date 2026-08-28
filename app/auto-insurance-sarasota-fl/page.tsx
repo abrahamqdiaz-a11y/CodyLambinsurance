@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import AutoPageClient from "./AutoPageClient";
+import { faqs } from "../content/faqs/auto-insurance-sarasota-fl";
+import { faqPageSchema } from "../content/faqs/types";
 
 export const metadata: Metadata = {
   title: { absolute: "Auto Insurance Sarasota FL | Car Insurance Quotes | Lamb" },
@@ -32,51 +34,7 @@ const schemas = {
       sameAs: [],
       serviceArea: { "@type": "City", name: "Sarasota" },
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "How much is auto insurance in Sarasota?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Your rate depends on factors like driving history, vehicle, location, coverage choices, and discounts. We help you compare options based on your situation.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I lower my monthly payment?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Often, yes. Adjusting deductibles, reviewing discounts, bundling policies, or comparing carriers may reduce your premium.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What coverage do I need in Florida?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "That depends on your car, budget, and risk tolerance. We'll explain your options clearly so you can decide with confidence.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I switch before renewal?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. Many drivers switch before their renewal date. We can help you review timing and next steps.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do you offer bilingual service?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes. We proudly help English- and Spanish-speaking customers.",
-          },
-        },
-      ],
-    },
+    faqPageSchema(faqs),
     {
       "@type": "BreadcrumbList",
       itemListElement: [

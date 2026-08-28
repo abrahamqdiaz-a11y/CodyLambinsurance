@@ -240,7 +240,7 @@ function ReviewCTA({
 }) {
   return (
     <Link
-      href="/protection-review?source=organic-umbrella"
+      href="/quote?source=organic-umbrella"
       className={`inline-block rounded-lg font-semibold [font-family:var(--font-inter)] tracking-wide bg-[#B08D4F] text-[#14201C] transition-all duration-200 hover:bg-[#C4A060] hover:shadow-[0_8px_24px_rgba(176,141,79,0.35)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B08D4F] motion-reduce:transition-none${
         size === "lg" ? " px-8 py-4 text-base" : " px-6 py-3 text-sm"
       }`}
