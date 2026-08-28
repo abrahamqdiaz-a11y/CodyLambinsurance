@@ -321,11 +321,11 @@ function Hero() {
               id="hero-heading"
               className="font-display text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-navy-900 leading-[1.08] mb-6"
             >
-              Sarasota Insurance Agency — Home, Condo &amp; Auto
+              Insurance Agency in Sarasota, FL for Home, Auto &amp; Condo
             </h1>
 
             <p className="text-navy-600 font-body text-base leading-relaxed mb-7 max-w-lg">
-              Local agency. Same-day quotes in English and Spanish. We review what you actually own — not just what&apos;s cheapest to write.
+              Get personalized guidance from a licensed local agent who reviews your coverage, explains your options and helps protect what matters most.
             </p>
 
             <ul className="space-y-2.5 mb-8" aria-label="Key benefits">
