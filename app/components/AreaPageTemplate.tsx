@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ServicePageHeader, ServicePageFooter } from "./ServicePageChrome";
+import { ServicePageFooter } from "./ServicePageChrome";
+import { SiteHeader } from "./SiteHeader";
 import HighLevelForm from "./HighLevelForm";
 
 export interface CoverageLink {
@@ -271,7 +272,7 @@ export default function AreaPageTemplate({ config }: { config: AreaPageConfig })
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
       <main id="main-content">
         <Hero config={config} />
         <LocalSection config={config} />

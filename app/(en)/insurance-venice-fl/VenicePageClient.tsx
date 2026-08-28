@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ServicePageHeader, ServicePageFooter } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 import HighLevelForm from "../../components/HighLevelForm";
 
 const EMAIL = "contact@lambinsuranceagency.com";
@@ -381,7 +382,7 @@ export default function VenicePageClient() {
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
       <main id="main-content">
         <Hero />
         <FourPointSection />

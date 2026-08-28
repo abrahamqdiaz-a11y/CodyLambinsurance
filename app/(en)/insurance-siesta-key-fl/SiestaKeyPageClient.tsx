@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ServicePageHeader, ServicePageFooter } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 import HighLevelForm from "../../components/HighLevelForm";
 import { faqs } from "../../content/faqs/insurance-siesta-key-fl";
 
@@ -358,7 +359,7 @@ export default function SiestaKeyPageClient() {
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
       <main id="main-content">
         <Hero />
         <CondoSection />

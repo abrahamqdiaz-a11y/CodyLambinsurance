@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ServicePageHeader, ServicePageFooter } from "../../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../../components/ServicePageChrome";
+import { SiteHeader } from "../../../components/SiteHeader";
 import type { Post, FaqItem } from "../posts";
 import { formatDate } from "../posts";
 import { useEffect, useState } from "react";
@@ -162,7 +163,7 @@ export default function InsightsPostClient({ post }: { post: Post }) {
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
 
       <main>
         {/* ── Hero ─────────────────────────────────────────────────── */}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ServicePageHeader, ServicePageFooter } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 
 export const metadata: Metadata = {
   title: { absolute: "Insurance Sales Careers in Sarasota, FL | Lamb Insurance" },
@@ -51,7 +52,7 @@ function CheckItem({ children }: { children: React.ReactNode }) {
 export default function CareersPage() {
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
 
       <main>
         {/* ── Hero ── */}

@@ -3,7 +3,8 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ServicePageFooter, ServicePageHeader } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 import HighLevelForm from "../../components/HighLevelForm";
 
 const EMAIL = "contact@lambinsuranceagency.com";
@@ -649,7 +650,7 @@ export default function AboutPageClient() {
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
       <main id="main-content">
         <Hero />
         <ExperienceSection />

@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ServicePageHeader, ServicePageFooter } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 
 const EMAIL = "contact@lambinsuranceagency.com";
 
@@ -136,7 +137,7 @@ export default function FAQPageClient() {
 
   return (
     <div className="min-h-screen bg-cream">
-      <ServicePageHeader />
+      <SiteHeader />
 
       <main id="main-content">
         {/* Hero banner */}

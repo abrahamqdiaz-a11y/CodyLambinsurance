@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { ServicePageFooter, ServicePageHeader } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 import HighLevelForm from "../../components/HighLevelForm";
 
 const EMAIL = "contact@lambinsuranceagency.com";
@@ -108,7 +109,7 @@ export default function QuotePageClient() {
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
       <main id="main-content">
         <Hero />
         <FormSection />

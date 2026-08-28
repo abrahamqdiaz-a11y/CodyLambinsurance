@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ServicePageHeader, ServicePageFooter } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 import HighLevelForm from "../../components/HighLevelForm";
 import RelatedGuides from "../../components/RelatedGuides";
 
@@ -501,7 +502,7 @@ export default function HomeownersPageClient() {
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
       <main id="main-content">
         <Hero />
         <WhatIsCoveredSection />

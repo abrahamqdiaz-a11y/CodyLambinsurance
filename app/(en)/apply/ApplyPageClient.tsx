@@ -3,7 +3,8 @@
 import { useState, useRef, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { ServicePageHeader, ServicePageFooter } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 
 const ROLE_OPTIONS = [
   { value: "sales-agent", label: "Sales Agent" },
@@ -363,7 +364,7 @@ function ApplyPageInner() {
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
 
       <main className="bg-cream min-h-screen pt-24 pb-20 px-5">
         <div className="max-w-2xl mx-auto">

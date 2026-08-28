@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ServicePageFooter, ServicePageHeader } from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 import HighLevelForm from "../../components/HighLevelForm";
 import { faqs } from "../../content/faqs/commercial-insurance-sarasota-fl";
 
@@ -439,7 +440,7 @@ export default function CommercialPageClient() {
 
   return (
     <>
-      <ServicePageHeader />
+      <SiteHeader />
       <main id="main-content">
         <Hero />
         <WhyBusinessesShopSection />

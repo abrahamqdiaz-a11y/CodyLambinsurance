@@ -3,10 +3,8 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
-import {
-  ServicePageHeader,
-  ServicePageFooter,
-} from "../../components/ServicePageChrome";
+import { ServicePageFooter } from "../../components/ServicePageChrome";
+import { SiteHeader } from "../../components/SiteHeader";
 import RelatedGuides from "../../components/RelatedGuides";
 
 // ─── Fonts ────────────────────────────────────────────────────────────────────
@@ -253,7 +251,7 @@ export default function UmbrellaInsuranceSarasotaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
 
-      <ServicePageHeader />
+      <SiteHeader />
 
       {/*
         The wrapper div sets the CSS custom properties for the three
