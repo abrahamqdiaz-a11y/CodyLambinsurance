@@ -103,6 +103,7 @@ function Header() {
   const [mobileInsuranceOpen, setMobileInsuranceOpen] = useState(false);
   const pathname = usePathname();
   const insuranceMenuRef = useRef<HTMLDivElement>(null);
+  const insuranceTriggerRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -161,28 +162,46 @@ function Header() {
             className="relative"
             onMouseEnter={() => setInsuranceOpen(true)}
             onMouseLeave={() => setInsuranceOpen(false)}
+            onFocus={() => setInsuranceOpen(true)}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                setInsuranceOpen(false);
+              }
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                insuranceTriggerRef.current?.focus();
+                setInsuranceOpen(false);
+              }
+            }}
           >
             <Link
+              ref={insuranceTriggerRef}
               href="/#services"
+              aria-haspopup="true"
+              aria-expanded={insuranceOpen}
               onClick={() => setInsuranceOpen(false)}
               className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors"
             >
               Insurance
             </Link>
-            {insuranceOpen && (
-              <div className="absolute top-full left-0 min-w-72 rounded-lg border border-white/10 bg-navy-950 shadow-lg shadow-black/20 py-2">
-                {INSURANCE_LINKS.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
-                    onClick={() => setInsuranceOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+            {/* Rendered on every request so the links exist in the server HTML.
+                Only visibility is toggled, which also keeps the closed menu out
+                of the tab order and the accessibility tree. */}
+            <div
+              className={`absolute top-full left-0 min-w-72 rounded-lg border border-white/10 bg-navy-950 shadow-lg shadow-black/20 py-2 transition-opacity duration-150 ${insuranceOpen ? "visible opacity-100" : "invisible opacity-0"}`}
+            >
+              {INSURANCE_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                  onClick={() => setInsuranceOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
           <Link href="/about" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">About</Link>
           <Link href="/insights" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Insights</Link>
