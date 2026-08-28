@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import CommercialPageClient from "./CommercialPageClient";
+import { faqs } from "../content/faqs/commercial-insurance-sarasota-fl";
+import { faqPageSchema } from "../content/faqs/types";
 
 export const metadata: Metadata = {
   title: { absolute: "Commercial Insurance Sarasota FL | BOP & Liability | Lamb" },
@@ -29,51 +31,7 @@ const schemas = {
       sameAs: [],
       serviceArea: { "@type": "City", name: "Sarasota" },
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What commercial insurance does my Sarasota business need?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "It depends on your industry, size, and risk exposure. Most businesses need at minimum general liability coverage. We review your specific situation and walk you through the options that make sense.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is a Business Owner's Policy (BOP)?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "A BOP bundles general liability and commercial property coverage into one policy — often at a lower cost than buying them separately. It's a common starting point for small and mid-size businesses.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Do I need workers' compensation insurance in Florida?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Florida law requires most employers to carry workers' compensation. Requirements vary by industry and number of employees. We can help you understand your obligations.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Can I bundle commercial and personal insurance?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "In some cases, yes. Bundling policies may simplify management and create savings opportunities. Ask us what options are available for your situation.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How do I get a commercial insurance quote in Sarasota?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Fill out the form on this page or call our office. We'll ask a few questions about your business and walk you through coverage options at no obligation.",
-          },
-        },
-      ],
-    },
+    faqPageSchema(faqs),
     {
       "@type": "BreadcrumbList",
       itemListElement: [

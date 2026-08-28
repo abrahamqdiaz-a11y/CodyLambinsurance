@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import LakewoodRanchPageClient from "./LakewoodRanchPageClient";
+import { faqs } from "../content/faqs/insurance-lakewood-ranch-fl";
+import { faqPageSchema } from "../content/faqs/types";
 
 export const metadata: Metadata = {
   title: { absolute: "Insurance in Lakewood Ranch, FL | Home & Auto | Lamb" },
@@ -25,51 +27,7 @@ const schema = {
         name: "Lakewood Ranch, Florida",
       },
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Do I need flood insurance in Lakewood Ranch?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Parts of Lakewood Ranch fall within FEMA-designated flood zones, and more properties than residents expect carry at least a moderate flood risk. Standard homeowners policies exclude flooding entirely. A FEMA address lookup tells you your zone; we can walk you through what that means for your premium.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Does my HOA insurance cover my personal belongings?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No. The HOA master policy covers common areas and shared amenities, but not the inside of your home, your furniture, electronics, or personal liability. That's what your individual homeowners or HO-6 policy is for.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "I just moved from New Jersey — what do I need to change about my coverage?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Florida operates differently: windstorm coverage is often excluded from standard homeowners policies and may require a separate endorsement or Citizens policy; flood is always separate; and Florida's auto requirements differ from New Jersey's no-fault structure. Out-of-state plates also need to be transferred within 90 days of establishing Florida residency.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How fast can I get proof of insurance for a closing in Lakewood Ranch?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Same day in most cases. Closing deadlines are one of the most common urgent requests we handle. Call us directly with your closing date and we'll prioritize it.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Is windstorm coverage included in Florida homeowners policies?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Not always. Many Florida carriers exclude windstorm or hurricane damage from standard homeowners policies. Coverage may require a separate windstorm endorsement or a Citizens Insurance policy. We'll make sure you know exactly what your policy does and doesn't cover before you close.",
-          },
-        },
-      ],
-    },
+    faqPageSchema(faqs),
     {
       "@type": "BreadcrumbList",
       itemListElement: [
