@@ -107,11 +107,11 @@ function Hero() {
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Insurance Agency Serving Lakewood Ranch, FL
+            Home &amp; Auto Insurance Agency in Lakewood Ranch, FL
           </h1>
 
           <p className="text-navy-200 text-base md:text-lg leading-relaxed mb-10 font-body max-w-3xl">
-            Lakewood Ranch is one of the fastest-growing communities in Florida, and with that growth comes a lot of residents navigating insurance for the first time in a new state. Florida&apos;s coverage requirements — especially around flood, windstorm, and HOA liability — are different from what most newcomers are used to. Lamb Insurance works with LWR residents to make sure they&apos;re actually covered, not just technically insured.
+            Moving to Lakewood Ranch or reviewing your current coverage? Lamb Insurance helps Florida residents compare home, auto, flood, and other insurance options with clear, local guidance—so you understand what&apos;s covered before you need to file a claim.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
