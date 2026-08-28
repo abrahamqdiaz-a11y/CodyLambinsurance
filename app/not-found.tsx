@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NotFoundContent from "./components/NotFoundContent";
 
-export const metadata: Metadata = { title: "Page Not Found" };
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  alternates: { canonical: null },
+};
 
 // Unmatched URLs fall outside both locale route groups, so Next renders this
 // file without a root layout and supplies a bare <html> wrapper of its own.

@@ -43,6 +43,8 @@ export function ServicePageHeader() {
   const pathname = usePathname();
   const insuranceMenuRef = useRef<HTMLDivElement>(null);
   const areasMenuRef = useRef<HTMLDivElement>(null);
+  const insuranceTriggerRef = useRef<HTMLAnchorElement>(null);
+  const areasTriggerRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -101,56 +103,91 @@ export function ServicePageHeader() {
             className="relative"
             onMouseEnter={() => setInsuranceOpen(true)}
             onMouseLeave={() => setInsuranceOpen(false)}
+            onFocus={() => setInsuranceOpen(true)}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                setInsuranceOpen(false);
+              }
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                insuranceTriggerRef.current?.focus();
+                setInsuranceOpen(false);
+              }
+            }}
           >
             <Link
+              ref={insuranceTriggerRef}
               href="/#services"
+              aria-haspopup="true"
+              aria-expanded={insuranceOpen}
               onClick={() => setInsuranceOpen(false)}
               className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors"
             >
               Insurance
             </Link>
-            {insuranceOpen && (
-              <div className="absolute top-full left-0 min-w-72 rounded-lg border border-white/10 bg-navy-950 shadow-lg shadow-black/20 py-2">
-                {INSURANCE_LINKS.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
-                    onClick={() => setInsuranceOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+            {/* Rendered on every request so the links exist in the server HTML.
+                Only visibility is toggled, which also keeps the closed menu out
+                of the tab order and the accessibility tree. */}
+            <div
+              className={`absolute top-full left-0 min-w-72 rounded-lg border border-white/10 bg-navy-950 shadow-lg shadow-black/20 py-2 transition-opacity duration-150 ${insuranceOpen ? "visible opacity-100" : "invisible opacity-0"}`}
+            >
+              {INSURANCE_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                  onClick={() => setInsuranceOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
           <div
             ref={areasMenuRef}
             className="relative"
             onMouseEnter={() => setAreasOpen(true)}
             onMouseLeave={() => setAreasOpen(false)}
+            onFocus={() => setAreasOpen(true)}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                setAreasOpen(false);
+              }
+            }}
+            onKeyDown={(event) => {
+              if (event.key === "Escape") {
+                areasTriggerRef.current?.focus();
+                setAreasOpen(false);
+              }
+            }}
           >
-            <button
-              type="button"
-              onClick={() => setAreasOpen(!areasOpen)}
+            {/* There is no service areas index route, so the trigger points at
+                the footer list of every area page, which renders on all pages. */}
+            <Link
+              ref={areasTriggerRef}
+              href="/#areas"
+              aria-haspopup="true"
+              aria-expanded={areasOpen}
+              onClick={() => setAreasOpen(false)}
               className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors"
             >
               Service Areas
-            </button>
-            {areasOpen && (
-              <div className="absolute top-full left-0 min-w-56 rounded-lg border border-white/10 bg-navy-950 shadow-lg shadow-black/20 py-2">
-                {SERVICE_AREA_LINKS.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
-                    onClick={() => setAreasOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            )}
+            </Link>
+            <div
+              className={`absolute top-full left-0 min-w-56 rounded-lg border border-white/10 bg-navy-950 shadow-lg shadow-black/20 py-2 transition-opacity duration-150 ${areasOpen ? "visible opacity-100" : "invisible opacity-0"}`}
+            >
+              {SERVICE_AREA_LINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`block px-4 py-3 text-sm font-body tracking-wide transition-colors ${pathname === item.href ? "text-white bg-white/10" : "text-navy-200 hover:text-white hover:bg-white/5"}`}
+                  onClick={() => setAreasOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
           <Link href="/about" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">About</Link>
           <Link href="/insights" className="nav-link text-navy-200 hover:text-white text-sm font-body tracking-wide transition-colors">Insights</Link>
@@ -319,7 +356,7 @@ export function ServicePageFooter({ email, phone }: { email: string; phone?: str
           </ul>
         </div>
 
-        <div>
+        <div id="areas" className="scroll-mt-24">
           <h3 className="font-body text-xs font-bold uppercase tracking-widest text-navy-500 mb-5">Areas We Serve</h3>
           <ul className="space-y-2 font-body text-sm mb-8">
             {SERVICE_AREA_LINKS.map((item) => (
