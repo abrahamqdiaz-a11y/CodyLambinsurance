@@ -18,18 +18,12 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "InsuranceAgency"],
-      name: "Lamb Insurance Agency",
-      url: "https://lambinsuranceagency.com",
-      email: "contact@lambinsuranceagency.com",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Sarasota",
-        addressRegion: "FL",
-        addressCountry: "US",
-      },
+      "@type": "Service",
+      name: "Insurance Services in North Port, FL",
+      serviceType: "Insurance Agency Services",
+      url: "https://lambinsuranceagency.com/insurance-north-port-fl",
+      provider: { "@id": "https://lambinsuranceagency.com/#organization" },
       areaServed: { "@type": "Place", name: "North Port, Sarasota County, FL" },
-      serviceArea: { "@type": "Place", name: "North Port, FL" },
     },
     faqPageSchema(faqs),
     {

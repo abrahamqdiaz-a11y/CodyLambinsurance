@@ -21,18 +21,12 @@ const schemas = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "InsuranceAgency"],
-      name: "Lamb Insurance Agency",
-      url: "https://lambinsuranceagency.com",
-      email: "contact@lambinsuranceagency.com",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Sarasota",
-        addressRegion: "FL",
-        addressCountry: "US",
-      },
-      sameAs: [],
-      serviceArea: { "@type": "City", name: "Sarasota" },
+      "@type": "Service",
+      name: "Auto Insurance",
+      serviceType: "Auto Insurance",
+      url: "https://lambinsuranceagency.com/auto-insurance-sarasota-fl",
+      provider: { "@id": "https://lambinsuranceagency.com/#organization" },
+      areaServed: { "@type": "City", name: "Sarasota" },
     },
     faqPageSchema(faqs),
     {

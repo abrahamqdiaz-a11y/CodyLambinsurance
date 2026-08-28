@@ -18,18 +18,12 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "InsuranceAgency"],
-      name: "Lamb Insurance Agency",
-      url: "https://lambinsuranceagency.com",
-      email: "contact@lambinsuranceagency.com",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Sarasota",
-        addressRegion: "FL",
-        addressCountry: "US",
-      },
+      "@type": "Service",
+      name: "Insurance Services on Siesta Key, FL",
+      serviceType: "Insurance Agency Services",
+      url: "https://lambinsuranceagency.com/insurance-siesta-key-fl",
+      provider: { "@id": "https://lambinsuranceagency.com/#organization" },
       areaServed: { "@type": "Place", name: "Siesta Key, Sarasota County, FL" },
-      serviceArea: { "@type": "Place", name: "Siesta Key, Sarasota, FL" },
     },
     faqPageSchema(faqs),
     {

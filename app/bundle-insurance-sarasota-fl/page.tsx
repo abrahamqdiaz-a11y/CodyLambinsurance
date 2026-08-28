@@ -17,47 +17,12 @@ const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "InsuranceAgency"],
-      name: "Lamb Insurance Agency",
-      url: "https://lambinsuranceagency.com",
-      email: "contact@lambinsuranceagency.com",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Sarasota",
-        addressRegion: "FL",
-        addressCountry: "US",
-      },
-      sameAs: [],
-      serviceArea: {
-        "@type": "City",
-        name: "Sarasota",
-      },
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Insurance Services",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Home and Auto Bundle Insurance" },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Auto Insurance" },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Home Insurance" },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Life Insurance" },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: { "@type": "Service", name: "Commercial Insurance" },
-          },
-        ],
-      },
+      "@type": "Service",
+      name: "Home and Auto Bundle Insurance",
+      serviceType: "Home and Auto Bundle Insurance",
+      url: "https://lambinsuranceagency.com/bundle-insurance-sarasota-fl",
+      provider: { "@id": "https://lambinsuranceagency.com/#organization" },
+      areaServed: { "@type": "City", name: "Sarasota" },
     },
     {
       "@type": "FAQPage",

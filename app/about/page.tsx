@@ -16,27 +16,10 @@ const schemas = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "InsuranceAgency"],
-      name: "Lamb Insurance Agency",
-      url: "https://lambinsuranceagency.com",
-      email: "contact@lambinsuranceagency.com",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Sarasota",
-        addressRegion: "FL",
-        addressCountry: "US",
-      },
-      sameAs: [],
-      serviceArea: { "@type": "City", name: "Sarasota" },
-    },
-    {
       "@type": "Person",
       name: "Cody Lamb",
       jobTitle: "Licensed Insurance Agent",
-      worksFor: {
-        "@type": "InsuranceAgency",
-        name: "Lamb Insurance Agency",
-      },
+      worksFor: { "@id": "https://lambinsuranceagency.com/#organization" },
       knowsAbout: [
         "Property & Casualty Insurance",
         "Life & Health Insurance",
