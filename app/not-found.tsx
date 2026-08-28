@@ -1,28 +1,18 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import "./globals.css";
+import NotFoundContent from "./components/NotFoundContent";
 
 export const metadata: Metadata = { title: "Page Not Found" };
 
-export default function NotFound() {
+// Unmatched URLs fall outside both locale route groups, so Next renders this
+// file without a root layout and supplies a bare <html> wrapper of its own.
+// The lang declaration therefore lives on the content wrapper here. Routes that
+// call notFound() inside the English group resolve to app/(en)/not-found.tsx,
+// which is wrapped by that group's root layout.
+export default function GlobalNotFound() {
   return (
-    <div className="min-h-screen bg-cream flex items-center justify-center px-5">
-      <div className="text-center max-w-md">
-        <p className="font-display text-8xl font-bold text-navy-100 mb-4" aria-hidden="true">
-          404
-        </p>
-        <h1 className="font-display text-2xl font-bold text-navy-800 mb-3">
-          Page Not Found
-        </h1>
-        <p className="text-navy-500 font-body text-base mb-8">
-          The page you&#39;re looking for doesn&#39;t exist. Let&#39;s get you back on track.
-        </p>
-        <Link
-          href="/"
-          className="btn-primary inline-block px-7 py-3.5 rounded-lg font-semibold font-body text-base"
-        >
-          ← Back to Home
-        </Link>
-      </div>
+    <div lang="en-US">
+      <NotFoundContent />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { POSTS } from "./insights/posts";
+import { POSTS } from "./(en)/insights/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://lambinsuranceagency.com";
@@ -115,6 +115,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/careers`,
+      lastModified: new Date("2026-05-05"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/espanol`,
       lastModified: new Date("2026-04-28"),
       changeFrequency: "monthly",
@@ -131,18 +137,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-04-28"),
       changeFrequency: "monthly",
       priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date("2025-01-01"),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date("2025-01-01"),
-      changeFrequency: "yearly",
-      priority: 0.3,
     },
     {
       url: `${baseUrl}/sms`,
